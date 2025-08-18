@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// About page providing a biography and credibility information.
+// Replace the placeholder text with your own story, credentials and
+// mission.  Consider including a portrait or additional images by
+// uploading them to the `public` folder and referencing them here.
+
+const name = 'Your Name';
+const bio = `
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam convallis
+  dignissim massa, sit amet laoreet lectus blandit non.  Suspendisse potenti.
+  Donec ac nisi nec arcu interdum aliquet.  Phasellus auctor justo a
+  faucibus dignissim.  Curabitur vel nibh non ipsum pharetra tincidunt vel
+  sit amet nunc.  Quisque auctor mi ut metus vulputate, ac varius dui
+  malesuada.
+`;
+
+const credentials = [
+  'Certified Life Coach and mindfulness practitioner',
+  'Featured speaker at regional wellness conferences',
+  'Contributor to several spirituality and personal growth publications',
+];
+---
+<Layout>
+  <section class="about">
+    <h1>About</h1>
+    <h2>{name}</h2>
+    <p class="bio">{bio}</p>
+    <h3>Why trust The Modern Compass?</h3>
+    <ul class="cred-list">
+      {credentials.map((cred) => (
+        <li>{cred}</li>
+      ))}
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+  }
+
+  .about h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+  }
+
+  .bio {
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+
+  .about h3 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+  }
+
+  .cred-list {
+    list-style: disc;
+    margin-left: 1.25rem;
+    line-height: 1.5;
+  }
+</style>

@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Events page listing upcoming and past workshops, retreats and webinars.
+// Replace the placeholder arrays below with real event data.  Each event
+// object includes a title, date, location and short description.  You
+// can add or remove fields as needed.
+
+const upcomingEvents = [
+  {
+    title: 'Finding Your Inner Compass Workshop',
+    date: 'September 20, 2025',
+    location: 'Online (Zoom)',
+    description: 'A two‑hour interactive workshop exploring mindfulness and goal setting.',
+  },
+  {
+    title: 'Autumn Retreat in the Hill Country',
+    date: 'October 15–17, 2025',
+    location: 'Fredericksburg, TX',
+    description: 'Join us for a weekend of reflection, nature hikes and creative exercises.',
+  },
+  {
+    title: 'New Year Visioning Webinar',
+    date: 'January 5, 2026',
+    location: 'Online (Webinar)',
+    description: 'Set your intentions for the year ahead with guided meditations and exercises.',
+  },
+];
+
+const pastEvents = [
+  {
+    title: 'Summer Solstice Ceremony',
+    date: 'June 21, 2025',
+    location: 'San Antonio, TX',
+    description: 'A celebration of the longest day with rituals and storytelling.',
+  },
+  {
+    title: 'Spring Refresh Webinar',
+    date: 'March 10, 2025',
+    location: 'Online (Webinar)',
+    description: 'Tips for spring cleaning your mind, body and surroundings.',
+  },
+];
+
+---
+<Layout>
+  <section class="events">
+    <h1>Events</h1>
+    <p class="intro">Stay connected with our upcoming workshops, retreats and webinars.  We believe in
+      the power of community and shared learning.  Join us to deepen your
+      experience and connect with like‑minded seekers.</p>
+
+    <div class="events-section">
+      <h2>Upcoming</h2>
+      <div class="event-list">
+        {upcomingEvents.map(({ title, date, location, description }) => (
+          <div class="event card upcoming">
+            <h3>{title}</h3>
+            <p class="event-meta">{date} · {location}</p>
+            <p>{description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="events-section">
+      <h2>Past</h2>
+      <div class="event-list">
+        {pastEvents.map(({ title, date, location, description }) => (
+          <div class="event card past">
+            <h3>{title}</h3>
+            <p class="event-meta">{date} · {location}</p>
+            <p>{description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .events {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .events h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .intro {
+    max-width: 700px;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .events-section {
+    margin-top: 2rem;
+  }
+
+  .events-section h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+
+  .event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .event.card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease;
+  }
+
+  .event.card.upcoming:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .event.card.past {
+    opacity: 0.7;
+  }
+
+  .event h3 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+  }
+
+  .event-meta {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+
+  .event p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+</style>

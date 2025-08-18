@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Newsletter page pointing visitors to your Beehiiv subscription page.  Replace
+// the newsletterLink constant with your actual Beehiiv subdomain URL.
+
+const newsletterLink = 'https://your-subdomain.beehiiv.com'; // Update this link
+
+---
+<Layout>
+  <section class="newsletter">
+    <h1>Newsletter</h1>
+    <p>
+      Join our mailing list to receive exclusive content, event updates and
+      resources straight to your inbox.  We respect your privacy and promise to
+      send only thoughtful communications.
+    </p>
+    <a href={newsletterLink} target="_blank" rel="noopener noreferrer" class="subscribe-button">Subscribe via Beehiiv</a>
+  </section>
+</Layout>
+
+<style>
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 700px;
+  }
+
+  .newsletter h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+
+  .newsletter p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .subscribe-button {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    max-width: fit-content;
+  }
+
+  .subscribe-button:hover {
+    background: var(--accent-color);
+  }
+</style>

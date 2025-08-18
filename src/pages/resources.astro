@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Resources page listing evergreen guides, templates and other tools.
+// Update the sections and items below to reflect the actual resources you
+// wish to share.  Each resource can link to a downloadable file or
+// another page on your site.
+
+const resources = [
+  {
+    category: 'Guides',
+    items: [
+      {
+        title: 'Goal Setting Guide',
+        description: 'A step‑by‑step worksheet to clarify your vision and break it down into actionable steps.',
+        link: '#',
+      },
+      {
+        title: 'Mindfulness Starter Kit',
+        description: 'Tips and practices to cultivate awareness in your daily life.',
+        link: '#',
+      },
+    ],
+  },
+  {
+    category: 'Templates',
+    items: [
+      {
+        title: 'Weekly Reflection Template',
+        description: 'A printable template for tracking progress and gratitude.',
+        link: '#',
+      },
+      {
+        title: 'Life Balance Wheel',
+        description: 'A tool to visualize different areas of your life and identify focus areas.',
+        link: '#',
+      },
+    ],
+  },
+];
+
+---
+<Layout>
+  <section class="resources">
+    <h1>Resources</h1>
+    <p>Access our free guides and templates designed to support your growth.  Feel free to download and share them with friends and family.</p>
+    {resources.map(({ category, items }) => (
+      <div class="resource-category">
+        <h2>{category}</h2>
+        <ul class="resource-list">
+          {items.map(({ title, description, link }) => (
+            <li class="resource-item">
+              <h3>{title}</h3>
+              <p>{description}</p>
+              <a href={link} target="_blank" rel="noopener noreferrer">Download</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </section>
+</Layout>
+
+<style>
+  .resources {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .resources h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+
+  .resources p {
+    max-width: 700px;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .resource-category {
+    margin-top: 1.5rem;
+  }
+
+  .resource-category h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+  }
+
+  .resource-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .resource-item {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .resource-item h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+  }
+
+  .resource-item p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .resource-item a {
+    align-self: flex-start;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+
+  .resource-item a:hover {
+    border-color: var(--secondary-color);
+  }
+</style>
