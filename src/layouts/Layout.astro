@@ -4,11 +4,14 @@
 // header with navigation, a main slot for page content, and a footer.
 
 const year = new Date().getFullYear();
+// Define the navigation links for the site.  The events link has been
+// intentionally removed per the latest design guidance to reduce
+// clutter and focus on core offerings.  You can reintroduce it by
+// adding an object with an `href` and `label` as needed.
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/book', label: 'Book' },
   { href: '/shop', label: 'Shop' },
-  { href: '/events', label: 'Events' },
   { href: '/about', label: 'About' },
   { href: '/newsletter', label: 'Newsletter' },
   { href: '/resources', label: 'Resources' },
@@ -47,12 +50,40 @@ const navLinks = [
   <style global>
     /* Define colour palette derived from the Modern Compass logo */
     :root {
-      --primary-color: #b20d98;
-      --secondary-color: #0a9bd2;
-      --accent-color: #f88e36;
+      /*
+       * Updated colour palette to better match the Modern Compass logo.  The
+       * original palette used deep magenta, cyan, and orange.  Here we
+       * brighten the magenta and orange and shift the blue toward a more
+       * turquoise tone to mirror the multicoloured gradient in the logo.  If
+       * these tones still feel off, you can tweak them further (e.g.
+       * using a colour picker on the logo image) until the gradient feels
+       * cohesive with your brand.
+       */
+      /*
+       * Updated brand palette to use four distinct colours from the logo.
+       * This palette reflects the purple, blue, yellow and orange that are
+       * prominent in the swirl.  Breaking the gradient into multiple stops
+       * allows the full range of colours to appear without muddying the
+       * transitions.  If you need to fine‑tune, sample directly from the
+       * logo image using a colour picker.
+       */
+      --color-purple: #b324a7;  /* rich purple/magenta */
+      --color-blue: #0087c9;    /* deep turquoise blue */
+      --color-yellow: #f5c242;  /* warm golden yellow */
+      --color-orange: #f76a3e;  /* vibrant orange */
       --text-color: #333333;
       --background-color: #ffffff;
-      --gradient: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+      /*
+       * Construct a four‑stop gradient that flows diagonally through
+       * the purple, blue, yellow and orange hues.  Adjust the stop
+       * percentages to balance the prominence of each colour.
+       */
+      --gradient: linear-gradient(45deg,
+        var(--color-purple) 0%,
+        var(--color-blue) 35%,
+        var(--color-yellow) 65%,
+        var(--color-orange) 100%
+      );
     }
 
     *, *::before, *::after {
@@ -70,9 +101,13 @@ const navLinks = [
     }
 
     header {
-      background: var(--gradient);
-      color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      /* Use a solid background in the header to separate it from the
+         hero section.  This prevents the site-wide gradient from
+         overpowering the navigation and keeps focus on the content.
+         The colour is derived from the global background variable. */
+      background: var(--background-color);
+      color: var(--text-color);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
 
     nav {
@@ -85,7 +120,13 @@ const navLinks = [
     }
 
     .logo img {
-      height: 48px;
+      /*
+       * Increase the logo size further to give it a stronger presence in the
+       * header.  The height is set to 72px and the width remains auto to
+       * preserve aspect ratio.  Adjust this value if the navigation
+       * begins to crowd or wrap on smaller screens.
+       */
+      height: 72px;
       width: auto;
     }
 
@@ -96,7 +137,7 @@ const navLinks = [
     }
 
     .nav-links li a {
-      color: #fff;
+      color: var(--text-color);
       text-decoration: none;
       font-weight: 500;
       padding: 0.5rem 0.75rem;
@@ -105,7 +146,7 @@ const navLinks = [
     }
 
     .nav-links li a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(0, 0, 0, 0.05);
     }
 
     main {
