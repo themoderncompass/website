@@ -8,6 +8,8 @@ import Layout from '../layouts/Layout.astro';
 // events calendar.  Adjust the text below to better reflect your
 // brand voice and offering.
 
+// Define the homepage tiles.  The events tile has been removed to simplify
+// navigation and focus visitors on core offerings like the book and shop.
 const tiles = [
   {
     href: '/book',
@@ -19,20 +21,15 @@ const tiles = [
     title: 'Shop',
     description: 'Discover curated products in our Etsy shop.',
   },
-  {
-    href: '/events',
-    title: 'Events',
-    description: 'Join us for workshops, retreats and webinars.',
-  },
 ];
 ---
 <Layout>
   <section class="hero">
     <div class="hero-content">
-      <h1>Find Your True North</h1>
+      <h1>Always Follow Your Compass</h1>
       <p>
         The Modern Compass guides you on your journey with insightful
-        resources, inspiring events and authentic community.
+        resources and an authentic community to support your growth.
       </p>
       <a href="/newsletter" class="cta-button">Subscribe</a>
     </div>
@@ -50,11 +47,34 @@ const tiles = [
 
 <style>
   .hero {
+    position: relative;
     padding: 4rem 0 3rem;
     text-align: center;
     background: var(--gradient);
     color: #fff;
     border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  /* Apply a subtle white overlay over the hero gradient to soften
+     the colours without changing the underlying palette.  The overlay
+     is implemented with a pseudo-element so that it doesn’t wrap the
+     content. */
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 0;
+  }
+
+  /* Ensure the hero content sits above the overlay */
+  .hero-content {
+    position: relative;
+    z-index: 1;
   }
 
   .hero h1 {
