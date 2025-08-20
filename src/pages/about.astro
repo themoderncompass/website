@@ -6,32 +6,34 @@ import Layout from '../layouts/Layout.astro';
 // mission.  Consider including a portrait or additional images by
 // uploading them to the `public` folder and referencing them here.
 
-const name = 'Josh Imholte';
+// Removed the unused name constant. The biography below has been revised to reflect a concise,
+// reader‑focused narrative and is used to populate the main content of the about page.
 const bio = `
-  Hi, my names Josh Imholte. For much of my life, I tried to navigate without a clear guide.
-  Like many people, I entered adulthood full of ambition but light on direction. Progress came,
-  but often slow and at times didn't move me forward.
+  For years in my 20's and 30's I tried to navigate life without a clear guide, full of ambition but
+  short on direction. Progress came slowly, often in circles.
 
-  Modern Compass grew out of that lived experience. I wanted a way to cut through noise, surface
-  what really matters, and create a framework that helps people act with clarity instead of
-  drifting on intention alone.
+  Modern Compass grew out of that experience. It’s my way of cutting through noise and surfacing what
+  really matters so you can act with clarity instead of drifting on intention alone.
 
-  Along the way, I discovered something important: growth isn’t always about collecting more
-  advice or following someone else’s formula. It’s about building your own compass, taking
-  small actions so that you build your own compass you can trust.
+  I’ve learned growth isn’t always about collecting more advice or following someone else’s formula. It’s
+  about building your own compass and taking small actions that help you trust yourself more with every step.
 
-  That’s what this project is about. Through my book, newsletter, TikTok, and tools, I share
-  practical ways to strengthen your sense of self, deepen trust, develop character, and build
-  relationships. My goal isn’t to tell you who to be, but to help you see where you are, choose
-  where you’re going, so that you have visibility on where to commit your time and energy in life.
+  My goal isn’t to tell you who to be. It’s to help you see where you are, choose where you’re going, and
+  help you decide where to commit your time and energy to what matters most.
 
-  Outside of Modern Compass, I’m a product leader in the tech world, a husband, and a dad.
-  Those roles keep me grounded in the real challenges of balancing ambition, responsibility, and
-  relationships. Everything I create here is tested in that reality. No abstract theory, just
-  clarity that works.
+  Outside of Modern Compass, I’m a product leader in tech, a husband, and a dad, a range of roles that
+  keep everything I share grounded in real life.
 
-  Always follow your compass.
+  Always...follow your compass.
 `;
+
+// List the practical outcomes shared through books, newsletters, social platforms and tools.
+const shares = [
+  'Strengthen your sense of self',
+  'Deepen trust',
+  'Develop character',
+  'Build relationships',
+];
 
 const credentials = [
   'I’ve spent over a decade leading complex projects in tech and the last 5 years launching global products, turning messy topics into clear strategies and value',
@@ -43,26 +45,35 @@ const credentials = [
 ---
 <Layout>
   <section class="about">
-    <!-- Headshot displayed as a round image -->
-    <img src="/1645116024072.jpeg" alt="Headshot of Josh Imholte" class="headshot" />
-    <h1>About</h1>
-    <h2>{name}</h2>
-    <p class="bio">{bio}</p>
-    <h3>Why trust The Modern Compass?</h3>
-    <ul class="cred-list">
-      {credentials.map((cred) => (
-        <li>{cred}</li>
-      ))}
-    </ul>
+    <div class="about-text">
+      <h1>About</h1>
+      <p class="bio">{bio}</p>
+      <!-- Introduce the areas of focus offered through Modern Compass -->
+      <p class="intro-share">Through my book, newsletter, TikTok, and tools, I share practical ways to:</p>
+      <ul class="share-list">
+        {shares.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <h3>Why trust The Modern Compass?</h3>
+      <ul class="cred-list">
+        {credentials.map((cred) => (
+          <li>{cred}</li>
+        ))}
+      </ul>
+    </div>
+    <!-- Headshot on the right to balance the layout -->
+    <img src="/1645116024072.jpeg" alt="Headshot" class="headshot" />
   </section>
 </Layout>
 
 <style>
   .about {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 800px;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 900px;
+    align-items: flex-start;
   }
 
   .about h1 {
@@ -73,6 +84,13 @@ const credentials = [
   .about h2 {
     font-size: 1.5rem;
     color: var(--secondary-color);
+  }
+
+  .about-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .bio {
@@ -99,7 +117,17 @@ const credentials = [
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    align-self: center;
-    margin-bottom: 1rem;
+    align-self: flex-start;
+    margin-left: 1rem;
+  }
+
+  .share-list {
+    list-style: disc;
+    margin-left: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .intro-share {
+    font-weight: 500;
   }
 </style>
