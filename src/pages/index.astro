@@ -92,10 +92,18 @@ const tiles = [
     line-height: 1.6;
   }
 
+  /*
+   * Style the call-to-action button to stand out against the hero gradient.  Instead of
+   * using a white background (which disappeared into the translucent overlay),
+   * apply the primary brand colour for the button background and invert the
+   * text colour to white for high contrast.  On hover, shift the background
+   * to the secondary colour (blue) while keeping the text white.  This makes
+   * the button clearly visible and reinforces the brand palette.
+   */
   .cta-button {
     display: inline-block;
-    background-color: #fff;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
@@ -104,8 +112,8 @@ const tiles = [
   }
 
   .cta-button:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: #fff;
   }
 
   .tiles {
