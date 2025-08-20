@@ -6,24 +6,45 @@ import Layout from '../layouts/Layout.astro';
 // mission.  Consider including a portrait or additional images by
 // uploading them to the `public` folder and referencing them here.
 
-const name = 'Your Name';
+const name = 'Josh Imholte';
 const bio = `
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Etiam convallis
-  dignissim massa, sit amet laoreet lectus blandit non.  Suspendisse potenti.
-  Donec ac nisi nec arcu interdum aliquet.  Phasellus auctor justo a
-  faucibus dignissim.  Curabitur vel nibh non ipsum pharetra tincidunt vel
-  sit amet nunc.  Quisque auctor mi ut metus vulputate, ac varius dui
-  malesuada.
+  Hi, my names Josh Imholte. For much of my life, I tried to navigate without a clear guide.
+  Like many people, I entered adulthood full of ambition but light on direction. Progress came,
+  but often slow and at times didn't move me forward.
+
+  Modern Compass grew out of that lived experience. I wanted a way to cut through noise, surface
+  what really matters, and create a framework that helps people act with clarity instead of
+  drifting on intention alone.
+
+  Along the way, I discovered something important: growth isn’t always about collecting more
+  advice or following someone else’s formula. It’s about building your own compass, taking
+  small actions so that you build your own compass you can trust.
+
+  That’s what this project is about. Through my book, newsletter, TikTok, and tools, I share
+  practical ways to strengthen your sense of self, deepen trust, develop character, and build
+  relationships. My goal isn’t to tell you who to be, but to help you see where you are, choose
+  where you’re going, so that you have visibility on where to commit your time and energy in life.
+
+  Outside of Modern Compass, I’m a product leader in the tech world, a husband, and a dad.
+  Those roles keep me grounded in the real challenges of balancing ambition, responsibility, and
+  relationships. Everything I create here is tested in that reality. No abstract theory, just
+  clarity that works.
+
+  Always follow your compass.
 `;
 
 const credentials = [
-  'Certified Life Coach and mindfulness practitioner',
-  'Featured speaker at regional wellness conferences',
-  'Contributor to several spirituality and personal growth publications',
+  'I’ve spent over a decade leading complex projects in tech and the last 5 years launching global products, turning messy topics into clear strategies and value',
+  'My writing and tools are built from lived experience, tested in the realities of work, family, and growth',
+  'I don’t preach quick fixes. I focus on frameworks that are easy to understand',
+  'Modern Compass is designed to be actionable and approachable with activities, tools, and a growing community to help',
+  'I believe clarity beats complexity. If it doesn’t simplify your life or nudge you to move forward, it doesn’t belong'
 ];
 ---
 <Layout>
   <section class="about">
+    <!-- Headshot displayed as a round image -->
+    <img src="/1645116024072.jpeg" alt="Headshot of Josh Imholte" class="headshot" />
     <h1>About</h1>
     <h2>{name}</h2>
     <p class="bio">{bio}</p>
@@ -70,5 +91,15 @@ const credentials = [
     list-style: disc;
     margin-left: 1.25rem;
     line-height: 1.5;
+  }
+
+  /* Style the headshot image to be round and appropriately sized */
+  .headshot {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-self: center;
+    margin-bottom: 1rem;
   }
 </style>
