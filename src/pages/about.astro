@@ -35,6 +35,11 @@ const shares = [
   'Build relationships',
 ];
 
+// Author name used for the caption beneath the headshot.  Reintroducing the
+// name here adds a personal touch without placing it prominently in the
+// main heading.
+const authorName = 'Josh Imholte';
+
 const credentials = [
   'I’ve spent over a decade leading complex projects in tech and the last 5 years launching global products, turning messy topics into clear strategies and value',
   'My writing and tools are built from lived experience, tested in the realities of work, family, and growth',
@@ -62,8 +67,13 @@ const credentials = [
         ))}
       </ul>
     </div>
-    <!-- Headshot on the right to balance the layout -->
-    <img src="/1645116024072.jpeg" alt="Headshot" class="headshot" />
+    <!-- Headshot on the right to balance the layout.  The author name
+         appears as a caption below the image to personalize the page
+         without cluttering the main heading. -->
+    <div class="photo-container">
+      <img src="/1645116024072.jpeg" alt="Headshot" class="headshot" />
+      <p class="photo-name">{authorName}</p>
+    </div>
   </section>
 </Layout>
 
@@ -119,6 +129,21 @@ const credentials = [
     object-fit: cover;
     align-self: flex-start;
     margin-left: 1rem;
+  }
+
+  /* Container for the photo and its caption */
+  .photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Caption beneath the headshot */
+  .photo-name {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
   }
 
   .share-list {

@@ -31,7 +31,19 @@ const tiles = [
         The Modern Compass guides you on your journey with insightful
         resources and an authentic community to support your growth.
       </p>
-      <a href="/newsletter" class="cta-button">Subscribe</a>
+      <!-- Embed Beehiiv subscribe form directly on the home page.  This replaces
+           the simple subscribe button with an inline form powered by Beehiiv. -->
+      <div class="newsletter-embed">
+        <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+        <iframe
+          src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
+          class="beehiiv-embed"
+          data-test-id="beehiiv-embed"
+          frameborder="0"
+          scrolling="no"
+          style="width: 100%; height: 439px; margin: 0; border-radius: 0; background-color: transparent; box-shadow: 0 0; max-width: 100%;"
+        ></iframe>
+      </div>
     </div>
   </section>
 
@@ -149,5 +161,12 @@ const tiles = [
   .tile:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Container for the Beehiiv subscription form on the home page */
+  .newsletter-embed {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
   }
 </style>
