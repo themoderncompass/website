@@ -1,3 +1,6 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
 <Layout>
   <section class="hero">
     <div class="hero-content">
@@ -33,7 +36,6 @@
   }
 
   .always-follow {
-    /* Gradient-filled text */
     background: linear-gradient(45deg,
       #b324a7, /* purple */
       #0087c9, /* blue */
@@ -44,7 +46,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;   /* Firefox */
     color: transparent;      /* Firefox */
-    display: inline-block;   /* avoids clipping in some browsers */
+    display: inline-block;
   }
 
   .hero-subtext {
@@ -53,23 +55,4 @@
 
   .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 0.75rem;
-    font-weight: 700;
-  }
-
-  .hero p {
-    font-size: 1.125rem;
-    margin-bottom: 1.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-  }
-
-  .newsletter-embed {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-</style>
+    margin-bo
