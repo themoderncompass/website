@@ -8,14 +8,16 @@ const year = new Date().getFullYear();
 // intentionally removed per the latest design guidance to reduce
 // clutter and focus on core offerings.  You can reintroduce it by
 // adding an object with an `href` and `label` as needed.
-const navLinks = [
-  { href: '/book', label: 'Book' },
-  { href: '/newsletter', label: 'Newsletter' },
-  { href: '/shop', label: 'Shop' },
-  { href: '/resources', label: 'Resources' },
+<ul class="nav-links center">
+  <li><a href="/book">Book</a></li>
+  <li><a href="/newsletter">Newsletter</a></li>
+  <li><a href="/shop">Shop</a></li>
+  <li><a href="/resources">Resources</a></li>
+</ul>
 
-  { href: '/about', label: 'About' },
-];
+<ul class="nav-links right">
+  <li><a href="/about">About</a></li>
+</ul>
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -33,11 +35,6 @@ const navLinks = [
         <a href="/" class="logo">
           <img src="/logo.png" alt="The Modern Compass logo" />
         </a>
-        <ul class="nav-links">
-          {navLinks.map(({ href, label }) => (
-            <li><a href={href}>{label}</a></li>
-          ))}
-        </ul>
       </nav>
     </header>
     <main>
@@ -129,6 +126,14 @@ const navLinks = [
       display: flex;
       gap: 1rem;
     }
+
+.nav-links.center {
+  margin: 0 auto;
+}
+
+.nav-links.right {
+  margin-left: auto;
+}
 
     .nav-links li a {
       color: var(--text-color);
