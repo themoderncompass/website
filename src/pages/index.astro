@@ -1,38 +1,11 @@
----
-import Layout from '../layouts/Layout.astro';
-
-// Define the content for the home page.  The hero introduces the
-// Modern Compass mission and provides a call‑to‑action for visitors
-// to subscribe to the newsletter.  Below the hero are three tiles
-// linking to key areas of the site: the book, the shop, and the
-// events calendar.  Adjust the text below to better reflect your
-// brand voice and offering.
-
-// Define the homepage tiles.  The events tile has been removed to simplify
-// navigation and focus visitors on core offerings like the book and shop.
-const tiles = [
-  {
-    href: '/book',
-    title: 'Book',
-    description: 'Learn about our upcoming book and read a sample excerpt.',
-  },
-  {
-    href: '/shop',
-    title: 'Shop',
-    description: 'Discover curated products in our Etsy shop.',
-  },
-];
----
 <Layout>
   <section class="hero">
     <div class="hero-content">
-      <h1>Always Follow Your Compass</h1>
-      <p>
-        The Modern Compass guides you on your journey with insightful
+      <h1 class="always-follow">Always Follow Your Compass</h1>
+      <p class="hero-subtext">
+        The Modern Compass guides you on your journey with insightful
         resources and an authentic community to support your growth.
       </p>
-      <!-- Embed Beehiiv subscribe form directly on the home page.  This replaces
-           the simple subscribe button with an inline form powered by Beehiiv. -->
       <div class="newsletter-embed">
         <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
         <iframe
@@ -46,15 +19,6 @@ const tiles = [
       </div>
     </div>
   </section>
-
-  <section class="tiles">
-    {tiles.map(({ href, title, description }) => (
-      <a href={href} class="tile">
-        <h2>{title}</h2>
-        <p>{description}</p>
-      </a>
-    ))}
-  </section>
 </Layout>
 
 <style>
@@ -62,31 +26,29 @@ const tiles = [
     position: relative;
     padding: 2rem 0;
     text-align: center;
-    background: var(--gradient);
-    color: #fff;
+    background: #ffffff;
+    color: #000000; /* default text color; the H1 will override */
     border-radius: 0.5rem;
     overflow: hidden;
   }
 
-  /* Apply a subtle white overlay over the hero gradient to soften
-     the colours without changing the underlying palette.  The overlay
-     is implemented with a pseudo-element so that it doesn’t wrap the
-     content. */
-  .hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.2);
-    z-index: 0;
+  .always-follow {
+    /* Gradient-filled text */
+    background: linear-gradient(45deg,
+      #b324a7, /* purple */
+      #0087c9, /* blue */
+      #f5c242, /* yellow */
+      #f76a3e  /* orange */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;   /* Firefox */
+    color: transparent;      /* Firefox */
+    display: inline-block;   /* avoids clipping in some browsers */
   }
 
-  /* Ensure the hero content sits above the overlay */
-  .hero-content {
-    position: relative;
-    z-index: 1;
+  .hero-subtext {
+    color: #000000;
   }
 
   .hero h1 {
@@ -104,70 +66,10 @@ const tiles = [
     line-height: 1.6;
   }
 
-  /*
-   * Style the call-to-action button to stand out against the hero gradient.  Instead of
-   * using a white background (which disappeared into the translucent overlay),
-   * apply the primary brand colour for the button background and invert the
-   * text colour to white for high contrast.  On hover, shift the background
-   * to the secondary colour (blue) while keeping the text white.  This makes
-   * the button clearly visible and reinforces the brand palette.
-   */
-  .cta-button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.2s ease, color 0.2s ease;
+  .newsletter-embed {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
-  .cta-button:hover {
-    background-color: var(--secondary-color);
-    color: #fff;
-  }
-
-  .tiles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-
-  .tile {
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-decoration: none;
-    color: var(--text-color);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .tile h2 {
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
-  }
-
-  .tile p {
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
-
-  .tile:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Container for the Beehiiv subscription form on the home page */
-.newsletter-embed {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center; /* vertically center the Beehiiv iframe */
-}
 </style>
