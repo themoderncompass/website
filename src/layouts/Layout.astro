@@ -8,16 +8,7 @@ const year = new Date().getFullYear();
 // intentionally removed per the latest design guidance to reduce
 // clutter and focus on core offerings.  You can reintroduce it by
 // adding an object with an `href` and `label` as needed.
-<ul class="nav-links center">
-  <li><a href="/book">Book</a></li>
-  <li><a href="/newsletter">Newsletter</a></li>
-  <li><a href="/shop">Shop</a></li>
-  <li><a href="/resources">Resources</a></li>
-</ul>
 
-<ul class="nav-links right">
-  <li><a href="/about">About</a></li>
-</ul>
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -31,11 +22,20 @@ const year = new Date().getFullYear();
   </head>
   <body>
     <header>
-      <nav>
-        <a href="/" class="logo">
-          <img src="/logo.png" alt="The Modern Compass logo" />
-        </a>
-      </nav>
+ <nav>
+  <a href="/" class="logo">
+    <img src="/logo.png" alt="The Modern Compass logo" />
+  </a>
+  <ul class="nav-links center">
+    <li><a href="/book">Book</a></li>
+    <li><a href="/newsletter">Newsletter</a></li>
+    <li><a href="/shop">Shop</a></li>
+    <li><a href="/resources">Resources</a></li>
+  </ul>
+  <ul class="nav-links right">
+    <li><a href="/about">About</a></li>
+  </ul>
+</nav>
     </header>
     <main>
       <slot />
@@ -101,14 +101,14 @@ const year = new Date().getFullYear();
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
 
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem;
-    }
+nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* logo | center group | about */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
 
     .logo img {
       /*
@@ -127,13 +127,8 @@ const year = new Date().getFullYear();
       gap: 1rem;
     }
 
-.nav-links.center {
-  margin: 0 auto;
-}
-
-.nav-links.right {
-  margin-left: auto;
-}
+.nav-links.center { justify-self: center; }
+.nav-links.right  { justify-self: end; }
 
     .nav-links li a {
       color: var(--text-color);
