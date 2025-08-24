@@ -36,6 +36,18 @@ const year = new Date().getFullYear();
     <li><a href="/about">About</a></li>
   </ul>
 </nav>
+    <button id="menu-button" class="menu-button">Menu</button>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuButton = document.getElementById('menu-button');
+        const nav = document.querySelector('nav');
+        menuButton?.addEventListener('click', () => {
+          nav.classList.toggle('open');
+        });
+      });
+    </script>
+
+
     </header>
     <main>
       <slot />
@@ -46,6 +58,26 @@ const year = new Date().getFullYear();
   </body>
   <style global>
     /* Define colour palette derived from the Modern Compass logo */
+  /* Responsive navigation for portrait mode */
+  @media (orientation: portrait) {
+    nav ul.nav-links {
+      display: none;
+    }
+    nav.open ul.nav-links {
+      display: block;
+    }
+    #menu-button {
+      display: inline-block;
+      margin-left: 1rem;
+    }
+  }
+
+  @media (orientation: landscape) {
+    #menu-button {
+      display: none;
+    }
+  }
+
     :root {
       /*
        * Updated colour palette to better match the Modern Compass logo.  The
