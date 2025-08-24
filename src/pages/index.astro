@@ -5,31 +5,29 @@ import Layout from '../layouts/Layout.astro';
   <section class="hero">
     <div class="hero-content">
       <h1 class="always-follow">Modern Compass</h1>
-  </p>
-  <p class="text-lg max-w-2xl mx-auto text-gray-700">
-   Helping you navigate across four life directions: self, relationships, trust, and character.
-  </p>
-      <div class="newsletter-embed">
-       <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-<div class="newsletter-embed text-center">
-  <!-- Promo first -->
-  <img 
-    src="/Newsletter%20Promo.png" 
-    alt="Join 100+ subscribers and get this digital asset free" 
-    style="width: 400px; height: auto; margin: 0 auto 8px auto;" 
-  />
+      <p class="text-lg max-w-2xl mx-auto text-gray-700">
+        Helping you navigate across four life directions: self, relationships, trust, and character.
+      </p>
 
-  <!-- Beehiiv form -->
-  <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-  <iframe
-    src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
-    class="beehiiv-embed"
-    data-test-id="beehiiv-embed"
-    frameborder="0"
-    scrolling="no"
-    style="width: 100%; height: 439px; margin: 0; border-radius: 0; background-color: transparent; box-shadow: 0 0; max-width: 100%; display: block;"
-  ></iframe>
-</div>
+      <!-- Newsletter block: promo above form, tight spacing -->
+      <div class="newsletter-embed">
+        <img
+          src="/Newsletter%20Promo.png"
+          alt="Join 100+ subscribers and get this digital asset free"
+          style="width: 300px; height: auto; margin: 0 auto;"
+        />
+
+        <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+        <iframe
+          src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
+          class="beehiiv-embed"
+          data-test-id="beehiiv-embed"
+          frameborder="0"
+          scrolling="no"
+          style="width: 100%; height: 439px; margin: 0; border-radius: 0; background-color: transparent; box-shadow: 0 0; max-width: 100%; display: block; line-height: 0;"
+        ></iframe>
+      </div>
+    </div>
   </section>
 </Layout>
 
@@ -39,29 +37,39 @@ import Layout from '../layouts/Layout.astro';
     padding: 2rem 0;
     text-align: center;
     background: #ffffff;
-    color: #000000; /* default text color; the H1 will override */
+    color: #000000;
     border-radius: 0.5rem;
     overflow: hidden;
   }
 
   .always-follow {
-    background: linear-gradient(45deg,
-      #b324a7, /* purple */
-      #0087c9, /* blue */
-      #f5c242, /* yellow */
-      #f76a3e  /* orange */
-    );
+    background: linear-gradient(45deg, #b324a7, #0087c9, #f5c242, #f76a3e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;   /* Firefox */
-    color: transparent;      /* Firefox */
+    background-clip: text;
+    color: transparent;
     display: inline-block;
-  }
-
-  .hero-subtext {
-    color: #000000;
   }
 
   .hero h1 {
     font-size: 2.5rem;
-    margin-bo
+  }
+
+  /* Tight control over the promo + Beehiiv spacing */
+  .newsletter-embed {
+    display: grid;
+    justify-items: center;
+    row-gap: 8px;           /* controls the space between promo and form */
+    margin: 0;
+  }
+  .newsletter-embed > * {
+    margin: 0 !important;   /* kill hidden top/bottom margins */
+    padding: 0 !important;
+    line-height: 0;
+  }
+  .newsletter-embed .beehiiv-embed {
+    display: block;
+    margin: 0 !important;
+    border: 0;
+  }
+</style>
