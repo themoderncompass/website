@@ -9,12 +9,12 @@ import Layout from '../layouts/Layout.astro';
         Helping you navigate across four life directions: self, relationships, trust, and character.
       </p>
 
-      <!-- Newsletter block: promo above form, tight spacing -->
+      <!-- Promo directly coupled to Beehiiv -->
       <div class="newsletter-embed">
         <img
           src="/Newsletter%20Promo.png"
           alt="Join 100+ subscribers and get this digital asset free"
-          style="width: 300px; height: auto; margin: 0 auto;"
+          style="width:300px; height:auto; margin:0 auto;"
         />
 
         <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
@@ -24,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
           data-test-id="beehiiv-embed"
           frameborder="0"
           scrolling="no"
-          style="width: 100%; height: 439px; margin: 0; border-radius: 0; background-color: transparent; box-shadow: 0 0; max-width: 100%; display: block; line-height: 0;"
+          style="width:100%; height:439px; margin:0; border-radius:0; background-color:transparent; box-shadow:0 0; max-width:100%; display:block;"
         ></iframe>
       </div>
     </div>
@@ -41,7 +41,6 @@ import Layout from '../layouts/Layout.astro';
     border-radius: 0.5rem;
     overflow: hidden;
   }
-
   .always-follow {
     background: linear-gradient(45deg, #b324a7, #0087c9, #f5c242, #f76a3e);
     -webkit-background-clip: text;
@@ -51,25 +50,22 @@ import Layout from '../layouts/Layout.astro';
     display: inline-block;
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  /* Tight control over the promo + Beehiiv spacing */
+  /* Couple promo to Beehiiv tightly */
   .newsletter-embed {
     display: grid;
     justify-items: center;
-    row-gap: 8px;           /* controls the space between promo and form */
+    row-gap: 8px;             /* base gap */
     margin: 0;
   }
   .newsletter-embed > * {
-    margin: 0 !important;   /* kill hidden top/bottom margins */
+    margin: 0 !important;
     padding: 0 !important;
     line-height: 0;
   }
   .newsletter-embed .beehiiv-embed {
     display: block;
-    margin: 0 !important;
-    border: 0;
+    margin-top: -16px !important;   /* pull iframe up under the promo */
   }
+
+  /* If you want it even tighter, try -20px. If too tight, use -8px. */
 </style>
