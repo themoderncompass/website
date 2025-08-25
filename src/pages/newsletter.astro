@@ -1,58 +1,100 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-// Newsletter page pointing visitors to your Beehiiv subscription page.  Replace
-// the newsletterLink constant with your actual Beehiiv subdomain URL.
-
-// The Beehiiv subscription form is embedded below.  The script and iframe
-// provided by Beehiiv are included directly in the page to allow visitors
-// to subscribe without leaving the site.
-
 ---
+
 <Layout>
-  <section class="newsletter">
-    <h1>Newsletter</h1>
-    <!-- Embed Beehiiv subscribe form directly on the newsletter page -->
+  <section class="newsletter mx-auto">
+    <!-- Intro -->
+    <h1 class="page-title">Modern Compass Newsletter</h1>
+    <p class="intro">
+      The <em>Modern Compass</em> newsletter gives you clarity without fluff, frameworks that work,
+      and stories that stick. Every issue is designed to help you navigate life with more purpose
+      and focus.
+    </p>
+
+    <!-- Promo Graphic -->
+    <div class="promo">
+      <img src="/images/newsletter-promo.png" alt="Modern Compass newsletter promo" loading="lazy" />
+    </div>
+
+    <!-- Beehiiv Subscribe Embed -->
     <div class="newsletter-embed">
       <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
       <iframe
         src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
         class="beehiiv-embed"
-        data-test-id="beehiiv-embed"
         frameborder="0"
         scrolling="no"
-        style="width: 100%; height: 439px; margin: 0; border-radius: 0; background-color: transparent; box-shadow: 0 0; max-width: 100%;"
+        title="Subscribe to Modern Compass on Beehiiv"
       ></iframe>
     </div>
-<section aria-labelledby="why-subscribe" class="max-w-2xl mx-auto">
-  <h3 id="why-subscribe" class="text-2xl font-semibold tracking-tight mb-3">
-    Why Subscribe to <em>Modern Compass</em>?
-  </h3>
 
-  <p class="text-base text-gray-700 mb-4">
-    Most personal growth content is noise made up of quick tips and abstract concepts that may be difficult to approach and implement.
-    <em>Modern Compass</em> is different.
-  </p>
+    <!-- Top Issues -->
+    <section class="top-issues">
+      <h2>Top Issues</h2>
 
-  <p class="text-base font-medium mb-2">Each issue gives you:</p>
-  <ul class="list-disc ml-6 space-y-1 mb-4">
-    <li><strong>Clarity without fluff.</strong> Big ideas distilled into practical takeaways.</li>
-    <li><strong>Proven frameworks.</strong> Tools like <em>TimeOS</em> and the <em>Intention vs. Action</em> activity to guide real decisions.</li>
-    <li><strong>Action over theory.</strong> Exercises and reflections you can apply immediately.</li>
-    <li><strong>Relatable depth.</strong> Stories and examples that stick, not abstract jargon.</li>
-  </ul>
+      <div class="card-grid">
+        <!-- Card 1 -->
+        <article class="flip-card">
+          <button class="flip-inner">
+            <div class="flip-face flip-front">
+              <h3>Resonance &amp; The Power of Two</h3>
+              <p class="kicker">Why we click with some people and not others</p>
+            </div>
+            <div class="flip-face flip-back">
+              <p><strong>Snapshot:</strong> Resonance forms when two signals align. The Power of Two
+                focuses attention on two meaningful commonalities that create momentum.</p>
+              <p class="cta">Read the full issue →</p>
+            </div>
+          </button>
+        </article>
 
-  <p class="text-base text-gray-700 mb-4">
-    Subscribers also get early access to tools, digital downloads, and updates on the
-    <em>Modern Compass</em> book.
-  </p>
+        <!-- Card 2 -->
+        <article class="flip-card">
+          <button class="flip-inner">
+            <div class="flip-face flip-front">
+              <h3>Creative Equity Review</h3>
+              <p class="kicker">Track effort, compound wins, reduce guesswork</p>
+            </div>
+            <div class="flip-face flip-back">
+              <p><strong>Snapshot:</strong> A weekly audit to measure inputs, compounding signals, 
+                and directional gains so progress stays visible even when vanity metrics lag.</p>
+              <p class="cta">Read the full issue →</p>
+            </div>
+          </button>
+        </article>
+      </div>
+    </section>
 
-  <p class="text-base text-gray-900 font-medium">
-    This is not about chasing endless self‑improvement. It is about building the compass that helps you
-    navigate life with purpose, trust, and clarity.
-  </p>
-</section>
-    </p>
+    <!-- Why Subscribe (kept at bottom) -->
+    <section aria-labelledby="why-subscribe" class="why max-w-2xl mx-auto">
+      <h3 id="why-subscribe" class="text-2xl font-semibold tracking-tight mb-3">
+        Why Subscribe to <em>Modern Compass</em>?
+      </h3>
+
+      <p class="text-base text-gray-700 mb-4">
+        Most personal growth content is noise made up of quick tips and abstract concepts that may be difficult to approach and implement.
+        <em>Modern Compass</em> is different.
+      </p>
+
+      <p class="text-base font-medium mb-2">Each issue gives you:</p>
+      <ul class="list-disc ml-6 space-y-1 mb-4">
+        <li><strong>Clarity without fluff.</strong> Big ideas distilled into practical takeaways.</li>
+        <li><strong>Proven frameworks.</strong> Tools like <em>TimeOS</em> and the <em>Intention vs. Action</em> activity to guide real decisions.</li>
+        <li><strong>Action over theory.</strong> Exercises and reflections you can apply immediately.</li>
+        <li><strong>Relatable depth.</strong> Stories and examples that stick, not abstract jargon.</li>
+      </ul>
+
+      <p class="text-base text-gray-700 mb-4">
+        Subscribers also get early access to tools, digital downloads, and updates on the
+        <em>Modern Compass</em> book.
+      </p>
+
+      <p class="text-base text-gray-900 font-medium">
+        This is not about chasing endless self-improvement. It is about building the compass that helps you
+        navigate life with purpose, trust, and clarity.
+      </p>
+    </section>
   </section>
 </Layout>
 
@@ -60,40 +102,87 @@ import Layout from '../layouts/Layout.astro';
   .newsletter {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    max-width: 700px;
+    gap: 2rem;
+    max-width: 900px;
+    padding: 1rem;
   }
 
-  .newsletter h1 {
+  .page-title {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: #111827;
   }
 
-  .newsletter p {
-    font-size: 1rem;
-    line-height: 1.6;
+  .intro {
+    font-size: 1.1rem;
+    color: #374151;
   }
 
-  .subscribe-button {
-    display: inline-block;
-    background: var(--secondary-color);
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.2s ease;
-    max-width: fit-content;
+  .promo img {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
   }
 
-  .subscribe-button:hover {
-    background: var(--accent-color);
-  }
-
-  /* Container for the Beehiiv subscription form on the newsletter page */
   .newsletter-embed {
-    margin-top: 1.5rem;
     display: flex;
     justify-content: center;
   }
+
+  .beehiiv-embed {
+    width: 100%;
+    max-width: 640px;
+    height: 460px;
+    border: 0;
+    background: transparent;
+  }
+
+  .top-issues h2 {
+    font-size: 1.5rem;
+    color: #111827;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 720px) {
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* Flip Cards */
+  .flip-card {
+    perspective: 1000px;
+  }
+  .flip-inner {
+    width: 100%;
+    height: 220px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+  }
+  .flip-face {
+    position: absolute;
+    inset: 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #fff;
+    backface-visibility: hidden;
+    padding: 1rem;
+    display: grid;
+    align-content: center;
+    gap: 0.4rem;
+    transition: transform 0.6s ease;
+  }
+  .flip-front h3 { margin: 0; font-size: 1.1rem; }
+  .flip-front .kicker { color: #6b7280; }
+  .flip-back { transform: rotateY(180deg); }
+  .flip-inner:hover .flip-front,
+  .flip-inner:focus-visible .flip-front { transform: rotateY(180deg); }
+  .flip-inner:hover .flip-back,
+  .flip-inner:focus-visible .flip-back { transform: rotateY(360deg); }
+  .flip-back .cta { color: var(--primary-color, #0ea5e9); font-weight: 600; }
 </style>
