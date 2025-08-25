@@ -13,11 +13,12 @@ import Layout from '../layouts/Layout.astro';
     </p>
 
     <!-- Promo Graphic -->
-   <div class="promo">
+<div class="promo">
   <img
     src="/Newsletter%20Promo.png"
     alt="Modern Compass newsletter promo"
     loading="lazy"
+    class="promo-img"
   />
 </div>
 
@@ -110,6 +111,14 @@ import Layout from '../layouts/Layout.astro';
     max-width: 900px;
     padding: 1rem;
   }
+
+.promo-img {
+  max-width: 350px;   /* shrink to whatever max size you like */
+  width: 100%;        /* stays responsive down to mobile */
+  height: auto;
+  display: block;
+  margin: 0 auto;     /* centers the image */
+}
 
   .page-title {
     font-size: 2rem;
