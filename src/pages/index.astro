@@ -36,32 +36,52 @@ import Layout from '../layouts/Layout.astro';
         There is a lot of great self improvement books out there, but many fall too academic and unapproachable, or great concepts in theory, but too abstract to apply. Modern Compass is different.
         It is built around four clear directions that are simple to remember and deep enough to guide real progress, and it becomes your compass for tracking your progress.Each direction has 4 layers within it, building on top of each other.
       </p>
-         <img src="/Modern%20Compass%20Layers.png" alt="Modern Compass layers graphic" style="display:block; width:100%; max-width:700px; margin: 12px auto;" />
-       <div class="grid">
+       <img src="/Modern%20Compass%20Layers.png" alt="Modern Compass layers graphic" style="display:block; width:100%; max-width:700px; margin: 12px auto;" />
+    <p class="sublead" style="text-align:center; margin-bottom:16px;">
+  Each direction builds in layers — you start from the foundation at the bottom 
+  and grow upward step by step.
+</p>
+<div class="grid">
+  <div class="card">
+    <h3 class="h3">Self</h3>
+    <ul>
+      <li>Control</li>
+      <li>Confidence</li>
+      <li>Awareness</li>
+      <li>Worth</li>
+    </ul>
+  </div>
 
-       <div class="card">
-  <h3 class="h3">Self</h3>
-  <ul>
-    <li>Control</li>
-    <li>Confidence</li>
-    <li>Worth</li>
-    <li>Awareness</li>
-  </ul>
+  <div class="card">
+    <h3 class="h3">Trust</h3>
+    <ul>
+      <li>Tenets of Trust</li>
+      <li>Trust in Humanity</li>
+      <li>Informed Trust</li>
+      <li>Profound Trust</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3 class="h3">Character</h3>
+    <ul>
+      <li>Environmental</li>
+      <li>Developed</li>
+      <li>Authentic</li>
+      <li>Transcending</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3 class="h3">Relationships</h3>
+    <ul>
+      <li>Empathy</li>
+      <li>Resonance</li>
+      <li>Affinity</li>
+      <li>Loyalty</li>
+    </ul>
+  </div>
 </div>
-        <div class="card">
-          <h3 class="h3">Trust</h3>
-          <p>Tenets of Trust>Trust in Humaity>Informed Trust>Profound Trust</p>
-        </div>
-        <div class="card">
-          <h3 class="h3">Character</h3>
-          <p>Environmental>Developed>Authentic>Transending</p>
-        </div>
-        <div class="card">
-          <h3 class="h3">Relationships</h3>
-          <p>Empathy>Resonance>Affinity>Loyalty</p>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- WHY IT MATTERS -->
@@ -106,6 +126,15 @@ import Layout from '../layouts/Layout.astro';
   .wrap.narrow { max-width: 800px; }
   .section { padding: 56px 0; background: #ffffff; color: #111; }
   .section.alt { background: #f8fafc; }
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.card li {
+  margin-bottom: 4px;
+}
 
   /* Hero */
  .hero { padding: 56px 0 12px; text-align: center; background: #ffffff; color: #111; }
