@@ -1,78 +1,158 @@
 ---
-layout: "../layouts/BaseLayout.astro"
+import Layout from '../layouts/Layout.astro';
+
+// About page providing a biography and credibility information.
+// Replace the placeholder text with your own story, credentials and
+// mission.  Consider including a portrait or additional images by
+// uploading them to the `public` folder and referencing them here.
+
+// Removed the unused name constant. The biography below has been revised to reflect a concise,
+// reader‑focused narrative and is used to populate the main content of the about page.
+const bio = `
+  For years in my 20's and 30's I tried to navigate life without a clear guide, full of ambition but
+  short on direction. Progress came slowly, often in circles.
+
+  Modern Compass grew out of that experience. It’s my way of cutting through noise and surfacing what
+  really matters so you can act with clarity instead of drifting on intention alone.
+
+  I’ve learned growth isn’t always about collecting more advice or following someone else’s formula. It’s
+  about building your own compass and taking small actions that help you trust yourself more with every step.
+
+  My goal isn’t to tell you who to be. It’s to help you see where you are, choose where you’re going, and
+  help you decide where to commit your time and energy to what matters most.
+
+  Outside of Modern Compass, I’m a product leader in tech, a husband, and a dad, a range of roles that
+  keep everything I share grounded in real life.
+
+  Always...follow your compass.
+`;
+
+// List the practical outcomes shared through books, newsletters, social platforms and tools.
+const shares = [
+  'Strengthen your sense of self',
+  'Deepen trust',
+  'Develop character',
+  'Build relationships',
+];
+
+// Author name used for the caption beneath the headshot.  Reintroducing the
+// name here adds a personal touch without placing it prominently in the
+// main heading.
+const authorName = 'Josh Imholte';
+
+const credentials = [
+  'I’ve spent over a decade leading complex projects in tech and the last 5 years launching global products, turning messy topics into clear strategies and value',
+  'My writing and tools are built from lived experience, tested in the realities of work, family, and growth',
+  'I don’t preach quick fixes. I focus on frameworks that are easy to understand',
+  'Modern Compass is designed to be actionable and approachable with activities, tools, and a growing community to help',
+  'I believe clarity beats complexity. If it doesn’t simplify your life or nudge you to move forward, it doesn’t belong'
+];
 ---
+<Layout>
+  <section class="about">
+    <div class="about-text">
+      <h1>About</h1>
+      <p class="bio">{bio}</p>
+      <!-- Introduce the areas of focus offered through Modern Compass -->
+      <p class="intro-share">Through my book, newsletter, TikTok, and tools, I share practical ways to:</p>
+      <ul class="share-list">
+        {shares.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <h3>Why trust The Modern Compass?</h3>
+      <ul class="cred-list">
+        {credentials.map((cred) => (
+          <li>{cred}</li>
+        ))}
+      </ul>
+    </div>
+    <!-- Headshot on the right to balance the layout.  The author name
+         appears as a caption below the image to personalize the page
+         without cluttering the main heading. -->
+    <div class="photo-container">
+      <img src="/1645116024072.jpeg" alt="Headshot" class="headshot" />
+      <p class="photo-name">{authorName}</p>
+    </div>
+  </section>
+</Layout>
 
-<!--
-  This updated about page moves the headshot below the main text instead of keeping it to the right.  
-  It also adds a TikTok button inviting visitors to join 1k+ followers.  
-  Adjust the imported layout path as needed to match your project's structure.
--->
+<style>
+  .about {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 900px;
+    align-items: flex-start;
+  }
 
-<section class="about text-left flex flex-col gap-8 max-w-3xl mx-auto py-12" style="align-items: center;">
-  <div class="about-text flex flex-col gap-4 w-full">
-    <h1>About</h1>
-    <p class="bio">
-      For years in my 20&#39;s and 30&#39;s I tried to navigate life without a clear guide, full of ambition but
-      short on direction. Progress came slowly, often in circles.
-      
-      Modern Compass grew out of that experience. It’s my way of cutting through noise and surfacing what
-      really matters so you can act with clarity instead of drifting on intention alone.
-      
-      I’ve learned growth isn’t always about collecting more advice or following someone else’s formula. It’s
-      about building your own compass and taking small actions that help you trust yourself more with every step.
-      
-      My goal isn’t to tell you who to be. It’s to help you see where you are, choose where you’re going, and
-      help you decide where to commit your time and energy to what matters most.
-      
-      Outside of Modern Compass, I’m a product leader in tech, a husband, and a dad, a range of roles that
-      keep everything I share grounded in real life.
-      
-      Always...follow your compass.
-    </p>
-    <p class="intro-share font-semibold">
-      Through my book, newsletter, TikTok, and tools, I share practical ways to:
-    </p>
-    <ul class="share-list list-disc ml-5 space-y-1">
-      <li>Strengthen your sense of self</li>
-      <li>Deepen trust</li>
-      <li>Develop character</li>
-      <li>Build relationships</li>
-    </ul>
-    <h3>Why trust The&nbsp;Modern&nbsp;Compass?</h3>
-    <ul class="cred-list list-disc ml-5 space-y-1">
-      <li>I’ve spent over a decade leading complex projects in tech and the last 5 years launching global products, turning messy topics into clear strategies and value</li>
-      <li>My writing and tools are built from lived experience, tested in the realities of work, family, and growth</li>
-      <li>I don’t preach quick fixes. I focus on frameworks that are easy to understand</li>
-      <li>Modern Compass is designed to be actionable and approachable with activities, tools, and a growing community to help</li>
-      <li>I believe clarity beats complexity. If it doesn’t simplify your life or nudge you to move forward, it doesn’t belong</li>
-    </ul>
-  </div>
+  .about h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
 
-  <!-- Headshot moved below the text to sit underneath the content -->
-  <div class="photo-container flex flex-col items-center">
-    <img src="/1645116024072.jpeg" alt="Headshot" class="headshot rounded-full w-48 h-48 object-cover mt-4" />
-    <p class="photo-name mt-2 font-semibold">Josh Imholte</p>
-  </div>
+  .about h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+  }
 
-  <!-- TikTok follow button with follower callout -->
-  <div class="tiktok-cta mt-6 flex justify-center w-full">
-    <a
-      href="https://www.tiktok.com/@themoderncompass"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition"
-    >
-      <svg
-        class="w-5 h-5 mr-2"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 448 512"
-      >
-        <path
-          d="M448,209.9a210.1,210.1,0,0,1-122.4-39.2V353.6c0,87.7-71.2,158.9-158.9,158.9S7.8,441.3,7.8,353.6,79,194.7,166.7,194.7a158.3,158.3,0,0,1,29.8,2.8v82.3a79.4,79.4,0,1,0,49.6,74.8V0h79.5a130.5,130.5,0,0,0,127.4,129.4Z"
-        />
-      </svg>
-      Join 1k+ followers on TikTok
-    </a>
-  </div>
-</section>
+  .about-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bio {
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+
+  .about h3 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+  }
+
+  .cred-list {
+    list-style: disc;
+    margin-left: 1.25rem;
+    line-height: 1.5;
+  }
+
+  /* Style the headshot image to be round and appropriately sized */
+  .headshot {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-self: flex-start;
+    margin-left: 1rem;
+  }
+
+  /* Container for the photo and its caption */
+  .photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Caption beneath the headshot */
+  .photo-name {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+  }
+
+  .share-list {
+    list-style: disc;
+    margin-left: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .intro-share {
+    font-weight: 500;
+  }
+</style>
