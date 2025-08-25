@@ -38,37 +38,48 @@ import Layout from '../layouts/Layout.astro';
     <section class="top-issues">
       <h2>Top Issues</h2>
 
-      <div class="card-grid">
-        <!-- Card 1 -->
-        <article class="flip-card">
-          <button class="flip-inner">
-            <div class="flip-face flip-front">
-              <h3>Resonance &amp; The Power of Two</h3>
-              <p class="kicker">Why we click with some people and not others</p>
-            </div>
-            <div class="flip-face flip-back">
-              <p><strong>Snapshot:</strong> Resonance forms when two signals align. The Power of Two
-                focuses attention on two meaningful commonalities that create momentum.</p>
-              <p class="cta">Read the full issue →</p>
-            </div>
-          </button>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="flip-card">
-          <button class="flip-inner">
-            <div class="flip-face flip-front">
-              <h3>Creative Equity Review</h3>
-              <p class="kicker">Track effort, compound wins, reduce guesswork</p>
-            </div>
-            <div class="flip-face flip-back">
-              <p><strong>Snapshot:</strong> A weekly audit to measure inputs, compounding signals, 
-                and directional gains so progress stays visible even when vanity metrics lag.</p>
-              <p class="cta">Read the full issue →</p>
-            </div>
-          </button>
-        </article>
+  <div class="card-grid">
+  <!-- Card 1: Resonance & Power of Two -->
+  <article class="flip-card">
+    <button class="flip-inner">
+      <div class="flip-face flip-front">
+        <h3>Resonance &amp; The Power of Two</h3>
+        <p class="kicker">Why and how we click with some people</p>
       </div>
+      <div class="flip-face flip-back">
+        <p><strong>Snapshot:</strong> Resonance forms when two signals align. The Power of Two
+          focuses attention on two meaningful components that create momentum in a relationship.</p>
+        <a
+          href="https://newsletter.themoderncompass.io/p/the-power-of-two-the-simple-way-to-think-about-why-we-click"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cta"
+        >Read the full issue →</a>
+      </div>
+    </button>
+  </article>
+
+  <!-- Card 2: Creative Equity Review -->
+  <article class="flip-card">
+    <button class="flip-inner">
+      <div class="flip-face flip-front">
+        <h3>Creative Equity Review</h3>
+        <p class="kicker">Track effort, compound wins, reduce guesswork</p>
+      </div>
+      <div class="flip-face flip-back">
+        <p><strong>Snapshot:</strong> A weekly audit to measure inputs, compounding signals,
+          and directional gains so progress stays visible even when vanity metrics lag.</p>
+        <a
+          href="https://newsletter.themoderncompass.io/p/creative-equity-and-the-compounding-effect-of-creating"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cta"
+        >Read the full issue →</a>
+      </div>
+    </button>
+  </article>
+</div>
+
     </section>
 
     <!-- Why Subscribe (kept at bottom) -->
@@ -164,38 +175,74 @@ import Layout from '../layouts/Layout.astro';
     .card-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
-  /* Flip Cards */
-  .flip-card {
-    perspective: 1000px;
-  }
-  .flip-inner {
-    width: 100%;
-    height: 220px;
-    background: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    position: relative;
-  }
-  .flip-face {
-    position: absolute;
-    inset: 0;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    background: #fff;
-    backface-visibility: hidden;
-    padding: 1rem;
-    display: grid;
-    align-content: center;
-    gap: 0.4rem;
-    transition: transform 0.6s ease;
-  }
-  .flip-front h3 { margin: 0; font-size: 1.1rem; }
-  .flip-front .kicker { color: #6b7280; }
-  .flip-back { transform: rotateY(180deg); }
-  .flip-inner:hover .flip-front,
-  .flip-inner:focus-visible .flip-front { transform: rotateY(180deg); }
-  .flip-inner:hover .flip-back,
-  .flip-inner:focus-visible .flip-back { transform: rotateY(360deg); }
-  .flip-back .cta { color: var(--primary-color, #0ea5e9); font-weight: 600; }
+/* Flip Cards */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 240px; /* slightly taller to fit content */
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: #fff;
+  backface-visibility: hidden;
+  padding: 1rem;
+  display: grid;
+  align-content: center;
+  gap: 0.4rem;
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle default shadow */
+  border: 1px solid #e5e7eb; /* keeps the border you had */
+}
+
+.flip-inner:hover .flip-face,
+.flip-inner:focus-visible .flip-face {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* deeper shadow on hover/focus */
+  transform: scale(1.02); /* slight pop-out effect */
+}
+
+.flip-front h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.flip-front .kicker {
+  color: #6b7280;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  text-align: left;
+}
+
+.flip-inner:hover .flip-front,
+.flip-inner:focus-visible .flip-front {
+  transform: rotateY(180deg);
+}
+.flip-inner:hover .flip-back,
+.flip-inner:focus-visible .flip-back {
+  transform: rotateY(360deg);
+}
+
+.flip-back .cta {
+  color: var(--primary-color, #0ea5e9);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+.flip-back .cta:hover {
+  text-decoration: underline;
+}
+
 </style>
