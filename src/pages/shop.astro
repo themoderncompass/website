@@ -94,6 +94,22 @@ import Layout from '../layouts/Layout.astro';
         Modern Compass is about clarity and application. The shop takes lessons from the book, newsletter,
         and TikTok and gives them form as digital downloads you can use right away. No waiting, no shipping,
         just tools designed to meet you where you are and move you forward.
+
+    <!-- Browse All -->
+    <section class="browse-all max-w-2xl mx-auto text-center mt-6">
+      <h3 class="text-xl font-semibold mb-2">Browse the full store</h3>
+      <p class="text-base text-gray-700 mb-4">
+        See every worksheet and activity available in the Modern Compass Digital Shop.
+      </p>
+      <a 
+        href="https://www.etsy.com/shop/ModernCompass" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="cta big"
+      >
+        Visit Etsy Shop →
+      </a>
+    </section>
       </p>
     </section>
   </section>
@@ -231,4 +247,17 @@ import Layout from '../layouts/Layout.astro';
   .free-card .flip-front {
     position: relative;
   }
+
+.cta.big {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: var(--primary-color, #0ea5e9);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.cta.big:hover {
+  background: #0284c7;
+}
 </style>
