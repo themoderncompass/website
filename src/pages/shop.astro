@@ -1,54 +1,87 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-// Shop page listing featured products from your Etsy store.  Replace the
-// sample items below with real products, descriptions and links to
-// your Etsy listings.  To keep the design cohesive, each item card
-// uses a simple coloured background drawn from the logo palette
-// instead of custom imagery.
-
-const shopUrl = '#'; // Replace with your Etsy store URL
-const items = [
-  {
-    title: 'Celestial Journal',
-    description: 'A beautifully bound journal for capturing your dreams and intentions.',
-    link: '#', // Replace with direct Etsy listing link
-    color: 'var(--primary-color)',
-  },
-  {
-    title: 'Guided Meditation Pack',
-    description: 'Audio meditations to align your mind with your inner compass.',
-    link: '#',
-    color: 'var(--secondary-color)',
-  },
-  {
-    title: 'Astrology Workbook',
-    description: 'Interactive worksheets to explore your birth chart and beyond.',
-    link: '#',
-    color: 'var(--accent-color)',
-  },
-];
-
 ---
+
 <Layout>
-  <section class="shop">
-    <h1>Shop</h1>
+  <section class="shop mx-auto">
+    <!-- Intro -->
+    <h1 class="page-title">Shop</h1>
     <p class="intro">
-      Visit our Etsy shop to discover curated tools and products designed to
-      support your spiritual journey.  Each item below is a featured product—click
-      through to purchase or view more details.
+      The Modern Compass shop turns ideas from the book, newsletter, and TikTok into
+      standalone activities and worksheets. Each tool helps you move from insight to action.
     </p>
-    <p class="shop-link">
-      <a href={shopUrl} target="_blank" rel="noopener noreferrer">Browse the full shop on Etsy</a>
-    </p>
-    <div class="items">
-      {items.map(({ title, description, link, color }) => (
-        <a href={link} target="_blank" rel="noopener noreferrer" class="item" style={`background: ${color};`}>
-          <h2>{title}</h2>
-          <p>{description}</p>
-        </a>
-      ))}
-    </div>
+
+    <!-- Featured Tools -->
+    <section class="featured-tools">
+      <h2>Featured Tools</h2>
+
+      <div class="card-grid">
+        <!-- Card 1: Get Unstuck -->
+        <article class="flip-card">
+          <button class="flip-inner">
+            <div class="flip-face flip-front">
+              <h3>Get Unstuck</h3>
+              <p class="kicker">Break the loop and build momentum</p>
+            </div>
+            <div class="flip-face flip-back">
+              <p>
+                A guided worksheet to surface the loop keeping you in place, choose a small next step,
+                and create motion you can sustain.
+              </p>
+              <a
+                href="https://www.etsy.com/listing/4333007914/get-unstuck-with-break-the-loop-guided?ref=shop_home_feat_1"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta"
+              >View on Etsy →</a>
+            </div>
+          </button>
+        </article>
+
+        <!-- Card 2: Overwhelm Reset -->
+        <article class="flip-card">
+          <button class="flip-inner">
+            <div class="flip-face flip-front">
+              <h3>Overwhelm Reset</h3>
+              <p class="kicker">Brain dump, sort, and refocus</p>
+            </div>
+            <div class="flip-face flip-back">
+              <p>
+                Clear the mental clutter, organize what matters, and leave with a short action list
+                that fits your real capacity.
+              </p>
+              <a
+                href="https://www.etsy.com/listing/4334703395/brain-dump-worksheet-for-the-overwhelmed?ref=shop_home_feat_2"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta"
+              >View on Etsy →</a>
+            </div>
+          </button>
+        </article>
+
+        <!-- Card 3: TimeOS Freebie -->
+        <article class="flip-card free-card">
+          <button class="flip-inner">
+            <div class="flip-face flip-front">
+              <h3>TimeOS</h3>
+              <p class="kicker">Reclaim time and focus</p>
+              <span class="free-badge">FREE</span>
+            </div>
+            <div class="flip-face flip-back">
+              <p>
+                A five step system to audit your time, uninstall what drains you, and free up space
+                for what matters most. Available free when you subscribe to the newsletter.
+              </p>
+              <a
+                href="/newsletter"
+                class="cta"
+              >Subscribe to get TimeOS →</a>
+            </div>
+          </button>
+        </article>
+      </div>
+    </section>
   </section>
 </Layout>
 
@@ -56,67 +89,131 @@ const items = [
   .shop {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
+    max-width: 900px;
+    padding: 1rem;
   }
 
-  .shop h1 {
+  .page-title {
     font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    color: #111827;
   }
 
   .intro {
-    font-size: 1rem;
-    max-width: 700px;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #374151;
   }
 
-  .shop-link a {
-    color: var(--secondary-color);
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
+  .featured-tools h2 {
+    font-size: 1.5rem;
+    color: #111827;
   }
 
-  .shop-link a:hover {
-    border-color: var(--secondary-color);
-  }
-
-  .items {
+  .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 1.5rem;
-    border-radius: 8px;
-    color: #fff;
-    text-decoration: none;
-    height: 200px;
+  @media (min-width: 720px) {
+    .card-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* Flip Cards */
+  .flip-card {
+    perspective: 1000px;
+  }
+
+  .flip-inner {
+    width: 100%;
+    height: 260px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
     position: relative;
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
-  .item h2 {
-    font-size: 1.3rem;
+  .flip-face {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: #fff;
+    backface-visibility: hidden;
+    padding: 1rem;
+    display: grid;
+    align-content: center;
+    gap: 0.4rem;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+  }
+
+  .flip-inner:hover .flip-face,
+  .flip-inner:focus-visible .flip-face {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+  }
+
+  .flip-front h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .flip-front .kicker {
+    color: #6b7280;
+  }
+
+  .flip-back {
+    transform: rotateY(180deg);
+    text-align: left;
+  }
+
+  .flip-inner:hover .flip-front,
+  .flip-inner:focus-visible .flip-front {
+    transform: rotateY(180deg);
+  }
+  .flip-inner:hover .flip-back,
+  .flip-inner:focus-visible .flip-back {
+    transform: rotateY(360deg);
+  }
+
+  .flip-back .cta {
+    color: var(--primary-color, #0ea5e9);
     font-weight: 600;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    display: inline-block;
+  }
+  .flip-back .cta:hover {
+    text-decoration: underline;
+  }
+
+  .flip-front,
+  .flip-back {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .flip-front h3,
+  .flip-back h3 {
+    font-size: 1.4rem;
     margin-bottom: 0.5rem;
   }
 
-  .item p {
-    font-size: 0.9rem;
-    line-height: 1.4;
+  /* Free Badge */
+  .free-badge {
+    display: inline-block;
+    background: #10b981; /* green */
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    margin-top: 0.4rem;
   }
 
-  .item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  .free-card .flip-front {
+    position: relative;
   }
 </style>
