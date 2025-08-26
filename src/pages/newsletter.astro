@@ -245,4 +245,21 @@ import Layout from '../layouts/Layout.astro';
   text-decoration: underline;
 }
 
+.flip-back {
+  transform: rotateY(180deg);
+  text-align: left;
+}
+
+/* make back text larger + more readable */
+.flip-back {
+  font-size: 1.2rem;   /* adjust size */
+  line-height: 1.6;    /* better spacing */
+}
+
+.flip-back h3, 
+.flip-back h4 {
+  font-size: 1.4rem;   /* scale headings */
+  margin-bottom: 0.5rem;
+}
+
 </style>
