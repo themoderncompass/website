@@ -11,7 +11,7 @@ const newsletterUrl = 'https://newsletter.themoderncompass.io';
     <p class="subtitle">Practical frameworks to help you navigate life with clarity and conviction.</p>
 
     <div class="content">
-      <!-- Left column -->
+<!-- Left column -->
 <div class="details">
   <img
     src="/book-graphic.png"
@@ -23,41 +23,38 @@ const newsletterUrl = 'https://newsletter.themoderncompass.io';
     decoding="async"
     sizes="(min-width: 768px) 320px, 70vw"
   />
-      <div class="details">
-        <h2>About the Book</h2>
-        <p>
-        Modern Compass is for people who are tired of vague or academic advice and want something practical they can use to see real growth in their own lives.
-There are strong personal growth books out there, but many fall into the trap of focusing too heavily on research without offering tools you can apply. Others lean on outdated approaches that do not fit digital lifestyles, or they inspire without giving you a way to move forward.
-        </p>
-        <p>
-  Modern Compass takes a different approach. Every chapter includes practical and approachable activities you can put into action. The Modern Compass printout is also a living tool that helps you track your growth over time across the four life directions and the layers within each.
-        </p>
 
-        <h2>Who It Is For</h2>
-        <ul class="bullets">
-          <li>You feel stuck in loops of intention without action.</li>
-          <li>You want clarity in relationships, career, or personal growth and do not know where to start.</li>
-          <li>You have read personal growth books and ended up back in the same patterns.</li>
-          <li>You want more than motivation. You want a compass you can carry with you.</li>
-        </ul>
+  <h2>About the Book</h2>
+  <p>
+    Modern Compass is for people who are tired of vague or academic advice and want something practical they can use to see real growth in their own lives.
+    There are strong personal growth books out there, but many fall into the trap of focusing too heavily on research without offering tools you can apply. Others lean on outdated approaches that do not fit digital lifestyles, or they inspire without giving you a way to move forward.
+  </p>
+  <p>
+    Modern Compass takes a different approach. Every chapter includes practical and approachable activities you can put into action. The Modern Compass printout is also a living tool that helps you track your growth over time across the four life directions and the layers within each.
+  </p>
 
-        <h2>What You Will Gain</h2>
-        <ul class="bullets">
-          <li>Confidence that grows from real world action instead of waiting for validation.</li>
-          <li>Character that shows up as aligned choices you can point to.</li>
-          <li>Trust that is informed and calibrated so you know when to extend it and when to hold back.</li>
-          <li>Relationships that deepen past surface connection or confidence when to release those that are no longer healthy to maintain.</li>
-          <li>Momentum that replaces cycles of hope and inaction, that starts wtih you.</li>
-        </ul>
+  <h2>Who It Is For</h2>
+  <ul class="bullets">
+    <li>You feel stuck in loops of intention without action.</li>
+    <li>You want clarity in relationships, career, or personal growth and do not know where to start.</li>
+    <li>You have read personal growth books and ended up back in the same patterns.</li>
+    <li>You want more than motivation. You want a compass you can carry with you.</li>
+  </ul>
 
-        <h2>Why It Matters</h2>
-        <p>
-          Most people drift. They wait for a breakthrough or a sign. Nothing shifts until you take ownership
-          of your direction. Modern Compass helps you build a personal system that keeps you moving forward
-          even when life gets messy or foggy. It helps you stop second guessing and start navigating with conviction.
-        </p>
+  <h2>What You Will Gain</h2>
+  <ul class="bullets">
+    <li>Confidence that grows from real world action instead of waiting for validation.</li>
+    <li>Character that shows up as aligned choices you can point to.</li>
+    <li>Trust that is informed and calibrated so you know when to extend it and when to hold back.</li>
+    <li>Relationships that deepen past surface connection or confidence to release those that are no longer healthy to maintain.</li>
+    <li>Momentum that replaces cycles of hope and inaction that starts with you.</li>
+  </ul>
 
-      </div>
+  <h2>Why It Matters</h2>
+  <p>
+    Most people drift. They wait for a breakthrough or a sign. Nothing shifts until you take ownership of your direction. Modern Compass helps you build a personal system that keeps you moving forward even when life gets messy or foggy. It helps you stop second guessing and start navigating with conviction.
+  </p>
+</div>
 
       <!-- Right column -->
       <aside class="sidebar">
@@ -264,11 +261,21 @@ The chance to raise your hand for early access to the introduction and one life 
   background-color: #f8f0ff; /* pale purple */
 }
 
+.details, .sidebar { flex: 1; min-width: 0; } /* prevents flex overflow */
+
 .book-graphic {
   display: block;
-  max-width: 260px;   /* tweak for balance */
-  margin: 0 auto 1.5rem auto;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 0 auto 1.25rem auto;
   border-radius: 8px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+@media (min-width: 768px) {
+  .book-graphic {
+    margin: 0 0 1rem 0; /* aligns with heading on desktop */
+  }
 }
 </style>
