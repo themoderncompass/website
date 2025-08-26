@@ -47,7 +47,7 @@ import Layout from '../layouts/Layout.astro';
         <p class="kicker">Why and how we click with some people</p>
       </div>
       <div class="flip-face flip-back">
-        <p><strong>Snapshot:</strong> Resonance forms when two signals align. The Power of Two
+        <p>Resonance forms when two signals align. The Power of Two
           focuses attention on two meaningful components that create momentum in a relationship.</p>
         <a
           href="https://newsletter.themoderncompass.io/p/the-power-of-two-the-simple-way-to-think-about-why-we-click"
@@ -67,7 +67,7 @@ import Layout from '../layouts/Layout.astro';
         <p class="kicker">Track effort, compound wins, give yourself some credit</p>
       </div>
       <div class="flip-face flip-back">
-        <p><strong>Snapshot:</strong> A weekly audit to measure inputs, compounding signals,
+        <p> A weekly audit to measure inputs, compounding signals,
           and directional gains so progress stays visible even when performance metrics like views, subscribers and follower counts lag.</p>
         <a
           href="https://newsletter.themoderncompass.io/p/creative-equity-and-the-compounding-effect-of-creating"
@@ -250,15 +250,18 @@ import Layout from '../layouts/Layout.astro';
   text-align: left;
 }
 
-/* make back text larger + more readable */
+/* Keep front + back font consistent */
+.flip-front,
 .flip-back {
-  font-size: 1.2rem;   /* adjust size */
-  line-height: 1.6;    /* better spacing */
+  font-size: 1.2rem;   /* same size on both faces */
+  line-height: 1.6;
 }
 
-.flip-back h3, 
+.flip-front h3, 
+.flip-back h3,
+.flip-front h4,
 .flip-back h4 {
-  font-size: 1.4rem;   /* scale headings */
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
 
