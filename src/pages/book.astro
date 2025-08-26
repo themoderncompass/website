@@ -12,6 +12,17 @@ const newsletterUrl = 'https://newsletter.themoderncompass.io';
 
     <div class="content">
       <!-- Left column -->
+<div class="details">
+  <img
+    src="/book-graphic.png"
+    alt="Modern Compass book cover"
+    class="book-graphic"
+    width="780"
+    height="780"
+    loading="eager"
+    decoding="async"
+    sizes="(min-width: 768px) 320px, 70vw"
+  />
       <div class="details">
         <h2>About the Book</h2>
         <p>
@@ -46,14 +57,6 @@ There are strong personal growth books out there, but many fall into the trap of
           even when life gets messy or foggy. It helps you stop second guessing and start navigating with conviction.
         </p>
 
-        <div class="cta-box">
-          <h3>Be Part of the Journey</h3>
-          <p>
-            I share fresh excerpts, behind the scenes thinking, and practical tools in the newsletter.
-            It is the best way to engage with the ideas and help shape the work while I finish the book. I eagerly hope you join and engage with me there.
-          </p>
-          <a class="cta-btn" href={newsletterUrl} target="_blank" rel="noopener noreferrer">Join the newsletter</a>
-        </div>
       </div>
 
       <!-- Right column -->
@@ -86,7 +89,7 @@ There are strong personal growth books out there, but many fall into the trap of
         </section>
 
         <section class="card blue">
-          <h3>Be Part of the Journey and Get Early Accessh</h3>
+          <h3>Be Part of the Journey and Get Early Access</h3>
           <p>
 Modern Compass is still in progress, and you can be part of shaping it. By joining the newsletter you’ll get:
 Fresh excerpts and behind-the-scenes thinking
@@ -259,5 +262,13 @@ The chance to raise your hand for early access to the introduction and one life 
 }
 .card.purple {
   background-color: #f8f0ff; /* pale purple */
+}
+
+.book-graphic {
+  display: block;
+  max-width: 260px;   /* tweak for balance */
+  margin: 0 auto 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 </style>
