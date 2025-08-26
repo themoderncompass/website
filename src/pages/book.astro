@@ -1,42 +1,128 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// This page serves as a sales page for your book.  Replace the
-// placeholder text and links with the actual details of your
-// publication, including the title, cover image, purchase links and
-// excerpt.  The design echoes the colour palette of the logo to tie
-// everything together.
-
-const bookTitle = 'Your Book Title';
-const amazonLink = '#'; // Replace with your Amazon product link
-const kdpLink = '#';    // Replace with your Kindle Direct Publishing link when available
-
+const bookTitle = 'Modern Compass';
+const newsletterUrl = 'https://newsletter.themoderncompass.io';
 ---
+
 <Layout>
   <section class="book">
     <h1>{bookTitle}</h1>
-    <p class="subtitle">An inspiring journey to help you navigate life with intention.</p>
+    <p class="subtitle">Practical frameworks to help you navigate life with clarity and conviction.</p>
+
     <div class="content">
+      <!-- Left column -->
       <div class="details">
         <h2>About the Book</h2>
         <p>
-          This section is a great place to share what the book is about—its purpose,
-          who it’s for and what readers can expect to take away.  Use this space to
-          highlight how your book complements the mission of The Modern Compass.
+          Modern Compass is for people who are tired of vague advice and want something they can use.
+          Most books tell stories or offer inspiration without giving you a structure for applying it.
+          This book is different.
         </p>
-        <h2>Purchase Links</h2>
-        <ul class="links">
-          <li><a href={amazonLink} target="_blank" rel="noopener noreferrer">Buy on Amazon</a></li>
-          <li><a href={kdpLink} target="_blank" rel="noopener noreferrer">Kindle Edition (coming soon)</a></li>
+        <p>
+          Your life has a direction whether you have chosen it or not. The real question is whether
+          outside forces are setting your course or whether you are choosing intentionally. Modern Compass
+          gives you the tools to choose.
+        </p>
+
+        <h2>Who It Is For</h2>
+        <ul class="bullets">
+          <li>You feel stuck in loops of intention without action.</li>
+          <li>You want clarity in relationships, career, or personal growth and do not know where to start.</li>
+          <li>You have read personal growth books and ended up back in the same patterns.</li>
+          <li>You want more than motivation. You want a compass you can carry with you.</li>
         </ul>
+
+        <h2>What You Will Gain</h2>
+        <ul class="bullets">
+          <li>Confidence that grows from real world action instead of waiting for validation.</li>
+          <li>Character that shows up as aligned choices you can point to.</li>
+          <li>Trust that is informed and calibrated so you know when to extend it and when to hold back.</li>
+          <li>Relationships that deepen past surface connection.</li>
+          <li>Momentum that replaces cycles of hope and inaction.</li>
+        </ul>
+
+        <h2>Why It Matters</h2>
+        <p>
+          Most people drift. They wait for a breakthrough or a sign. Nothing shifts until you take ownership
+          of your direction. Modern Compass helps you build a personal system that keeps you moving forward
+          even when life gets messy. It helps you stop second guessing and start navigating with conviction.
+        </p>
+
+        <div class="cta-box">
+          <h3>Be Part of the Journey</h3>
+          <p>
+            I share fresh excerpts, behind the scenes thinking, and practical tools in the newsletter.
+            It is the best way to engage with the ideas and help shape the work while I finish the book.
+          </p>
+          <a class="cta-btn" href={newsletterUrl} target="_blank" rel="noopener noreferrer">Join the newsletter</a>
+        </div>
       </div>
-      <div class="excerpt">
-        <h2>Excerpt</h2>
-        <blockquote>
-          "This is where you can include a powerful excerpt or quote from your book
-          that will resonate with your audience and encourage them to read more."
-        </blockquote>
-      </div>
+
+      <!-- Right column -->
+      <aside class="sidebar">
+        <section class="excerpt">
+          <h2>Excerpts</h2>
+
+          <blockquote class="quote">
+            Profound trust is the rare moment when you know without needing to ask that someone would
+            protect the most vulnerable parts of you even if it cost them something.
+          </blockquote>
+
+          <blockquote class="quote">
+            Confidence does not come from ignoring what people think. It grows when you apply yourself in
+            the real world and build evidence of your own ability.
+          </blockquote>
+
+          <blockquote class="quote">
+            Hope does not change outcomes. Action does. Without it we loop in the same patterns expecting
+            different results from the same choices.
+          </blockquote>
+        </section>
+
+        <section class="card">
+          <h3>Publishing Approach</h3>
+          <p>
+            I plan to self publish so the book can stay practical and unfiltered. The goal is a clear
+            and useful read with frameworks you can put to work the same day you open it.
+          </p>
+        </section>
+
+        <section class="card">
+          <h3>Early Access Path</h3>
+          <p>
+            If you want an early look you can join the newsletter and raise your hand for beta access.
+            I will share the introduction and one direction from the compass. You can choose self,
+            relationships, or trust. Character will follow.
+          </p>
+          <a class="text-link" href={newsletterUrl} target="_blank" rel="noopener noreferrer">Sign up for early access</a>
+        </section>
+
+        <section class="card">
+          <h3>Two Minute Activity</h3>
+          <p class="activity-lead">
+            Try this now to see how Modern Compass works in practice.
+          </p>
+          <ol class="activity-steps">
+            <li>Write down one choice that has been stuck on your mind.</li>
+            <li>Name the pull that is keeping you in place. Is it fear, habit, or outside opinions.</li>
+            <li>Decide one small action that will create evidence in the real world within the next day.</li>
+          </ol>
+          <p class="activity-close">
+            If this felt useful you will like the tools in the newsletter.
+          </p>
+          <a class="cta-btn ghost" href={newsletterUrl} target="_blank" rel="noopener noreferrer">Get more tools</a>
+        </section>
+
+        <section class="card">
+          <h3>How to Engage</h3>
+          <ul class="checklist">
+            <li>Subscribe to the newsletter.</li>
+            <li>Reply to share your take on excerpts and tools.</li>
+            <li>Try the worksheets and tell me what improved or what felt unclear.</li>
+          </ul>
+        </section>
+      </aside>
     </div>
   </section>
 </Layout>
@@ -74,7 +160,7 @@ const kdpLink = '#';    // Replace with your Kindle Direct Publishing link when 
   }
 
   .details,
-  .excerpt {
+  .sidebar {
     flex: 1;
   }
 
@@ -91,32 +177,94 @@ const kdpLink = '#';    // Replace with your Kindle Direct Publishing link when 
     margin-bottom: 1rem;
   }
 
-  .links {
-    list-style: none;
-    padding-left: 0;
+  .bullets {
+    margin: 0 0 1rem 1rem;
+    padding: 0;
+    list-style: disc;
   }
+  .bullets li { margin: 0.25rem 0; }
 
-  .links li {
-    margin-bottom: 0.5rem;
-  }
-
-  .links a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease;
-  }
-
-  .links a:hover {
-    color: var(--accent-color);
-  }
-
-  .excerpt blockquote {
-    font-style: italic;
-    color: #555;
+  .cta-box {
+    margin-top: 1rem;
     padding: 1rem;
     border-left: 4px solid var(--primary-color);
-    background-color: #f9f9f9;
-    border-radius: 4px;
+    background-color: #f6f7f8;
+    border-radius: 6px;
   }
+  .cta-box h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+  }
+  .cta-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: white;
+    transition: transform 0.06s ease, opacity 0.1s ease;
+  }
+  .cta-btn:hover { transform: translateY(-1px); }
+  .cta-btn.ghost {
+    background: transparent;
+    color: var(--primary-color);
+    box-shadow: 0 0 0 1px var(--primary-color) inset;
+  }
+  .cta-btn.ghost:hover { opacity: 0.9; }
+
+  .sidebar {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .excerpt { display: grid; gap: 0.75rem; }
+  .quote {
+    font-style: italic;
+    color: #555;
+    padding: 0.85rem 1rem;
+    border-left: 4px solid var(--primary-color);
+    background-color: #f2f3f5;
+    border-radius: 6px;
+    margin: 0;
+  }
+
+  .card {
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.04) inset;
+  }
+  .card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.05rem;
+    color: var(--primary-color);
+  }
+  .card p { margin: 0; line-height: 1.6; }
+
+  .text-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+  .text-link:hover { color: var(--accent-color); }
+
+  .checklist {
+    margin: 0.25rem 0 0 1rem;
+    padding: 0;
+    list-style: disc;
+  }
+  .checklist li { margin: 0.25rem 0; }
+
+  .activity-lead { margin: 0 0 0.5rem 0; }
+  .activity-steps {
+    margin: 0 0 0.5rem 1.25rem;
+    padding: 0;
+  }
+  .activity-steps li { margin: 0.25rem 0; }
+  .activity-close { margin: 0.5rem 0 0 0; }
 </style>
