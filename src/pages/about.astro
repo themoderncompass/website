@@ -143,15 +143,23 @@ const credentials = [
     }
   }
 
-  /* Gradient motto */
-  .motto {
+  /* Gradient motto – stronger, safe, and with a fallback */
+  .about .motto {
     margin-top: 3rem;
-    font-size: 2.25rem; /* bump up size */
-    font-weight: 700;
-    background: var(--gradient);
+    font-size: clamp(2.25rem, 4vw, 3rem);
+    line-height: 1.1;
+    font-weight: 800;
+    display: inline-block; /* ensure background paints the glyphs */
+    background-image: var(--gradient, linear-gradient(45deg,
+      var(--color-purple, #7c3aed) 0%,
+      var(--color-blue, #2563eb) 35%,
+      var(--color-yellow, #f59e0b) 65%,
+      var(--color-orange, #f97316) 100%));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-align: center; /* center it for emphasis */
+    -webkit-text-fill-color: transparent;
+    color: transparent;         /* safety against inherited h2 color */
+    text-align: center;
+    align-self: center;
   }
 </style>
