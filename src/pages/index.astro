@@ -151,18 +151,21 @@ import Layout from '../layouts/Layout.astro';
   margin: 0 0 8px 0;
   font-weight: 700;
   letter-spacing: -0.02em;
-  background: var(--gradient, linear-gradient(45deg,
-    #8b5cf6 0%,   /* fallback purple */
-    #3b82f6 35%,  /* fallback blue */
-    #facc15 65%,  /* fallback yellow */
-    #f97316 100%  /* fallback orange */
-  ));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 
-  /* Safety fallback so text is visible if gradient fails */
-  color: #111;
+  /* Robust gradient: same approach as About.motto */
+  display: inline-block; /* ensure the background paints only the text box */
+  background-image: var(--gradient, linear-gradient(45deg,
+    var(--color-purple, #8b5cf6) 0%,
+    var(--color-blue,   #3b82f6) 35%,
+    var(--color-yellow, #facc15) 65%,
+    var(--color-orange, #f97316) 100%));
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* matches About so the text never falls back to solid */
 }
   .lead { font-size: 18px; margin: 0 0 6px 0; color: #222; }
   .sublead { font-size: 16px; margin: 0 0 18px 0; color: #444; }
