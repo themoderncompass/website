@@ -18,23 +18,92 @@ const tools = [
 
 const prompts = [
   {
-    title: 'Intention vs Action reflection',
-    description: 'Ten minute exercise to spot where you are stuck in intention without action.',
+    title: 'Goals',
+    description: 'See your goals come to fruition with this choose your own GenAI adventure. Just copy and paste into ChatGPT (tested & validatd tool)',
     content: `Prompt:
-Identify one area where your intention is high but action is low. Write:
-1) The smallest next step that takes <10 minutes.
-2) The cost of not doing it this week.
-3) One friction you can remove right now.
-Finish by scheduling the step on your calendar.`,
+I have a goal, and I want you to narrate me through a 10-stage journey of pursuing it one question at a time. Start by asking me what my goal is. Then, at each stage, describe a fork in the road—with 4 choices. Don't show this in the choices but each choice has an associated XP and at the end, you can see how much XP (experience points) you racked ups for fun. Add a narrative on how those small choices compound over time. Keep it realistic but inspiring. You can throw in one random setback and one random breakthrough type stage. End with a reflection on what I’ve learned from this exercise.`,
   },
   {
-    title: 'Power of Two resonance scan',
-    description: 'Identify two reliable points of resonance before you invest more in a relationship.',
+    title: 'Career Intuition Simulation',
+    description: 'Apply your intution to a 20 year career through various forks in the road to determine how strong your intuition within career choices is. Just copy and paste into ChatGPT (tested & validatd tool)',
     content: `Prompt:
-List two interactions with this person that left you energized. For each, note:
-• What exactly created the resonance?
-• Is it repeatable weekly?
-If you cannot name two, pause new commitments for 14 days.`,
+I want to play a career intuition and trust-building simulation where I navigate a 20-year career by making critical decisions at different stages. Act as the narrator, guiding me through complex choices involving:
+Intuition & Trust Calibration
+Leadership & Ethics
+Career Growth & Setbacks
+Unexpected Twists & Industry Changes
+Relationship Dynamics & Personal Conflicts
+Step 1: Customizing My Character
+Before we start, let me select three starting personality traits from this expanded list:
+Ambitious – Always looking for the next big opportunity.
+Cautious – Weighs risks carefully, avoiding reckless moves.
+Adaptable – Thrives in changing environments and pivots easily.
+Logical – Analyzes every decision, prioritizing data over gut instinct.
+Intuitive – Trusts their instincts, even when logic says otherwise.
+Risk-Taker – Embraces bold opportunities, even when uncertain.
+Integrity-Driven – Prioritizes ethics, reputation, and doing what’s right.
+Strategic – Always planning ahead, thinking of long-term moves.
+Persuasive – A strong negotiator who can influence people.
+Empathetic – Values relationships and fosters strong connections.
+Step 2: Career Journey (20 Key Decisions)
+Introduce my first job offer, then guide me through 20 career-defining questions, each representing a critical momentin my professional life.
+Each choice should have branching consequences that impact my long-term career path.
+Introduce trust & intuition-based dilemmas, including:
+Whom to trust in high-stakes situations
+Ethical gray areas & moral conflicts
+Leadership opportunities & power struggles
+Unexpected betrayals
+Design the Experience with:
+Branching Paths – My choices should impact my long-term trajectory.
+Trust & Intuition-Based Dilemmas – I must navigate leadership, ethics, and critical career decisions.
+Character Alignment – My decisions should reflect traits like ambition, integrity, caution, adaptability, or balance.
+Twists, Setbacks, and Unexpected Events – Life doesn’t go as planned. Introduce:
+Industry shifts (new technology, job disruptions, AI automation)
+Betrayals from colleagues or bosses
+Economic downturns & job market changes
+Personal dilemmas that test priorities
+Relationship Dynamics – Trust isn’t just about work—add key relationships:
+Mentors (some helpful, some self-serving)
+Romantic Partners (career vs. relationship tension)
+Friends & Colleagues (some loyal, some competitors)
+Family Responsibilities (career choices affecting loved ones)
+Emotional vs. Logical Conflicts – Decision-making should be layered with:
+Your heart says one thing, logic says another.
+Intuition whispers a third option—do you trust it?
+Success in the game should strengthen your intuition over time.
+Randomized Layoff Possibilities – At key points, introduce the risk of:
+Unexpected layoffs (Are you prepared?)
+Tough job searches (Do you pivot industries or wait it out?)
+Career reinvention (Start over or rebuild your reputation?)
+Alternate Career Endings – My journey shouldn’t always lead to becoming a CEO. Offer multiple possible conclusions, such as:
+Consultant
+Mentor
+Professor
+Entrepreneur
+Executive
+Industry Expert
+Freelancer
+Career Pivot
+Early Retirement
+Nonprofit Leadership
+Step 3: Scoring & Personalized Insights
+At the end of the simulation, evaluate my career path using a scoring system based on:
+Intuition Score (1-10) – Did I trust my instincts wisely or ignore them?
+Trust Calibration (1-10) – Did I balance trust with skepticism effectively?
+Character Alignment – What kind of professional did I become?
+Career Trajectory – Did my choices lead to fulfillment, success, or regret?
+Intuition Level-Up System – The more I relied on instinct + experience, the more my intuition score improved.
+Step 4: Post-Game Analysis
+At the end of the game, provide:
+Key Moments Review – Analyze pivotal choices (e.g., What if I had taken the Director job instead?).
+Leadership Strengths & Weaknesses – Did I lead with strategy, intuition, or ethics?
+Trust-Building Abilities – Was I too trusting, too skeptical, or well-balanced?
+How My Career Story is Remembered – What’s my professional legacy?
+Let’s Begin!
+1️. Ask me to choose my three starting personality traits.
+2️. Introduce my first job offer and launch me into my 20-year career simulation!
+I’m ready to shape my professional journey. Let’s go!
+`,
   },
 ]
 
@@ -81,7 +150,7 @@ const newsletterCTA = {
 
 <Layout>
   <section class="resources">
-    <h1>Modern Compass resources</h1>
+    <h1>Resources</h1>
     <p class="intro">A curated set of tools and recommendations I use and trust. Simple and built to help you take action today.</p>
 
     <div class="block">
