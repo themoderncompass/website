@@ -38,16 +38,11 @@ const apps = [
 
 const newsletters = [
   { name: 'James Clear 3-2-1', href: 'https://jamesclear.com/3-2-1', note: 'Short weekly prompts that pair well with micro actions.' },
-  { name: 'Deep Culture', href: 'https://www.readdeepculture.com/', note: 'Thoughtful ideas with a bias toward clarity and practice.' },
+  { name: 'Deep Culture', href: 'https://deepculture.substack.com', note: 'Interesting finds across the internet, and some ways broaden our horizon.' },
 ]
 
-const inspiration = [
-  { title: 'Wait But Why', href: 'https://waitbutwhy.com/', note: 'Long form posts that reward slow reading and consequential thinking.' },
-  { title: 'Farnam Street', href: 'https://fs.blog/', note: 'Mental models and decision making that strengthen calibrated trust.' },
-  { title: 'Clear Thinking with Shane Parrish', href: 'https://fs.blog/podcast/', note: 'Interviews that show how operators make tradeoffs.' },
-]
 
-const tiktok = { href: 'https://www.tiktok.com/@themoderncompass', blurb: 'Follow for daily videos on confidence, trust, and practical relationship skills that bring the book to life.' }
+const tiktok = { href: 'https://www.tiktok.com/@themoderncompass', blurb: 'Follow for videos on confidence, trust, practical relationship skills, and more that bring the book to life.' }
 
 const newsletterCTA = {
   heading: 'Get the TimeOS Audit free',
@@ -205,27 +200,63 @@ const newsletterCTA = {
   @media (min-width: 768px) {
     .list { grid-template-columns: 1fr 1fr; }
   }
-  /* Bookshelf styling */
-  .bookshelf { position: relative; display: grid; grid-auto-flow: column; gap: .75rem; align-items: end; min-height: 220px; padding-bottom: 18px; }
-  .bookshelf .shelf { position: absolute; left: -12px; right: -12px; bottom: 0; height: 10px; background: linear-gradient(#c9a97e, #b58f66); border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,.15) inset, 0 6px 16px rgba(0,0,0,.08); }
+/* Bookshelf styling */
+.bookshelf {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;       /* lay books left→right */
+  grid-auto-columns: 56px;      /* each spine is one fixed column */
+  justify-content: center;      /* center the group of spines */
+  gap: .75rem;
+  align-items: end;
+  min-height: 220px;
+  padding-bottom: 18px;
 
-  .book-spine { display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 56px; height: var(--h, 200px); padding: 8px 6px; border-radius: 6px; color: #111; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,.08), inset 0 0 0 1px rgba(0,0,0,.06); transition: transform .15s ease, box-shadow .15s ease; writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); }
-  .book-spine:hover { transform: translateY(-4px) rotate(180deg); box-shadow: 0 6px 18px rgba(0,0,0,.12), inset 0 0 0 1px rgba(0,0,0,.08); }
-  .spine-title { font-weight: 700; font-size: .9rem; line-height: 1; letter-spacing: .01em; text-align: center; }
-  .spine-author { font-size: .75rem; opacity: .85; text-align: center; }
+  /* constrain width, center on larger screens */
+  max-width: 500px;
+  margin: 0 auto;
+}
 
-  /* Subtle height variation for visual rhythm */
-  .bookshelf .book-spine:nth-child(1) { --h: 190px; }
-  .bookshelf .book-spine:nth-child(2) { --h: 210px; }
-  .bookshelf .book-spine:nth-child(3) { --h: 200px; }
+/* shelf bar should match the container width */
+.bookshelf .shelf {
+  position: absolute;
+  left: 0;                      /* was -12px, which overhung after constraining */
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  background: linear-gradient(#c9a97e, #b58f66);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15) inset, 0 6px 16px rgba(0,0,0,.08);
+}
 
-  /* Colorways */
-  .color-0 { background: linear-gradient(180deg, #f3d9a7, #eac27b); }
-  .color-1 { background: linear-gradient(180deg, #c6e2ff, #9ec5ff); }
-  .color-2 { background: linear-gradient(180deg, #ffd5d5, #ffb4b4); }
-  .color-3 { background: linear-gradient(180deg, #d8ffc8, #b7f3a3); }
-  .color-4 { background: linear-gradient(180deg, #e3d7ff, #c8b5ff); }
-  .color-5 { background: linear-gradient(180deg, #ffe6c7, #ffd19a); }
+/* spines */
+.book-spine {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 56px;
+  height: var(--h, 200px);
+  padding: 8px 6px;
+  border-radius: 6px;
+  color: #111;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08), inset 0 0 0 1px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .15s ease;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+.book-spine:hover {
+  transform: translateY(-4px) rotate(180deg);
+  box-shadow: 0 6px 18px rgba(0,0,0,.12), inset 0 0 0 1px rgba(0,0,0,.08);
+}
+.spine-title { font-weight: 700; font-size: .9rem; line-height: 1; letter-spacing: .01em; text-align: center; }
+.spine-author { font-size: .75rem; opacity: .85; text-align: center; }
 
-  .shelf-note { margin-top: .5rem; color: var(--text-muted, #4b5563); font-size: .9rem; }
-</style>
+/* optional: only constrain on tablet+ so mobile can breathe */
+@media (max-width: 640px) {
+  .bookshelf {
+    max-width: 100%;
+  }
+}
