@@ -1,111 +1,73 @@
 ---
 import Layout from '../layouts/Layout.astro'
 
-// Data
+// Modern Compass Resources page
+// Streamlined architecture: Featured tools > Prompts/Bookshelf/Apps > Inspiration/Newsletters/TikTok > CTA
+
 const tools = [
   {
-    title: 'Impulse Wallet',
-    href: '/tools/impulse-wallet',
-    description: 'Two minute ritual that adds friction to impulses and builds bias toward action.',
-    label: 'Modern Compass tool',
-  },
-  {
     title: 'Creative Equity Review',
-    href: '/tools/creative-equity-review',
+    href: 'https://newsletter.themoderncompass.io/p/creative-equity-and-the-compounding-effect-of-creating',
     description: 'Track compounding effort so motivation is not tied to daily performance.',
     label: 'Modern Compass tool',
   },
   {
     title: 'TimeOS Audit',
     href: '/tools/timeos-audit',
-    description: 'Five page audit to reclaim time. Free with newsletter.',
+    description: 'Five page audit to reclaim time.',
     label: 'Free with newsletter',
   },
 ]
 
 const prompts = [
-  {
-    title: 'Intention vs Action reflection',
-    href: '/prompts/intention-action',
-    description: 'Ten minute exercise to spot where you are stuck in intention without action.',
-  },
-  {
-    title: 'Power of Two resonance scan',
-    href: '/prompts/power-of-two',
-    description: 'Identify two reliable points of resonance before you invest more in a relationship.',
-  },
-  {
-    title: 'Emotional Safety signals',
-    href: '/prompts/emotional-safety',
-    description: 'Guided checks to notice if a relationship is ready to deepen.',
-  },
+  { title: 'Intention vs Action reflection', href: '/prompts/intention-action', description: 'Ten minute exercise to spot where you are stuck in intention without action.' },
+  { title: 'Power of Two resonance scan', href: '/prompts/power-of-two', description: 'Identify two reliable points of resonance before you invest more in a relationship.' },
 ]
 
 const bookshelf = [
-  {
-    title: 'Atomic Habits',
-    author: 'James Clear',
-    href: 'https://jamesclear.com/atomic-habits',
-    note: 'Mechanics for habit formation that pair well with Creative Equity.',
-  },
-  {
-    title: 'Deep Work',
-    author: 'Cal Newport',
-    href: 'https://www.calnewport.com/books/deep-work/',
-    note: 'Focus capital with constraints that match modern schedules.',
-  },
-  {
-    title: 'The Defining Decade',
-    author: 'Meg Jay',
-    href: 'https://www.megjay.com/the-defining-decade',
-    note: 'Identity capital that complements Modern Compass character chapters.',
-  },
+  { title: 'Atomic Habits', author: 'James Clear', href: 'https://jamesclear.com/atomic-habits', note: 'Clear mechanisms for habit formation that pairs well with Creative Equity.' },
+  { title: '7 Habits of Highly Effective People', author: 'Stephen Covey', href: 'https://www.franklincovey.com/courses/the-7-habits/', note: 'Timeless habits for aligning values with daily action. It reinforces Modern Compass by showing how character and principle-based living create a stable foundation for growth.' },
+  { title: 'The Defining Decade', author: 'Meg Jay', href: 'https://www.megjay.com/the-defining-decade', note: 'Identity capital that complements Modern Compass frameworks and character chapters.' },
 ]
 
 const apps = [
   { name: 'Notion', href: 'https://www.notion.so/', note: 'Second brain for drafts and assets.' },
-  { name: 'Obsidian', href: 'https://obsidian.md/', note: 'Local first vault for evergreen notes.' },
-  { name: 'Readwise', href: 'https://readwise.io/', note: 'Surface highlights for weekly Creative Equity reviews.' },
-]
-
-const inspiration = [
-  { title: 'Wait But Why', href: 'https://waitbutwhy.com/', note: 'Long form posts that reward consequential thinking.' },
-  { title: 'Farnam Street', href: 'https://fs.blog/', note: 'Mental models that strengthen calibrated trust.' },
-  { title: 'Clear Thinking with Shane Parrish', href: 'https://fs.blog/podcast/', note: 'Operators making real tradeoffs.' },
+  { name: 'Obsidian', href: 'https://obsidian.md/', note: 'Local first vault for research and evergreen notes.' },
+  { name: 'Cron', href: 'https://cron.com/', note: 'Calendar that respects time blocking.' },
 ]
 
 const newsletters = [
-  { name: 'James Clear 3-2-1', href: 'https://jamesclear.com/3-2-1', note: 'Short prompts that pair with micro actions.' },
-  { name: 'Deep Culture', href: 'https://www.readdeepculture.com/', note: 'Clarity and practice over hot takes.' },
-  { name: 'The Modern Compass', href: '/newsletter', note: 'My weekly tools and one useful idea.' },
+  { name: 'James Clear 3-2-1', href: 'https://jamesclear.com/3-2-1', note: 'Short weekly prompts that pair well with micro actions.' },
+  { name: 'Deep Culture', href: 'https://www.readdeepculture.com/', note: 'Thoughtful ideas with a bias toward clarity and practice.' },
 ]
 
-const tiktok = {
-  href: 'https://www.tiktok.com/@themoderncompass',
-  blurb: 'Daily videos on confidence, trust, and practical relationship skills.',
-}
+const inspiration = [
+  { title: 'Wait But Why', href: 'https://waitbutwhy.com/', note: 'Long form posts that reward slow reading and consequential thinking.' },
+  { title: 'Farnam Street', href: 'https://fs.blog/', note: 'Mental models and decision making that strengthen calibrated trust.' },
+  { title: 'Clear Thinking with Shane Parrish', href: 'https://fs.blog/podcast/', note: 'Interviews that show how operators make tradeoffs.' },
+]
+
+const tiktok = { href: 'https://www.tiktok.com/@themoderncompass', blurb: 'Follow for daily videos on confidence, trust, and practical relationship skills that bring the book to life.' }
 
 const newsletterCTA = {
-  heading: 'Get the TimeOS Audit free with the newsletter',
-  body: 'Join for practical tools and one useful idea each week. You will also get the five page TimeOS Audit as a welcome bonus. The same freebie is labeled on the TimeOS card above.',
+  heading: 'Get the TimeOS Audit free',
+  body: 'Join the newsletter for practical tools and one useful idea each week. You will also get the five page TimeOS Audit as a welcome bonus.',
   button: { label: 'Join the newsletter', href: '/newsletter' },
 }
 ---
 
 <Layout>
   <section class="resources">
-    <!-- Hero: Above the fold -->
+    <!-- Intro -->
     <h1>Modern Compass resources</h1>
     <p class="intro">A curated set of tools and recommendations I use and trust. Simple and built to help you take action today.</p>
 
-    <!-- Featured tools (exactly 3) -->
+    <!-- Featured tools -->
     <div class="block">
-      <div class="block-head">
-        <h2>Featured tools</h2>
-      </div>
+      <h2>Featured tools</h2>
       <div class="cards">
-        {tools.slice(0, 3).map((t) => (
-          <a href={t.href} class="card" data-track="resources-click" data-kind="tool">
+        {tools.map((t) => (
+          <a href={t.href} class="card">
             <div class="eyebrow">{t.label}</div>
             <h3>{t.title}</h3>
             <p>{t.description}</p>
@@ -114,116 +76,91 @@ const newsletterCTA = {
       </div>
     </div>
 
-    <!-- Middle: Prompts, Books, Apps (all capped at 3) -->
+    <!-- Prompts -->
     <div class="block">
       <h2>Prompts</h2>
       <ul class="list">
-        {prompts.slice(0, 3).map((p) => (
+        {prompts.map((p) => (
           <li class="list-item">
-            <a href={p.href} class="link" data-track="resources-click" data-kind="prompt">{p.title}</a>
+            <a href={p.href} class="link">{p.title}</a>
             <p class="note">{p.description}</p>
           </li>
         ))}
       </ul>
     </div>
 
+    <!-- Bookshelf -->
     <div class="block">
       <h2>Book shelf</h2>
-      <div class="cards">
-        {bookshelf.slice(0, 3).map((b) => (
+      <div class="bookshelf" role="list">
+        {bookshelf.map((b, i) => (
           <a
             href={b.href}
-            class="card"
-            data-track="resources-click"
-            data-kind="book"
+            role="listitem"
+            class={`book-spine color-${i % 6}`}
             target="_blank"
             rel="nofollow noopener"
+            aria-label={`${b.title} by ${b.author}`}
+            title={`${b.title} — ${b.author}`}
           >
-            <h3>{b.title}</h3>
-            <p class="by">{b.author}</p>
-            <p>{b.note}</p>
+            <span class="spine-title">{b.title}</span>
+            <span class="spine-author">{b.author}</span>
           </a>
         ))}
+        <div class="shelf"></div>
       </div>
+      <p class="shelf-note">Click a spine to learn more about the book.</p>
     </div>
 
+    <!-- Apps -->
     <div class="block">
       <h2>Apps I use</h2>
       <div class="table">
-        {apps.slice(0, 3).map((a) => (
+        {apps.map((a) => (
           <div class="row">
-            <div class="cell title">
-              <a
-                href={a.href}
-                class="link"
-                data-track="resources-click"
-                data-kind="app"
-                target="_blank"
-                rel="nofollow noopener"
-              >{a.name}</a>
-            </div>
+            <div class="cell title"><a href={a.href} class="link" rel="nofollow noopener" target="_blank">{a.name}</a></div>
             <div class="cell">{a.note}</div>
           </div>
         ))}
       </div>
     </div>
 
-    <!-- Bottom: Inspiration, Newsletters, TikTok -->
+    <!-- Inspiration -->
     <div class="block">
       <h2>Inspiration and learning</h2>
       <ul class="list">
-        {inspiration.slice(0, 3).map((i) => (
+        {inspiration.map((i) => (
           <li class="list-item">
-            <a
-              href={i.href}
-              class="link"
-              data-track="resources-click"
-              data-kind="inspiration"
-              target="_blank"
-              rel="nofollow noopener"
-            >{i.title}</a>
+            <a href={i.href} class="link" rel="nofollow noopener" target="_blank">{i.title}</a>
             <span class="note">{i.note}</span>
           </li>
         ))}
       </ul>
     </div>
 
+    <!-- Newsletters -->
     <div class="block">
       <h2>Newsletters worth reading</h2>
       <ul class="list">
-        {newsletters.slice(0, 3).map((n) => (
+        {newsletters.map((n) => (
           <li class="list-item">
-            <a
-              href={n.href}
-              class="link"
-              data-track="resources-click"
-              data-kind="newsletter"
-              target={n.href.startsWith('http') ? '_blank' : undefined}
-              rel={n.href.startsWith('http') ? 'nofollow noopener' : undefined}
-            >{n.name}</a>
+            <a href={n.href} class="link" rel="nofollow noopener" target="_blank">{n.name}</a>
             <span class="note">{n.note}</span>
           </li>
         ))}
       </ul>
     </div>
 
+    <!-- TikTok -->
     <div class="promo">
       <div class="promo-copy">
         <h3>TikTok</h3>
-        <p>Follow for short, practical examples of Modern Compass in real life. No fluff, just what to try next.</p>
         <p>{tiktok.blurb}</p>
       </div>
-      <a
-        href={tiktok.href}
-        class="button ghost"
-        data-track="resources-click"
-        data-kind="tiktok"
-        target="_blank"
-        rel="nofollow noopener"
-      >Visit @themoderncompass</a>
+      <a href={tiktok.href} class="button ghost" rel="nofollow noopener" target="_blank">Visit @themoderncompass</a>
     </div>
 
-    <!-- Final CTA -->
+    <!-- CTA -->
     <div class="cta">
       <h2>{newsletterCTA.heading}</h2>
       <p>{newsletterCTA.body}</p>
@@ -238,7 +175,6 @@ const newsletterCTA = {
 
   .block { display: flex; flex-direction: column; gap: 1rem; }
   .block h2 { font-size: 1.5rem; color: var(--secondary-color); }
-  .block-head { display: flex; align-items: baseline; justify-content: space-between; }
 
   .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
   .card { background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 1.25rem; text-decoration: none; color: inherit; transition: box-shadow .2s ease; }
@@ -248,7 +184,7 @@ const newsletterCTA = {
   .eyebrow { font-size: .72rem; color: #1d4ed8; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
   .by { color: #111827; font-weight: 600; }
 
-  .list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr; gap: .75rem; }
+  .list { list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
   .list-item { background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 1rem; }
   .link { color: var(--link-color, #1d4ed8); text-decoration: none; font-weight: 600; }
   .note { display: block; color: var(--text-muted, #4b5563); margin-top: .25rem; }
@@ -269,4 +205,27 @@ const newsletterCTA = {
   @media (min-width: 768px) {
     .list { grid-template-columns: 1fr 1fr; }
   }
+  /* Bookshelf styling */
+  .bookshelf { position: relative; display: grid; grid-auto-flow: column; gap: .75rem; align-items: end; min-height: 220px; padding-bottom: 18px; }
+  .bookshelf .shelf { position: absolute; left: -12px; right: -12px; bottom: 0; height: 10px; background: linear-gradient(#c9a97e, #b58f66); border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,.15) inset, 0 6px 16px rgba(0,0,0,.08); }
+
+  .book-spine { display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 56px; height: var(--h, 200px); padding: 8px 6px; border-radius: 6px; color: #111; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,.08), inset 0 0 0 1px rgba(0,0,0,.06); transition: transform .15s ease, box-shadow .15s ease; writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); }
+  .book-spine:hover { transform: translateY(-4px) rotate(180deg); box-shadow: 0 6px 18px rgba(0,0,0,.12), inset 0 0 0 1px rgba(0,0,0,.08); }
+  .spine-title { font-weight: 700; font-size: .9rem; line-height: 1; letter-spacing: .01em; text-align: center; }
+  .spine-author { font-size: .75rem; opacity: .85; text-align: center; }
+
+  /* Subtle height variation for visual rhythm */
+  .bookshelf .book-spine:nth-child(1) { --h: 190px; }
+  .bookshelf .book-spine:nth-child(2) { --h: 210px; }
+  .bookshelf .book-spine:nth-child(3) { --h: 200px; }
+
+  /* Colorways */
+  .color-0 { background: linear-gradient(180deg, #f3d9a7, #eac27b); }
+  .color-1 { background: linear-gradient(180deg, #c6e2ff, #9ec5ff); }
+  .color-2 { background: linear-gradient(180deg, #ffd5d5, #ffb4b4); }
+  .color-3 { background: linear-gradient(180deg, #d8ffc8, #b7f3a3); }
+  .color-4 { background: linear-gradient(180deg, #e3d7ff, #c8b5ff); }
+  .color-5 { background: linear-gradient(180deg, #ffe6c7, #ffd19a); }
+
+  .shelf-note { margin-top: .5rem; color: var(--text-muted, #4b5563); font-size: .9rem; }
 </style>
