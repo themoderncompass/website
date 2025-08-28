@@ -1,134 +1,272 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro'
 
-// Resources page listing evergreen guides, templates and other tools.
-// Update the sections and items below to reflect the actual resources you
-// wish to share.  Each resource can link to a downloadable file or
-// another page on your site.
-
-const resources = [
+// Data
+const tools = [
   {
-    category: 'Guides',
-    items: [
-      {
-        title: 'Goal Setting Guide',
-        description: 'A step‑by‑step worksheet to clarify your vision and break it down into actionable steps.',
-        link: '#',
-      },
-      {
-        title: 'Mindfulness Starter Kit',
-        description: 'Tips and practices to cultivate awareness in your daily life.',
-        link: '#',
-      },
-    ],
+    title: 'Impulse Wallet',
+    href: '/tools/impulse-wallet',
+    description: 'Two minute ritual that adds friction to impulses and builds bias toward action.',
+    label: 'Modern Compass tool',
   },
   {
-    category: 'Templates',
-    items: [
-      {
-        title: 'Weekly Reflection Template',
-        description: 'A printable template for tracking progress and gratitude.',
-        link: '#',
-      },
-      {
-        title: 'Life Balance Wheel',
-        description: 'A tool to visualize different areas of your life and identify focus areas.',
-        link: '#',
-      },
-    ],
+    title: 'Creative Equity Review',
+    href: '/tools/creative-equity-review',
+    description: 'Track compounding effort so motivation is not tied to daily performance.',
+    label: 'Modern Compass tool',
   },
-];
+  {
+    title: 'TimeOS Audit',
+    href: '/tools/timeos-audit',
+    description: 'Five page audit to reclaim time. Free with newsletter.',
+    label: 'Free with newsletter',
+  },
+]
 
+const prompts = [
+  {
+    title: 'Intention vs Action reflection',
+    href: '/prompts/intention-action',
+    description: 'Ten minute exercise to spot where you are stuck in intention without action.',
+  },
+  {
+    title: 'Power of Two resonance scan',
+    href: '/prompts/power-of-two',
+    description: 'Identify two reliable points of resonance before you invest more in a relationship.',
+  },
+  {
+    title: 'Emotional Safety signals',
+    href: '/prompts/emotional-safety',
+    description: 'Guided checks to notice if a relationship is ready to deepen.',
+  },
+]
+
+const bookshelf = [
+  {
+    title: 'Atomic Habits',
+    author: 'James Clear',
+    href: 'https://jamesclear.com/atomic-habits',
+    note: 'Mechanics for habit formation that pair well with Creative Equity.',
+  },
+  {
+    title: 'Deep Work',
+    author: 'Cal Newport',
+    href: 'https://www.calnewport.com/books/deep-work/',
+    note: 'Focus capital with constraints that match modern schedules.',
+  },
+  {
+    title: 'The Defining Decade',
+    author: 'Meg Jay',
+    href: 'https://www.megjay.com/the-defining-decade',
+    note: 'Identity capital that complements Modern Compass character chapters.',
+  },
+]
+
+const apps = [
+  { name: 'Notion', href: 'https://www.notion.so/', note: 'Second brain for drafts and assets.' },
+  { name: 'Obsidian', href: 'https://obsidian.md/', note: 'Local first vault for evergreen notes.' },
+  { name: 'Readwise', href: 'https://readwise.io/', note: 'Surface highlights for weekly Creative Equity reviews.' },
+]
+
+const inspiration = [
+  { title: 'Wait But Why', href: 'https://waitbutwhy.com/', note: 'Long form posts that reward consequential thinking.' },
+  { title: 'Farnam Street', href: 'https://fs.blog/', note: 'Mental models that strengthen calibrated trust.' },
+  { title: 'Clear Thinking with Shane Parrish', href: 'https://fs.blog/podcast/', note: 'Operators making real tradeoffs.' },
+]
+
+const newsletters = [
+  { name: 'James Clear 3-2-1', href: 'https://jamesclear.com/3-2-1', note: 'Short prompts that pair with micro actions.' },
+  { name: 'Deep Culture', href: 'https://www.readdeepculture.com/', note: 'Clarity and practice over hot takes.' },
+  { name: 'The Modern Compass', href: '/newsletter', note: 'My weekly tools and one useful idea.' },
+]
+
+const tiktok = {
+  href: 'https://www.tiktok.com/@themoderncompass',
+  blurb: 'Daily videos on confidence, trust, and practical relationship skills.',
+}
+
+const newsletterCTA = {
+  heading: 'Get the TimeOS Audit free with the newsletter',
+  body: 'Join for practical tools and one useful idea each week. You will also get the five page TimeOS Audit as a welcome bonus. The same freebie is labeled on the TimeOS card above.',
+  button: { label: 'Join the newsletter', href: '/newsletter' },
+}
 ---
+
 <Layout>
   <section class="resources">
-    <h1>Resources</h1>
-    <p>Access our free guides and templates designed to support your growth.  Feel free to download and share them with friends and family.</p>
-    {resources.map(({ category, items }) => (
-      <div class="resource-category">
-        <h2>{category}</h2>
-        <ul class="resource-list">
-          {items.map(({ title, description, link }) => (
-            <li class="resource-item">
-              <h3>{title}</h3>
-              <p>{description}</p>
-              <a href={link} target="_blank" rel="noopener noreferrer">Download</a>
-            </li>
-          ))}
-        </ul>
+    <!-- Hero: Above the fold -->
+    <h1>Modern Compass resources</h1>
+    <p class="intro">A curated set of tools and recommendations I use and trust. Simple and built to help you take action today.</p>
+
+    <!-- Featured tools (exactly 3) -->
+    <div class="block">
+      <div class="block-head">
+        <h2>Featured tools</h2>
       </div>
-    ))}
+      <div class="cards">
+        {tools.slice(0, 3).map((t) => (
+          <a href={t.href} class="card" data-track="resources-click" data-kind="tool">
+            <div class="eyebrow">{t.label}</div>
+            <h3>{t.title}</h3>
+            <p>{t.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Middle: Prompts, Books, Apps (all capped at 3) -->
+    <div class="block">
+      <h2>Prompts</h2>
+      <ul class="list">
+        {prompts.slice(0, 3).map((p) => (
+          <li class="list-item">
+            <a href={p.href} class="link" data-track="resources-click" data-kind="prompt">{p.title}</a>
+            <p class="note">{p.description}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2>Book shelf</h2>
+      <div class="cards">
+        {bookshelf.slice(0, 3).map((b) => (
+          <a
+            href={b.href}
+            class="card"
+            data-track="resources-click"
+            data-kind="book"
+            target="_blank"
+            rel="nofollow noopener"
+          >
+            <h3>{b.title}</h3>
+            <p class="by">{b.author}</p>
+            <p>{b.note}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="block">
+      <h2>Apps I use</h2>
+      <div class="table">
+        {apps.slice(0, 3).map((a) => (
+          <div class="row">
+            <div class="cell title">
+              <a
+                href={a.href}
+                class="link"
+                data-track="resources-click"
+                data-kind="app"
+                target="_blank"
+                rel="nofollow noopener"
+              >{a.name}</a>
+            </div>
+            <div class="cell">{a.note}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Bottom: Inspiration, Newsletters, TikTok -->
+    <div class="block">
+      <h2>Inspiration and learning</h2>
+      <ul class="list">
+        {inspiration.slice(0, 3).map((i) => (
+          <li class="list-item">
+            <a
+              href={i.href}
+              class="link"
+              data-track="resources-click"
+              data-kind="inspiration"
+              target="_blank"
+              rel="nofollow noopener"
+            >{i.title}</a>
+            <span class="note">{i.note}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2>Newsletters worth reading</h2>
+      <ul class="list">
+        {newsletters.slice(0, 3).map((n) => (
+          <li class="list-item">
+            <a
+              href={n.href}
+              class="link"
+              data-track="resources-click"
+              data-kind="newsletter"
+              target={n.href.startsWith('http') ? '_blank' : undefined}
+              rel={n.href.startsWith('http') ? 'nofollow noopener' : undefined}
+            >{n.name}</a>
+            <span class="note">{n.note}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="promo">
+      <div class="promo-copy">
+        <h3>TikTok</h3>
+        <p>Follow for short, practical examples of Modern Compass in real life. No fluff, just what to try next.</p>
+        <p>{tiktok.blurb}</p>
+      </div>
+      <a
+        href={tiktok.href}
+        class="button ghost"
+        data-track="resources-click"
+        data-kind="tiktok"
+        target="_blank"
+        rel="nofollow noopener"
+      >Visit @themoderncompass</a>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="cta">
+      <h2>{newsletterCTA.heading}</h2>
+      <p>{newsletterCTA.body}</p>
+      <a href={newsletterCTA.button.href} class="button">{newsletterCTA.button.label}</a>
+    </div>
   </section>
 </Layout>
 
 <style>
-  .resources {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
+  .resources { display: flex; flex-direction: column; gap: 2rem; }
+  .intro { max-width: 720px; color: var(--text-muted, #4b5563); }
 
-  .resources h1 {
-    font-size: 2rem;
-    color: var(--primary-color);
-  }
+  .block { display: flex; flex-direction: column; gap: 1rem; }
+  .block h2 { font-size: 1.5rem; color: var(--secondary-color); }
+  .block-head { display: flex; align-items: baseline; justify-content: space-between; }
 
-  .resources p {
-    max-width: 700px;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .card { background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 1.25rem; text-decoration: none; color: inherit; transition: box-shadow .2s ease; }
+  .card:hover { box-shadow: 0 4px 18px rgba(0,0,0,.06); }
+  .card h3 { font-size: 1.15rem; color: var(--primary-color); margin: .25rem 0; }
+  .card p { font-size: .95rem; color: var(--text-muted, #4b5563); }
+  .eyebrow { font-size: .72rem; color: #1d4ed8; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
+  .by { color: #111827; font-weight: 600; }
 
-  .resource-category {
-    margin-top: 1.5rem;
-  }
+  .list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr; gap: .75rem; }
+  .list-item { background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 1rem; }
+  .link { color: var(--link-color, #1d4ed8); text-decoration: none; font-weight: 600; }
+  .note { display: block; color: var(--text-muted, #4b5563); margin-top: .25rem; }
 
-  .resource-category h2 {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.75rem;
-  }
+  .table { display: grid; grid-template-columns: 1fr; border: 1px solid #eaeaea; border-radius: 12px; overflow: hidden; }
+  .row { display: grid; grid-template-columns: 240px 1fr; gap: 1rem; padding: .9rem 1rem; border-top: 1px solid #eaeaea; }
+  .row:first-child { border-top: none; }
+  .cell.title { font-weight: 600; }
 
-  .resource-list {
-    list-style: none;
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1rem;
-  }
+  .promo { display: flex; flex-direction: column; gap: .75rem; border: 1px solid #eaeaea; border-radius: 12px; padding: 1rem; align-items: flex-start; }
+  .promo-copy h3 { margin: 0; font-size: 1.15rem; color: var(--primary-color); }
 
-  .resource-item {
-    background: #fff;
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
-    padding: 1.25rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+  .cta { text-align: center; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 16px; padding: 2rem; }
+  .cta h2 { font-size: 1.75rem; margin: 0 0 .5rem; }
+  .button { display: inline-flex; align-items: center; justify-content: center; padding: .75rem 1rem; border-radius: 12px; background: #1d4ed8; color: #fff; text-decoration: none; font-weight: 600; }
+  .button.ghost { background: transparent; color: #1d4ed8; border: 1px solid #1d4ed8; }
 
-  .resource-item h3 {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-  }
-
-  .resource-item p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .resource-item a {
-    align-self: flex-start;
-    color: var(--secondary-color);
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
-  }
-
-  .resource-item a:hover {
-    border-color: var(--secondary-color);
+  @media (min-width: 768px) {
+    .list { grid-template-columns: 1fr 1fr; }
   }
 </style>
