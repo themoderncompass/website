@@ -1,8 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// About page providing a biography and credibility information.
-
 const bio = `
   For years in my 20's and 30's I tried to navigate life without a clear guide, full of ambition but
   short on direction. Progress came slowly, often in circles.
@@ -18,8 +16,6 @@ const bio = `
 
   Outside of Modern Compass, I’m a product leader in tech, a husband, and a dad, a range of roles that
   keep everything I share grounded in real life.
-
-  Always...follow your compass.
 `;
 
 const shares = [
@@ -41,7 +37,6 @@ const credentials = [
 ---
 <Layout>
   <section class="about">
-    <!-- Photo first, above the text -->
     <div class="photo-container">
       <img src="/1645116024072.jpeg" alt="Headshot" class="headshot" />
       <p class="photo-name">{authorName}</p>
@@ -65,18 +60,20 @@ const credentials = [
         ))}
       </ul>
     </div>
+
+    <!-- Gradient motto at the bottom -->
+    <h2 class="motto">Always…follow your compass.</h2>
   </section>
 </Layout>
 
 <style>
-  /* Layout: stack vertically; left-align on larger screens */
   .about {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     max-width: 900px;
     margin: 0 auto;
-    align-items: stretch; /* children take full width */
+    align-items: stretch;
   }
 
   .about h1 {
@@ -108,12 +105,7 @@ const credentials = [
     margin-top: 1.5rem;
   }
 
-  .cred-list {
-    list-style: disc;
-    margin-left: 1.25rem;
-    line-height: 1.5;
-  }
-
+  .cred-list,
   .share-list {
     list-style: disc;
     margin-left: 1.25rem;
@@ -124,11 +116,10 @@ const credentials = [
     font-weight: 500;
   }
 
-  /* Photo styles */
   .photo-container {
     display: flex;
     flex-direction: column;
-    align-items: center;   /* center on small screens */
+    align-items: center;
     text-align: center;
   }
 
@@ -145,11 +136,22 @@ const credentials = [
     color: var(--secondary-color);
   }
 
-  /* On tablet/desktop: align the photo to the left so it sits directly above the text column */
   @media (min-width: 768px) {
     .photo-container {
-      align-items: flex-start;   /* left align */
+      align-items: flex-start;
       text-align: left;
     }
+  }
+
+  /* Gradient motto */
+  .motto {
+    margin-top: 3rem;
+    font-size: 2.25rem; /* bump up size */
+    font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center; /* center it for emphasis */
   }
 </style>
