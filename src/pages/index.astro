@@ -17,7 +17,12 @@ import Layout from '../layouts/Layout.astro';
       <!-- Promo + Beehiiv embed as a single unit -->
       <div class="promo-subscribe" aria-labelledby="subscribe-title">
         <div class="promo-img">
-          <img src="/images/promo.png" alt="TimeOS audit and tools preview" loading="lazy" decoding="async">
+          <!-- Use ONE of these src values -->
+          <!-- If file lives at public/Newsletter Promo.png -->
+          <img src="/Newsletter%20Promo.png" alt="TimeOS audit and tools preview" loading="lazy" decoding="async" />
+          <!-- If you move it to public/images/newsletter-promo.png, then use:
+          <img src="/images/newsletter-promo.png" alt="TimeOS audit and tools preview" loading="lazy" decoding="async" />
+          -->
         </div>
 
         <div class="beehiiv-embed" id="subscribe">
@@ -34,8 +39,6 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
-</Layout>
-
 
   <!-- WHAT IS MODERN COMPASS -->
   <section class="section">
@@ -147,49 +150,62 @@ import Layout from '../layouts/Layout.astro';
 
   /* Hero */
   .hero { padding: 56px 0 12px; text-align: center; background: #ffffff; color: #111; }
-.brand {
-  font-size: clamp(28px, 5vw, 48px);
-  line-height: 1.1;
-  margin: 0 0 8px 0;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-
-  /* Robust gradient: same approach as About.motto */
-  display: inline-block; /* ensure the background paints only the text box */
-  background-image: var(--gradient, linear-gradient(45deg,
-    var(--color-purple, #8b5cf6) 0%,
-    var(--color-blue,   #3b82f6) 35%,
-    var(--color-yellow, #facc15) 65%,
-    var(--color-orange, #f97316) 100%));
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent; /* matches About so the text never falls back to solid */
-}
+  .brand {
+    font-size: clamp(28px, 5vw, 48px);
+    line-height: 1.1;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    display: inline-block;
+    background-image: var(--gradient, linear-gradient(45deg,
+      var(--color-purple, #8b5cf6) 0%,
+      var(--color-blue,   #3b82f6) 35%,
+      var(--color-yellow, #facc15) 65%,
+      var(--color-orange, #f97316) 100%));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
   .lead { font-size: 18px; margin: 0 0 6px 0; color: #222; }
   .sublead { font-size: 16px; margin: 0 0 18px 0; color: #444; }
   .sublead.centered { text-align: center; margin-bottom: 16px; }
 
-  /* Promo + Beehiiv as a single unit */
-  .newsletter-embed {
-    display: grid;
-    justify-items: center;
-    row-gap: 8px;
-    margin: 12px auto;
-    width: 100%;
-    max-width: 700px;
+  /* Promo + Beehiiv row */
+  .promo-subscribe {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 2rem auto 0;
   }
-  .promo-img {
+  .promo-subscribe .promo-img {
+    flex: 0 0 420px;
+    max-width: 420px;
+  }
+  .promo-subscribe .promo-img img {
     display: block;
     width: 100%;
-    max-width: 420px;
     height: auto;
-    margin: 0 auto;
+    border-radius: 12px;
   }
-  .beehiiv-embed { display: block; margin-top: -12px !important; }
+  .promo-subscribe .beehiiv-embed {
+    flex: 1 1 520px;
+    max-width: 560px;
+    min-width: 300px;
+  }
+  .promo-subscribe .beehiiv-embed iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 225px;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
 
   /* Content blocks */
   .h { font-size: 24px; margin: 0 0 12px 0; color: #111; }
@@ -203,7 +219,6 @@ import Layout from '../layouts/Layout.astro';
     margin: 12px auto;
     height: auto;
   }
-
   .grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -224,79 +239,31 @@ import Layout from '../layouts/Layout.astro';
   .card li { margin-bottom: 4px; }
 
   /* Responsive */
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
+    .promo-subscribe { gap: 1.5rem; }
+    .promo-subscribe .promo-img { flex-basis: 360px; max-width: 360px; }
     .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 720px) {
+    .promo-subscribe {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 0 1rem;
+    }
+    .promo-subscribe .promo-img {
+      flex-basis: auto;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+    .promo-subscribe .beehiiv-embed { max-width: 100%; }
   }
   @media (max-width: 560px) {
     .grid { grid-template-columns: 1fr; }
-    .beehiiv-embed { margin-top: -8px !important; }
   }
-/* Layout for promo + subscribe row */
-.promo-subscribe {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  max-width: 1100px;
-  margin: 2rem auto 0;
-}
 
-/* Image block */
-.promo-subscribe .promo-img {
-  flex: 0 0 420px;
-  max-width: 420px;
-}
-.promo-subscribe .promo-img img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* Form block */
-.promo-subscribe .beehiiv-embed {
-  flex: 1 1 520px;
-  max-width: 560px;
-  min-width: 300px;
-}
-
-/* Make Beehiiv iframe fluid */
-.promo-subscribe .beehiiv-embed iframe {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 225px;               /* keep original visual height */
-  border: 0;
-  background: transparent;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .promo-subscribe { gap: 1.5rem; }
-  .promo-subscribe .promo-img { flex-basis: 360px; max-width: 360px; }
-}
-
-/* Mobile */
-@media (max-width: 720px) {
-  .promo-subscribe {
-    flex-direction: column;     /* stack */
-    align-items: stretch;
-    padding: 0 1rem;
+  /* Optional: visually-hidden utility for the H2 inside the embed */
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,1px,1px); white-space: nowrap; border: 0;
   }
-  .promo-subscribe .promo-img {
-    flex-basis: auto;
-    max-width: 260px;           /* smaller promo on mobile */
-    margin: 0 auto;
-  }
-  .promo-subscribe .beehiiv-embed {
-    max-width: 100%;
-  }
-}
-
-/* Very small phones */
-@media (max-width: 420px) {
-  .promo-subscribe .beehiiv-embed iframe { height: 210px; }
-}
-
 </style>
