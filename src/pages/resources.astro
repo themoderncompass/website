@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 
 // Modern Compass Resources page
-// Streamlined architecture: Featured tools > Prompts/Bookshelf/Apps > Newsletters/TikTok > CTA
+// Featured tools > Prompts (expand/copy) > Book shelf > Apps > Newsletters > TikTok > CTA
 
 const tools = [
   {
@@ -19,17 +19,37 @@ const tools = [
   },
 ]
 
+// Prompts now include `content` for the expandable body and copy button
 const prompts = [
-  { title: 'Intention vs Action reflection', href: '/prompts/intention-action', description: 'Ten minute exercise to spot where you are stuck in intention without action.' },
-  { title: 'Power of Two resonance scan', href: '/prompts/power-of-two', description: 'Identify two reliable points of resonance before you invest more in a relationship.' },
+  {
+    title: 'Intention vs Action reflection',
+    description: 'Ten minute exercise to spot where you are stuck in intention without action.',
+    content: `Prompt:
+Identify one area where your intention is high but action is low. Write:
+1) The smallest next step that takes <10 minutes.
+2) The cost of not doing it this week.
+3) One friction you can remove right now.
+Finish by scheduling the step on your calendar.`,
+  },
+  {
+    title: 'Power of Two resonance scan',
+    description: 'Identify two reliable points of resonance before you invest more in a relationship.',
+    content: `Prompt:
+List two interactions with this person that left you energized. For each, note:
+• What exactly created the resonance?
+• Is it repeatable weekly?
+If you cannot name two, pause new commitments for 14 days.`,
+  },
 ]
 
+// Bookshelf: spine layout handled by your existing CSS
 const bookshelf = [
   { title: 'Atomic Habits', author: 'James Clear', href: 'https://jamesclear.com/atomic-habits', note: 'Clear mechanisms for habit formation that pairs well with Creative Equity.' },
   { title: '7 Habits of Highly Effective People', author: 'Stephen Covey', href: 'https://www.franklincovey.com/courses/the-7-habits/', note: 'Timeless habits for aligning values with daily action. It reinforces Modern Compass by showing how character and principle-based living create a stable foundation for growth.' },
   { title: 'The Defining Decade', author: 'Meg Jay', href: 'https://www.megjay.com/the-defining-decade', note: 'Identity capital that complements Modern Compass frameworks and character chapters.' },
 ]
 
+// Apps: you said you’ve got it, but here’s the lineup you settled on
 const apps = [
   {
     name: 'ChatGPT Plus',
@@ -42,7 +62,7 @@ const apps = [
     note: 'A habit tracker that builds on the Atomic Habits framework to make small actions stick.',
   },
   {
-    name: 'Impulse Wallet (In Development)',
+    name: 'Impulse Wallet (Coming Soon)',
     href: '/tools/impulse-wallet',
     note: 'A Modern Compass web app to track your impulses and compare weekly scores with friends or family to fight negative habits and reinforce positive ones.',
   },
@@ -53,11 +73,15 @@ const newsletters = [
   { name: 'Deep Culture', href: 'https://deepculture.substack.com', note: 'Interesting finds across the internet, and some ways broaden our horizon.' },
 ]
 
-const tiktok = { href: 'https://www.tiktok.com/@themoderncompass', blurb: 'Follow for videos on confidence, trust, practical relationship skills, and more that bring the book to life.' }
+const tiktok = {
+  href: 'https://www.tiktok.com/@themoderncompass',
+  blurb: 'Follow for videos on confidence, trust, practical relationship skills, and more that bring the book to life.',
+}
 
+// Simplified CTA
 const newsletterCTA = {
-  heading: 'Get the TimeOS Audit free',
-  body: 'Join the newsletter for practical tools and one useful idea each month. You will also get the five page TimeOS Audit as a welcome bonus.',
+  heading: 'More like this, monthly',
+  body: 'One practical idea and a few curated tools. No fluff.',
   button: { label: 'Join the newsletter', href: '/newsletter' },
 }
 ---
@@ -82,20 +106,26 @@ const newsletterCTA = {
       </div>
     </div>
 
-    <!-- Prompts -->
+    <!-- Prompts (expandable + copy) -->
     <div class="block">
       <h2>Prompts</h2>
-      <ul class="list">
-        {prompts.map((p) => (
-          <li class="list-item">
-            <a href={p.href} class="link">{p.title}</a>
-            <p class="note">{p.description}</p>
+      <ul class="prompt-accordion">
+        {prompts.map((p, idx) => (
+          <li class="prompt-item">
+            <details>
+              <summary>
+                <span class="prompt-title">{p.title}</span>
+                <span class="prompt-desc">{p.description}</span>
+              </summary>
+              <pre class="prompt-content" id={`prompt-${idx}`}>{p.content}</pre>
+              <button class="copy-btn" onClick={() => copyPrompt(`prompt-${idx}`)}>Copy</button>
+            </details>
           </li>
         ))}
       </ul>
     </div>
 
-    <!-- Bookshelf -->
+    <!-- Book shelf -->
     <div class="block">
       <h2>Book shelf</h2>
       <div class="shelf-wrap">
@@ -126,9 +156,7 @@ const newsletterCTA = {
       <div class="table">
         {apps.map((a) => (
           <div class="row">
-            <div class="cell title">
-              <a href={a.href} class="link" rel="nofollow noopener" target="_blank">{a.name}</a>
-            </div>
+            <div class="cell title"><a href={a.href} class="link" rel="nofollow noopener" target="_blank">{a.name}</a></div>
             <div class="cell">{a.note}</div>
           </div>
         ))}
@@ -164,6 +192,30 @@ const newsletterCTA = {
       <a href={newsletterCTA.button.href} class="button">{newsletterCTA.button.label}</a>
     </div>
   </section>
+
+  <!-- Lightweight prompt copy script -->
+  <script is:inline>
+    async function copyPrompt(id) {
+      try {
+        const el = document.getElementById(id);
+        if (!el) return;
+        await navigator.clipboard.writeText(el.innerText);
+        const btn = event?.currentTarget;
+        if (btn) {
+          const prev = btn.textContent;
+          btn.textContent = 'Copied';
+          setTimeout(() => (btn.textContent = prev), 1200);
+        }
+      } catch (e) {
+        // Fallback: select text for manual copy
+        const range = document.createRange();
+        range.selectNodeContents(document.getElementById(id));
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+      }
+    }
+  </script>
 </Layout>
 
 <style>
@@ -179,7 +231,6 @@ const newsletterCTA = {
   .card h3 { font-size: 1.15rem; color: var(--primary-color); margin: .25rem 0; }
   .card p { font-size: .95rem; color: var(--text-muted, #4b5563); }
   .eyebrow { font-size: .72rem; color: #1d4ed8; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
-  .by { color: #111827; font-weight: 600; }
 
   .list { list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
   .list-item { background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 1rem; }
@@ -203,73 +254,22 @@ const newsletterCTA = {
     .list { grid-template-columns: 1fr 1fr; }
   }
 
-  /* Bookshelf wrapper constrains width */
- .shelf-wrap {
-  max-width: 500px;
-  margin-left: 0;    /* instead of auto */
-  margin-right: auto;
-}
-
-  /* Bookshelf uses content width, not full container */
-  .bookshelf {
-    position: relative;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 56px;
-    gap: .75rem;
-    align-items: end;
-    justify-content: center;
-    min-height: 220px;
-    padding-bottom: 18px;
-    width: fit-content;
-  }
-
-  .bookshelf .shelf {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 10px;
-    background: linear-gradient(#c9a97e, #b58f66);
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,.15) inset, 0 6px 16px rgba(0,0,0,.08);
-  }
-
-  .book-spine {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 56px;
-    height: var(--h, 200px);
-    padding: 8px 6px;
-    border-radius: 6px;
-    color: #111;
-    text-decoration: none;
-    box-shadow: 0 2px 6px rgba(0,0,0,.08), inset 0 0 0 1px rgba(0,0,0,.06);
-    transition: transform .15s ease, box-shadow .15s ease;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-  }
-  .book-spine:hover {
-    transform: translateY(-4px) rotate(180deg);
-    box-shadow: 0 6px 18px rgba(0,0,0,.12), inset 0 0 0 1px rgba(0,0,0,.08);
-  }
+  /* Bookshelf wrapper keeps it tight and left-aligned */
+  .shelf-wrap { max-width: 500px; margin-left: 0; margin-right: auto; }
+  .bookshelf { position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: 56px; gap: .75rem; align-items: end; justify-content: center; min-height: 220px; padding-bottom: 18px; width: fit-content; }
+  .bookshelf .shelf { position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: linear-gradient(#c9a97e, #b58f66); border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,.15) inset, 0 6px 16px rgba(0,0,0,.08); }
+  .book-spine { display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 56px; height: var(--h, 200px); padding: 8px 6px; border-radius: 6px; color: #111; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,.08), inset 0 0 0 1px rgba(0,0,0,.06); transition: transform .15s ease, box-shadow .15s ease; writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); }
+  .book-spine:hover { transform: translateY(-4px) rotate(180deg); box-shadow: 0 6px 18px rgba(0,0,0,.12), inset 0 0 0 1px rgba(0,0,0,.08); }
   .spine-title { font-weight: 700; font-size: .9rem; line-height: 1; letter-spacing: .01em; text-align: center; }
   .spine-author { font-size: .75rem; opacity: .85; text-align: center; }
-
   .shelf-note { margin-top: .5rem; color: var(--text-muted, #4b5563); font-size: .9rem; }
 
-  @media (max-width: 640px) {
-    .shelf-wrap { max-width: 100%; }
-  }
-
-  /* Optional colorways for spines */
-  .color-0 { background: linear-gradient(180deg, #f3d9a7, #eac27b); }
-  .color-1 { background: linear-gradient(180deg, #c6e2ff, #9ec5ff); }
-  .color-2 { background: linear-gradient(180deg, #ffd5d5, #ffb4b4); }
-  .color-3 { background: linear-gradient(180deg, #d8ffc8, #b7f3a3); }
-  .color-4 { background: linear-gradient(180deg, #e3d7ff, #c8b5ff); }
-  .color-5 { background: linear-gradient(180deg, #ffe6c7, #ffd19a); }
+  /* Prompt accordion styles */
+  .prompt-accordion { list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
+  .prompt-item details { border: 1px solid #eaeaea; border-radius: 12px; background: #fff; padding: .75rem 1rem; }
+  .prompt-item summary { cursor: pointer; display: flex; flex-direction: column; gap: .25rem; font-weight: 600; color: var(--primary-color); }
+  .prompt-item .prompt-desc { font-weight: 500; color: var(--text-muted, #4b5563); font-size: .95rem; }
+  .prompt-item .prompt-content { background: #f9fafb; border: 1px dashed #e5e7eb; border-radius: 8px; padding: .75rem; margin-top: .75rem; white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  .copy-btn { margin-top: .5rem; align-self: flex-start; padding: .5rem .75rem; border-radius: 8px; border: 1px solid #1d4ed8; background: transparent; color: #1d4ed8; font-weight: 600; cursor: pointer; }
+  .copy-btn:hover { background: rgba(29, 78, 216, .06); }
 </style>
