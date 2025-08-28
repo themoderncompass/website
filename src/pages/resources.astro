@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 
 // Modern Compass Resources page
-// Streamlined architecture: Featured tools > Prompts/Bookshelf/Apps > Inspiration/Newsletters/TikTok > CTA
+// Streamlined architecture: Featured tools > Prompts/Bookshelf/Apps > Newsletters/TikTok > CTA
 
 const tools = [
   {
@@ -41,7 +41,6 @@ const newsletters = [
   { name: 'Deep Culture', href: 'https://deepculture.substack.com', note: 'Interesting finds across the internet, and some ways broaden our horizon.' },
 ]
 
-
 const tiktok = { href: 'https://www.tiktok.com/@themoderncompass', blurb: 'Follow for videos on confidence, trust, practical relationship skills, and more that bring the book to life.' }
 
 const newsletterCTA = {
@@ -62,7 +61,7 @@ const newsletterCTA = {
       <h2>Featured tools</h2>
       <div class="cards">
         {tools.map((t) => (
-          <a href={t.href} class="card">
+          <a href={t.href} class="card" rel={t.href.startsWith('http') ? 'nofollow noopener' : undefined} target={t.href.startsWith('http') ? '_blank' : undefined}>
             <div class="eyebrow">{t.label}</div>
             <h3>{t.title}</h3>
             <p>{t.description}</p>
@@ -87,22 +86,24 @@ const newsletterCTA = {
     <!-- Bookshelf -->
     <div class="block">
       <h2>Book shelf</h2>
-      <div class="bookshelf" role="list">
-        {bookshelf.map((b, i) => (
-          <a
-            href={b.href}
-            role="listitem"
-            class={`book-spine color-${i % 6}`}
-            target="_blank"
-            rel="nofollow noopener"
-            aria-label={`${b.title} by ${b.author}`}
-            title={`${b.title} — ${b.author}`}
-          >
-            <span class="spine-title">{b.title}</span>
-            <span class="spine-author">{b.author}</span>
-          </a>
-        ))}
-        <div class="shelf"></div>
+      <div class="shelf-wrap">
+        <div class="bookshelf" role="list">
+          {bookshelf.map((b, i) => (
+            <a
+              href={b.href}
+              role="listitem"
+              class={`book-spine color-${i % 6}`}
+              target="_blank"
+              rel="nofollow noopener"
+              aria-label={`${b.title} by ${b.author}`}
+              title={`${b.title} — ${b.author}`}
+            >
+              <span class="spine-title">{b.title}</span>
+              <span class="spine-author">{b.author}</span>
+            </a>
+          ))}
+          <div class="shelf"></div>
+        </div>
       </div>
       <p class="shelf-note">Click a spine to learn more about the book.</p>
     </div>
@@ -113,24 +114,13 @@ const newsletterCTA = {
       <div class="table">
         {apps.map((a) => (
           <div class="row">
-            <div class="cell title"><a href={a.href} class="link" rel="nofollow noopener" target="_blank">{a.name}</a></div>
+            <div class="cell title">
+              <a href={a.href} class="link" rel="nofollow noopener" target="_blank">{a.name}</a>
+            </div>
             <div class="cell">{a.note}</div>
           </div>
         ))}
       </div>
-    </div>
-
-    <!-- Inspiration -->
-    <div class="block">
-      <h2>Inspiration and learning</h2>
-      <ul class="list">
-        {inspiration.map((i) => (
-          <li class="list-item">
-            <a href={i.href} class="link" rel="nofollow noopener" target="_blank">{i.title}</a>
-            <span class="note">{i.note}</span>
-          </li>
-        ))}
-      </ul>
     </div>
 
     <!-- Newsletters -->
@@ -200,63 +190,74 @@ const newsletterCTA = {
   @media (min-width: 768px) {
     .list { grid-template-columns: 1fr 1fr; }
   }
-/* Bookshelf styling */
-.bookshelf {
-  position: relative;
-  display: grid;
-  grid-auto-flow: column;       /* lay books left→right */
-  grid-auto-columns: 56px;      /* each spine is one fixed column */
-  justify-content: center;      /* center the group of spines */
-  gap: .75rem;
-  align-items: end;
-  min-height: 220px;
-  padding-bottom: 18px;
 
-  /* constrain width, center on larger screens */
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-/* shelf bar should match the container width */
-.bookshelf .shelf {
-  position: absolute;
-  left: 0;                      /* was -12px, which overhung after constraining */
-  right: 0;
-  bottom: 0;
-  height: 10px;
-  background: linear-gradient(#c9a97e, #b58f66);
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,.15) inset, 0 6px 16px rgba(0,0,0,.08);
-}
-
-/* spines */
-.book-spine {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 56px;
-  height: var(--h, 200px);
-  padding: 8px 6px;
-  border-radius: 6px;
-  color: #111;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,.08), inset 0 0 0 1px rgba(0,0,0,.06);
-  transition: transform .15s ease, box-shadow .15s ease;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-}
-.book-spine:hover {
-  transform: translateY(-4px) rotate(180deg);
-  box-shadow: 0 6px 18px rgba(0,0,0,.12), inset 0 0 0 1px rgba(0,0,0,.08);
-}
-.spine-title { font-weight: 700; font-size: .9rem; line-height: 1; letter-spacing: .01em; text-align: center; }
-.spine-author { font-size: .75rem; opacity: .85; text-align: center; }
-
-/* optional: only constrain on tablet+ so mobile can breathe */
-@media (max-width: 640px) {
-  .bookshelf {
-    max-width: 100%;
+  /* Bookshelf wrapper constrains width */
+  .shelf-wrap {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
+
+  /* Bookshelf uses content width, not full container */
+  .bookshelf {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 56px;
+    gap: .75rem;
+    align-items: end;
+    justify-content: center;
+    min-height: 220px;
+    padding-bottom: 18px;
+    width: fit-content;
+  }
+
+  .bookshelf .shelf {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10px;
+    background: linear-gradient(#c9a97e, #b58f66);
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15) inset, 0 6px 16px rgba(0,0,0,.08);
+  }
+
+  .book-spine {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 56px;
+    height: var(--h, 200px);
+    padding: 8px 6px;
+    border-radius: 6px;
+    color: #111;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,.08), inset 0 0 0 1px rgba(0,0,0,.06);
+    transition: transform .15s ease, box-shadow .15s ease;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+  .book-spine:hover {
+    transform: translateY(-4px) rotate(180deg);
+    box-shadow: 0 6px 18px rgba(0,0,0,.12), inset 0 0 0 1px rgba(0,0,0,.08);
+  }
+  .spine-title { font-weight: 700; font-size: .9rem; line-height: 1; letter-spacing: .01em; text-align: center; }
+  .spine-author { font-size: .75rem; opacity: .85; text-align: center; }
+
+  .shelf-note { margin-top: .5rem; color: var(--text-muted, #4b5563); font-size: .9rem; }
+
+  @media (max-width: 640px) {
+    .shelf-wrap { max-width: 100%; }
+  }
+
+  /* Optional colorways for spines */
+  .color-0 { background: linear-gradient(180deg, #f3d9a7, #eac27b); }
+  .color-1 { background: linear-gradient(180deg, #c6e2ff, #9ec5ff); }
+  .color-2 { background: linear-gradient(180deg, #ffd5d5, #ffb4b4); }
+  .color-3 { background: linear-gradient(180deg, #d8ffc8, #b7f3a3); }
+  .color-4 { background: linear-gradient(180deg, #e3d7ff, #c8b5ff); }
+  .color-5 { background: linear-gradient(180deg, #ffe6c7, #ffd19a); }
+</style>
