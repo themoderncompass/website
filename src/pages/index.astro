@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
+
 <Layout>
   <!-- HERO with upfront CTA via Beehiiv + promo -->
   <section class="hero">
@@ -18,9 +19,18 @@ import Layout from '../layouts/Layout.astro';
         <img
           src="/Newsletter%20Promo.png"
           alt="Join 100+ subscribers and get this digital asset free"
-          class="promo"
+          class="promo-img"
         />
-       <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script><iframe src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 595px; height: 225px; margin: 0; border-radius: 0px 0px 0px 0px !important; background-color: transparent; box-shadow: 0 0 #0000; max-width: 100%;"></iframe>
+        <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+        <iframe
+          src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
+          class="beehiiv-embed"
+          data-test-id="beehiiv-embed"
+          frameborder="0"
+          scrolling="no"
+          style="width: 595px; height: 225px; margin: 0; border-radius: 0; background-color: transparent; box-shadow: 0 0 #0000; max-width: 100%;"
+          title="Subscribe to the Modern Compass newsletter"
+        ></iframe>
       </div>
     </div>
   </section>
@@ -30,145 +40,62 @@ import Layout from '../layouts/Layout.astro';
     <div class="wrap narrow">
       <h2 class="h">What Is Modern Compass?</h2>
       <p>
-        There is a lot of great self improvement books out there, but many fall too academic and unapproachable, or great concepts in theory, but too abstract to apply. Modern Compass is different.
-        It is built around four clear directions that are simple to remember and deep enough to guide real progress, and it becomes your compass for tracking your progress.Each direction has 4 layers within it, building on top of each other.
+        There are a lot of great self-improvement books, yet many skew academic or abstract. Modern Compass is different.
+        It is built around four clear directions that are simple to remember and deep enough to guide real progress. It becomes your compass for tracking growth. Each direction has four layers that build on each other.
       </p>
-       <img src="/Modern%20Compass%20Layers.png" alt="Modern Compass layers graphic" style="display:block; width:100%; max-width:700px; margin: 12px auto;" />
-    <p class="sublead" style="text-align:center; margin-bottom:16px;">
-  Each direction builds in layers. Start at the top with the foundation, then move down as each layer builds on the previous one.
-</p>
-<div class="grid">
-  <div class="card">
-    <h3 class="h3">Self</h3>
-    <ul>
-      <li>Awareness</li>
-      <li>Worth</li>
-      <li>Confidence</li>
-      <li>Control</li>
-    </ul>
-  </div>
 
-  <div class="card">
-    <h3 class="h3">Trust</h3>
-    <ul>
-      <li>Tenets of Trust</li>
-      <li>Trust in Humanity</li>
-      <li>Informed Trust</li>
-      <li>Profound Trust</li>
-    </ul>
-  </div>
+      <img
+        src="/Modern%20Compass%20Layers.png"
+        alt="Modern Compass layers graphic"
+        class="layers-img"
+      />
 
-  <div class="card">
-    <h3 class="h3">Character</h3>
-    <ul>
-      <li>Environmental</li>
-      <li>Developed</li>
-      <li>Authentic</li>
-      <li>Transcending</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3 class="h3">Relationships</h3>
-    <ul>
-      <li>Empathy</li>
-      <li>Resonance</li>
-      <li>Affinity</li>
-      <li>Loyalty</li>
-    </ul>
-  </div>
-</div>
-  </section>
-const bio = `
-  For years in my 20's and 30's I tried to navigate life without a clear guide, full of ambition but
-  short on direction. Progress came slowly, often in circles.
-
-  <!-- WHY IT MATTERS -->
-  <section class="section alt">
-    <div class="wrap narrow">
-      <h2 class="h">Why it matters</h2>
-      <p>
-        Life doesn't come with a map or directions, and every choice pulls you somewhere. Without clarity, you drift.
-        With Modern Compass, you have a tool to orient yourself, test your decisions, and move with confidence.
+      <p class="sublead centered">
+        Each direction builds in layers. Start with the foundation, then move down as each layer builds on the previous one.
       </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3 class="h3">Self</h3>
+          <ul>
+            <li>Awareness</li>
+            <li>Worth</li>
+            <li>Confidence</li>
+            <li>Control</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Trust</h3>
+          <ul>
+            <li>Tenets of Trust</li>
+            <li>Trust in Humanity</li>
+            <li>Informed Trust</li>
+            <li>Profound Trust</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Character</h3>
+          <ul>
+            <li>Environmental</li>
+            <li>Developed</li>
+            <li>Authentic</li>
+            <li>Transcending</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="h3">Relationships</h3>
+          <ul>
+            <li>Empathy</li>
+            <li>Resonance</li>
+            <li>Affinity</li>
+            <li>Loyalty</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </section>
-  Modern Compass grew out of that experience. It’s my way of cutting through noise and surfacing what
-  really matters so you can act with clarity instead of drifting on intention alone.
-
-  <!-- PROOF AND MOMENTUM -->
-  <section class="section">
-    <div class="wrap narrow">
-      <h2 class="h">Proof and momentum</h2>
-      <p>
-        Over one hundred subscribers gaining monthly insights and using Modern tools like the TimeOS Audit, the Impulse Wallet, and the Intention vs Action Activity
-        to reclaim time, take action, and grow with intention. 1,000+ followers on TikTok for behind the scenes, insights, and nightly navigation.
-      </p>
-    </div>
-  </section>
-  I’ve learned growth isn’t always about collecting more advice or following someone else’s formula. It’s
-  about building your own compass and taking small actions that help you trust yourself more with every step.
-
-  My goal isn’t to tell you who to be. It’s to help you see where you are, choose where you’re going, and
-  help you decide where to commit your time and energy to what matters most.
-
-  Outside of Modern Compass, I’m a product leader in tech, a husband, and a dad, a range of roles that
-  keep everything I share grounded in real life.
-`;
-
-  <!-- CLOSING NOTE -->
-  <section class="section">
-    <div class="wrap narrow">
-      <h2 class="h">A personal note</h2>
-      <p>
-        I created Modern Compass for a couple reasons. One, I myself in my late teens and 20's felt lost with little to give me direction and how to build myself up. I'm writing this for others that feel this way. Lastly, while this book is not about parenthood, I'm writing what I would want my daugters to have as they become adults and how to navigate life.
-        As I close most of my newsletters and TikTok Posts, always...follow your compass.
-      </p>
-const shares = [
-  'Strengthen your sense of self',
-  'Deepen trust',
-  'Develop character',
-  'Build relationships',
-];
-
-const authorName = 'Josh Imholte';
-
-const credentials = [
-  'I’ve spent over a decade leading complex projects in tech and the last 5 years launching global products, turning messy topics into clear strategies and value',
-  'My writing and tools are built from lived experience, tested in the realities of work, family, and growth',
-  'I don’t preach quick fixes. I focus on frameworks that are easy to understand',
-  'Modern Compass is designed to be actionable and approachable with activities, tools, and a growing community to help',
-  'I believe clarity beats complexity. If it doesn’t simplify your life or nudge you to move forward, it doesn’t belong'
-];
----
-<Layout>
-  <section class="about">
-    <div class="photo-container">
-      <img src="/1645116024072.jpeg" alt="Headshot" class="headshot" />
-      <p class="photo-name">{authorName}</p>
-    </div>
-
-    <div class="about-text">
-      <h1>About</h1>
-      <p class="bio">{bio}</p>
-
-      <p class="intro-share">Through my book, newsletter, TikTok, and tools, I share practical ways to:</p>
-      <ul class="share-list">
-        {shares.map((item) => (
-          <li>{item}</li>
-        ))}
-      </ul>
-
-      <h3>Why trust The Modern Compass?</h3>
-      <ul class="cred-list">
-        {credentials.map((cred) => (
-          <li>{cred}</li>
-        ))}
-      </ul>
-    </div>
-
-    <!-- Gradient motto at the bottom -->
-    <h2 class="motto">Always…follow your compass.</h2>
   </section>
 </Layout>
 
@@ -177,37 +104,22 @@ const credentials = [
   .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
   .wrap.narrow { max-width: 800px; }
   .section { padding: 56px 0; background: #ffffff; color: #111; }
-  .section.alt { background: #f8fafc; }
-
-.card ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-.card li {
-  margin-bottom: 4px;
-}
 
   /* Hero */
- .hero { padding: 56px 0 12px; text-align: center; background: #ffffff; color: #111; }
-
+  .hero { padding: 56px 0 12px; text-align: center; background: #ffffff; color: #111; }
   .brand {
     font-size: clamp(28px, 5vw, 48px);
     line-height: 1.1;
     margin: 0 0 8px 0;
     background: linear-gradient(45deg, var(--color-purple) 0%, var(--color-blue) 35%, var(--color-yellow) 65%, var(--color-orange) 100%);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text; color: transparent;
-  .about {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    align-items: stretch;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
   .lead { font-size: 18px; margin: 0 0 6px 0; color: #222; }
   .sublead { font-size: 16px; margin: 0 0 18px 0; color: #444; }
+  .sublead.centered { text-align: center; margin-bottom: 16px; }
 
   /* Promo + Beehiiv as a single unit */
   .newsletter-embed {
@@ -217,23 +129,14 @@ const credentials = [
     margin: 12px auto;
     width: 100%;
     max-width: 700px;
-
-  .about h1 {
-    font-size: 2rem;
-    color: var(--primary-color);
   }
-  .promo {
+  .promo-img {
     display: block;
     width: 100%;
     max-width: 420px; /* controls promo size so it is not huge */
     height: auto;
     margin: 0 auto;
-
-  .about h2 {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
   }
-  .newsletter-embed > * { margin: 0 !important; padding: 0 !important; line-height: 0; }
   .beehiiv-embed { display: block; margin-top: -12px !important; }
 
   /* Content blocks */
@@ -246,84 +149,14 @@ const credentials = [
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 14px;
     margin-top: 12px;
-
-  .about-text {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    text-align: left;
   }
   .card {
     background: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 10px;
     padding: 14px;
-
-  .bio {
-    font-size: 1rem;
-    line-height: 1.6;
-    white-space: pre-line;
   }
-
-  /* Responsive */
-  @media (max-width: 900px) {
-    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .about h3 {
-    font-size: 1.25rem;
-    color: var(--primary-color);
-    margin-top: 1.5rem;
-  }
-  @media (max-width: 560px) {
-    .grid { grid-template-columns: 1fr; }
-    .beehiiv-embed { margin-top: -8px !important; }
-
-  .cred-list,
-  .share-list {
-    list-style: disc;
-    margin-left: 1.25rem;
-    line-height: 1.5;
-  }
-
-  .intro-share {
-    font-weight: 500;
-  }
-
-  .photo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .headshot {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .photo-name {
-    margin-top: 0.5rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-  }
-
-  @media (min-width: 768px) {
-    .photo-container {
-      align-items: flex-start;
-      text-align: left;
-    }
-  }
-
-  /* Gradient motto */
-  .motto {
-    margin-top: 3rem;
-    font-size: 2.25rem; /* bump up size */
-    font-weight: 700;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-align: center; /* center it for emphasis */
-  }
-</style>
+  .card ul {
+    list-style: none;
+    padding-left: 0;
+    margin:
