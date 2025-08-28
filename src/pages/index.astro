@@ -15,25 +15,27 @@ import Layout from '../layouts/Layout.astro';
       </p>
 
       <!-- Promo + Beehiiv embed as a single unit -->
-      <div class="newsletter-embed">
-        <img
-          src="/Newsletter%20Promo.png"
-          alt="Join 100+ subscribers and get this digital asset free"
-          class="promo-img"
-        />
-        <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-        <iframe
-          src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
-          class="beehiiv-embed"
-          data-test-id="beehiiv-embed"
-          frameborder="0"
-          scrolling="no"
-          style="width: 595px; height: 225px; margin: 0; border-radius: 0; background-color: transparent; box-shadow: 0 0 #0000; max-width: 100%;"
-          title="Subscribe to the Modern Compass newsletter"
-        ></iframe>
+      <div class="promo-subscribe" aria-labelledby="subscribe-title">
+        <div class="promo-img">
+          <img src="/images/promo.png" alt="TimeOS audit and tools preview" loading="lazy" decoding="async">
+        </div>
+
+        <div class="beehiiv-embed" id="subscribe">
+          <h2 id="subscribe-title" class="sr-only">Subscribe to Modern Compass</h2>
+          <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+          <iframe
+            src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
+            title="Subscribe to the Modern Compass newsletter"
+            frameborder="0"
+            scrolling="no"
+            data-test-id="beehiiv-embed"
+          ></iframe>
+        </div>
       </div>
     </div>
   </section>
+</Layout>
+
 
   <!-- WHAT IS MODERN COMPASS -->
   <section class="section">
@@ -229,4 +231,72 @@ import Layout from '../layouts/Layout.astro';
     .grid { grid-template-columns: 1fr; }
     .beehiiv-embed { margin-top: -8px !important; }
   }
+/* Layout for promo + subscribe row */
+.promo-subscribe {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 2rem auto 0;
+}
+
+/* Image block */
+.promo-subscribe .promo-img {
+  flex: 0 0 420px;
+  max-width: 420px;
+}
+.promo-subscribe .promo-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Form block */
+.promo-subscribe .beehiiv-embed {
+  flex: 1 1 520px;
+  max-width: 560px;
+  min-width: 300px;
+}
+
+/* Make Beehiiv iframe fluid */
+.promo-subscribe .beehiiv-embed iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 225px;               /* keep original visual height */
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .promo-subscribe { gap: 1.5rem; }
+  .promo-subscribe .promo-img { flex-basis: 360px; max-width: 360px; }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .promo-subscribe {
+    flex-direction: column;     /* stack */
+    align-items: stretch;
+    padding: 0 1rem;
+  }
+  .promo-subscribe .promo-img {
+    flex-basis: auto;
+    max-width: 260px;           /* smaller promo on mobile */
+    margin: 0 auto;
+  }
+  .promo-subscribe .beehiiv-embed {
+    max-width: 100%;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .promo-subscribe .beehiiv-embed iframe { height: 210px; }
+}
+
 </style>
