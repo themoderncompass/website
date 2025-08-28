@@ -291,10 +291,55 @@ body: 'One practical insight and hand-picked tools to help you take the next ste
   .link { color: var(--link-color, #1d4ed8); text-decoration: none; font-weight: 600; }
   .note { display: block; color: var(--text-muted, #4b5563); margin-top: .25rem; }
 
-  .table { display: grid; grid-template-columns: 1fr; border: 1px solid #eaeaea; border-radius: 12px; overflow: hidden; }
-  .row { display: grid; grid-template-columns: 240px 1fr; gap: 1rem; padding: .9rem 1rem; border-top: 1px solid #eaeaea; }
-  .row:first-child { border-top: none; }
-  .cell.title { font-weight: 600; }
+/* Apps table – responsive + unclip text */
+.table {
+  display: grid;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  overflow: hidden; /* keeps rounded corners */
+}
+
+/* Two-column on larger screens.
+   First column flexes between 140–240px instead of hard 240px */
+.row {
+  display: grid;
+  grid-template-columns: clamp(140px, 35%, 240px) 1fr;
+  gap: 0.75rem 1rem;
+  padding: 0.9rem 1rem;
+  border-top: 1px solid #eaeaea;
+  align-items: start;
+}
+.row:first-child { border-top: none; }
+
+/* Let grid kids wrap inside their tracks */
+.row > .cell,
+.row > .cell.title { min-width: 0; }
+
+.cell.title { font-weight: 600; }
+
+/* Cross-browser wrapping */
+.cell,
+.cell.title,
+.cell.title .link {
+  overflow-wrap: break-word;     /* fallback */
+  overflow-wrap: anywhere;       /* modern */
+  word-break: break-word;        /* WebKit quirk */
+  hyphens: auto;                 /* nicer wrapping for long words */
+}
+
+/* Mobile: stack so nothing gets cut off */
+@media (max-width: 600px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem 0;
+  }
+  .cell.title { margin-bottom: 0.1rem; }
+  .row { padding: 0.8rem 0.9rem; } /* optional tighter spacing */
+}
+
+
+/* If you ever see ultra-long URLs still overflow, enable this: */
+/* .cell a { word-break: break-all; } */
 
   .promo { display: flex; flex-direction: column; gap: .75rem; border: 1px solid #eaeaea; border-radius: 12px; padding: 1rem; align-items: flex-start; }
   .promo-copy h3 { margin: 0; font-size: 1.15rem; color: var(--primary-color); }
