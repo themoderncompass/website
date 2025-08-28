@@ -2,12 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 
 // About page providing a biography and credibility information.
-// Replace the placeholder text with your own story, credentials and
-// mission.  Consider including a portrait or additional images by
-// uploading them to the `public` folder and referencing them here.
 
-// Removed the unused name constant. The biography below has been revised to reflect a concise,
-// reader‑focused narrative and is used to populate the main content of the about page.
 const bio = `
   For years in my 20's and 30's I tried to navigate life without a clear guide, full of ambition but
   short on direction. Progress came slowly, often in circles.
@@ -27,7 +22,6 @@ const bio = `
   Always...follow your compass.
 `;
 
-// List the practical outcomes shared through books, newsletters, social platforms and tools.
 const shares = [
   'Strengthen your sense of self',
   'Deepen trust',
@@ -35,9 +29,6 @@ const shares = [
   'Build relationships',
 ];
 
-// Author name used for the caption beneath the headshot.  Reintroducing the
-// name here adds a personal touch without placing it prominently in the
-// main heading.
 const authorName = 'Josh Imholte';
 
 const credentials = [
@@ -50,40 +41,42 @@ const credentials = [
 ---
 <Layout>
   <section class="about">
+    <!-- Photo first, above the text -->
+    <div class="photo-container">
+      <img src="/1645116024072.jpeg" alt="Headshot" class="headshot" />
+      <p class="photo-name">{authorName}</p>
+    </div>
+
     <div class="about-text">
       <h1>About</h1>
       <p class="bio">{bio}</p>
-      <!-- Introduce the areas of focus offered through Modern Compass -->
+
       <p class="intro-share">Through my book, newsletter, TikTok, and tools, I share practical ways to:</p>
       <ul class="share-list">
         {shares.map((item) => (
           <li>{item}</li>
         ))}
       </ul>
-      <h3>Why trust The Modern Compass?</h3>
+
+      <h3>Why trust The Modern Compass?</h3>
       <ul class="cred-list">
         {credentials.map((cred) => (
           <li>{cred}</li>
         ))}
       </ul>
     </div>
-    <!-- Headshot on the right to balance the layout.  The author name
-         appears as a caption below the image to personalize the page
-         without cluttering the main heading. -->
-    <div class="photo-container">
-      <img src="/1645116024072.jpeg" alt="Headshot" class="headshot" />
-      <p class="photo-name">{authorName}</p>
-    </div>
   </section>
 </Layout>
 
 <style>
+  /* Layout: stack vertically; left-align on larger screens */
   .about {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 2rem;
     max-width: 900px;
-    align-items: flex-start;
+    margin: 0 auto;
+    align-items: stretch; /* children take full width */
   }
 
   .about h1 {
@@ -97,10 +90,10 @@ const credentials = [
   }
 
   .about-text {
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    text-align: left;
   }
 
   .bio {
@@ -121,31 +114,6 @@ const credentials = [
     line-height: 1.5;
   }
 
-  /* Style the headshot image to be round and appropriately sized */
-  .headshot {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    align-self: flex-start;
-    margin-left: 1rem;
-  }
-
-  /* Container for the photo and its caption */
-  .photo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  /* Caption beneath the headshot */
-  .photo-name {
-    margin-top: 0.5rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-  }
-
   .share-list {
     list-style: disc;
     margin-left: 1.25rem;
@@ -154,5 +122,34 @@ const credentials = [
 
   .intro-share {
     font-weight: 500;
+  }
+
+  /* Photo styles */
+  .photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* center on small screens */
+    text-align: center;
+  }
+
+  .headshot {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .photo-name {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+  }
+
+  /* On tablet/desktop: align the photo to the left so it sits directly above the text column */
+  @media (min-width: 768px) {
+    .photo-container {
+      align-items: flex-start;   /* left align */
+      text-align: left;
+    }
   }
 </style>
