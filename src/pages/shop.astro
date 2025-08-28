@@ -94,6 +94,8 @@ import Layout from '../layouts/Layout.astro';
         Modern Compass is about clarity and application. The shop takes lessons from the book, newsletter,
         and TikTok and gives them form as digital downloads you can use right away. No waiting, no shipping,
         just tools designed to meet you where you are and move you forward.
+      </p>
+    </section>
 
     <!-- Browse All -->
     <section class="browse-all max-w-2xl mx-auto text-center mt-6">
@@ -105,16 +107,13 @@ import Layout from '../layouts/Layout.astro';
         href="https://www.etsy.com/shop/ModernCompass" 
         target="_blank" 
         rel="noopener noreferrer" 
-        class="cta big"
+        class="button"
       >
         Visit Etsy Shop →
       </a>
     </section>
-      </p>
-    </section>
   </section>
 </Layout>
-
 
 <style>
   .shop {
@@ -248,16 +247,19 @@ import Layout from '../layouts/Layout.astro';
     position: relative;
   }
 
-.cta.big {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
-  background: var(--primary-color, #0ea5e9);
-  color: white;
-  font-weight: 600;
-  border-radius: 8px;
-  text-decoration: none;
-}
-.cta.big:hover {
-  background: #0284c7;
-}
+  /* Blue button (same as Resources) */
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1rem;
+    border-radius: 12px;
+    background: #1d4ed8;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .button:hover {
+    background: #1e40af;
+  }
 </style>
