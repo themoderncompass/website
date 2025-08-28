@@ -145,18 +145,25 @@ import Layout from '../layouts/Layout.astro';
 
   /* Hero */
   .hero { padding: 56px 0 12px; text-align: center; background: #ffffff; color: #111; }
-  .brand {
-    font-size: clamp(28px, 5vw, 48px);
-    line-height: 1.1;
-    margin: 0 0 8px 0;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    background: var(--gradient); /* uses your site gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-  }
+.brand {
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.1;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: var(--gradient, linear-gradient(45deg,
+    #8b5cf6 0%,   /* fallback purple */
+    #3b82f6 35%,  /* fallback blue */
+    #facc15 65%,  /* fallback yellow */
+    #f97316 100%  /* fallback orange */
+  ));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  /* Safety fallback so text is visible if gradient fails */
+  color: #111;
+}
   .lead { font-size: 18px; margin: 0 0 6px 0; color: #222; }
   .sublead { font-size: 16px; margin: 0 0 18px 0; color: #444; }
   .sublead.centered { text-align: center; margin-bottom: 16px; }
