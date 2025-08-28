@@ -41,7 +41,8 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="h">What Is Modern Compass?</h2>
       <p>
         There are a lot of great self-improvement books, yet many skew academic or abstract. Modern Compass is different.
-        It is built around four clear directions that are simple to remember and deep enough to guide real progress. It becomes your compass for tracking growth. Each direction has four layers that build on each other.
+        It is built around four clear directions that are simple to remember and deep enough to guide real progress.
+        It becomes your compass for tracking growth. Each direction has four layers that build on each other.
       </p>
 
       <img
@@ -97,6 +98,42 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <!-- WHY IT MATTERS -->
+  <section class="section alt">
+    <div class="wrap narrow">
+      <h2 class="h">Why it matters</h2>
+      <p>
+        Life does not come with a map, and every choice pulls you somewhere. Without clarity you drift.
+        With Modern Compass, you have a tool to orient yourself, test your decisions, and move with confidence.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROOF AND MOMENTUM -->
+  <section class="section">
+    <div class="wrap narrow">
+      <h2 class="h">Proof and momentum</h2>
+      <p>
+        Over one hundred subscribers gain monthly insights and use Modern tools like the TimeOS Audit, the Impulse Wallet,
+        and the Intention vs Action Activity to reclaim time, take action, and grow with intention.
+        There are also 1,000+ followers on TikTok for behind the scenes, insights, and nightly navigation.
+      </p>
+    </div>
+  </section>
+
+  <!-- CLOSING NOTE -->
+  <section class="section">
+    <div class="wrap narrow">
+      <h2 class="h">A personal note</h2>
+      <p>
+        I created Modern Compass for a couple of reasons. In my late teens and twenties I felt lost with little to give me direction.
+        I am writing this for others who feel that way. While this book is not about parenthood, I am also writing what I would want
+        my daughters to have as they become adults and learn to navigate life.
+        As I close most of my newsletters and TikTok posts, always… follow your compass.
+      </p>
+    </div>
+  </section>
 </Layout>
 
 <style>
@@ -104,6 +141,7 @@ import Layout from '../layouts/Layout.astro';
   .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
   .wrap.narrow { max-width: 800px; }
   .section { padding: 56px 0; background: #ffffff; color: #111; }
+  .section.alt { background: #f8fafc; }
 
   /* Hero */
   .hero { padding: 56px 0 12px; text-align: center; background: #ffffff; color: #111; }
@@ -111,7 +149,9 @@ import Layout from '../layouts/Layout.astro';
     font-size: clamp(28px, 5vw, 48px);
     line-height: 1.1;
     margin: 0 0 8px 0;
-    background: linear-gradient(45deg, var(--color-purple) 0%, var(--color-blue) 35%, var(--color-yellow) 65%, var(--color-orange) 100%);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: var(--gradient); /* uses your site gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -133,7 +173,7 @@ import Layout from '../layouts/Layout.astro';
   .promo-img {
     display: block;
     width: 100%;
-    max-width: 420px; /* controls promo size so it is not huge */
+    max-width: 420px;
     height: auto;
     margin: 0 auto;
   }
@@ -143,6 +183,14 @@ import Layout from '../layouts/Layout.astro';
   .h { font-size: 24px; margin: 0 0 12px 0; color: #111; }
   .h3 { font-size: 18px; margin: 0 0 4px 0; color: #111; }
   p { margin: 0 0 12px 0; color: #333; }
+
+  .layers-img {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin: 12px auto;
+    height: auto;
+  }
 
   .grid {
     display: grid;
@@ -159,4 +207,16 @@ import Layout from '../layouts/Layout.astro';
   .card ul {
     list-style: none;
     padding-left: 0;
-    margin:
+    margin: 0;
+  }
+  .card li { margin-bottom: 4px; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 560px) {
+    .grid { grid-template-columns: 1fr; }
+    .beehiiv-embed { margin-top: -8px !important; }
+  }
+</style>
