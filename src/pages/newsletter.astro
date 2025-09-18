@@ -13,28 +13,40 @@ import Layout from '../layouts/Layout.astro';
     <!-- Main Hero Content -->
     <div class="hero-content">
       <div class="hero-text">
-        <h1 class="hero-title">Get Impulse Wallet Beta + Monthly Tools</h1>
+        <h1 class="hero-title">Get Impulse Wallet Beta + Tools Every 3rd Friday</h1>
         <p class="hero-subtitle">Join 100+ subscribers for exclusive app access before public launch</p>
+
+        <!-- Animated Social Proof Counters -->
+        <div class="animated-stats">
+          <div class="stat-box">
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-label">Subscribers</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number" data-target="1000">0</div>
+            <div class="stat-label">TikTok Followers</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">5★</div>
+            <div class="stat-label">Beta Rating</div>
+          </div>
+        </div>
 
         <!-- Quick Value Props -->
         <div class="value-props">
-          <div class="prop">📱 Beta app access</div>
-          <div class="prop">🧠 Monthly frameworks</div>
-          <div class="prop">🎯 TimeOS system</div>
+          <div class="prop">📱 Exclusive beta access</div>
+          <div class="prop">🧠 Practical frameworks</div>
+          <div class="prop">💎 Free TimeOS Digital Asset ($5 value)</div>
         </div>
       </div>
 
       <div class="hero-visual">
         <div class="mockup-container">
           <img
-            src="/src/assets/main-wallet-interface.png"
+            src="/main-wallet-interface.png"
             alt="Impulse Wallet Beta Interface"
             class="wallet-mockup"
           />
-          <div class="social-proof-overlay">
-            <div class="proof-item">✅ 100+ subscribers</div>
-            <div class="proof-item">🚀 Beta launching</div>
-          </div>
         </div>
       </div>
     </div>
@@ -64,18 +76,6 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
 
-    <!-- Secondary CTA -->
-    <div class="secondary-cta">
-      <p>Ready to join 100+ others building better habits?</p>
-      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe
-        src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
-        class="beehiiv-embed-secondary"
-        frameborder="0"
-        scrolling="no"
-        title="Subscribe to Modern Compass on Beehiiv"
-      ></iframe>
-    </div>
 
     <!-- Top Issues -->
     <section class="top-issues">
@@ -302,11 +302,92 @@ import Layout from '../layouts/Layout.astro';
   margin-bottom: 0.5rem;
 }
 
+/* Animated Social Proof Stats */
+.animated-stats {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  justify-content: flex-start;
+}
+
+@media (max-width: 767px) {
+  .animated-stats {
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-purple);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  min-width: 80px;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-purple);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-blue);
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile wallet sizing */
+.wallet-mockup {
+  max-width: 280px !important;
+}
+
+@media (max-width: 767px) {
+  .wallet-mockup {
+    max-width: 220px !important;
+  }
+}
+
 </style>
 
 <script is:inline>
   // Add class to body for custom styling
   document.body.classList.add('newsletter-page');
+
+  // Animate counters
+  function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number[data-target]');
+
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      const duration = 2000;
+      const step = target / (duration / 16);
+      let current = 0;
+
+      const updateCounter = () => {
+        current += step;
+        if (current < target) {
+          counter.textContent = Math.floor(current) + '+';
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target + '+';
+        }
+      };
+
+      updateCounter();
+    });
+  }
+
+  // Run animation when page loads
+  document.addEventListener('DOMContentLoaded', animateCounters);
 
   // Meta Pixel tracking for newsletter signups
   if (typeof fbq !== 'undefined') {
