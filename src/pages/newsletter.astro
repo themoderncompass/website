@@ -26,18 +26,17 @@ import Layout from '../layouts/Layout.astro';
             <div class="stat-number" data-target="1000">0</div>
             <div class="stat-label">TikTok Followers</div>
           </div>
-          <div class="stat-box">
-            <div class="stat-number">5★</div>
-            <div class="stat-label">Beta Rating</div>
-          </div>
         </div>
 
         <!-- Quick Value Props -->
         <div class="value-props">
-          <div class="prop">📱 Exclusive beta access</div>
-          <div class="prop">🧠 Practical frameworks</div>
           <div class="prop">💎 Free TimeOS Digital Asset ($5 value)</div>
+          <div class="prop">🧠 Practical frameworks</div>
+          <div class="prop">📱 Exclusive beta app access</div>
         </div>
+
+        <!-- Simple Join Message -->
+        <p class="join-message">Join 100+ subscribers</p>
       </div>
 
       <div class="hero-visual">
@@ -320,39 +319,49 @@ import Layout from '../layouts/Layout.astro';
 .stat-box {
   background: rgba(255, 255, 255, 0.95);
   color: var(--color-purple);
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  min-width: 80px;
+  min-width: 70px;
 }
 
 .stat-number {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-purple);
   line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .stat-label {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-weight: 600;
   color: var(--color-blue);
   margin-top: 0.25rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+}
+
+.join-message {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 1rem 0 0 0;
+  font-weight: 500;
 }
 
 /* Mobile wallet sizing */
 .wallet-mockup {
-  max-width: 280px !important;
+  max-width: 200px !important;
 }
 
 @media (max-width: 767px) {
   .wallet-mockup {
-    max-width: 220px !important;
+    max-width: 140px !important;
   }
 }
 
