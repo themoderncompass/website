@@ -58,8 +58,21 @@ import Layout from '../layouts/Layout.astro';
         class="beehiiv-embed-mobile"
         frameborder="0"
         scrolling="no"
+        style="width: 400px; height: 135px; margin: 0; border-radius: 8px !important; background-color: transparent; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 100%;"
         title="Subscribe to Modern Compass on Beehiiv"
       ></iframe>
+
+      <!-- Animated Social Proof Counters Below Subscribe -->
+      <div class="animated-stats-bottom">
+        <div class="stat-box">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">Subscribers</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" data-target="1000">0</div>
+          <div class="stat-label">TikTok Followers</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -354,14 +367,28 @@ import Layout from '../layouts/Layout.astro';
   font-weight: 500;
 }
 
-/* Mobile wallet sizing */
+/* Mobile wallet sizing - much smaller */
 .wallet-mockup {
-  max-width: 200px !important;
+  max-width: 120px !important;
 }
 
 @media (max-width: 767px) {
   .wallet-mockup {
-    max-width: 140px !important;
+    max-width: 80px !important;
+  }
+}
+
+/* Social proof counters below subscribe form - tightly aligned left */
+.animated-stats-bottom {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: flex-start;
+}
+
+@media (max-width: 767px) {
+  .animated-stats-bottom {
+    gap: 0.4rem;
   }
 }
 
