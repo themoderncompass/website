@@ -195,8 +195,15 @@ nav {
     main {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 2rem 1.5rem;
+      padding: 1rem 1rem;
       min-height: calc(100vh - 160px); /* ensures footer sticks to bottom when content is short */
+    }
+
+    /* Desktop/tablet: restore original spacing */
+    @media (min-width: 768px) {
+      main {
+        padding: 2rem 1.5rem;
+      }
     }
 
     footer {

@@ -3,31 +3,74 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <section class="newsletter mx-auto">
-    <!-- Intro -->
-    <h1 class="page-title">Newsletter</h1>
-    <p class="intro">
-     Get clarity without the fluff, frameworks that work,
-      and stories that stick. Every issue is designed to help you navigate life with more intent
-      and focus.
-    </p>
 
-    <!-- Promo Graphic -->
-<div class="promo">
-  <img
-    src="/Newsletter%20Promo.png"
-    alt="Modern Compass newsletter promo"
-    loading="lazy"
-    class="promo-img"
-  />
-</div>
+  <section class="newsletter-hero">
+    <!-- Beta Access Badge -->
+    <div class="beta-badge">
+      🔥 <span class="pulse">EXCLUSIVE BETA ACCESS</span>
+    </div>
 
-    <!-- Beehiiv Subscribe Embed -->
-    <div class="newsletter-embed">
+    <!-- Main Hero Content -->
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Get Impulse Wallet Beta + Monthly Tools</h1>
+        <p class="hero-subtitle">Join 100+ subscribers for exclusive app access before public launch</p>
+
+        <!-- Quick Value Props -->
+        <div class="value-props">
+          <div class="prop">📱 Beta app access</div>
+          <div class="prop">🧠 Monthly frameworks</div>
+          <div class="prop">🎯 TimeOS system</div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="mockup-container">
+          <img
+            src="/src/assets/main-wallet-interface.png"
+            alt="Impulse Wallet Beta Interface"
+            class="wallet-mockup"
+          />
+          <div class="social-proof-overlay">
+            <div class="proof-item">✅ 100+ subscribers</div>
+            <div class="proof-item">🚀 Beta launching</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subscribe Form - Compressed for Mobile -->
+    <div class="newsletter-embed-hero">
       <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
       <iframe
         src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
-        class="beehiiv-embed"
+        class="beehiiv-embed-mobile"
+        frameborder="0"
+        scrolling="no"
+        title="Subscribe to Modern Compass on Beehiiv"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- Secondary Content (Below fold) -->
+  <section class="newsletter-details">
+
+    <!-- Social Proof Testimonials -->
+    <div class="testimonials">
+      <h3>What Subscribers Are Saying</h3>
+      <div class="testimonial-grid">
+        <blockquote>"TimeOS gave me clarity in minutes—love it!"</blockquote>
+        <blockquote>"Monthly tools that actually work in real life."</blockquote>
+      </div>
+    </div>
+
+    <!-- Secondary CTA -->
+    <div class="secondary-cta">
+      <p>Ready to join 100+ others building better habits?</p>
+      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+      <iframe
+        src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
+        class="beehiiv-embed-secondary"
         frameborder="0"
         scrolling="no"
         title="Subscribe to Modern Compass on Beehiiv"
@@ -36,82 +79,76 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- Top Issues -->
     <section class="top-issues">
-      <h2>Top Issues</h2>
+      <h2>Recent Issues</h2>
+      <div class="card-grid">
+        <!-- Card 1: Resonance & Power of Two -->
+        <article class="flip-card">
+          <button class="flip-inner">
+            <div class="flip-face flip-front">
+              <h3>Resonance &amp; The Power of Two</h3>
+              <p class="kicker">Why and how we click with some people</p>
+            </div>
+            <div class="flip-face flip-back">
+              <p>Resonance forms when two signals align. The Power of Two
+                focuses attention on two meaningful components that create momentum in a relationship.</p>
+              <a
+                href="https://newsletter.themoderncompass.io/p/the-power-of-two-the-simple-way-to-think-about-why-we-click"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta"
+              >Read the full issue →</a>
+            </div>
+          </button>
+        </article>
 
-  <div class="card-grid">
-  <!-- Card 1: Resonance & Power of Two -->
-  <article class="flip-card">
-    <button class="flip-inner">
-      <div class="flip-face flip-front">
-        <h3>Resonance &amp; The Power of Two</h3>
-        <p class="kicker">Why and how we click with some people</p>
+        <!-- Card 2: Creative Equity Review -->
+        <article class="flip-card">
+          <button class="flip-inner">
+            <div class="flip-face flip-front">
+              <h3>Creative Equity Review</h3>
+              <p class="kicker">Track effort, compound wins, give yourself some credit</p>
+            </div>
+            <div class="flip-face flip-back">
+              <p> A weekly audit to measure inputs, compounding signals,
+                and directional gains so progress stays visible even when performance metrics like views, subscribers and follower counts lag.</p>
+              <a
+                href="https://newsletter.themoderncompass.io/p/creative-equity-and-the-compounding-effect-of-creating"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta"
+              >Read the full issue →</a>
+            </div>
+          </button>
+        </article>
       </div>
-      <div class="flip-face flip-back">
-        <p>Resonance forms when two signals align. The Power of Two
-          focuses attention on two meaningful components that create momentum in a relationship.</p>
-        <a
-          href="https://newsletter.themoderncompass.io/p/the-power-of-two-the-simple-way-to-think-about-why-we-click"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="cta"
-        >Read the full issue →</a>
-      </div>
-    </button>
-  </article>
-
-  <!-- Card 2: Creative Equity Review -->
-  <article class="flip-card">
-    <button class="flip-inner">
-      <div class="flip-face flip-front">
-        <h3>Creative Equity Review</h3>
-        <p class="kicker">Track effort, compound wins, give yourself some credit</p>
-      </div>
-      <div class="flip-face flip-back">
-        <p> A weekly audit to measure inputs, compounding signals,
-          and directional gains so progress stays visible even when performance metrics like views, subscribers and follower counts lag.</p>
-        <a
-          href="https://newsletter.themoderncompass.io/p/creative-equity-and-the-compounding-effect-of-creating"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="cta"
-        >Read the full issue →</a>
-      </div>
-    </button>
-  </article>
-</div>
-
-    </section>
-
-    <!-- Why Subscribe (kept at bottom) -->
-    <section aria-labelledby="why-subscribe" class="why max-w-2xl mx-auto">
-      <h3 id="why-subscribe" class="text-2xl font-semibold tracking-tight mb-3">
-        Why Subscribe to <em>Modern Compass</em>?
-      </h3>
-
-      <p class="text-base text-gray-700 mb-4">
-        Most personal growth content is noise made up of quick tips and abstract concepts that may be difficult to approach and implement.
-        <em>Modern Compass</em> is different.
-      </p>
-
-      <p class="text-base font-medium mb-2">Each issue gives you:</p>
-      <ul class="list-disc ml-6 space-y-1 mb-4">
-        <li><strong>Clarity without fluff.</strong> Big ideas distilled into practical takeaways.</li>
-        <li><strong>Proven frameworks.</strong> Tools like <em>TimeOS</em> and the <em>Intention vs. Action</em> activity to guide real decisions.</li>
-        <li><strong>Action over theory.</strong> Exercises and reflections you can apply immediately.</li>
-        <li><strong>Relatable depth.</strong> Stories and examples that stick, not abstract jargon.</li>
-      </ul>
-
-      <p class="text-base text-gray-700 mb-4">
-        Subscribers also get early access to tools, digital downloads, and updates on the
-        <em>Modern Compass</em> book.
-      </p>
-
-      <p class="text-base text-gray-900 font-medium">
-        This is not about chasing endless self-improvement. It is about building the compass that helps you
-        navigate life with purpose, trust, and clarity.
-      </p>
     </section>
   </section>
+
+    <!-- Why Subscribe (kept at bottom) -->
+    <section aria-labelledby="why-subscribe" class="why">
+      <h3 id="why-subscribe">Why Subscribe to <em>Modern Compass</em>?</h3>
+
+      <p>Most personal growth content is noise. <em>Modern Compass</em> is different.</p>
+
+      <div class="why-grid">
+        <div class="why-item">
+          <strong>💡 Clarity without fluff</strong>
+          <p>Big ideas distilled into practical takeaways</p>
+        </div>
+        <div class="why-item">
+          <strong>🛠️ Proven frameworks</strong>
+          <p>Tools like TimeOS to guide real decisions</p>
+        </div>
+        <div class="why-item">
+          <strong>⚡ Action over theory</strong>
+          <p>Exercises you can apply immediately</p>
+        </div>
+        <div class="why-item">
+          <strong>📱 Exclusive app access</strong>
+          <p>Beta testing privileges for Impulse Wallet</p>
+        </div>
+      </div>
+    </section>
 </Layout>
 
 <style>
@@ -257,7 +294,7 @@ import Layout from '../layouts/Layout.astro';
   line-height: 1.6;
 }
 
-.flip-front h3, 
+.flip-front h3,
 .flip-back h3,
 .flip-front h4,
 .flip-back h4 {
@@ -266,3 +303,32 @@ import Layout from '../layouts/Layout.astro';
 }
 
 </style>
+
+<script is:inline>
+  // Add class to body for custom styling
+  document.body.classList.add('newsletter-page');
+
+  // Meta Pixel tracking for newsletter signups
+  if (typeof fbq !== 'undefined') {
+    // Track newsletter page view
+    fbq('track', 'ViewContent', {
+      content_name: 'Newsletter Landing Page',
+      content_category: 'Newsletter'
+    });
+
+    // Listen for form submissions (you can enhance this based on Beehiiv events)
+    document.addEventListener('DOMContentLoaded', function() {
+      // This will track when users interact with the iframe
+      const iframes = document.querySelectorAll('.beehiiv-embed-mobile, .beehiiv-embed-secondary');
+      iframes.forEach(iframe => {
+        iframe.addEventListener('load', function() {
+          fbq('track', 'InitiateCheckout', {
+            content_name: 'Newsletter Signup Form',
+            value: 5.00,
+            currency: 'USD'
+          });
+        });
+      });
+    });
+  }
+</script>
