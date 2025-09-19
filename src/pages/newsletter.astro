@@ -350,19 +350,20 @@ import Layout from '../layouts/Layout.astro';
   font-weight: 500;
 }
 
-/* Value props with inline mockup */
+/* Value props stacked vertically with mockup underneath */
 .value-props-container {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
-  align-items: flex-start;
   margin-top: 1rem;
+  align-items: flex-start;
 }
 
 .value-props {
-  flex: 1;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.5rem;
+  width: 100%;
 }
 
 .prop {
@@ -371,10 +372,11 @@ import Layout from '../layouts/Layout.astro';
   border-radius: 15px;
   font-size: 0.8rem;
   font-weight: 500;
+  align-self: flex-start;
 }
 
 .mockup-inline {
-  flex-shrink: 0;
+  align-self: flex-start;
 }
 
 .wallet-mockup-small {
@@ -425,27 +427,32 @@ import Layout from '../layouts/Layout.astro';
   // Add class to body for custom styling
   document.body.classList.add('newsletter-page');
 
-  // Animate counters
+  // Animate counters with easing
   function animateCounters() {
     const counters = document.querySelectorAll('.stat-number[data-target]');
 
     counters.forEach(counter => {
       const target = parseInt(counter.getAttribute('data-target'));
-      const duration = 2000;
-      const step = target / (duration / 16);
-      let current = 0;
+      const duration = 2500;
+      const startTime = performance.now();
 
-      const updateCounter = () => {
-        current += step;
-        if (current < target) {
-          counter.textContent = Math.floor(current) + '+';
+      const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
+
+      const updateCounter = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = easeOutQuart(progress);
+        const current = Math.floor(easedProgress * target);
+
+        if (progress < 1) {
+          counter.textContent = current + '+';
           requestAnimationFrame(updateCounter);
         } else {
           counter.textContent = target + '+';
         }
       };
 
-      updateCounter();
+      requestAnimationFrame(updateCounter);
     });
   }
 
