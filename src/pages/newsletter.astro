@@ -47,14 +47,14 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <!-- Subscribe Form - Compressed for Mobile -->
-    <div class="newsletter-embed-clean">
+    <div class="newsletter-embed-clean iframe-container">
       <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
       <iframe
         src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
-        class="beehiiv-embed-mobile"
+        class="beehiiv-embed-mobile no-padding-iframe"
         frameborder="0"
         scrolling="no"
-        style="width: 400px; height: 135px; margin: 0; border-radius: 8px !important; background-color: transparent; max-width: 100%;"
+        style="width: 400px; height: 135px; margin: 0 !important; padding: 0 !important; border: none !important; display: block !important; border-radius: 8px !important; background-color: transparent; max-width: 100%;"
         title="Subscribe to Modern Compass on Beehiiv"
       ></iframe>
     </div>
@@ -313,10 +313,33 @@ import Layout from '../layouts/Layout.astro';
 /* Clean newsletter embed - no padding */
 .newsletter-embed-clean {
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
+  border-radius: 12px 12px 0 0;
   padding: 0;
-  margin: 1rem 0;
+  margin: 0;
   text-align: center;
+}
+
+/* Beehiiv iframe padding fixes */
+.iframe-container {
+  line-height: 0 !important;
+  font-size: 0 !important;
+}
+
+.no-padding-iframe {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.iframe-container iframe {
+  display: block !important;
+}
+
+/* Beehiiv internal wrapper fix from forum */
+.embed-block-wrapper {
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 @media (min-width: 768px) {
@@ -485,7 +508,7 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.8rem;
   }
   .newsletter-embed-clean {
-    margin: 0.3rem 0 0 0;
+    margin: 0;
   }
 }
 
@@ -496,9 +519,9 @@ import Layout from '../layouts/Layout.astro';
   margin: 0;
   justify-content: center;
   background: rgba(255, 255, 255, 0.95);
-  padding: 0.75rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 0 0 12px 12px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -510,7 +533,7 @@ import Layout from '../layouts/Layout.astro';
 @media (max-width: 767px) {
   .animated-stats-bottom {
     gap: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.4rem 0.5rem;
     justify-content: space-evenly;
   }
 }
