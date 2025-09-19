@@ -16,62 +16,51 @@ import Layout from '../layouts/Layout.astro';
         <h1 class="hero-title">Get Impulse Wallet Beta + Tools Every 3rd Friday</h1>
         <p class="hero-subtitle">Join 100+ subscribers for exclusive app access before public launch</p>
 
-        <!-- Animated Social Proof Counters -->
-        <div class="animated-stats">
-          <div class="stat-box">
-            <div class="stat-number" data-target="100">0</div>
-            <div class="stat-label">Subscribers</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-number" data-target="1000">0</div>
-            <div class="stat-label">TikTok Followers</div>
-          </div>
-        </div>
 
-        <!-- Quick Value Props -->
-        <div class="value-props">
-          <div class="prop">💎 Free TimeOS Digital Asset ($5 value)</div>
-          <div class="prop">🧠 Practical frameworks</div>
-          <div class="prop">📱 Exclusive beta app access</div>
+        <!-- Value Props with Inline Mockup -->
+        <div class="value-props-container">
+          <div class="value-props">
+            <div class="prop">💎 Free TimeOS Digital Asset ($5 value)</div>
+            <div class="prop">🧠 Practical frameworks</div>
+            <div class="prop">📊 Monthly insights & actionable takeaways</div>
+            <div class="prop">📱 Exclusive beta app access</div>
+          </div>
+          <div class="mockup-inline">
+            <img
+              src="/main-wallet-interface.png"
+              alt="Impulse Wallet Beta Interface"
+              class="wallet-mockup-small"
+            />
+          </div>
         </div>
 
         <!-- Simple Join Message -->
         <p class="join-message">Join 100+ subscribers</p>
       </div>
-
-      <div class="hero-visual">
-        <div class="mockup-container">
-          <img
-            src="/main-wallet-interface.png"
-            alt="Impulse Wallet Beta Interface"
-            class="wallet-mockup"
-          />
-        </div>
-      </div>
     </div>
 
     <!-- Subscribe Form - Compressed for Mobile -->
-    <div class="newsletter-embed-hero">
+    <div class="newsletter-embed-clean">
       <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
       <iframe
         src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
         class="beehiiv-embed-mobile"
         frameborder="0"
         scrolling="no"
-        style="width: 400px; height: 135px; margin: 0; border-radius: 8px !important; background-color: transparent; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 100%;"
+        style="width: 400px; height: 135px; margin: 0; border-radius: 8px !important; background-color: transparent; max-width: 100%;"
         title="Subscribe to Modern Compass on Beehiiv"
       ></iframe>
+    </div>
 
-      <!-- Animated Social Proof Counters Below Subscribe -->
-      <div class="animated-stats-bottom">
-        <div class="stat-box">
-          <div class="stat-number" data-target="100">0</div>
-          <div class="stat-label">Subscribers</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-number" data-target="1000">0</div>
-          <div class="stat-label">TikTok Followers</div>
-        </div>
+    <!-- Animated Social Proof Counters Below Subscribe -->
+    <div class="animated-stats-bottom">
+      <div class="stat-box">
+        <div class="stat-number" data-target="100">0</div>
+        <div class="stat-label">Subscribers</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="1000">0</div>
+        <div class="stat-label">TikTok Followers</div>
       </div>
     </div>
   </section>
@@ -314,19 +303,13 @@ import Layout from '../layouts/Layout.astro';
   margin-bottom: 0.5rem;
 }
 
-/* Animated Social Proof Stats */
-.animated-stats {
-  display: flex;
-  gap: 1rem;
-  margin: 1.5rem 0;
-  justify-content: flex-start;
-}
-
-@media (max-width: 767px) {
-  .animated-stats {
-    justify-content: space-between;
-    margin: 1rem 0;
-  }
+/* Clean newsletter embed - no padding */
+.newsletter-embed-clean {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 0;
+  margin: 1rem 0;
+  text-align: center;
 }
 
 .stat-box {
@@ -367,14 +350,50 @@ import Layout from '../layouts/Layout.astro';
   font-weight: 500;
 }
 
-/* Mobile wallet sizing - much smaller */
-.wallet-mockup {
-  max-width: 120px !important;
+/* Value props with inline mockup */
+.value-props-container {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.value-props {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.prop {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.mockup-inline {
+  flex-shrink: 0;
+}
+
+.wallet-mockup-small {
+  width: 60px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 767px) {
-  .wallet-mockup {
-    max-width: 80px !important;
+  .value-props-container {
+    gap: 0.5rem;
+  }
+  .wallet-mockup-small {
+    width: 45px;
+  }
+  .prop {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
   }
 }
 
@@ -382,13 +401,17 @@ import Layout from '../layouts/Layout.astro';
 .animated-stats-bottom {
   display: flex;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin: 0.5rem 0 0 0;
   justify-content: flex-start;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  border-radius: 0 0 12px 12px;
 }
 
 @media (max-width: 767px) {
   .animated-stats-bottom {
     gap: 0.4rem;
+    padding: 0.75rem;
   }
 }
 
