@@ -5,11 +5,6 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
 
   <section class="newsletter-hero">
-    <!-- Beta Access Badge -->
-    <div class="beta-badge">
-      🔥 <span class="pulse">EXCLUSIVE BETA ACCESS</span>
-    </div>
-
     <!-- Main Hero Content -->
     <div class="hero-content">
       <div class="hero-text">
@@ -30,12 +25,27 @@ import Layout from '../layouts/Layout.astro';
               src="/main-wallet-interface.png"
               alt="Impulse Wallet Beta Interface"
               class="wallet-mockup-small"
+              id="wallet-mockup"
+            />
+            <img
+              src="/timeos-audit-preview.png"
+              alt="TimeOS Digital Asset Preview"
+              class="wallet-mockup-small"
+              id="timeos-mockup"
             />
           </div>
         </div>
 
         <!-- Simple Join Message -->
         <p class="join-message">Join 100+ subscribers</p>
+      </div>
+    </div>
+
+    <!-- Modal for enlarged mockup -->
+    <div id="mockup-modal" class="mockup-modal">
+      <span class="close-modal">&times;</span>
+      <div class="mockup-modal-content">
+        <img id="modal-image" src="/main-wallet-interface.png" alt="Enlarged View">
       </div>
     </div>
 
@@ -51,8 +61,9 @@ import Layout from '../layouts/Layout.astro';
         title="Subscribe to Modern Compass on Beehiiv"
       ></iframe>
     </div>
+  </section>
 
-    <!-- Animated Social Proof Counters Below Subscribe -->
+  <!-- Animated Social Proof Counters Below Subscribe - Moved below fold -->
     <div class="animated-stats-bottom">
       <div class="stat-box">
         <div class="stat-number" data-target="100">0</div>
@@ -63,7 +74,6 @@ import Layout from '../layouts/Layout.astro';
         <div class="stat-label">TikTok Followers</div>
       </div>
     </div>
-  </section>
 
   <!-- Secondary Content (Below fold) -->
   <section class="newsletter-details">
@@ -312,6 +322,12 @@ import Layout from '../layouts/Layout.astro';
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .newsletter-embed-clean {
+    text-align: left;
+  }
+}
+
 .stat-box {
   background: linear-gradient(135deg, var(--color-purple), var(--color-blue));
   color: white;
@@ -377,6 +393,8 @@ import Layout from '../layouts/Layout.astro';
 
 .mockup-inline {
   align-self: flex-start;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .wallet-mockup-small {
@@ -384,20 +402,80 @@ import Layout from '../layouts/Layout.astro';
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.wallet-mockup-small:hover {
+  transform: scale(1.05);
+}
+
+/* Modal styles for enlarged image */
+.mockup-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.mockup-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.mockup-modal img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {
   .value-props-container {
-    gap: 0.75rem;
-    margin-bottom: 1rem;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   .wallet-mockup-small {
-    width: 65px;
+    width: 60px;
   }
   .prop {
-    font-size: 0.8rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 0.3rem;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.1;
     margin-bottom: 0.5rem;
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .join-message {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.8rem;
+  }
+  .newsletter-embed-clean {
+    margin: 0.5rem 0;
   }
 }
 
@@ -418,6 +496,32 @@ import Layout from '../layouts/Layout.astro';
     gap: 0.5rem;
     padding: 1rem;
     justify-content: space-evenly;
+  }
+}
+
+/* Newsletter page only - reduced nav whitespace on mobile */
+.newsletter-page {
+  --nav-padding-top: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .newsletter-page header {
+    padding-top: var(--nav-padding-top, 0.5rem);
+    padding-bottom: 0.5rem;
+  }
+
+  .newsletter-page .nav-container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .newsletter-page .menu-toggle {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .newsletter-page .logo {
+    order: 1;
   }
 }
 
@@ -458,6 +562,45 @@ import Layout from '../layouts/Layout.astro';
 
   // Run animation when page loads
   document.addEventListener('DOMContentLoaded', animateCounters);
+
+  // Modal functionality for wallet mockup
+  document.addEventListener('DOMContentLoaded', function() {
+    const walletImg = document.getElementById('wallet-mockup');
+    const timeosImg = document.getElementById('timeos-mockup');
+    const modal = document.getElementById('mockup-modal');
+    const modalImage = document.getElementById('modal-image');
+    const closeBtn = document.querySelector('.close-modal');
+
+    if (modal && modalImage && closeBtn) {
+      // Wallet mockup click
+      if (walletImg) {
+        walletImg.addEventListener('click', function() {
+          modalImage.src = '/main-wallet-interface.png';
+          modalImage.alt = 'Impulse Wallet Beta Interface - Enlarged View';
+          modal.style.display = 'block';
+        });
+      }
+
+      // TimeOS mockup click
+      if (timeosImg) {
+        timeosImg.addEventListener('click', function() {
+          modalImage.src = '/timeos-audit-preview.png';
+          modalImage.alt = 'TimeOS Digital Asset - Enlarged View';
+          modal.style.display = 'block';
+        });
+      }
+
+      closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+      });
+
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+  });
 
   // Meta Pixel tracking for newsletter signups
   if (typeof fbq !== 'undefined') {
