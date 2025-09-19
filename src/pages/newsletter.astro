@@ -313,21 +313,21 @@ import Layout from '../layouts/Layout.astro';
 }
 
 .stat-box {
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--color-purple);
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
+  background: linear-gradient(135deg, var(--color-purple), var(--color-blue));
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  min-width: 70px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 85px;
 }
 
 .stat-number {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: var(--color-purple);
+  color: white;
   line-height: 1;
   display: flex;
   align-items: center;
@@ -335,12 +335,12 @@ import Layout from '../layouts/Layout.astro';
 }
 
 .stat-label {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  color: var(--color-blue);
+  color: rgba(255, 255, 255, 0.9);
   margin-top: 0.25rem;
   text-transform: uppercase;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
 }
 
 .join-message {
@@ -378,40 +378,44 @@ import Layout from '../layouts/Layout.astro';
 }
 
 .wallet-mockup-small {
-  width: 60px;
+  width: 80px;
   height: auto;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 767px) {
   .value-props-container {
-    gap: 0.5rem;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
   }
   .wallet-mockup-small {
-    width: 45px;
+    width: 65px;
   }
   .prop {
-    font-size: 0.75rem;
-    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 0.5rem;
   }
 }
 
-/* Social proof counters below subscribe form - tightly aligned left */
+/* Social proof counters below subscribe form - visible and prominent */
 .animated-stats-bottom {
   display: flex;
-  gap: 0.5rem;
-  margin: 0.5rem 0 0 0;
-  justify-content: flex-start;
+  gap: 0.75rem;
+  margin: 0;
+  justify-content: center;
   background: rgba(255, 255, 255, 0.95);
   padding: 1rem;
   border-radius: 0 0 12px 12px;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 767px) {
   .animated-stats-bottom {
-    gap: 0.4rem;
-    padding: 0.75rem;
+    gap: 0.5rem;
+    padding: 1rem;
+    justify-content: space-evenly;
   }
 }
 
