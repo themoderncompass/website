@@ -3,115 +3,163 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <section class="newsletter mx-auto">
-    <!-- Intro -->
-    <h1 class="page-title">Newsletter</h1>
-    <p class="intro">
-     Get clarity without the fluff, frameworks that work,
-      and stories that stick. Every issue is designed to help you navigate life with more intent
-      and focus.
-    </p>
 
-    <!-- Promo Graphic -->
-<div class="promo">
-  <img
-    src="/Newsletter%20Promo.png"
-    alt="Modern Compass newsletter promo"
-    loading="lazy"
-    class="promo-img"
-  />
-</div>
+  <section class="newsletter-hero">
+    <!-- Main Hero Content -->
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Get Impulse Wallet Beta + Tools and Insights Every 3rd Friday of the month</h1>
+        <p class="hero-subtitle">Join 100+ subscribers for exclusive app access before public launch</p>
 
-    <!-- Beehiiv Subscribe Embed -->
-    <div class="newsletter-embed">
+
+        <!-- Value Props with Inline Mockup -->
+        <div class="value-props-container">
+          <div class="value-props">
+            <div class="prop">💎 Free TimeOS Digital Asset ($5 value)</div>
+            <div class="prop">🧠 Practical frameworks</div>
+            <div class="prop">📊 Monthly insights & actionable takeaways</div>
+            <div class="prop">📱 Exclusive beta app access</div>
+          </div>
+          <div class="mockup-inline">
+            <img
+              src="/main-wallet-interface.png"
+              alt="Impulse Wallet Beta Interface"
+              class="wallet-mockup-small"
+              id="wallet-mockup"
+            />
+            <img
+              src="/TimeOS.png"
+              alt="TimeOS Digital Asset Preview"
+              class="wallet-mockup-small timeos-wider"
+              id="timeos-mockup"
+            />
+          </div>
+        </div>
+
+        <!-- Simple Join Message -->
+        <p class="join-message">Join 100+ subscribers</p>
+      </div>
+    </div>
+
+    <!-- Modal for enlarged mockup -->
+    <div id="mockup-modal" class="mockup-modal">
+      <span class="close-modal">&times;</span>
+      <div class="mockup-modal-content">
+        <img id="modal-image" src="/main-wallet-interface.png" alt="Enlarged View">
+      </div>
+    </div>
+
+    <!-- Subscribe Form - Compressed for Mobile -->
+    <div class="newsletter-embed-clean">
       <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
       <iframe
         src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
-        class="beehiiv-embed"
+        class="beehiiv-embed-mobile"
         frameborder="0"
         scrolling="no"
+        style="width: 400px; height: 135px; margin: 0; border-radius: 8px !important; background-color: transparent; max-width: 100%;"
         title="Subscribe to Modern Compass on Beehiiv"
       ></iframe>
     </div>
+  </section>
+
+  <!-- Animated Social Proof Counters Below Subscribe - Moved below fold -->
+    <div class="animated-stats-bottom">
+      <div class="stat-box">
+        <div class="stat-number" data-target="100">0</div>
+        <div class="stat-label">Subscribers</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="1000">0</div>
+        <div class="stat-label">TikTok Followers</div>
+      </div>
+    </div>
+
+  <!-- Secondary Content (Below fold) -->
+  <section class="newsletter-details">
+
+    <!-- Social Proof Testimonials -->
+    <div class="testimonials">
+      <h3>What Subscribers Are Saying</h3>
+      <div class="testimonial-grid">
+        <blockquote>"TimeOS gave me clarity in minutes—love it!"</blockquote>
+        <blockquote>"Monthly tools that actually work in real life."</blockquote>
+      </div>
+    </div>
+
 
     <!-- Top Issues -->
     <section class="top-issues">
-      <h2>Top Issues</h2>
+      <h2>Recent Issues</h2>
+      <div class="card-grid">
+        <!-- Card 1: Resonance & Power of Two -->
+        <article class="flip-card">
+          <button class="flip-inner">
+            <div class="flip-face flip-front">
+              <h3>Resonance &amp; The Power of Two</h3>
+              <p class="kicker">Why and how we click with some people</p>
+            </div>
+            <div class="flip-face flip-back">
+              <p>Resonance forms when two signals align. The Power of Two
+                focuses attention on two meaningful components that create momentum in a relationship.</p>
+              <a
+                href="https://newsletter.themoderncompass.io/p/the-power-of-two-the-simple-way-to-think-about-why-we-click"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta"
+              >Read the full issue →</a>
+            </div>
+          </button>
+        </article>
 
-  <div class="card-grid">
-  <!-- Card 1: Resonance & Power of Two -->
-  <article class="flip-card">
-    <button class="flip-inner">
-      <div class="flip-face flip-front">
-        <h3>Resonance &amp; The Power of Two</h3>
-        <p class="kicker">Why and how we click with some people</p>
+        <!-- Card 2: Creative Equity Review -->
+        <article class="flip-card">
+          <button class="flip-inner">
+            <div class="flip-face flip-front">
+              <h3>Creative Equity Review</h3>
+              <p class="kicker">Track effort, compound wins, give yourself some credit</p>
+            </div>
+            <div class="flip-face flip-back">
+              <p> A weekly audit to measure inputs, compounding signals,
+                and directional gains so progress stays visible even when performance metrics like views, subscribers and follower counts lag.</p>
+              <a
+                href="https://newsletter.themoderncompass.io/p/creative-equity-and-the-compounding-effect-of-creating"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta"
+              >Read the full issue →</a>
+            </div>
+          </button>
+        </article>
       </div>
-      <div class="flip-face flip-back">
-        <p>Resonance forms when two signals align. The Power of Two
-          focuses attention on two meaningful components that create momentum in a relationship.</p>
-        <a
-          href="https://newsletter.themoderncompass.io/p/the-power-of-two-the-simple-way-to-think-about-why-we-click"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="cta"
-        >Read the full issue →</a>
-      </div>
-    </button>
-  </article>
-
-  <!-- Card 2: Creative Equity Review -->
-  <article class="flip-card">
-    <button class="flip-inner">
-      <div class="flip-face flip-front">
-        <h3>Creative Equity Review</h3>
-        <p class="kicker">Track effort, compound wins, give yourself some credit</p>
-      </div>
-      <div class="flip-face flip-back">
-        <p> A weekly audit to measure inputs, compounding signals,
-          and directional gains so progress stays visible even when performance metrics like views, subscribers and follower counts lag.</p>
-        <a
-          href="https://newsletter.themoderncompass.io/p/creative-equity-and-the-compounding-effect-of-creating"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="cta"
-        >Read the full issue →</a>
-      </div>
-    </button>
-  </article>
-</div>
-
-    </section>
-
-    <!-- Why Subscribe (kept at bottom) -->
-    <section aria-labelledby="why-subscribe" class="why max-w-2xl mx-auto">
-      <h3 id="why-subscribe" class="text-2xl font-semibold tracking-tight mb-3">
-        Why Subscribe to <em>Modern Compass</em>?
-      </h3>
-
-      <p class="text-base text-gray-700 mb-4">
-        Most personal growth content is noise made up of quick tips and abstract concepts that may be difficult to approach and implement.
-        <em>Modern Compass</em> is different.
-      </p>
-
-      <p class="text-base font-medium mb-2">Each issue gives you:</p>
-      <ul class="list-disc ml-6 space-y-1 mb-4">
-        <li><strong>Clarity without fluff.</strong> Big ideas distilled into practical takeaways.</li>
-        <li><strong>Proven frameworks.</strong> Tools like <em>TimeOS</em> and the <em>Intention vs. Action</em> activity to guide real decisions.</li>
-        <li><strong>Action over theory.</strong> Exercises and reflections you can apply immediately.</li>
-        <li><strong>Relatable depth.</strong> Stories and examples that stick, not abstract jargon.</li>
-      </ul>
-
-      <p class="text-base text-gray-700 mb-4">
-        Subscribers also get early access to tools, digital downloads, and updates on the
-        <em>Modern Compass</em> book.
-      </p>
-
-      <p class="text-base text-gray-900 font-medium">
-        This is not about chasing endless self-improvement. It is about building the compass that helps you
-        navigate life with purpose, trust, and clarity.
-      </p>
     </section>
   </section>
+
+    <!-- Why Subscribe (kept at bottom) -->
+    <section aria-labelledby="why-subscribe" class="why">
+      <h3 id="why-subscribe">Why Subscribe to <em>Modern Compass</em>?</h3>
+
+      <p>Most personal growth content is noise. <em>Modern Compass</em> is different.</p>
+
+      <div class="why-grid">
+        <div class="why-item">
+          <strong>💡 Clarity without fluff</strong>
+          <p>Big ideas distilled into practical takeaways</p>
+        </div>
+        <div class="why-item">
+          <strong>🛠️ Proven frameworks</strong>
+          <p>Tools like TimeOS to guide real decisions</p>
+        </div>
+        <div class="why-item">
+          <strong>⚡ Action over theory</strong>
+          <p>Exercises you can apply immediately</p>
+        </div>
+        <div class="why-item">
+          <strong>📱 Exclusive app access</strong>
+          <p>Beta testing privileges for Impulse Wallet</p>
+        </div>
+      </div>
+    </section>
 </Layout>
 
 <style>
@@ -257,7 +305,7 @@ import Layout from '../layouts/Layout.astro';
   line-height: 1.6;
 }
 
-.flip-front h3, 
+.flip-front h3,
 .flip-back h3,
 .flip-front h4,
 .flip-back h4 {
@@ -265,4 +313,335 @@ import Layout from '../layouts/Layout.astro';
   margin-bottom: 0.5rem;
 }
 
+/* Clean newsletter embed - no padding */
+.newsletter-embed-clean {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 0;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .newsletter-embed-clean {
+    text-align: left;
+  }
+}
+
+.stat-box {
+  background: linear-gradient(135deg, var(--color-purple), var(--color-blue));
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 85px;
+}
+
+.stat-number {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.join-message {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 1rem 0 0 0;
+  font-weight: 500;
+}
+
+/* Value props stacked vertically with mockup underneath */
+.value-props-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: flex-start;
+}
+
+.value-props {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.prop {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.mockup-inline {
+  align-self: flex-start;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.wallet-mockup-small {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.timeos-wider {
+  width: 100px;
+}
+
+.wallet-mockup-small:hover {
+  transform: scale(1.05);
+}
+
+/* Modal styles for enlarged image */
+.mockup-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.mockup-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mockup-modal img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .value-props-container {
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .wallet-mockup-small {
+    width: 60px;
+  }
+  .timeos-wider {
+    width: 75px;
+  }
+  .prop {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 0.3rem;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .join-message {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.8rem;
+  }
+  .newsletter-embed-clean {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Social proof counters below subscribe form - visible and prominent */
+.animated-stats-bottom {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .animated-stats-bottom {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .animated-stats-bottom {
+    gap: 0.5rem;
+    padding: 1rem;
+    justify-content: space-evenly;
+  }
+}
+
+/* Newsletter page only - reduced nav whitespace on mobile */
+.newsletter-page {
+  --nav-padding-top: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .newsletter-page header {
+    padding-top: var(--nav-padding-top, 0.5rem);
+    padding-bottom: 0.5rem;
+  }
+
+  .newsletter-page .nav-container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .newsletter-page .menu-toggle {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .newsletter-page .logo {
+    order: 1;
+  }
+}
+
 </style>
+
+<script is:inline>
+  // Add class to body for custom styling
+  document.body.classList.add('newsletter-page');
+
+  // Animate counters with easing
+  function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number[data-target]');
+
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      const duration = 2500;
+      const startTime = performance.now();
+
+      const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
+
+      const updateCounter = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = easeOutQuart(progress);
+        const current = Math.floor(easedProgress * target);
+
+        if (progress < 1) {
+          counter.textContent = current + '+';
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target + '+';
+        }
+      };
+
+      requestAnimationFrame(updateCounter);
+    });
+  }
+
+  // Run animation when page loads
+  document.addEventListener('DOMContentLoaded', animateCounters);
+
+  // Modal functionality for wallet mockup
+  document.addEventListener('DOMContentLoaded', function() {
+    const walletImg = document.getElementById('wallet-mockup');
+    const timeosImg = document.getElementById('timeos-mockup');
+    const modal = document.getElementById('mockup-modal');
+    const modalImage = document.getElementById('modal-image');
+    const closeBtn = document.querySelector('.close-modal');
+
+    if (modal && modalImage && closeBtn) {
+      // Wallet mockup click
+      if (walletImg) {
+        walletImg.addEventListener('click', function() {
+          modalImage.src = '/main-wallet-interface.png';
+          modalImage.alt = 'Impulse Wallet Beta Interface - Enlarged View';
+          modal.style.display = 'block';
+        });
+      }
+
+      // TimeOS mockup click
+      if (timeosImg) {
+        timeosImg.addEventListener('click', function() {
+          modalImage.src = '/TimeOS.png';
+          modalImage.alt = 'TimeOS Digital Asset - Enlarged View';
+          modal.style.display = 'block';
+        });
+      }
+
+      closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+      });
+
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+  });
+
+  // Meta Pixel tracking for newsletter signups
+  if (typeof fbq !== 'undefined') {
+    // Track newsletter page view
+    fbq('track', 'ViewContent', {
+      content_name: 'Newsletter Landing Page',
+      content_category: 'Newsletter'
+    });
+
+    // Listen for form submissions (you can enhance this based on Beehiiv events)
+    document.addEventListener('DOMContentLoaded', function() {
+      // This will track when users interact with the iframe
+      const iframes = document.querySelectorAll('.beehiiv-embed-mobile, .beehiiv-embed-secondary');
+      iframes.forEach(iframe => {
+        iframe.addEventListener('load', function() {
+          fbq('track', 'InitiateCheckout', {
+            content_name: 'Newsletter Signup Form',
+            value: 5.00,
+            currency: 'USD'
+          });
+        });
+      });
+    });
+  }
+</script>
