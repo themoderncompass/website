@@ -159,6 +159,13 @@ nav {
   padding: 1rem 1.5rem;
 }
 
+/* Mobile nav optimization */
+@media (max-width: 767px) {
+  nav {
+    padding: 0.5rem 1rem;
+  }
+}
+
     .logo img {
       /*
        * Increase the logo size further to give it a stronger presence in the
@@ -168,6 +175,13 @@ nav {
        */
       height: 72px;
       width: auto;
+    }
+
+    /* Smaller logo on mobile to save space */
+    @media (max-width: 767px) {
+      .logo img {
+        height: 48px;
+      }
     }
 
     .nav-links {
