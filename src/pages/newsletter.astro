@@ -3,665 +3,548 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-
-  <section class="newsletter-hero">
-    <!-- Main Hero Content -->
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="hero-title">Get Impulse Wallet Beta + Tools and Insights Every 3rd Friday of the month</h1>
-
-
-        <!-- Value Props with Inline Mockup -->
-        <div class="value-props-container">
-          <div class="value-props">
-            <div class="prop">💎 Free TimeOS Digital Asset ($5 value)</div>
-            <div class="prop">🧠 Practical frameworks</div>
-            <div class="prop">📊 Monthly insights & actionable takeaways</div>
-            <div class="prop">📱 Exclusive beta app access</div>
-          </div>
-          <div class="mockup-inline">
-            <img
-              src="/main-wallet-interface.png"
-              alt="Impulse Wallet Beta Interface"
-              class="wallet-mockup-small"
-              id="wallet-mockup"
-            />
-            <img
-              src="/TimeOS.png"
-              alt="TimeOS Digital Asset Preview"
-              class="wallet-mockup-small timeos-wider"
-              id="timeos-mockup"
-            />
-          </div>
+  <!-- Hero Section with Purple Gradient Box -->
+  <section class="newsletter-hero-new">
+    <div class="hero-container-new">
+      <div class="hero-box">
+        <div class="brand-title">Modern Compass Newsletter</div>
+        
+        <h1 class="main-headline">Stop the scroll and start taking <span class="highlight">action</span> to build your compass</h1>
+        
+        <p class="main-description">
+          A <strong>purpose-filled email once a month</strong> (every 3rd Friday) with insights, tools, and actions you can take.
+        </p>
+        
+        <div class="value-statement">
+          <p>
+            No hours of podcasts per week, no daily emails, just once a month to give you depth and room to take action, reflect, and repeat.
+          </p>
         </div>
 
-      </div>
-    </div>
+        <div class="signup-bonuses">
+          <p><strong>Exclusive signup bonuses delivered right to your inbox:</strong></p>
+          <ul>
+            <li>Digital asset to reclaim time during your busy week</li>
+            <li>Social accountability web app/game</li>
+          </ul>
+        </div>
 
-    <!-- Modal for enlarged mockup -->
-    <div id="mockup-modal" class="mockup-modal">
-      <span class="close-modal">&times;</span>
-      <div class="mockup-modal-content">
-        <img id="modal-image" src="/main-wallet-interface.png" alt="Enlarged View">
-      </div>
-    </div>
+        <!-- Social Proof Text -->
+        <div class="social-proof-text">
+          <p>Join <strong class="highlight-purple">100+</strong> subscribers and <strong class="highlight-purple">1,000+</strong> TikTok followers finding their direction</p>
+        </div>
 
-    <!-- Subscribe Form - Compressed for Mobile -->
-    <div class="newsletter-embed-clean iframe-container">
-      <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe
-        src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
-        class="beehiiv-embed-mobile no-padding-iframe"
-        frameborder="0"
-        scrolling="no"
-        style="width: 400px; height: 135px; margin: 0 !important; padding: 0 !important; border: none !important; display: block !important; border-radius: 8px !important; background-color: transparent; max-width: 100%;"
-        title="Subscribe to Modern Compass on Beehiiv"
-      ></iframe>
+        <!-- Subscribe Form -->
+        <div class="newsletter-embed-new">
+          <iframe
+            src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
+            class="beehiiv-embed-styled"
+            frameborder="0"
+            scrolling="no"
+            style="width: 100%; height: 135px; border: none; border-radius: 8px; background-color: transparent;"
+            title="Subscribe to Modern Compass on Beehiiv"
+          ></iframe>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Animated Social Proof Counters Below Subscribe - Moved below fold -->
-    <div class="animated-stats-bottom">
-      <div class="stat-box">
-        <div class="stat-number" data-target="100">0</div>
-        <div class="stat-label">Subscribers</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number" data-target="1000">0</div>
-        <div class="stat-label">TikTok Followers</div>
+  <!-- What You Get Section -->
+  <section class="what-you-get-section">
+    <h2>What You Get Every Month</h2>
+    <p class="section-description">Insights, tools, frameworks and a growing community to help you find direction and move you forward, some built by Modern Compass, just for you!</p>
+
+    <!-- Image Carousel -->
+    <div class="asset-carousel">
+      <div class="carousel-container">
+        <div class="carousel-track" id="carousel-track">
+          <div class="carousel-slide active">
+            <img src="/Impulse_wallet_ipad.png" alt="Impulse Wallet Beta - App to track focus areas" />
+            <div class="slide-caption">
+              <h3>Impulse Wallet</h3>
+              <p>App to track focus areas</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="/TimeOS_asset.png" alt="TimeOS Digital Asset - 5-step system for time and attention management" />
+            <div class="slide-caption">
+              <h3>TimeOS Digital Asset</h3>
+              <p>Reclaim your time and redirect it toward focus areas you want to progress in</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="/book-graphic.png" alt="Modern Compass Book - Beta reader signup coming soon" />
+            <div class="slide-caption">
+              <h3>Book Resources</h3>
+              <p>Beta reader signup coming, stay subscribed to the newsletter if interested</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="carousel-nav">
+          <button class="carousel-btn prev" id="prev-btn">‹</button>
+          <div class="carousel-dots">
+            <button class="dot active" data-slide="0"></button>
+            <button class="dot" data-slide="1"></button>
+            <button class="dot" data-slide="2"></button>
+          </div>
+          <button class="carousel-btn next" id="next-btn">›</button>
+        </div>
       </div>
     </div>
-
-  <!-- Secondary Content (Below fold) -->
-  <section class="newsletter-details">
-
-    <!-- Social Proof Testimonials -->
-    <div class="testimonials">
-      <h3>What Subscribers Are Saying</h3>
-      <div class="testimonial-grid">
-        <blockquote>"TimeOS gave me clarity in minutes—love it!"</blockquote>
-        <blockquote>"Monthly tools that actually work in real life."</blockquote>
-      </div>
-    </div>
-
-
-    <!-- Top Issues -->
-    <section class="top-issues">
-      <h2>Recent Issues</h2>
-      <div class="card-grid">
-        <!-- Card 1: Resonance & Power of Two -->
-        <article class="flip-card">
-          <button class="flip-inner">
-            <div class="flip-face flip-front">
-              <h3>Resonance &amp; The Power of Two</h3>
-              <p class="kicker">Why and how we click with some people</p>
-            </div>
-            <div class="flip-face flip-back">
-              <p>Resonance forms when two signals align. The Power of Two
-                focuses attention on two meaningful components that create momentum in a relationship.</p>
-              <a
-                href="https://newsletter.themoderncompass.io/p/the-power-of-two-the-simple-way-to-think-about-why-we-click"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="cta"
-              >Read the full issue →</a>
-            </div>
-          </button>
-        </article>
-
-        <!-- Card 2: Creative Equity Review -->
-        <article class="flip-card">
-          <button class="flip-inner">
-            <div class="flip-face flip-front">
-              <h3>Creative Equity Review</h3>
-              <p class="kicker">Track effort, compound wins, give yourself some credit</p>
-            </div>
-            <div class="flip-face flip-back">
-              <p> A weekly audit to measure inputs, compounding signals,
-                and directional gains so progress stays visible even when performance metrics like views, subscribers and follower counts lag.</p>
-              <a
-                href="https://newsletter.themoderncompass.io/p/creative-equity-and-the-compounding-effect-of-creating"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="cta"
-              >Read the full issue →</a>
-            </div>
-          </button>
-        </article>
-      </div>
-    </section>
   </section>
 
-    <!-- Why Subscribe (kept at bottom) -->
-    <section aria-labelledby="why-subscribe" class="why">
-      <h3 id="why-subscribe">Why Subscribe to <em>Modern Compass</em>?</h3>
-
-      <p>Most personal growth content is noise. <em>Modern Compass</em> is different.</p>
-
-      <div class="why-grid">
-        <div class="why-item">
-          <strong>💡 Clarity without fluff</strong>
-          <p>Big ideas distilled into practical takeaways</p>
-        </div>
-        <div class="why-item">
-          <strong>🛠️ Proven frameworks</strong>
-          <p>Tools like TimeOS to guide real decisions</p>
-        </div>
-        <div class="why-item">
-          <strong>⚡ Action over theory</strong>
-          <p>Exercises you can apply immediately</p>
-        </div>
-        <div class="why-item">
-          <strong>📱 Exclusive app access</strong>
-          <p>Beta testing privileges for Impulse Wallet</p>
-        </div>
-      </div>
-    </section>
 </Layout>
 
 <style>
-  .newsletter {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 900px;
-    padding: 1rem;
+  /* New Hero Section Styles */
+  .newsletter-hero-new {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 3rem 1.5rem;
+    margin: -1rem -1rem 2rem -1rem;
+    border-radius: 20px;
   }
 
-.promo-img {
-  max-width: 450px;   /* shrink to whatever max size you like */
-  width: 100%;        /* stays responsive down to mobile */
-  height: auto;
-  display: block;
-  margin: 0 auto;     /* centers the image */
-}
-
-  .page-title {
-    font-size: 2rem;
-    color: #111827;
+  .hero-container-new {
+    max-width: 700px;
+    margin: 0 auto;
   }
 
-  .intro {
-    font-size: 1.1rem;
-    color: #374151;
+  .hero-box {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   }
 
-  .promo img {
-    display: block;
-    width: 100%;
+  .brand-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .main-headline {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .main-headline .highlight {
+    color: #667eea;
+  }
+
+  .main-description {
+    font-size: 1.2rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .main-description strong {
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+
+  .value-statement {
+    background: #f7fafc;
     border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
-  .newsletter-embed {
-    display: flex;
-    justify-content: center;
-  }
-
-  .beehiiv-embed {
-    width: 100%;
-    max-width: 640px;
-    height: 460px;
-    border: 0;
-    background: transparent;
-  }
-
-  .top-issues h2 {
-    font-size: 1.5rem;
-    color: #111827;
-  }
-
-  .card-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  @media (min-width: 720px) {
-    .card-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
-/* Flip Cards */
-.flip-card {
-  perspective: 1000px;
-}
-
-.flip-inner {
-  width: 100%;
-  height: 240px; /* slightly taller to fit content */
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  position: relative;
-}
-
-.flip-face {
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  background: #fff;
-  backface-visibility: hidden;
-  padding: 1rem;
-  display: grid;
-  align-content: center;
-  gap: 0.4rem;
-  transition: transform 0.6s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle default shadow */
-  border: 1px solid #e5e7eb; /* keeps the border you had */
-}
-
-.flip-inner:hover .flip-face,
-.flip-inner:focus-visible .flip-face {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* deeper shadow on hover/focus */
-  transform: scale(1.02); /* slight pop-out effect */
-}
-
-.flip-front h3 {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.flip-front .kicker {
-  color: #6b7280;
-}
-
-.flip-back {
-  transform: rotateY(180deg);
-  text-align: left;
-}
-
-.flip-inner:hover .flip-front,
-.flip-inner:focus-visible .flip-front {
-  transform: rotateY(180deg);
-}
-.flip-inner:hover .flip-back,
-.flip-inner:focus-visible .flip-back {
-  transform: rotateY(360deg);
-}
-
-.flip-back .cta {
-  color: var(--primary-color, #0ea5e9);
-  font-weight: 600;
-  text-decoration: none;
-  margin-top: 0.5rem;
-  display: inline-block;
-}
-.flip-back .cta:hover {
-  text-decoration: underline;
-}
-
-.flip-back {
-  transform: rotateY(180deg);
-  text-align: left;
-}
-
-/* Keep front + back font consistent */
-.flip-front,
-.flip-back {
-  font-size: 1.2rem;   /* same size on both faces */
-  line-height: 1.6;
-}
-
-.flip-front h3,
-.flip-back h3,
-.flip-front h4,
-.flip-back h4 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Clean newsletter embed - no padding */
-.newsletter-embed-clean {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px 12px 0 0;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-/* Beehiiv iframe padding fixes */
-.iframe-container {
-  line-height: 0 !important;
-  font-size: 0 !important;
-}
-
-.no-padding-iframe {
-  display: block !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
-}
-
-.iframe-container iframe {
-  display: block !important;
-}
-
-/* Beehiiv internal wrapper fix from forum */
-.embed-block-wrapper {
-  margin-bottom: 0px !important;
-  padding-bottom: 0px !important;
-}
-
-@media (min-width: 768px) {
-  .newsletter-embed-clean {
-    text-align: left;
-  }
-}
-
-.stat-box {
-  background: linear-gradient(135deg, var(--color-purple), var(--color-blue));
-  color: white;
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  min-width: 85px;
-}
-
-.stat-number {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: white;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.stat-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  margin-top: 0.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.join-message {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 1rem 0 0 0;
-  font-weight: 500;
-}
-
-/* Value props stacked vertically with mockup underneath */
-.value-props-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
-  align-items: flex-start;
-}
-
-.value-props {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  width: 100%;
-}
-
-.prop {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0.3rem 0.7rem;
-  border-radius: 15px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  align-self: flex-start;
-}
-
-.mockup-inline {
-  align-self: flex-start;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.wallet-mockup-small {
-  width: 80px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.timeos-wider {
-  width: 100px;
-}
-
-.wallet-mockup-small:hover {
-  transform: scale(1.05);
-}
-
-/* Modal styles for enlarged image */
-.mockup-modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.mockup-modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: min(600px, 90vw);
-  max-height: min(800px, 85vh);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mockup-modal img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  border-radius: 12px;
-  object-fit: contain;
-}
-
-.close-modal {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  color: white;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-@media (max-width: 767px) {
-  .value-props-container {
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .wallet-mockup-small {
-    width: 60px;
-  }
-  .timeos-wider {
-    width: 75px;
-  }
-  .prop {
+  .value-statement p {
     font-size: 1rem;
-    padding: 0.25rem 0.6rem;
-    margin-bottom: 0.2rem;
-  }
-  .hero-title {
-    font-size: 1.4rem;
-    line-height: 1.1;
-    margin-bottom: 0.3rem;
-  }
-  .hero-subtitle {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-  .join-message {
-    margin: 0.5rem 0 0 0;
-    font-size: 0.8rem;
-  }
-  .newsletter-embed-clean {
+    color: #2d3748;
+    line-height: 1.7;
     margin: 0;
   }
-}
 
-/* Social proof counters below subscribe form - visible and prominent */
-.animated-stats-bottom {
-  display: flex;
-  gap: 0.75rem;
-  margin: 0;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 0.5rem 0.75rem;
-  border-radius: 0 0 12px 12px;
-  margin-bottom: 0;
-}
-
-@media (min-width: 768px) {
-  .animated-stats-bottom {
-    justify-content: flex-start;
-  }
-}
-
-@media (max-width: 767px) {
-  .animated-stats-bottom {
-    gap: 0.5rem;
-    padding: 0.4rem 0.5rem;
-    justify-content: space-evenly;
-  }
-}
-
-/* Newsletter page only - reduced nav whitespace on mobile */
-.newsletter-page {
-  --nav-padding-top: 0.5rem;
-}
-
-@media (max-width: 767px) {
-  .newsletter-page header {
-    padding-top: var(--nav-padding-top, 0.5rem);
-    padding-bottom: 0.5rem;
+  .signup-bonuses {
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+    border: 1px solid #b3e5fc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
-  .newsletter-page .nav-container {
-    justify-content: space-between;
+  .signup-bonuses p {
+    margin-bottom: 0.5rem;
+    color: #1e40af;
+    font-weight: 600;
+  }
+
+  .signup-bonuses ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .signup-bonuses li {
+    font-size: 0.95rem;
+    color: #1e40af;
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+  }
+
+  .social-proof-text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-proof-text p {
+    font-size: 1rem;
+    color: #4a5568;
+    margin: 0;
+  }
+
+  .highlight-purple {
+    color: #667eea;
+    font-weight: 700;
+  }
+
+  .newsletter-embed-new {
+    margin-bottom: 1rem;
+  }
+
+  .beehiiv-embed-styled {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  /* What You Get Section */
+  .what-you-get-section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: #f9fafb;
+    border-radius: 16px;
+  }
+
+  .what-you-get-section h2 {
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0 0 2rem 0;
+  }
+
+  /* Asset Carousel */
+  .asset-carousel {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .carousel-container {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.4s ease;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    display: flex;
     align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
 
-  .newsletter-page .menu-toggle {
-    order: 2;
-    margin-left: auto;
+  .carousel-slide.active {
+    opacity: 1;
   }
 
-  .newsletter-page .logo {
-    order: 1;
+  .carousel-slide img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
   }
-}
 
+  .slide-caption {
+    flex: 1;
+  }
+
+  .slide-caption h3 {
+    font-size: 1.5rem;
+    color: #111827;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+
+  .slide-caption p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #f8f9fa;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .carousel-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    font-weight: bold;
+  }
+
+  .carousel-btn:hover {
+    background: #5a67d8;
+    transform: scale(1.05);
+  }
+
+  .carousel-btn:active {
+    transform: scale(0.95);
+  }
+
+  .carousel-dots {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #d1d5db;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+
+  .dot.active {
+    background: #667eea;
+  }
+
+  .dot:hover {
+    background: #9ca3af;
+    transform: scale(1.1);
+  }
+
+
+  /* Mobile Responsive */
+  @media (max-width: 767px) {
+    .newsletter-hero-new {
+      padding: 1rem 0.75rem;
+      margin: -0.5rem -1rem 1rem -1rem;
+    }
+
+    .hero-box {
+      padding: 1rem 1rem;
+    }
+
+    .brand-title {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .main-headline {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.1;
+    }
+
+    .main-description {
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .value-statement {
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .value-statement p {
+      font-size: 0.85rem;
+    }
+
+    .signup-bonuses {
+      padding: 0.5rem 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .signup-bonuses p {
+      font-size: 0.85rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .signup-bonuses li {
+      font-size: 0.8rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .social-proof-text {
+      margin-bottom: 1rem;
+    }
+
+    .social-proof-text p {
+      font-size: 0.9rem;
+    }
+
+    .newsletter-embed-new {
+      margin-bottom: 0.5rem;
+    }
+
+    .what-you-get-section {
+      padding: 1rem;
+      margin: 1.5rem auto;
+    }
+
+    .what-you-get-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-description {
+      font-size: 0.95rem;
+    }
+
+    /* Mobile Carousel */
+    .carousel-slide {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.75rem;
+      padding: 1rem 0.75rem;
+    }
+
+    .carousel-slide img {
+      width: 220px;
+      max-width: 85%;
+    }
+
+    .slide-caption h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .slide-caption p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .carousel-nav {
+      padding: 0.5rem 0.75rem;
+    }
+
+    .carousel-btn {
+      width: 32px;
+      height: 32px;
+      font-size: 0.9rem;
+    }
+  }
 </style>
 
 <script is:inline>
   // Add class to body for custom styling
   document.body.classList.add('newsletter-page');
 
-  // Animate counters with easing
-  function animateCounters() {
-    const counters = document.querySelectorAll('.stat-number[data-target]');
-
-    counters.forEach(counter => {
-      const target = parseInt(counter.getAttribute('data-target'));
-      const duration = 2500;
-      const startTime = performance.now();
-
-      const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
-
-      const updateCounter = (currentTime) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const easedProgress = easeOutQuart(progress);
-        const current = Math.floor(easedProgress * target);
-
-        if (progress < 1) {
-          counter.textContent = current + '+';
-          requestAnimationFrame(updateCounter);
-        } else {
-          counter.textContent = target + '+';
-        }
-      };
-
-      requestAnimationFrame(updateCounter);
-    });
-  }
-
-  // Run animation when page loads
-  document.addEventListener('DOMContentLoaded', animateCounters);
-
-  // Modal functionality for wallet mockup
+  // Carousel functionality
   document.addEventListener('DOMContentLoaded', function() {
-    const walletImg = document.getElementById('wallet-mockup');
-    const timeosImg = document.getElementById('timeos-mockup');
-    const modal = document.getElementById('mockup-modal');
-    const modalImage = document.getElementById('modal-image');
-    const closeBtn = document.querySelector('.close-modal');
+    const track = document.getElementById('carousel-track');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
 
-    if (modal && modalImage && closeBtn) {
-      // Wallet mockup click
-      if (walletImg) {
-        walletImg.addEventListener('click', function() {
-          modalImage.src = '/main-wallet-interface.png';
-          modalImage.alt = 'Impulse Wallet Beta Interface - Enlarged View';
-          modal.style.display = 'block';
-        });
-      }
+    let currentSlide = 0;
+    const totalSlides = slides.length;
 
-      // TimeOS mockup click
-      if (timeosImg) {
-        timeosImg.addEventListener('click', function() {
-          modalImage.src = '/TimeOS.png';
-          modalImage.alt = 'TimeOS Digital Asset - Enlarged View';
-          modal.style.display = 'block';
-        });
-      }
+    function showSlide(index) {
+      // Remove active class from all slides and dots
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
 
-      closeBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
-      });
+      // Add active class to current slide and dot
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
 
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          modal.style.display = 'none';
-        }
-      });
+      // Move track
+      track.style.transform = `translateX(-${index * 100}%)`;
+
+      currentSlide = index;
     }
+
+    function nextSlide() {
+      const next = (currentSlide + 1) % totalSlides;
+      showSlide(next);
+    }
+
+    function prevSlide() {
+      const prev = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(prev);
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Dot navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showSlide(index));
+    });
+
+    // Auto-advance every 8 seconds
+    setInterval(nextSlide, 8000);
+
+    // Touch/swipe support for mobile
+    let startX = 0;
+    let endX = 0;
+
+    track.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    track.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+
+      if (Math.abs(diff) > 50) { // Minimum swipe distance
+        if (diff > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+    });
   });
-
-  // Meta Pixel tracking for newsletter signups
-  if (typeof fbq !== 'undefined') {
-    // Track newsletter page view
-    fbq('track', 'ViewContent', {
-      content_name: 'Newsletter Landing Page',
-      content_category: 'Newsletter'
-    });
-
-    // Listen for form submissions (you can enhance this based on Beehiiv events)
-    document.addEventListener('DOMContentLoaded', function() {
-      // This will track when users interact with the iframe
-      const iframes = document.querySelectorAll('.beehiiv-embed-mobile, .beehiiv-embed-secondary');
-      iframes.forEach(iframe => {
-        iframe.addEventListener('load', function() {
-          fbq('track', 'InitiateCheckout', {
-            content_name: 'Newsletter Signup Form',
-            value: 5.00,
-            currency: 'USD'
-          });
-        });
-      });
-    });
-  }
 </script>
+</Layout>
