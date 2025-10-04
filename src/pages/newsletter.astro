@@ -109,6 +109,91 @@ import SEO from '../components/SEO.astro';
     </div>
   </section>
 
+  <!-- FAQ Section for SEO and Conversion -->
+  <section class="newsletter-faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>What is the Modern Compass newsletter about?</h3>
+        <p>The Modern Compass newsletter is a monthly personal development email focused on helping you find direction in Self, Trust, Character, and Relationships. Each issue includes actionable insights, exclusive tools like TimeOS and Impulse Wallet, and frameworks for intentional growth.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How often will I receive emails?</h3>
+        <p>Once a month, every 3rd Friday. No daily spam, no inbox overwhelm—just one purpose-filled email with depth and room to take action.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the TimeOS digital asset?</h3>
+        <p>TimeOS is a 5-step time audit system that helps you identify where your hours are going and redirect them toward what matters most. It's a simple, actionable framework to reclaim 5-10 hours per week. You'll receive it instantly after signing up.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is Impulse Wallet?</h3>
+        <p>Impulse Wallet is a gamified accountability app that uses a simple "$1 up/down" virtual wallet system to track positive and negative choices. It features anonymous accounts, accountability rooms, weekly resets, and a 15-minute undo grace period. Subscribers get early access.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is the newsletter really free?</h3>
+        <p>Yes, completely free. You'll get the newsletter, TimeOS system, and early access to Impulse Wallet at no cost. Unsubscribe anytime with one click. No credit card required.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Who is Modern Compass for?</h3>
+        <p>Anyone feeling stuck, lost, or searching for direction in life. Whether you're in your 20s navigating early adulthood, a professional seeking clarity, or someone wanting intentional personal growth, Modern Compass provides the framework and tools to move forward.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Subscription Schema -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Modern Compass Newsletter Signup",
+    "description": "Monthly personal development newsletter with free TimeOS system",
+    "url": "https://themoderncompass.io/newsletter",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "Question",
+          "name": "What is the Modern Compass newsletter about?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Modern Compass newsletter is a monthly personal development email focused on helping you find direction in Self, Trust, Character, and Relationships. Each issue includes actionable insights, exclusive tools like TimeOS and Impulse Wallet, and frameworks for intentional growth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often will I receive emails?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Once a month, every 3rd Friday. No daily spam, no inbox overwhelm—just one purpose-filled email with depth and room to take action."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the TimeOS digital asset?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TimeOS is a 5-step time audit system that helps you identify where your hours are going and redirect them toward what matters most. It's a simple, actionable framework to reclaim 5-10 hours per week. You'll receive it instantly after signing up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the newsletter really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, completely free. You'll get the newsletter, TimeOS system, and early access to Impulse Wallet at no cost. Unsubscribe anytime with one click. No credit card required."
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
 </Layout>
 
 <style>
@@ -512,6 +597,78 @@ import SEO from '../components/SEO.astro';
       width: 32px;
       height: 32px;
       font-size: 0.9rem;
+    }
+  }
+
+  /* FAQ Section Styles */
+  .newsletter-faq {
+    max-width: 900px;
+    margin: 3rem auto 2rem;
+    padding: 2rem 1.5rem;
+    background: #f9fafb;
+    border-radius: 16px;
+  }
+
+  .newsletter-faq h2 {
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .faq-item {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .faq-item h3 {
+    font-size: 1.2rem;
+    color: #667eea;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  .faq-item p {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 767px) {
+    .newsletter-faq {
+      padding: 1.5rem 1rem;
+      margin: 2rem auto 1rem;
+    }
+
+    .newsletter-faq h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      padding: 1rem;
+    }
+
+    .faq-item h3 {
+      font-size: 1.1rem;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
     }
   }
 </style>
