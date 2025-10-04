@@ -28,88 +28,44 @@ Who has time to meticulously log every 15-minute block of their day? That's just
 
 The 5-minute time audit is different. It's a one-time snapshot that reveals patterns you can actually fix.
 
-## The 5-Minute Time Audit (Do This Now)
+## What a Time Audit Actually Reveals
 
-Grab a piece of paper or open a note on your phone. Answer these 5 questions honestly:
+Here's what most people discover when they track their time honestly:
 
-### 1. What did you do yesterday from the moment you woke up until you went to bed?
+**The shocking truth:**
+- 5-10 hours per day disappear into activities you don't even enjoy
+- 1-2 hours per day go toward what actually matters to you
+- 35-70 hours per week lost to things that don't align with your values
 
-Don't think too hard. Just write down the major blocks:
-- Woke up, scrolled phone for 30 minutes
-- Got ready, commute
-- Work (be honest: how much was actual work vs. meetings/email/distraction?)
-- Lunch, more work
-- Commute home, Netflix, dinner, scroll, bed
+That's not a productivity problem. That's a **visibility problem**.
 
-**Time: 1 minute**
+**Common time drains people don't realize:**
+- Mindless social media scrolling (morning phone time adds up fast)
+- Low-value meetings and interruptions
+- Saying yes to obligations that drain your energy
+- "Busy work" that feels productive but moves nothing forward
 
-### 2. Circle anything that felt like a "time drain"
+**What's usually missing:**
+- Deep work on projects you care about
+- Quality time with people who matter
+- Activities that energize rather than deplete you
+- Space to think, reflect, and grow
 
-A time drain is something that:
-- You don't enjoy
-- Doesn't move you toward a goal
-- Leaves you feeling empty or guilty after
+The gap between where your time goes and where you *want* it to go? That's your opportunity.
 
-For most people, this includes:
-- Mindless social media scrolling
-- Low-value meetings
-- Saying yes to things you didn't want to do
-- Overcommitting to obligations that don't matter
+## The TimeOS System: Your 5-Step Audit
 
-**Time: 1 minute**
+The full **TimeOS system** is a simple framework that takes about 5 minutes to complete but reveals patterns you can act on immediately:
 
-### 3. Underline anything that felt meaningful or energizing
+1. **Map your actual day** (not your ideal day - your real one)
+2. **Identify time drains vs. meaningful activities** (you'll be surprised)
+3. **Calculate the gap** (how many hours are misaligned with your values?)
+4. **Pick one small swap** (15 minutes is enough to start)
+5. **Track progress without overthinking** (awareness, not perfection)
 
-This is where your life actually is:
-- Deep conversation with a friend
-- Working on a project you care about
-- Exercise, reading, learning something new
-- Quality time with family
+It's not about overhauling your life. It's about redirecting just enough time to start seeing progress.
 
-Notice how small this list probably is compared to the drains.
-
-**Time: 1 minute**
-
-### 4. Add up your "drain time" vs. "meaningful time"
-
-Rough estimates are fine.
-
-Most people discover they spend **5-10 hours/day on drains** and **1-2 hours on what matters**.
-
-That's 35-70 hours/week lost to activities that don't align with their values.
-
-**Time: 1 minute**
-
-### 5. Pick ONE drain to cut this week
-
-Don't try to overhaul your entire life. Pick the easiest, most obvious time drain and commit to reducing it by 30%.
-
-**Examples:**
-- Morning phone scroll → Replace with 10 minutes of reading or journaling
-- Evening Netflix binge → Set a 1-hour limit, use the rest for a hobby
-- Saying yes to every social invitation → Say no to 1 this week
-
-**Time: 1 minute**
-
----
-
-**Total time: 5 minutes. Potential time reclaimed: 5-10 hours/week.**
-
-Not bad for 5 minutes of honesty.
-
-## The TimeOS System: Go Deeper
-
-The 5-minute audit is just the beginning. If you want to go deeper, the **TimeOS system** is a full 5-step framework to:
-
-1. **Map your current time usage** (the real numbers, not your best guess)
-2. **Identify your top 3 time drains** (and why they're so hard to quit)
-3. **Clarify what "meaningful time" looks like for you** (your values, not society's)
-4. **Redirect 5-10 hours/week** toward what actually matters
-5. **Build systems to protect your time** (so you don't slip back into old patterns)
-
-It's a simple, actionable 5-page PDF that takes about 30 minutes to complete - and can change how you spend the next decade.
-
-**[Get the full TimeOS system free when you subscribe to the Modern Compass newsletter →](/newsletter)**
+**[Get the complete TimeOS audit free when you subscribe →](/newsletter)**
 
 ## Why Time Awareness Beats Time Management
 
@@ -125,31 +81,31 @@ The 5-minute audit gives you awareness.
 The TimeOS system gives you action.
 Modern Compass gives you the framework to sustain it.
 
-## What Happens When You Reclaim Your Time
+## What Changes When You Reclaim Your Time
 
-When you redirect even 5 hours/week from drains to meaning, here's what changes:
+When you start redirecting even small amounts of time from drains to meaning, here's what shifts:
 
 - **Clarity** - You stop feeling "busy but unproductive"
 - **Energy** - Meaningful activities energize you; drains deplete you
-- **Progress** - Small, consistent actions compound into real growth
+- **Progress** - Small, consistent swaps compound into real growth
 - **Control** - You stop feeling like life is happening *to* you
 
-One subscriber used the TimeOS system to reclaim 8 hours/week. She used it to:
-- Start a side business (now replacing her full-time income)
-- Train for a half marathon
-- Actually finish the book she'd been "reading" for 2 years
+One subscriber used TimeOS to identify 8 hours/week of wasted time. She redirected it and:
+- Started a side business (now replacing her full-time income)
+- Trained for a half marathon
+- Actually finished the book she'd been "reading" for 2 years
 
 **She didn't get more time. She just stopped wasting it.**
 
-## Your Next Step
+## Where to Start
 
-1. **Do the 5-minute audit right now** (seriously, stop reading and do it)
-2. **Pick ONE time drain to cut this week** (just one)
-3. **Track the difference** (notice how you feel when you reclaim that time)
+The first step is simple: **see where your time is really going**.
 
-If you want the full system:
+Most people guess wrong about their time use. They think they spend 30 minutes on social media when it's actually 2 hours. They think they work 8 focused hours when it's closer to 4.
 
-**[Get the TimeOS 5-step audit free + monthly insights on personal growth →](/newsletter)**
+Awareness changes everything.
+
+**[Get the TimeOS 5-step audit free + track your progress with Impulse Wallet →](/newsletter)**
 
 ---
 
