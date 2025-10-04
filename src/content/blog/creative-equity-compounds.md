@@ -4,7 +4,7 @@ description: "Job performance resets every quarter. Creative equity compounds fo
 publishedDate: 2025-02-12
 author: "Josh Imholte"
 keywords: ["creative equity", "side project benefits", "personal growth investment", "create for yourself", "compounding creativity"]
-image: "/src/assets/blog-thumbnails/creative-equity-compounds.svg"
+image: "/blog-thumbnails/creative-equity-compounds.svg"
 draft: false
 ---
 

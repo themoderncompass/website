@@ -4,7 +4,7 @@ description: "Self-confidence doesn't come from affirmations. It comes from cons
 publishedDate: 2025-01-29
 author: "Josh Imholte"
 keywords: ["build self confidence", "consistency and confidence", "how to be more confident", "self confidence tips", "overcome self doubt"]
-image: "/src/assets/blog-thumbnails/consistency-builds-self-confidence.svg"
+image: "/blog-thumbnails/consistency-builds-self-confidence.svg"
 draft: false
 ---
 

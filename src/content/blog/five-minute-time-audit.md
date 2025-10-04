@@ -4,7 +4,7 @@ description: "Stop wondering where your time goes. This quick time audit reveals
 publishedDate: 2025-01-22
 author: "Josh Imholte"
 keywords: ["time audit", "time management", "productivity tips", "reclaim time", "where does time go"]
-image: "/src/assets/blog-thumbnails/five-minute-time-audit.svg"
+image: "/blog-thumbnails/five-minute-time-audit.svg"
 draft: false
 ---
 

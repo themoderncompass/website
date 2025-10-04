@@ -4,7 +4,7 @@ description: "Ever wonder why you instantly connect with some people but not oth
 publishedDate: 2025-02-19
 author: "Josh Imholte"
 keywords: ["relationship resonance", "why people click", "genuine connections", "meaningful relationships", "relationship compatibility"]
-image: "/src/assets/blog-thumbnails/power-of-two-relationship-resonance.svg"
+image: "/blog-thumbnails/power-of-two-relationship-resonance.svg"
 draft: false
 ---
 

@@ -4,7 +4,7 @@ description: "Discover why planning and researching without action keeps you stu
 publishedDate: 2025-10-04
 author: "Josh Imholte"
 keywords: ["getting unstuck", "feeling stuck in life", "how to get unstuck", "breaking the stagnation cycle", "intent and action", "personal growth stuck"]
-image: "/src/assets/blog-thumbnails/getting-unstuck-intent-action.svg"
+image: "/blog-thumbnails/getting-unstuck-intent-action.svg"
 draft: false
 ---
 

@@ -4,7 +4,7 @@ description: "Stop chasing mastery and start building from the foundation. Learn
 publishedDate: 2025-10-04
 author: "Josh Imholte"
 keywords: ["personal growth framework", "minimum requirements", "sustainable growth", "personal development blueprint", "getting unstuck", "intentional progress"]
-image: "/src/assets/blog-thumbnails/minimum-requirements-personal-growth.svg"
+image: "/blog-thumbnails/minimum-requirements-personal-growth.svg"
 draft: false
 ---
 

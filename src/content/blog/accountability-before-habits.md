@@ -4,7 +4,7 @@ description: "Habits fail without accountability. Learn why the accountability-f
 publishedDate: 2025-02-05
 author: "Josh Imholte"
 keywords: ["accountability for habits", "why habits fail", "accountability partner", "build better habits", "habit accountability system"]
-image: "/src/assets/blog-thumbnails/accountability-before-habits.svg"
+image: "/blog-thumbnails/accountability-before-habits.svg"
 draft: false
 ---
 

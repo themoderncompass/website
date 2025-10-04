@@ -1,0 +1,35 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Background -->
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06B6D4"/>
+      <stop offset="33%" style="stop-color:#3B82F6"/>
+      <stop offset="66%" style="stop-color:#EC4899"/>
+      <stop offset="100%" style="stop-color:#FBBF24"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Simple Growth Chart Drawing -->
+  <g transform="translate(250, 450)">
+    <!-- Axes -->
+    <line x1="0" y1="0" x2="700" y2="0" stroke="#333" stroke-width="4"/>
+    <line x1="0" y1="0" x2="0" y2="-350" stroke="#333" stroke-width="4"/>
+
+    <!-- Exponential growth curve -->
+    <path d="M 50,-20 Q 200,-50 350,-120 T 650,-300"
+          fill="none"
+          stroke="url(#grad5)"
+          stroke-width="8"
+          stroke-linecap="round"/>
+
+    <!-- Data points -->
+    <circle cx="50" cy="-20" r="10" fill="url(#grad5)"/>
+    <circle cx="200" cy="-60" r="12" fill="url(#grad5)"/>
+    <circle cx="350" cy="-120" r="14" fill="url(#grad5)"/>
+    <circle cx="500" cy="-210" r="16" fill="url(#grad5)"/>
+    <circle cx="650" cy="-300" r="18" fill="url(#grad5)"/>
+  </g>
+</svg>

@@ -4,7 +4,7 @@ description: "Forget dramatic transformations. Learn why 15-minute daily choices
 publishedDate: 2025-10-04
 author: "Josh Imholte"
 keywords: ["goal setting", "small daily habits", "consistency over motivation", "why goals fail", "building momentum", "sustainable change"]
-image: "/src/assets/blog-thumbnails/why-little-things-matter-goals.svg"
+image: "/blog-thumbnails/why-little-things-matter-goals.svg"
 draft: false
 ---
 

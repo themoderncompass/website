@@ -1,0 +1,46 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Background -->
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="grad7" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="33%" style="stop-color:#A855F7"/>
+      <stop offset="66%" style="stop-color:#F97316"/>
+      <stop offset="100%" style="stop-color:#FBBF24"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Simple Path Forward Drawing -->
+  <g transform="translate(200, 315)">
+    <!-- Looping/stuck path (going in circles) -->
+    <path d="M 0,0 Q 50,-80 100,0 T 200,0"
+          fill="none"
+          stroke="#CCCCCC"
+          stroke-width="8"
+          stroke-linecap="round"
+          stroke-dasharray="12,8"/>
+
+    <!-- Transition point -->
+    <circle cx="200" cy="0" r="20" fill="url(#grad7)" opacity="0.3"/>
+
+    <!-- Straight path forward (breaking the loop) -->
+    <line x1="220" y1="0" x2="800" y2="0"
+          stroke="url(#grad7)"
+          stroke-width="10"
+          stroke-linecap="round"/>
+
+    <!-- Arrow head -->
+    <path d="M 800,0 L 770,-20 M 800,0 L 770,20"
+          stroke="url(#grad7)"
+          stroke-width="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+
+    <!-- Small progress markers along the straight path -->
+    <circle cx="350" cy="0" r="8" fill="url(#grad7)"/>
+    <circle cx="500" cy="0" r="8" fill="url(#grad7)"/>
+    <circle cx="650" cy="0" r="8" fill="url(#grad7)"/>
+  </g>
+</svg>
