@@ -60,39 +60,36 @@ After years of circling the same patterns, I created Modern Compass - a simple f
 
 **Start here:** Reach out to one person you've been meaning to connect with. No agenda, just genuine check-in.
 
-## Three Practical Steps to Find Direction Today
+## How to Actually Move Forward (Not Just Think About It)
 
-### Step 1: Audit Your Time
-Feeling lost often means you're spending hours on things that don't matter. Use the [TimeOS system](/newsletter) to identify where your time is really going.
+Understanding the framework is one thing. Taking action is another.
 
-**Quick version:**
-1. Track your time for 3 days (be honest)
-2. Categorize activities: Essential, Growth, Wasted
-3. Identify your top 3 time drains
-4. Replace one drain with one growth activity this week
+Most people stay stuck because they can't see where their time and energy are actually going. You might feel busy all day but can't point to real progress. That's not a motivation problem - it's a visibility problem.
 
-### Step 2: Define "Progress" for Yourself
-Stop chasing other people's definition of success.
+### Track Where Your Time Really Goes
 
-**Ask yourself:**
-- What does a meaningful day look like for me?
-- What do I want to be true about my life in 5 years?
-- What small action can I take today that moves me toward that?
+Before you can redirect your life, you need to see where it's currently headed. That's where the **TimeOS system** comes in - a simple 5-step audit that reveals:
+- Your biggest time drains (usually 5-10 hours/week you didn't realize were wasted)
+- Where you're already making progress (so you can do more of it)
+- How to redirect even 1-2 hours/day toward what actually matters
 
-Write it down. Specificity kills confusion.
+It's not another productivity hack. It's awareness. And awareness is the first step toward intentional change.
 
-### Step 3: Build Momentum Through Micro-Actions
-You don't need a complete plan. You need momentum.
+**[Get the free TimeOS system when you join the newsletter →](/newsletter)**
 
-**The Modern Compass approach:**
-- Choose ONE direction to focus on this month (Self, Trust, Character, or Relationships)
-- Set ONE small, weekly action in that direction
-- Track progress in a simple notebook or app
-- Reflect monthly: What's working? What's not?
+### Track Your Focus Areas With Social Accountability
 
-**Example:** If you're focusing on **Self → Control**, your weekly action might be: *"No phone for the first hour after waking up."*
+Knowing where you want to go is only half the battle. Staying accountable to yourself is the other half.
 
-Small actions, repeated consistently, compound into clarity.
+**Impulse Wallet** is a gamified accountability app that helps you track your focus areas in real-time:
+- Simple "$1 up/down" system for every choice you make
+- Join accountability rooms with friends or family
+- Weekly resets so you're never too far behind
+- 15-minute undo grace period (because we're all human)
+
+It's progress over perfection. Awareness over judgment. And it works because it makes self-control feel like a game, not a grind.
+
+**[Get early access to Impulse Wallet (free beta) →](/newsletter)**
 
 ## The Most Important Thing to Remember
 
