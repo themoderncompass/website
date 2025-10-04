@@ -33,7 +33,7 @@ The 5-minute time audit is different. It's a one-time snapshot that reveals patt
 Here's what most people discover when they track their time honestly:
 
 **The shocking truth:**
-- 2-4 hours per day disappear into activities you don't even enjoy
+- 2+ hours per day spent consuming or wasting time
 - Less than 1 hour per day goes toward what actually matters to you
 - 15-25 hours per week lost to things that don't align with your values
 
