@@ -4,7 +4,7 @@ description: "Feeling lost in your twenties is normal. Learn practical strategie
 publishedDate: 2025-01-15
 author: "Josh Imholte"
 keywords: ["feeling lost in twenties", "find life direction", "quarter life crisis", "personal growth 20s", "life clarity"]
-image: "/Modern Compass Layers.png"
+image: "/src/assets/blog-thumbnails/find-direction-lost-twenties.svg"
 draft: false
 ---
 
