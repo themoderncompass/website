@@ -10,7 +10,7 @@ draft: false
 
 If you're in your twenties and feeling lost, you're not alone. I spent years in my 20s and early 30s full of ambition but short on direction, making progress slowly and often in circles.
 
-The truth? Feeling lost isn't a flaw. It's a signal—one that tells you it's time to build your compass instead of waiting for someone else to hand you a map.
+The truth? Feeling lost isn't a flaw. It's a signal - one that tells you it's time to build your compass instead of waiting for someone else to hand you a map.
 
 ## Why Feeling Lost Is So Common in Your 20s
 
@@ -26,7 +26,7 @@ The good news? This discomfort is growth trying to happen. You just need a frame
 
 ## The Modern Compass Framework: Four Directions for Clarity
 
-After years of circling the same patterns, I created Modern Compass—a simple framework that cuts through the noise and gives you four clear directions to focus on:
+After years of circling the same patterns, I created Modern Compass - a simple framework that cuts through the noise and gives you four clear directions to focus on:
 
 ### 1. **Self** - Know where you stand
 - **Awareness** - Understand your patterns, triggers, and strengths
@@ -116,6 +116,6 @@ If you're ready to stop scrolling and start taking action:
 
 You've got this. Just pick a direction and start walking.
 
-**Always… follow your compass.**
+**Always... follow your compass.**
 
-*— Josh*
+*- Josh*

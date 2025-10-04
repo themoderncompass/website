@@ -107,7 +107,7 @@ The 5-minute audit is just the beginning. If you want to go deeper, the **TimeOS
 4. **Redirect 5-10 hours/week** toward what actually matters
 5. **Build systems to protect your time** (so you don't slip back into old patterns)
 
-It's a simple, actionable 5-page PDF that takes about 30 minutes to complete—and can change how you spend the next decade.
+It's a simple, actionable 5-page PDF that takes about 30 minutes to complete - and can change how you spend the next decade.
 
 **[Get the full TimeOS system free when you subscribe to the Modern Compass newsletter →](/newsletter)**
 
@@ -167,9 +167,9 @@ The good news? You can redirect today.
 
 Ready?
 
-**Always… follow your compass.**
+**Always... follow your compass.**
 
-*— Josh*
+*- Josh*
 
 ---
 
