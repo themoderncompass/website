@@ -1,8 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
 ---
 
 <Layout>
+  <SEO
+    slot="head"
+    title="Free Personal Development Newsletter - TimeOS System Included | Modern Compass"
+    description="Get monthly insights for personal growth, free TimeOS time management system, and access to Impulse Wallet accountability app. Join 100+ subscribers finding direction in life. No spam, unsubscribe anytime."
+    canonical="https://themoderncompass.io/newsletter"
+    keywords="personal development newsletter, monthly self improvement newsletter, free time management system, life direction coaching, accountability app, personal growth email"
+  />
   <!-- Hero Section with Purple Gradient Box -->
   <section class="newsletter-hero-new">
     <div class="hero-container-new">
@@ -65,21 +73,21 @@ import Layout from '../layouts/Layout.astro';
       <div class="carousel-container">
         <div class="carousel-track" id="carousel-track">
           <div class="carousel-slide active">
-            <img src="/Impulse_wallet_ipad.png" alt="Impulse Wallet Beta - App to track focus areas" />
+            <img src="/Impulse_wallet_ipad.png" alt="Impulse Wallet beta app interface showing daily accountability tracking on iPad with $1 up/down system for self-control" />
             <div class="slide-caption">
               <h3>Impulse Wallet</h3>
               <p>App to track focus areas</p>
             </div>
           </div>
           <div class="carousel-slide">
-            <img src="/TimeOS_asset.png" alt="TimeOS Digital Asset - 5-step system for time and attention management" />
+            <img src="/TimeOS_asset.png" alt="TimeOS digital asset - 5-step time audit system worksheet for reclaiming wasted hours and redirecting time to what matters" />
             <div class="slide-caption">
               <h3>TimeOS Digital Asset</h3>
               <p>Reclaim your time and redirect it toward focus areas you want to progress in</p>
             </div>
           </div>
           <div class="carousel-slide">
-            <img src="/book-graphic.png" alt="Modern Compass Book - Beta reader signup coming soon" />
+            <img src="/book-graphic.png" alt="Modern Compass book cover - practical framework for personal growth covering Self, Trust, Character, and Relationships" />
             <div class="slide-caption">
               <h3>Book Resources</h3>
               <p>Beta reader signup coming, stay subscribed to the newsletter if interested</p>
