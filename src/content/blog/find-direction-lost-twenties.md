@@ -71,7 +71,7 @@ Most people stay stuck because they can't see where their time and energy are ac
 Before you can redirect your life, you need to see where it's currently headed. That's where the **TimeOS system** comes in - a simple 5-step audit that reveals:
 - Your biggest time drains (usually 5-10 hours/week you didn't realize were wasted)
 - Where you're already making progress (so you can do more of it)
-- How to redirect even 1-2 hours/day toward what actually matters
+- How to start small by replacing just 15 minutes of something else with 15 minutes on something that moves you forward
 
 It's not another productivity hack. It's awareness. And awareness is the first step toward intentional change.
 
