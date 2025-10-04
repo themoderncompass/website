@@ -1,11 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
 
 const bookTitle = 'Modern Compass';
 const newsletterUrl = 'https://newsletter.themoderncompass.io';
 ---
 
 <Layout>
+  <SEO
+    slot="head"
+    title="Modern Compass Book - Practical Framework for Personal Growth | Josh Imholte"
+    description="Practical frameworks to navigate life with clarity and conviction. A personal growth book covering Self, Trust, Character, and Relationships with actionable activities and tools."
+    canonical="https://themoderncompass.io/book"
+    keywords="modern compass book, personal growth book, life direction framework, practical self improvement, character development, relationship building, Josh Imholte"
+  />
   <section class="book">
     <h1>{bookTitle}</h1>
     <p class="subtitle">Practical frameworks to help you navigate life with clarity and conviction.</p>

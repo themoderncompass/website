@@ -1,0 +1,270 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
+
+// Get all blog posts, filter out drafts, and sort by date
+const allPosts = await getCollection('blog', ({ data }) => {
+  return data.draft !== true;
+});
+
+const posts = allPosts.sort((a, b) =>
+  b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+);
+---
+
+<Layout>
+  <SEO
+    slot="head"
+    title="Personal Development Blog - Life Direction & Growth Insights | Modern Compass"
+    description="Practical insights on finding direction in life, personal growth strategies, time management, and building intentional habits. Expert advice from Josh Imholte."
+    canonical="https://themoderncompass.io/blog"
+    keywords="personal development blog, life direction advice, self improvement tips, personal growth strategies, time management tips"
+  />
+
+  <section class="blog-listing">
+    <div class="blog-header">
+      <h1>Blog</h1>
+      <p class="intro">Practical insights to help you find direction and take action in the moments that matter most.</p>
+    </div>
+
+    {posts.length === 0 ? (
+      <div class="no-posts">
+        <p>No blog posts yet. Check back soon for insights on personal growth and finding direction.</p>
+        <a href="/newsletter" class="cta-link">Subscribe to the newsletter →</a>
+      </div>
+    ) : (
+      <div class="posts-grid">
+        {posts.map((post) => {
+          const { title, description, publishedDate, image } = post.data;
+          const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+
+          return (
+            <article class="post-card">
+              {image && (
+                <a href={`/blog/${post.slug}`} class="post-image-link">
+                  <img src={image} alt={title} class="post-image" loading="lazy" />
+                </a>
+              )}
+              <div class="post-content">
+                <time datetime={publishedDate.toISOString()} class="post-date">
+                  {formattedDate}
+                </time>
+                <h2>
+                  <a href={`/blog/${post.slug}`} class="post-title-link">
+                    {title}
+                  </a>
+                </h2>
+                <p class="post-description">{description}</p>
+                <a href={`/blog/${post.slug}`} class="read-more">
+                  Read more →
+                </a>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    )}
+
+    <div class="newsletter-cta">
+      <h2>Get insights delivered monthly</h2>
+      <p>Join 100+ subscribers receiving practical tools and frameworks for personal growth.</p>
+      <a href="/newsletter" class="button">Subscribe to the newsletter</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .blog-listing {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .blog-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .blog-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #111827;
+  }
+
+  .intro {
+    font-size: 1.2rem;
+    color: #4a5568;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .no-posts {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #f9fafb;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+  }
+
+  .no-posts p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 1rem;
+  }
+
+  .cta-link {
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+
+  .cta-link:hover {
+    text-decoration: underline;
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .post-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .post-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .post-image-link {
+    display: block;
+  }
+
+  .post-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .post-content {
+    padding: 1.5rem;
+  }
+
+  .post-date {
+    display: block;
+    font-size: 0.875rem;
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .post-title-link {
+    text-decoration: none;
+    color: #111827;
+  }
+
+  .post-title-link:hover {
+    color: #667eea;
+  }
+
+  .post-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .post-description {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .read-more {
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .read-more:hover {
+    text-decoration: underline;
+  }
+
+  .newsletter-cta {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+  }
+
+  .newsletter-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .newsletter-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+  }
+
+  .button {
+    display: inline-block;
+    background: white;
+    color: #667eea;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 767px) {
+    .blog-header h1 {
+      font-size: 2rem;
+    }
+
+    .intro {
+      font-size: 1rem;
+    }
+
+    .posts-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .newsletter-cta {
+      padding: 2rem 1.5rem;
+    }
+
+    .newsletter-cta h2 {
+      font-size: 1.5rem;
+    }
+
+    .newsletter-cta p {
+      font-size: 1rem;
+    }
+  }
+</style>

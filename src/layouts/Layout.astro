@@ -17,6 +17,42 @@ const year = new Date().getFullYear();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/logo.png" />
     <title>The Modern Compass</title>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "The Modern Compass",
+          "url": "https://themoderncompass.io",
+          "logo": "https://themoderncompass.io/logo.png",
+          "description": "A framework for personal growth in Self, Trust, Character, and Relationships",
+          "sameAs": [
+            "https://www.tiktok.com/@themoderncompass"
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Josh Imholte",
+            "jobTitle": "Author & Personal Development Coach",
+            "description": "Product leader in tech, author of Modern Compass framework"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "name": "The Modern Compass",
+          "url": "https://themoderncompass.io",
+          "description": "Helping you find direction in the moments that matter most",
+          "publisher": {
+            "@type": "Organization",
+            "name": "The Modern Compass"
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- Allow pages to inject additional head content -->
     <slot name="head" />
 <!-- Meta Pixel Code -->
@@ -46,6 +82,7 @@ src="https://www.facebook.com/tr?id=705209105898090&ev=PageView&noscript=1"
   <ul class="nav-links center">
     <li><a href="/book">Book</a></li>
     <li><a href="/newsletter">Newsletter</a></li>
+    <li><a href="/blog">Blog</a></li>
     <li><a href="/shop">Shop</a></li>
     <li><a href="/resources">Resources</a></li>
   </ul>
