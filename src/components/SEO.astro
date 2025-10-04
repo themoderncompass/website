@@ -1,0 +1,88 @@
+---
+/**
+ * SEO Component for The Modern Compass
+ *
+ * Provides comprehensive meta tags for search engines and social media sharing.
+ * Include this component in the <head> slot of any page that needs custom SEO.
+ *
+ * Usage:
+ * <SEO
+ *   title="Page Title | The Modern Compass"
+ *   description="Page description for search engines"
+ *   image="/og-image.png"
+ *   canonical="https://themoderncompass.io/page"
+ *   type="website"
+ * />
+ */
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+  type?: 'website' | 'article';
+  author?: string;
+  publishedTime?: string;
+  keywords?: string;
+}
+
+const {
+  title = "The Modern Compass - Find Direction in Life's Key Moments",
+  description = "A framework for accelerating personal growth in Self, Trust, Character, and Relationships. Helping you navigate life with clarity, confidence, and intention.",
+  image = "/logo.png",
+  canonical,
+  type = "website",
+  author = "Josh Imholte",
+  publishedTime,
+  keywords = "personal development, self-improvement, life direction, personal growth, modern compass, self awareness, character development"
+} = Astro.props;
+
+// Build full URLs for canonical and images
+const canonicalURL = canonical
+  ? new URL(canonical, Astro.site).href
+  : new URL(Astro.url.pathname, Astro.site).href;
+
+const socialImage = new URL(image, Astro.site).href;
+
+// Ensure title isn't too long for social media (60 chars optimal)
+const socialTitle = title.length > 60 ? title.substring(0, 57) + '...' : title;
+
+// Ensure description isn't too long (155 chars optimal for Google)
+const metaDescription = description.length > 155 ? description.substring(0, 152) + '...' : description;
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={metaDescription} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content={author} />
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={socialTitle} />
+<meta property="og:description" content={metaDescription} />
+<meta property="og:image" content={socialImage} />
+<meta property="og:site_name" content="The Modern Compass" />
+<meta property="og:locale" content="en_US" />
+
+{publishedTime && <meta property="article:published_time" content={publishedTime} />}
+{author && type === 'article' && <meta property="article:author" content={author} />}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={socialTitle} />
+<meta name="twitter:description" content={metaDescription} />
+<meta name="twitter:image" content={socialImage} />
+<meta name="twitter:creator" content="@themoderncompass" />
+
+<!-- Additional Meta -->
+<meta name="robots" content="index, follow" />
+<meta name="language" content="English" />
+<meta name="revisit-after" content="7 days" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/logo.png" />
