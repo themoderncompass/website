@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
 
 const bio = `
   For years in my 20's and 30's I tried to navigate life without a clear guide, full of ambition but
@@ -32,13 +33,20 @@ const credentials = [
   'My writing and tools are built from lived experience, tested in the realities of work, family, and growth',
   'I don’t preach quick fixes. I focus on frameworks that are easy to understand',
   'Modern Compass is designed to be actionable and approachable with activities, tools, and a growing community to help',
-  'I believe clarity beats complexity. If it doesn’t simplify your life or nudge you to move forward, it doesn’t belong'
+  'I believe clarity beats complexity. If it doesn't simplify your life or nudge you to move forward, it doesn't belong'
 ];
 ---
 <Layout>
+  <SEO
+    slot="head"
+    title="About Josh Imholte - Modern Compass Founder | Personal Development Coach"
+    description="Meet Josh Imholte, product leader turned personal development coach. Learn how Modern Compass was created to help people feeling lost find direction and build intentional lives."
+    canonical="https://themoderncompass.io/about"
+    keywords="Josh Imholte, Modern Compass founder, personal development coach, life direction mentor, product leader"
+  />
   <section class="about">
     <div class="photo-container">
-      <img src="/1645116024072.jpeg" alt="Headshot" class="headshot" />
+      <img src="/1645116024072.jpeg" alt="Josh Imholte - Founder of Modern Compass, personal development coach and product leader" class="headshot" />
       <p class="photo-name">{authorName}</p>
     </div>
 

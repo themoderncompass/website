@@ -1,8 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
 ---
 
 <Layout>
+  <SEO
+    slot="head"
+    title="Modern Compass - Find Direction in Life's Key Moments | Personal Growth Framework"
+    description="A framework for accelerating personal growth in Self, Trust, Character, and Relationships. Helping you navigate life with clarity, confidence, and intention. Free tools & monthly newsletter."
+    canonical="https://themoderncompass.io"
+    keywords="personal development, personal growth framework, life direction, self improvement, modern compass, character development, self awareness, trust building, relationship growth"
+  />
   <!-- HERO with upfront CTA via Beehiiv + promo -->
   <section class="hero">
     <div class="wrap">
@@ -58,6 +66,7 @@ import Layout from '../layouts/Layout.astro';
 
       <p class="sublead centered">
         Each direction builds in layers. Start with the foundation, then move down as each layer builds on the previous one.
+        <a href="/newsletter" style="color: #667eea; font-weight: 600; text-decoration: underline;">Join our monthly newsletter</a> for deeper insights and exclusive tools.
       </p>
 
       <div class="grid">
