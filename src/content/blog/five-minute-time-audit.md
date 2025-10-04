@@ -90,12 +90,14 @@ When you start redirecting even small amounts of time from drains to meaning, he
 - **Progress** - Small, consistent swaps compound into real growth
 - **Control** - You stop feeling like life is happening *to* you
 
-One subscriber used TimeOS to identify 8 hours/week of wasted time. She redirected it and:
-- Started a side business (now replacing her full-time income)
-- Trained for a half marathon
-- Actually finished the book she'd been "reading" for 2 years
+When I first tracked my own time, I discovered I was spending 5+ hours/week consuming content (podcasts, articles, videos) but zero hours creating.
 
-**She didn't get more time. She just stopped wasting it.**
+I swapped just 5 hours/week from consuming to writing. That shift changed everything:
+- Built Modern Compass from an idea to a framework
+- Wrote the book I'd been "planning" for years
+- Started the newsletter that now reaches 100+ people
+
+**I didn't get more time. I just stopped wasting it.**
 
 ## Where to Start
 
