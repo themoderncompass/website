@@ -1,0 +1,339 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => {
+    return data.draft !== true;
+  });
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const { title, description, publishedDate, author, keywords, image } = post.data;
+
+const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+const keywordString = keywords ? keywords.join(', ') : 'personal development, life direction, self improvement';
+---
+
+<Layout>
+  <SEO
+    slot="head"
+    title={`${title} | Modern Compass Blog`}
+    description={description}
+    canonical={`https://themoderncompass.io/blog/${post.slug}`}
+    type="article"
+    author={author}
+    publishedTime={publishedDate.toISOString()}
+    keywords={keywordString}
+    image={image || '/logo.png'}
+  />
+
+  <article class="blog-post">
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime={publishedDate.toISOString()} class="post-date">
+          {formattedDate}
+        </time>
+        <span class="post-author">by {author}</span>
+      </div>
+      <h1 class="post-title">{title}</h1>
+      <p class="post-description">{description}</p>
+    </header>
+
+    {image && (
+      <div class="featured-image">
+        <img src={image} alt={title} loading="eager" />
+      </div>
+    )}
+
+    <div class="post-content">
+      <Content />
+    </div>
+
+    <footer class="post-footer">
+      <div class="newsletter-cta-inline">
+        <h3>Want more insights like this?</h3>
+        <p>Join 100+ subscribers getting monthly personal growth insights, tools, and frameworks delivered to their inbox.</p>
+        <a href="/newsletter" class="cta-button">Subscribe to the newsletter</a>
+      </div>
+
+      <div class="back-to-blog">
+        <a href="/blog" class="back-link">← Back to all posts</a>
+      </div>
+    </footer>
+  </article>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "image": image ? `https://themoderncompass.io${image}` : "https://themoderncompass.io/logo.png",
+    "datePublished": publishedDate.toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": author,
+      "url": "https://themoderncompass.io/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Modern Compass",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://themoderncompass.io/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://themoderncompass.io/blog/${post.slug}`
+    }
+  })} />
+</Layout>
+
+<style>
+  .blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-date {
+    font-size: 0.875rem;
+    color: #667eea;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .post-author {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+
+  .post-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+
+  .post-description {
+    font-size: 1.25rem;
+    color: #4a5568;
+    line-height: 1.6;
+  }
+
+  .featured-image {
+    margin-bottom: 3rem;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .post-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #1f2937;
+  }
+
+  .post-content :global(h2) {
+    font-size: 1.875rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #111827;
+  }
+
+  .post-content :global(h3) {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: #111827;
+  }
+
+  .post-content :global(p) {
+    margin-bottom: 1.5rem;
+  }
+
+  .post-content :global(ul),
+  .post-content :global(ol) {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .post-content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .post-content :global(blockquote) {
+    border-left: 4px solid #667eea;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #4a5568;
+  }
+
+  .post-content :global(a) {
+    color: #667eea;
+    text-decoration: underline;
+  }
+
+  .post-content :global(a:hover) {
+    color: #764ba2;
+  }
+
+  .post-content :global(code) {
+    background: #f3f4f6;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  .post-content :global(pre) {
+    background: #1f2937;
+    color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-content :global(pre code) {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+  }
+
+  .post-content :global(strong) {
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .post-footer {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid #e5e7eb;
+  }
+
+  .newsletter-cta-inline {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .newsletter-cta-inline h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .newsletter-cta-inline p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: white;
+    color: #667eea;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .back-to-blog {
+    text-align: center;
+  }
+
+  .back-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 767px) {
+    .blog-post {
+      padding: 1.5rem 1rem;
+    }
+
+    .post-title {
+      font-size: 1.875rem;
+    }
+
+    .post-description {
+      font-size: 1.1rem;
+    }
+
+    .post-content {
+      font-size: 1rem;
+    }
+
+    .post-content :global(h2) {
+      font-size: 1.5rem;
+    }
+
+    .post-content :global(h3) {
+      font-size: 1.25rem;
+    }
+
+    .newsletter-cta-inline {
+      padding: 2rem 1.5rem;
+    }
+
+    .newsletter-cta-inline h3 {
+      font-size: 1.5rem;
+    }
+
+    .newsletter-cta-inline p {
+      font-size: 1rem;
+    }
+  }
+</style>
