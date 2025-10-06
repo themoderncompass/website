@@ -11,7 +11,7 @@ import SEO from '../components/SEO.astro';
     canonical="https://themoderncompass.io"
     keywords="personal development, personal growth framework, life direction, self improvement, modern compass, character development, self awareness, trust building, relationship growth"
   />
-  <!-- HERO with upfront CTA via Beehiiv + promo -->
+  <!-- HERO -->
   <section class="hero">
     <div class="wrap">
       <h1 class="brand">Modern Compass</h1>
@@ -21,30 +21,6 @@ import SEO from '../components/SEO.astro';
       <p class="sublead">
         Modern Compass is a framework for accelerating growth in Self, Trust, Character, and Relationships.
       </p>
-
-      <!-- Promo + Beehiiv embed as a single unit -->
-      <div class="promo-subscribe" aria-labelledby="subscribe-title">
-        <div class="promo-img">
-          <!-- Use ONE of these src values -->
-          <!-- If file lives at public/Newsletter Promo.png -->
-          <img src="/Newsletter%20Promo.png" alt="TimeOS audit and tools preview" loading="lazy" decoding="async" />
-          <!-- If you move it to public/images/newsletter-promo.png, then use:
-          <img src="/images/newsletter-promo.png" alt="TimeOS audit and tools preview" loading="lazy" decoding="async" />
-          -->
-        </div>
-
-        <div class="beehiiv-embed" id="subscribe">
-          <h2 id="subscribe-title" class="sr-only">Subscribe to Modern Compass</h2>
-          <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-          <iframe
-            src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
-            title="Subscribe to the Modern Compass newsletter"
-            frameborder="0"
-            scrolling="no"
-            data-test-id="beehiiv-embed"
-          ></iframe>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -66,7 +42,6 @@ import SEO from '../components/SEO.astro';
 
       <p class="sublead centered">
         Each direction builds in layers. Start with the foundation, then move down as each layer builds on the previous one.
-        <a href="/newsletter" style="color: #667eea; font-weight: 600; text-decoration: underline;">Join our monthly newsletter</a> for deeper insights and exclusive tools.
       </p>
 
       <div class="grid">
@@ -127,11 +102,13 @@ import SEO from '../components/SEO.astro';
   <!-- PROOF AND MOMENTUM -->
   <section class="section">
     <div class="wrap narrow">
-      <h2 class="h">Proof and momentum</h2>
+      <h2 class="h">Join the growing community</h2>
       <p>
-        Over one hundred subscribers gain monthly insights and use Modern tools like the TimeOS Audit, the Impulse Wallet,
-        and the Intention vs Action Activity to reclaim time, take action, and grow with intention.
-        There are also 1,000+ followers on TikTok for behind the scenes, insights, and nightly navigation.
+        Over 100 subscribers receive monthly insights and get Break the Loop, a guided worksheet to help you get unstuck and build momentum.
+        Additional tools like TimeOS and the Impulse Wallet are unlocked as a subscriber if you need more support moving forward.
+      </p>
+      <p style="margin-top: 16px;">
+        <a href="/newsletter" style="color: #667eea; font-weight: 600; text-decoration: underline;">Join the newsletter</a> to get Break the Loop free.
       </p>
     </div>
   </section>
@@ -141,9 +118,10 @@ import SEO from '../components/SEO.astro';
     <div class="wrap narrow">
       <h2 class="h">A personal note</h2>
       <p>
-        I created Modern Compass for a couple of reasons. In my late teens and twenties I felt lost with little to give me direction.
-        I am writing this for others who feel that way. While this book is not about parenthood, I am also writing what I would want
-        my daughters to have as they become adults and learn to navigate life.
+        I created Modern Compass because I have felt lost at different points in my life with little to give me direction.
+        I am writing this for others who feel that way, whether you're just starting out, navigating a midlife pivot, or looking for clarity in any major transition.
+        While this book is not about parenthood, I am also writing what I would want
+        my daughters to have as they navigate life.
         As I close most of my newsletters and TikTok posts, always… follow your compass.
       </p>
     </div>
@@ -158,7 +136,7 @@ import SEO from '../components/SEO.astro';
   .section.alt { background: #f8fafc; }
 
   /* Hero */
-  .hero { padding: 56px 0 12px; text-align: center; background: #ffffff; color: #111; }
+  .hero { padding: 56px 0 40px; text-align: center; background: #ffffff; color: #111; }
   .brand {
     font-size: clamp(28px, 5vw, 48px);
     line-height: 1.1;
@@ -181,40 +159,6 @@ import SEO from '../components/SEO.astro';
   .lead { font-size: 18px; margin: 0 0 6px 0; color: #222; }
   .sublead { font-size: 16px; margin: 0 0 18px 0; color: #444; }
   .sublead.centered { text-align: center; margin-bottom: 16px; }
-
-  /* Promo + Beehiiv row */
-  .promo-subscribe {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    max-width: 1100px;
-    margin: 2rem auto 0;
-  }
-  .promo-subscribe .promo-img {
-    flex: 0 0 420px;
-    max-width: 420px;
-  }
-  .promo-subscribe .promo-img img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-  }
-  .promo-subscribe .beehiiv-embed {
-    flex: 1 1 520px;
-    max-width: 560px;
-    min-width: 300px;
-  }
-  .promo-subscribe .beehiiv-embed iframe {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 225px;
-    border: 0;
-    background: transparent;
-    border-radius: 0;
-    box-shadow: none;
-  }
 
   /* Content blocks */
   .h { font-size: 24px; margin: 0 0 12px 0; color: #111; }
@@ -249,22 +193,7 @@ import SEO from '../components/SEO.astro';
 
   /* Responsive */
   @media (max-width: 1024px) {
-    .promo-subscribe { gap: 1.5rem; }
-    .promo-subscribe .promo-img { flex-basis: 360px; max-width: 360px; }
     .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  }
-  @media (max-width: 720px) {
-    .promo-subscribe {
-      flex-direction: column;
-      align-items: stretch;
-      padding: 0 1rem;
-    }
-    .promo-subscribe .promo-img {
-      flex-basis: auto;
-      max-width: 260px;
-      margin: 0 auto;
-    }
-    .promo-subscribe .beehiiv-embed { max-width: 100%; }
   }
   @media (max-width: 560px) {
     .grid { grid-template-columns: 1fr; }

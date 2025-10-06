@@ -15,7 +15,10 @@ const year = new Date().getFullYear();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <meta name="theme-color" content="#8b5cf6" />
     <title>The Modern Compass</title>
 
     <!-- Schema.org Structured Data -->
@@ -37,6 +40,11 @@ const year = new Date().getFullYear();
             "name": "Josh Imholte",
             "jobTitle": "Author & Personal Development Coach",
             "description": "Product leader in tech, author of Modern Compass framework"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "url": "https://themoderncompass.io/newsletter"
           }
         },
         {
@@ -47,6 +55,11 @@ const year = new Date().getFullYear();
           "publisher": {
             "@type": "Organization",
             "name": "The Modern Compass"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://themoderncompass.io/blog?search={search_term_string}",
+            "query-input": "required name=search_term_string"
           }
         }
       ]
@@ -99,14 +112,54 @@ src="https://www.facebook.com/tr?id=705209105898090&ev=PageView&noscript=1"
   <ul class="nav-links right">
     <li><a href="/about">About</a></li>
   </ul>
+  <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+  </button>
 </nav>
-    <button id="menu-button" class="menu-button">Menu</button>
+    <div id="mobile-menu" class="mobile-menu">
+      <button id="menu-close" class="menu-close" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+        <span>Close</span>
+      </button>
+      <ul class="mobile-nav-links">
+        <li><a href="/book">Book</a></li>
+        <li><a href="/newsletter">Newsletter</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/shop">Shop</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </div>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const menuButton = document.getElementById('menu-button');
-        const nav = document.querySelector('nav');
-        menuButton?.addEventListener('click', () => {
-          nav.classList.toggle('open');
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle?.addEventListener('click', () => {
+          mobileMenu?.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+
+        menuClose?.addEventListener('click', () => {
+          mobileMenu?.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+
+        // Close menu when clicking a link
+        const mobileLinks = mobileMenu?.querySelectorAll('a');
+        mobileLinks?.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu?.classList.remove('open');
+            document.body.style.overflow = '';
+          });
         });
       });
     </script>
@@ -122,22 +175,94 @@ src="https://www.facebook.com/tr?id=705209105898090&ev=PageView&noscript=1"
   </body>
 <style is:global>
     /* Define colour palette derived from the Modern Compass logo */
-  /* Responsive navigation for portrait mode */
-  @media (orientation: portrait) {
+  /* Mobile menu styles */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--text-color);
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .mobile-menu.open {
+    right: 0;
+  }
+
+  .menu-close {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    text-align: left;
+  }
+
+  .menu-close svg {
+    flex-shrink: 0;
+  }
+
+  .mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-nav-links li {
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .mobile-nav-links li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+
+  .mobile-nav-links li a:hover {
+    background-color: #f8f8f8;
+  }
+
+  /* Show mobile menu on portrait/small screens */
+  @media (max-width: 900px) {
     nav ul.nav-links {
       display: none;
     }
-    nav.open ul.nav-links {
+    .menu-toggle {
       display: block;
-    }
-    #menu-button {
-      display: inline-block;
-      margin-left: 1rem;
     }
   }
 
-  @media (orientation: landscape) {
-    #menu-button {
+  /* Hide mobile menu on larger screens */
+  @media (min-width: 901px) {
+    .menu-toggle,
+    .mobile-menu {
       display: none;
     }
   }
@@ -204,6 +329,7 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 1.5rem;
+  position: relative;
 }
 
 /* Mobile nav optimization */

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
 
 // Events page listing upcoming and past workshops, retreats and webinars.
 // Replace the placeholder arrays below with real event data.  Each event
@@ -44,6 +45,13 @@ const pastEvents = [
 
 ---
 <Layout>
+  <SEO
+    slot="head"
+    title="Events & Workshops | Modern Compass"
+    description="Join Modern Compass workshops, retreats, and webinars. Connect with a community focused on personal growth, self-awareness, and intentional living."
+    canonical="https://themoderncompass.io/events"
+    keywords="personal development workshops, growth retreats, mindfulness events, modern compass events"
+  />
   <section class="events">
     <h1>Events</h1>
     <p class="intro">Stay connected with our upcoming workshops, retreats and webinars.  We believe in
