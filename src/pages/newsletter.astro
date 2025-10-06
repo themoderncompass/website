@@ -23,29 +23,45 @@ import SEO from '../components/SEO.astro';
           Every 3rd Friday, I share <strong>one insight</strong> I'm working through, <strong>one tool</strong> that helps, and <strong>one action</strong> you can take in Self, Trust, Character, or Relationships.
         </p>
 
-        <!-- Subscribe Form -->
-        <div class="newsletter-embed-new" style="text-align: center;">
-          <iframe
-            src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
-            frameborder="0"
-            scrolling="no"
-            style="width: 100%; max-width: 500px; height: 135px; border: none; border-radius: 8px; background-color: transparent; margin: 0 auto; display: inline-block;"
-            title="Subscribe to Modern Compass on Beehiiv"
-          ></iframe>
-        </div>
+        <div class="bonus-with-image">
+          <div class="bonus-image desktop-only">
+            <a href="#" class="preview-trigger" title="Click to view full Break the Loop PDF preview">
+              <img src="/break-the-loop.png" alt="Break the Loop PDF guide preview" />
+            </a>
+          </div>
+          <div class="bonus-content">
+            <div class="signup-bonuses">
+              <p><strong>Subscribe and get "Break the Loop"</strong></p>
+              <p class="bonus-description">A PDF to identify where you're stuck and take your first visible move in under 10 minutes.</p>
+              <a href="#" class="mobile-preview-link preview-trigger">Preview the guide →</a>
+            </div>
 
-        <div class="signup-bonuses">
-          <p><strong>Subscribe and get "Break the Loop"</strong></p>
-          <p class="bonus-description">A PDF to identify where you're stuck and take your first visible move in under 10 minutes.</p>
-        </div>
+            <!-- Social Proof Text -->
+            <div class="social-proof-text">
+              <p>Join <strong class="highlight-purple">100+</strong> readers building their Modern Compass</p>
+            </div>
 
-        <!-- Social Proof Text -->
-        <div class="social-proof-text">
-          <p>Join <strong class="highlight-purple">100+</strong> readers building their Modern Compass</p>
+            <!-- Subscribe Form -->
+            <div class="newsletter-embed-new" style="text-align: center;">
+              <iframe
+                src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
+                frameborder="0"
+                scrolling="no"
+                style="width: 100%; max-width: 500px; height: 135px; border: none; border-radius: 8px; background-color: transparent; margin: 0 auto; display: inline-block;"
+                title="Subscribe to Modern Compass on Beehiiv"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" src="/break-the-loop.png" alt="Break the Loop PDF guide full preview">
+  </div>
 
   <!-- Modern Tools Section -->
   <section class="what-you-get-section">
@@ -291,6 +307,97 @@ import SEO from '../components/SEO.astro';
     margin-bottom: 0.5rem;
   }
 
+  .bonus-with-image {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+  }
+
+  .bonus-image {
+    flex-shrink: 0;
+  }
+
+  .bonus-image a {
+    display: block;
+    transition: transform 0.2s ease;
+  }
+
+  .bonus-image a:hover {
+    transform: scale(1.05);
+  }
+
+  .bonus-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+
+  .bonus-content {
+    flex: 1;
+  }
+
+  .mobile-preview-link {
+    display: none;
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .mobile-preview-link:hover {
+    text-decoration: underline;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+
+  /* Image Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10000;
+  }
+
+  .modal-close:hover,
+  .modal-close:focus {
+    color: #bbb;
+  }
+
   /* What You Get Section */
   .what-you-get-section {
     max-width: 900px;
@@ -511,6 +618,20 @@ import SEO from '../components/SEO.astro';
       margin-bottom: 0.25rem;
     }
 
+    .bonus-with-image {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .desktop-only {
+      display: none;
+    }
+
+    .mobile-preview-link {
+      display: inline-block;
+    }
+
     .what-you-get-section {
       padding: 1rem;
       margin: 1.5rem auto;
@@ -648,6 +769,36 @@ import SEO from '../components/SEO.astro';
 <script is:inline>
   // Add class to body for custom styling
   document.body.classList.add('newsletter-page');
+
+  // Image Modal functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('imageModal');
+    const triggers = document.querySelectorAll('.preview-trigger');
+    const closeBtn = document.querySelector('.modal-close');
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.style.display = 'block';
+      });
+    });
+
+    closeBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.style.display === 'block') {
+        modal.style.display = 'none';
+      }
+    });
+  });
 
   // Carousel functionality
   document.addEventListener('DOMContentLoaded', function() {
