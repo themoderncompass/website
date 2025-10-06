@@ -16,56 +16,43 @@ import SEO from '../components/SEO.astro';
     <div class="hero-container-new">
       <div class="hero-box">
         <div class="brand-title">Modern Compass Newsletter</div>
-        
-        <h1 class="main-headline">Stop the scroll and start taking <span class="highlight">action</span> to build your compass</h1>
-        
+
+        <h1 class="main-headline">Personal growth that simplifies the complex and moves you forward</h1>
+
         <p class="main-description">
-          A <strong>purpose-filled email once a month</strong> (every 3rd Friday) with insights, tools, and actions you can take.
+          Every 3rd Friday, I share <strong>one insight</strong> I'm working through, <strong>one tool</strong> that helps, and <strong>one action</strong> you can take in Self, Trust, Character, or Relationships.
         </p>
-        
-        <div class="value-statement">
-          <p>
-            No hours of podcasts per week, no daily emails, just once a month to give you depth and room to take action, reflect, and repeat.
-          </p>
+
+        <!-- Subscribe Form -->
+        <div class="newsletter-embed-new" style="text-align: center;">
+          <iframe
+            src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
+            frameborder="0"
+            scrolling="no"
+            style="width: 100%; max-width: 500px; height: 135px; border: none; border-radius: 8px; background-color: transparent; margin: 0 auto; display: inline-block;"
+            title="Subscribe to Modern Compass on Beehiiv"
+          ></iframe>
         </div>
 
         <div class="signup-bonuses">
-          <p><strong>Exclusive signup bonuses delivered right to your inbox:</strong></p>
-          <ul>
-            <li>Digital asset to reclaim time during your busy week</li>
-            <li>Social accountability web app/game</li>
-          </ul>
+          <p><strong>Subscribe and get "Break the Loop"</strong></p>
+          <p class="bonus-description">A PDF to identify where you're stuck and take your first visible move in under 10 minutes.</p>
         </div>
 
         <!-- Social Proof Text -->
         <div class="social-proof-text">
-          <p>Join <strong class="highlight-purple">100+</strong> subscribers and <strong class="highlight-purple">1,000+</strong> TikTok followers finding their direction</p>
-        </div>
-
-        <!-- Subscribe Form -->
-        <div class="newsletter-embed-new">
-          <iframe
-            src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
-            class="beehiiv-embed-styled"
-            frameborder="0"
-            scrolling="no"
-            style="width: 100%; height: 135px; border: none; border-radius: 8px; background-color: transparent;"
-            title="Subscribe to Modern Compass on Beehiiv"
-          ></iframe>
+          <p>Join <strong class="highlight-purple">100+</strong> readers building their Modern Compass</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- What You Get Section -->
+  <!-- Modern Tools Section -->
   <section class="what-you-get-section">
-    <h2>What You Get Every Month</h2>
-    <p class="section-description">Insights, tools, frameworks and a growing community to help you find direction and move you forward, some built by Modern Compass, just for you!</p>
-
     <!-- Tools Header -->
     <div class="tools-header">
-      <h3>Access to Modern Tools</h3>
-      <p>As a subscriber, explore our growing library of personal growth resources</p>
+      <h3>Modern Tools</h3>
+      <p>Additional tools you have access to through Modern Compass membership</p>
     </div>
 
     <!-- Image Carousel -->
@@ -73,13 +60,6 @@ import SEO from '../components/SEO.astro';
       <div class="carousel-container">
         <div class="carousel-track" id="carousel-track">
           <div class="carousel-slide active">
-            <img src="/Impulse_wallet_ipad.png" alt="Impulse Wallet beta app interface showing daily accountability tracking on iPad with $1 up/down system for self-control" />
-            <div class="slide-caption">
-              <h3>Impulse Wallet</h3>
-              <p>App to track focus areas</p>
-            </div>
-          </div>
-          <div class="carousel-slide">
             <img src="/TimeOS_asset.png" alt="TimeOS digital asset - 5-step time audit system worksheet for reclaiming wasted hours and redirecting time to what matters" />
             <div class="slide-caption">
               <h3>TimeOS Digital Asset</h3>
@@ -87,10 +67,10 @@ import SEO from '../components/SEO.astro';
             </div>
           </div>
           <div class="carousel-slide">
-            <img src="/book-graphic.png" alt="Modern Compass book cover - practical framework for personal growth covering Self, Trust, Character, and Relationships" />
+            <img src="/Impulse_wallet_ipad.png" alt="Impulse Wallet beta app interface showing daily accountability tracking on iPad with $1 up/down system for self-control" />
             <div class="slide-caption">
-              <h3>Book Resources</h3>
-              <p>Beta reader signup coming, stay subscribed to the newsletter if interested</p>
+              <h3>Impulse Wallet</h3>
+              <p>App to track focus areas</p>
             </div>
           </div>
         </div>
@@ -101,7 +81,6 @@ import SEO from '../components/SEO.astro';
           <div class="carousel-dots">
             <button class="dot active" data-slide="0"></button>
             <button class="dot" data-slide="1"></button>
-            <button class="dot" data-slide="2"></button>
           </div>
           <button class="carousel-btn next" id="next-btn">›</button>
         </div>
@@ -115,8 +94,8 @@ import SEO from '../components/SEO.astro';
 
     <div class="faq-grid">
       <div class="faq-item">
-        <h3>What is the Modern Compass newsletter about?</h3>
-        <p>The Modern Compass newsletter is a monthly personal development email focused on helping you find direction in Self, Trust, Character, and Relationships. Each issue includes actionable insights, exclusive tools like TimeOS and Impulse Wallet, and frameworks for intentional growth.</p>
+        <h3>What is the Modern Compass newsletter?</h3>
+        <p>The Modern Compass newsletter is personal growth that simplifies the complex and moves you forward. Every 3rd Friday, you get one insight I'm working through, one tool that helps, and one action you can take in Self, Trust, Character, or Relationships. Each issue cuts through the noise to help you take meaningful steps forward.</p>
       </div>
 
       <div class="faq-item">
@@ -125,8 +104,13 @@ import SEO from '../components/SEO.astro';
       </div>
 
       <div class="faq-item">
+        <h3>What is "Break the Loop"?</h3>
+        <p>Break the Loop is a PDF guide you receive immediately after subscribing. It helps you identify where you're stuck, what's dragging you in, determine micro actions you can take, and make your first visible move public in under 10 minutes. It's designed to get you unstuck and moving forward quickly.</p>
+      </div>
+
+      <div class="faq-item">
         <h3>What is the TimeOS digital asset?</h3>
-        <p>TimeOS is a 5-step time audit system that helps you identify where your hours are going and redirect them toward what matters most. It's a simple, actionable framework to reclaim 5-10 hours per week. You'll receive it instantly after signing up.</p>
+        <p>TimeOS is a 5-step time audit system that helps you identify where your hours are going and redirect them toward what matters most. It's a simple, actionable framework to reclaim wasted time. Available as a bonus Modern Tool for subscribers.</p>
       </div>
 
       <div class="faq-item">
@@ -136,12 +120,12 @@ import SEO from '../components/SEO.astro';
 
       <div class="faq-item">
         <h3>Is the newsletter really free?</h3>
-        <p>Yes, completely free. You'll get the newsletter, TimeOS system, and early access to Impulse Wallet at no cost. Unsubscribe anytime with one click. No credit card required.</p>
+        <p>Yes, completely free. You'll get the newsletter, Break the Loop PDF, and access to Modern Tools like TimeOS and Impulse Wallet at no cost. Unsubscribe anytime with one click. No credit card required.</p>
       </div>
 
       <div class="faq-item">
         <h3>Who is Modern Compass for?</h3>
-        <p>Anyone feeling stuck, lost, or searching for direction in life. Whether you're in your 20s navigating early adulthood, a professional seeking clarity, or someone wanting intentional personal growth, Modern Compass provides the framework and tools to move forward.</p>
+        <p>Anyone feeling stuck, lost, or searching for direction in life. Whether you're navigating a life transition, a professional seeking clarity, or someone wanting intentional personal growth, Modern Compass provides the framework and tools to move forward.</p>
       </div>
     </div>
   </section>
@@ -152,17 +136,17 @@ import SEO from '../components/SEO.astro';
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Modern Compass Newsletter Signup",
-    "description": "Monthly personal development newsletter with free TimeOS system",
+    "description": "Personal growth newsletter that simplifies the complex and moves you forward - get Break the Loop PDF free",
     "url": "https://themoderncompass.io/newsletter",
     "mainEntity": {
       "@type": "ItemList",
       "itemListElement": [
         {
           "@type": "Question",
-          "name": "What is the Modern Compass newsletter about?",
+          "name": "What is the Modern Compass newsletter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Modern Compass newsletter is a monthly personal development email focused on helping you find direction in Self, Trust, Character, and Relationships. Each issue includes actionable insights, exclusive tools like TimeOS and Impulse Wallet, and frameworks for intentional growth."
+            "text": "The Modern Compass newsletter is personal growth that simplifies the complex and moves you forward. Every 3rd Friday, you get one insight I'm working through, one tool that helps, and one action you can take in Self, Trust, Character, or Relationships. Each issue cuts through the noise to help you take meaningful steps forward."
           }
         },
         {
@@ -175,10 +159,10 @@ import SEO from '../components/SEO.astro';
         },
         {
           "@type": "Question",
-          "name": "What is the TimeOS digital asset?",
+          "name": "What is Break the Loop?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "TimeOS is a 5-step time audit system that helps you identify where your hours are going and redirect them toward what matters most. It's a simple, actionable framework to reclaim 5-10 hours per week. You'll receive it instantly after signing up."
+            "text": "Break the Loop is a PDF guide you receive immediately after subscribing. It helps you identify where you're stuck, what's dragging you in, determine micro actions you can take, and make your first visible move public in under 10 minutes. It's designed to get you unstuck and moving forward quickly."
           }
         },
         {
@@ -186,7 +170,7 @@ import SEO from '../components/SEO.astro';
           "name": "Is the newsletter really free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, completely free. You'll get the newsletter, TimeOS system, and early access to Impulse Wallet at no cost. Unsubscribe anytime with one click. No credit card required."
+            "text": "Yes, completely free. You'll get the newsletter, Break the Loop PDF, and access to Modern Tools like TimeOS and Impulse Wallet at no cost. Unsubscribe anytime with one click. No credit card required."
           }
         }
       ]
@@ -279,16 +263,11 @@ import SEO from '../components/SEO.astro';
     font-weight: 600;
   }
 
-  .signup-bonuses ul {
-    margin: 0;
-    padding-left: 1.5rem;
-  }
-
-  .signup-bonuses li {
+  .signup-bonuses .bonus-description {
     font-size: 0.95rem;
     color: #1e40af;
     line-height: 1.5;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0;
     font-weight: 500;
   }
 
@@ -309,13 +288,7 @@ import SEO from '../components/SEO.astro';
   }
 
   .newsletter-embed-new {
-    margin-bottom: 1rem;
-  }
-
-  .beehiiv-embed-styled {
-    display: block;
-    margin: 0 auto;
-    max-width: 500px;
+    margin-bottom: 0.5rem;
   }
 
   /* What You Get Section */
@@ -522,9 +495,8 @@ import SEO from '../components/SEO.astro';
       margin-bottom: 0.25rem;
     }
 
-    .signup-bonuses li {
+    .signup-bonuses .bonus-description {
       font-size: 0.8rem;
-      margin-bottom: 0.15rem;
     }
 
     .social-proof-text {
@@ -536,7 +508,7 @@ import SEO from '../components/SEO.astro';
     }
 
     .newsletter-embed-new {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
     }
 
     .what-you-get-section {
@@ -684,6 +656,8 @@ import SEO from '../components/SEO.astro';
     const dots = document.querySelectorAll('.dot');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
+
+    if (!track || slides.length === 0) return; // Exit if carousel elements don't exist
 
     let currentSlide = 0;
     const totalSlides = slides.length;
