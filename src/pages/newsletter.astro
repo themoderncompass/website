@@ -17,11 +17,18 @@ import SEO from '../components/SEO.astro';
       <div class="hero-box">
         <div class="brand-title">Modern Compass Newsletter</div>
 
-        <h1 class="main-headline">Personal growth that simplifies the complex and moves you forward</h1>
+        <h1 class="main-headline">You can't know where you're going, if you don't know where you are.</h1>
 
         <p class="main-description">
-          Every 3rd Friday, I share <strong>one insight</strong> I'm working through, <strong>one tool</strong> that helps, and <strong>one action</strong> you can take in Self, Trust, Character, or Relationships.
+          You thought you'd be further along by now. Modern Compass reveals exactly where you stand across Self, Trust, Character, and Relationships so you can stop drifting and start building the life you want.
         </p>
+
+        <div class="built-for">
+          <span class="built-for-label">Built for</span>
+          <span class="arrow">→</span>
+          <span class="cycling-text" id="cyclingText"></span>
+          <span class="cursor">|</span>
+        </div>
 
         <div class="bonus-with-image">
           <div class="bonus-image desktop-only">
@@ -36,18 +43,14 @@ import SEO from '../components/SEO.astro';
               <a href="#" class="mobile-preview-link preview-trigger">Preview the guide →</a>
             </div>
 
-            <!-- Social Proof Text -->
-            <div class="social-proof-text">
-              <p>Join <strong class="highlight-purple">100+</strong> readers building their Modern Compass</p>
-            </div>
-
             <!-- Subscribe Form -->
             <div class="newsletter-embed-new" style="text-align: center;">
               <iframe
+                id="beehiiv-subscribe-form"
                 src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
                 frameborder="0"
-                scrolling="no"
-                style="width: 100%; max-width: 500px; height: 135px; border: none; border-radius: 8px; background-color: transparent; margin: 0 auto; display: inline-block;"
+                scrolling="yes"
+                style="width: 100%; max-width: 500px; height: 180px; border: none; border-radius: 8px; background-color: transparent; margin: 0 auto; display: inline-block;"
                 title="Subscribe to Modern Compass on Beehiiv"
               ></iframe>
             </div>
@@ -63,46 +66,6 @@ import SEO from '../components/SEO.astro';
     <img class="modal-content" src="/break-the-loop.png" alt="Break the Loop PDF guide full preview">
   </div>
 
-  <!-- Modern Tools Section -->
-  <section class="what-you-get-section">
-    <!-- Tools Header -->
-    <div class="tools-header">
-      <h3>Modern Tools</h3>
-      <p>Additional tools you have access to through Modern Compass membership</p>
-    </div>
-
-    <!-- Image Carousel -->
-    <div class="asset-carousel">
-      <div class="carousel-container">
-        <div class="carousel-track" id="carousel-track">
-          <div class="carousel-slide active">
-            <img src="/TimeOS_asset.png" alt="TimeOS digital asset - 5-step time audit system worksheet for reclaiming wasted hours and redirecting time to what matters" />
-            <div class="slide-caption">
-              <h3>TimeOS Digital Asset</h3>
-              <p>Reclaim your time and redirect it toward focus areas you want to progress in</p>
-            </div>
-          </div>
-          <div class="carousel-slide">
-            <img src="/Impulse_wallet_ipad.png" alt="Impulse Wallet beta app interface showing daily accountability tracking on iPad with $1 up/down system for self-control" />
-            <div class="slide-caption">
-              <h3>Impulse Wallet</h3>
-              <p>App to track focus areas</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Navigation -->
-        <div class="carousel-nav">
-          <button class="carousel-btn prev" id="prev-btn">‹</button>
-          <div class="carousel-dots">
-            <button class="dot active" data-slide="0"></button>
-            <button class="dot" data-slide="1"></button>
-          </div>
-          <button class="carousel-btn next" id="next-btn">›</button>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- FAQ Section for SEO and Conversion -->
   <section class="newsletter-faq">
@@ -249,6 +212,52 @@ import SEO from '../components/SEO.astro';
   .main-description strong {
     color: #1a1a1a;
     font-weight: 600;
+  }
+
+  .built-for {
+    text-align: center;
+    margin: 2rem 0 1.5rem 0;
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+  }
+
+  .built-for-label {
+    font-weight: 600;
+    color: #667eea;
+    white-space: nowrap;
+  }
+
+  .arrow {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  .cycling-text {
+    font-weight: 600;
+    color: #1a1a1a;
+    display: inline-block;
+    min-width: 300px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .cursor {
+    color: #667eea;
+    font-weight: 400;
+    animation: blink 1s step-end infinite;
+    margin-left: -0.1rem;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
   }
 
   .value-statement {
@@ -398,164 +407,6 @@ import SEO from '../components/SEO.astro';
     color: #bbb;
   }
 
-  /* What You Get Section */
-  .what-you-get-section {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 2rem 1.5rem;
-    text-align: center;
-    background: #f9fafb;
-    border-radius: 16px;
-  }
-
-  .what-you-get-section h2 {
-    font-size: 2rem;
-    color: #111827;
-    margin-bottom: 1rem;
-  }
-
-  .section-description {
-    font-size: 1.1rem;
-    color: #4a5568;
-    line-height: 1.6;
-    margin: 0 0 2rem 0;
-  }
-
-  .tools-header {
-    margin: 2rem 0 1.5rem 0;
-  }
-
-  .tools-header h3 {
-    font-size: 1.5rem;
-    color: #111827;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-  }
-
-  .tools-header p {
-    font-size: 1rem;
-    color: #6b7280;
-    margin: 0;
-  }
-
-  /* Asset Carousel */
-  .asset-carousel {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .carousel-container {
-    position: relative;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-
-  .carousel-track {
-    display: flex;
-    transition: transform 0.4s ease;
-  }
-
-  .carousel-slide {
-    min-width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
-  .carousel-slide.active {
-    opacity: 1;
-  }
-
-  .carousel-slide img {
-    width: 300px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    flex-shrink: 0;
-  }
-
-  .slide-caption {
-    flex: 1;
-  }
-
-  .slide-caption h3 {
-    font-size: 1.5rem;
-    color: #111827;
-    margin-bottom: 0.75rem;
-    font-weight: 700;
-  }
-
-  .slide-caption p {
-    font-size: 1.1rem;
-    color: #4a5568;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  .carousel-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background: #f8f9fa;
-    border-top: 1px solid #e5e7eb;
-  }
-
-  .carousel-btn {
-    background: #667eea;
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    font-weight: bold;
-  }
-
-  .carousel-btn:hover {
-    background: #5a67d8;
-    transform: scale(1.05);
-  }
-
-  .carousel-btn:active {
-    transform: scale(0.95);
-  }
-
-  .carousel-dots {
-    display: flex;
-    gap: 0.5rem;
-  }
-
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: none;
-    background: #d1d5db;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-  }
-
-  .dot.active {
-    background: #667eea;
-  }
-
-  .dot:hover {
-    background: #9ca3af;
-    transform: scale(1.1);
-  }
-
-
   /* Mobile Responsive */
   @media (max-width: 767px) {
     .newsletter-hero-new {
@@ -581,6 +432,22 @@ import SEO from '../components/SEO.astro';
     .main-description {
       font-size: 0.9rem;
       margin-bottom: 0.75rem;
+    }
+
+    .built-for {
+      font-size: 1rem;
+      margin: 1.5rem 0 1rem 0;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+
+    .arrow {
+      font-size: 1.1rem;
+    }
+
+    .cycling-text {
+      min-width: 200px;
+      text-align: left;
     }
 
     .value-statement {
@@ -630,66 +497,6 @@ import SEO from '../components/SEO.astro';
 
     .mobile-preview-link {
       display: inline-block;
-    }
-
-    .what-you-get-section {
-      padding: 1rem;
-      margin: 1.5rem auto;
-    }
-
-    .what-you-get-section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .section-description {
-      font-size: 0.95rem;
-    }
-
-    .tools-header {
-      margin: 1.5rem 0 1rem 0;
-    }
-
-    .tools-header h3 {
-      font-size: 1.2rem;
-    }
-
-    .tools-header p {
-      font-size: 0.9rem;
-    }
-
-    /* Mobile Carousel */
-    .carousel-slide {
-      flex-direction: column;
-      text-align: center;
-      gap: 0.75rem;
-      padding: 1rem 0.75rem;
-    }
-
-    .carousel-slide img {
-      width: 220px;
-      max-width: 85%;
-    }
-
-    .slide-caption h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .slide-caption p {
-      font-size: 0.9rem;
-      line-height: 1.4;
-      margin: 0;
-    }
-
-    .carousel-nav {
-      padding: 0.5rem 0.75rem;
-    }
-
-    .carousel-btn {
-      width: 32px;
-      height: 32px;
-      font-size: 0.9rem;
     }
   }
 
@@ -770,6 +577,86 @@ import SEO from '../components/SEO.astro';
   // Add class to body for custom styling
   document.body.classList.add('newsletter-page');
 
+  // Meta Pixel Conversion Tracking for Newsletter Signups
+  window.addEventListener('message', function(event) {
+    // Listen for Beehiiv form submission success
+    if (event.data && typeof event.data === 'string' && event.data.includes('beehiiv')) {
+      // Fire Meta Pixel Lead conversion
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', {
+          content_name: 'Newsletter Signup',
+          content_category: 'Newsletter',
+          value: 5.00,
+          currency: 'USD'
+        });
+        console.log('Meta Pixel: Lead conversion tracked');
+      }
+
+      // Fire Google Analytics conversion
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'generate_lead', {
+          event_category: 'Newsletter',
+          event_label: 'Newsletter Signup',
+          value: 5.00
+        });
+        console.log('GA4: Lead conversion tracked');
+      }
+    }
+  });
+
+  // Typewriter animation for "Built for:" section
+  document.addEventListener('DOMContentLoaded', function() {
+    const personas = [
+      'Lost twenty-somethings',
+      'Wandering thirty-somethings',
+      'Searching forty-somethings',
+      'Framework seekers',
+      'Assessment believers',
+      'Patient builders',
+      'Anti-quick-hack thinkers'
+    ];
+
+    const cyclingTextElement = document.getElementById('cyclingText');
+    let currentIndex = 0;
+    let isDeleting = false;
+    let currentText = '';
+    let charIndex = 0;
+
+    function type() {
+      const fullText = personas[currentIndex];
+
+      if (isDeleting) {
+        // Erase text
+        currentText = fullText.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        // Type text
+        currentText = fullText.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      cyclingTextElement.textContent = currentText;
+
+      let typeSpeed = isDeleting ? 30 : 60; // Faster erasing, slower typing
+
+      if (!isDeleting && charIndex === fullText.length) {
+        // Finished typing, wait before erasing
+        typeSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        // Finished erasing, move to next word
+        isDeleting = false;
+        currentIndex = (currentIndex + 1) % personas.length;
+        typeSpeed = 500; // Brief pause before typing next word
+      }
+
+      setTimeout(type, typeSpeed);
+    }
+
+    // Start the animation
+    type();
+  });
+
   // Image Modal functionality
   document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('imageModal');
@@ -796,78 +683,6 @@ import SEO from '../components/SEO.astro';
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && modal.style.display === 'block') {
         modal.style.display = 'none';
-      }
-    });
-  });
-
-  // Carousel functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    const track = document.getElementById('carousel-track');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-
-    if (!track || slides.length === 0) return; // Exit if carousel elements don't exist
-
-    let currentSlide = 0;
-    const totalSlides = slides.length;
-
-    function showSlide(index) {
-      // Remove active class from all slides and dots
-      slides.forEach(slide => slide.classList.remove('active'));
-      dots.forEach(dot => dot.classList.remove('active'));
-
-      // Add active class to current slide and dot
-      slides[index].classList.add('active');
-      dots[index].classList.add('active');
-
-      // Move track
-      track.style.transform = `translateX(-${index * 100}%)`;
-
-      currentSlide = index;
-    }
-
-    function nextSlide() {
-      const next = (currentSlide + 1) % totalSlides;
-      showSlide(next);
-    }
-
-    function prevSlide() {
-      const prev = (currentSlide - 1 + totalSlides) % totalSlides;
-      showSlide(prev);
-    }
-
-    // Event listeners
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-
-    // Dot navigation
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => showSlide(index));
-    });
-
-    // Auto-advance every 8 seconds
-    setInterval(nextSlide, 8000);
-
-    // Touch/swipe support for mobile
-    let startX = 0;
-    let endX = 0;
-
-    track.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-    });
-
-    track.addEventListener('touchend', (e) => {
-      endX = e.changedTouches[0].clientX;
-      const diff = startX - endX;
-
-      if (Math.abs(diff) > 50) { // Minimum swipe distance
-        if (diff > 0) {
-          nextSlide();
-        } else {
-          prevSlide();
-        }
       }
     });
   });
