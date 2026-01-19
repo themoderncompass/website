@@ -230,14 +230,6 @@ Stop setting goals based on what sounds good.
 
 ---
 
-## Want More Like This in Your Inbox Monthly?
-
-Subscribe to the **Modern Compass newsletter** for practical insights on personal growth, directional thinking, and finding clarity in life's key moments.
-
-**[Subscribe to Modern Compass Newsletter →](/newsletter/)**
-
----
-
 ## More Resources
 
 - **Need to understand your character direction?** → Read [The 4 Pillars of Persistence](/blog/persistence-four-pillars-framework/)

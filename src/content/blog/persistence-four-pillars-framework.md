@@ -243,14 +243,6 @@ When persistence starts cracking, **trace it back to the pillar:**
 
 ---
 
-## Want More Like This in Your Inbox Monthly?
-
-Subscribe to the **Modern Compass newsletter** for practical insights on personal growth, character development, and finding direction in life's key moments.
-
-**[Subscribe to Modern Compass Newsletter →](/newsletter/)**
-
----
-
 ## More Resources
 
 - **Want to track invisible progress?** → Read [Creative Equity: Why Creating for Yourself Compounds](/blog/creative-equity-compounds)
