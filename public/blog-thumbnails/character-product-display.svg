@@ -1,0 +1,40 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Background -->
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="grad-character" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FBBF24"/>
+      <stop offset="33%" style="stop-color:#F97316"/>
+      <stop offset="66%" style="stop-color:#EC4899"/>
+      <stop offset="100%" style="stop-color:#A855F7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Four layers building up - representing character development -->
+  <g transform="translate(600, 480)">
+    <!-- Layer 1: Environmental (widest, bottom) -->
+    <rect x="-280" y="-80" width="560" height="80" fill="none" stroke="url(#grad-character)" stroke-width="6" rx="4"/>
+    <text x="0" y="-35" text-anchor="middle" font-size="18" font-weight="600" fill="#333">Environmental</text>
+
+    <!-- Layer 2: Developed -->
+    <rect x="-220" y="-160" width="440" height="80" fill="none" stroke="url(#grad-character)" stroke-width="6" rx="4"/>
+    <text x="0" y="-115" text-anchor="middle" font-size="18" font-weight="600" fill="#333">Developed</text>
+
+    <!-- Layer 3: Authentic -->
+    <rect x="-160" y="-240" width="320" height="80" fill="none" stroke="url(#grad-character)" stroke-width="6" rx="4"/>
+    <text x="0" y="-195" text-anchor="middle" font-size="18" font-weight="600" fill="#333">Authentic</text>
+
+    <!-- Layer 4: Driven (top, smallest) -->
+    <rect x="-100" y="-320" width="200" height="80" fill="none" stroke="url(#grad-character)" stroke-width="6" rx="4"/>
+    <text x="0" y="-275" text-anchor="middle" font-size="18" font-weight="600" fill="#333">Driven</text>
+
+    <!-- Upward arrows showing progression -->
+    <path d="M -320,-40 L -320,-280" stroke="url(#grad-character)" stroke-width="4" stroke-dasharray="8,6" opacity="0.4"/>
+    <path d="M -320,-280 L -330,-260 M -320,-280 L -310,-260" stroke="url(#grad-character)" stroke-width="4" opacity="0.4"/>
+
+    <path d="M 320,-40 L 320,-280" stroke="url(#grad-character)" stroke-width="4" stroke-dasharray="8,6" opacity="0.4"/>
+    <path d="M 320,-280 L 310,-260 M 320,-280 L 330,-260" stroke="url(#grad-character)" stroke-width="4" opacity="0.4"/>
+  </g>
+</svg>
