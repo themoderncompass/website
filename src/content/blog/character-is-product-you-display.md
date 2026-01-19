@@ -1,5 +1,5 @@
 ---
-title: "Character Is the Product You Display to the World: The 4 Layers Framework"
+title: "Character is the Product You Display to the World"
 description: "Character isn't something you just have - it's something you develop. Learn the 4 progressive layers of character and how to move from environmental patterns to driven action."
 publishedDate: 2026-01-17
 author: "Josh Imholte"

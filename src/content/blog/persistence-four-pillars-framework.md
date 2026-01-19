@@ -1,5 +1,5 @@
 ---
-title: "The 4 Pillars of Persistence: How to Know If You're Being Persistent or Just Stubborn"
+title: "Persistence"
 description: "Persistence isn't about willpower or passion alone. Learn the 4-pillar framework that reveals when to stay the course and when to pivot, plus activities to strengthen your persistence."
 publishedDate: 2025-11-21
 author: "Josh Imholte"

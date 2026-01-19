@@ -1,5 +1,5 @@
 ---
-title: "Looking Back to Move Forward into 2026: Map Who You Are Before Deciding Who You Become"
+title: "Looking Back to Move Forward into 2026"
 description: "Stop jumping straight to goals. Use the Modern Compass framework to understand your navigation patterns from 2025 and set intentional direction for 2026."
 publishedDate: 2025-12-20
 author: "Josh Imholte"
