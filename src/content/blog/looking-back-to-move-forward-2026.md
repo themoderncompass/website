@@ -35,8 +35,6 @@ Use four key directions to see where you've been investing your energy and where
 
 ## The Modern Compass Framework
 
-![Modern Compass Framework - Four Directions](https://newsletter.themoderncompass.io/api/v1/file/b0831ba7-2ac5-4f50-b2e3-df7eeb4f3b12.png)
-
 This is the Modern Compass framework. Within each direction are four layers that build upon each other, but for this issue, you only need to know the four core directions:
 
 - **Relationships** - Connection, empathy, resonance, loyalty

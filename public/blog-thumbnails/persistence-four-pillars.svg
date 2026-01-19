@@ -1,0 +1,36 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Background -->
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="grad-persistence" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#A855F7"/>
+      <stop offset="33%" style="stop-color:#EC4899"/>
+      <stop offset="66%" style="stop-color:#F97316"/>
+      <stop offset="100%" style="stop-color:#FBBF24"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Four Pillars representing the 4 pillars of persistence -->
+  <g transform="translate(300, 450)">
+    <!-- Pillar 1: Clarity -->
+    <rect x="0" y="-180" width="80" height="180" fill="none" stroke="url(#grad-persistence)" stroke-width="6" rx="4"/>
+    <text x="40" y="-200" text-anchor="middle" font-size="16" font-weight="600" fill="#333">Clarity</text>
+
+    <!-- Pillar 2: Adaptation -->
+    <rect x="200" y="-200" width="80" height="200" fill="none" stroke="url(#grad-persistence)" stroke-width="6" rx="4"/>
+    <text x="240" y="-220" text-anchor="middle" font-size="16" font-weight="600" fill="#333">Adaptation</text>
+
+    <!-- Pillar 3: Grace -->
+    <rect x="400" y="-160" width="80" height="160" fill="none" stroke="url(#grad-persistence)" stroke-width="6" rx="4"/>
+    <text x="440" y="-180" text-anchor="middle" font-size="16" font-weight="600" fill="#333">Grace</text>
+
+    <!-- Pillar 4: Belief -->
+    <rect x="600" y="-220" width="80" height="220" fill="none" stroke="url(#grad-persistence)" stroke-width="6" rx="4"/>
+    <text x="640" y="-240" text-anchor="middle" font-size="16" font-weight="600" fill="#333">Belief</text>
+
+    <!-- Base line -->
+    <line x1="-20" y1="0" x2="700" y2="0" stroke="#333" stroke-width="4"/>
+  </g>
+</svg>

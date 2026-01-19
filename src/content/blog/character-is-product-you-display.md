@@ -44,8 +44,6 @@ I think you'll find that this progression has always been there. **I'm just givi
 
 ## The 4 Layers of Character
 
-![Character Layers - Modern Compass Framework](https://newsletter.themoderncompass.io/api/v1/file/3c8ae0fe-b2a6-4dd9-92c7-dcde35fcc0a0.png)
-
 ### Layer 1: Environmental
 
 **The actions shaped by what your environment installed in you.**
