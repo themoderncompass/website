@@ -6,7 +6,7 @@ author: "Josh Imholte"
 keywords: ["creative equity", "side project benefits", "personal growth investment", "create for yourself", "compounding creativity"]
 image: "/blog-thumbnails/creative-equity-compounds.svg"
 draft: false
-categories: ["Career", "Growth"]
+categories: ["Building", "Growth"]
 ---
 
 You spend 40-60 hours/week creating value for someone else.

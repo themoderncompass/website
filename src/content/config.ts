@@ -10,7 +10,7 @@ const blog = defineCollection({
     keywords: z.array(z.string()).optional(),
     image: z.string().optional(),
     draft: z.boolean().default(false),
-    categories: z.array(z.enum(['Book Frameworks', 'Productivity', 'Growth', 'Life Transition', 'Relationships', 'Career'])).default([]),
+    categories: z.array(z.enum(['Book Frameworks', 'Productivity', 'Growth', 'Life Transition', 'Relationships', 'Career', 'Building'])).default([]),
   }),
 });
 

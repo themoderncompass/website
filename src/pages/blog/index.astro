@@ -49,6 +49,12 @@ const categories = [
     slug: 'career',
     description: 'Navigate career decisions, job transitions, and building work that matters.',
     icon: '/categories/career.svg'
+  },
+  {
+    name: 'Building',
+    slug: 'building',
+    description: 'Creating projects, businesses, and ventures that compound over time.',
+    icon: '/categories/building.svg'
   }
 ];
 
@@ -68,7 +74,8 @@ const categoryColors: Record<string, string> = {
   'Growth': 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
   'Life Transition': 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
   'Relationships': 'linear-gradient(135deg, #EC4899 0%, #DB2777 100%)',
-  'Career': 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)'
+  'Career': 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
+  'Building': 'linear-gradient(135deg, #EF4444 0%, #F97316 100%)'
 };
 ---
 
@@ -84,7 +91,7 @@ const categoryColors: Record<string, string> = {
   <section class="blog-listing">
     <div class="blog-header">
       <h1>Blog</h1>
-      <p class="intro">Practical insights to help you find direction and take action in the moments that matter most.</p>
+      <p class="intro">Map who you are, before deciding who you become.</p>
     </div>
 
     {posts.length === 0 ? (
