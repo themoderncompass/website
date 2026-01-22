@@ -6,6 +6,7 @@ author: "Josh Imholte"
 keywords: ["accountability for habits", "why habits fail", "accountability partner", "build better habits", "habit accountability system"]
 image: "/blog-thumbnails/accountability-before-habits.svg"
 draft: false
+categories: ["Productivity", "Growth"]
 ---
 
 You've tried building habits before.

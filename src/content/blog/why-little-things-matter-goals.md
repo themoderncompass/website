@@ -6,6 +6,7 @@ author: "Josh Imholte"
 keywords: ["goal setting", "small daily habits", "consistency over motivation", "why goals fail", "building momentum", "sustainable change"]
 image: "/blog-thumbnails/why-little-things-matter-goals.svg"
 draft: false
+categories: ["Productivity", "Growth"]
 ---
 
 Most goals fail.

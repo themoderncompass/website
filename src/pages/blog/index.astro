@@ -11,6 +11,65 @@ const allPosts = await getCollection('blog', ({ data }) => {
 const posts = allPosts.sort((a, b) =>
   b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
 );
+
+// Define categories with metadata
+const categories = [
+  {
+    name: 'Frameworks',
+    slug: 'frameworks',
+    description: 'Core concepts and systems from the Modern Compass book to help you navigate life with clarity.',
+    icon: '/categories/frameworks.svg'
+  },
+  {
+    name: 'Productivity',
+    slug: 'productivity',
+    description: 'Practical strategies to manage your time, build consistency, and take meaningful action.',
+    icon: '/categories/productivity.svg'
+  },
+  {
+    name: 'Growth',
+    slug: 'growth',
+    description: 'Insights on personal development, building confidence, and creating lasting change.',
+    icon: '/categories/growth.svg'
+  },
+  {
+    name: 'Life Transition',
+    slug: 'life-transition',
+    description: 'Guidance for navigating major life changes, finding direction, and making tough decisions.',
+    icon: '/categories/life-transition.svg'
+  },
+  {
+    name: 'Relationships',
+    slug: 'relationships',
+    description: 'Understanding connections, resonance, and building meaningful relationships.',
+    icon: '/categories/relationships.svg'
+  },
+  {
+    name: 'Career',
+    slug: 'career',
+    description: 'Navigate career decisions, job transitions, and building work that matters.',
+    icon: '/categories/career.svg'
+  }
+];
+
+// Group posts by category
+const postsByCategory = categories.map(category => ({
+  ...category,
+  posts: posts.filter(post => post.data.categories?.includes(category.name))
+})).filter(category => category.posts.length > 0);
+
+// Get latest 6 posts for the "Latest Posts" section
+const latestPosts = posts.slice(0, 6);
+
+// Category badge colors
+const categoryColors: Record<string, string> = {
+  'Frameworks': 'linear-gradient(135deg, #F97316 0%, #EC4899 50%, #A855F7 100%)',
+  'Productivity': 'linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%)',
+  'Growth': 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+  'Life Transition': 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
+  'Relationships': 'linear-gradient(135deg, #EC4899 0%, #DB2777 100%)',
+  'Career': 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)'
+};
 ---
 
 <Layout>
@@ -34,40 +93,118 @@ const posts = allPosts.sort((a, b) =>
         <a href="/newsletter" class="cta-link">Subscribe to the newsletter →</a>
       </div>
     ) : (
-      <div class="posts-grid">
-        {posts.map((post) => {
-          const { title, description, publishedDate, image } = post.data;
-          const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          });
-
-          return (
-            <article class="post-card">
-              {image && (
-                <a href={`/blog/${post.slug}`} class="post-image-link">
-                  <img src={image} alt={title} class="post-image" loading="lazy" />
-                </a>
-              )}
-              <div class="post-content">
-                <time datetime={publishedDate.toISOString()} class="post-date">
-                  {formattedDate}
-                </time>
-                <h2>
-                  <a href={`/blog/${post.slug}`} class="post-title-link">
-                    {title}
-                  </a>
-                </h2>
-                <p class="post-description">{description}</p>
-                <a href={`/blog/${post.slug}`} class="read-more">
-                  Read more →
-                </a>
+      <>
+        <!-- Category Sections -->
+        {postsByCategory.map((category) => (
+          <div class="category-section">
+            <div class="category-header">
+              <img src={category.icon} alt={category.name} class="category-icon" loading="lazy" />
+              <div class="category-info">
+                <h2 class="category-title">{category.name}</h2>
+                <p class="category-description">{category.description}</p>
               </div>
-            </article>
-          );
-        })}
-      </div>
+            </div>
+
+            <div class="posts-grid">
+              {category.posts.map((post) => {
+                const { title, description, publishedDate, image, categories: postCategories } = post.data;
+                const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                });
+
+                return (
+                  <article class="post-card">
+                    {image && (
+                      <a href={`/blog/${post.slug}`} class="post-image-link">
+                        <img src={image} alt={title} class="post-image" loading="lazy" />
+                      </a>
+                    )}
+                    <div class="post-content">
+                      <div class="post-meta">
+                        <time datetime={publishedDate.toISOString()} class="post-date">
+                          {formattedDate}
+                        </time>
+                        {postCategories && postCategories.length > 0 && (
+                          <div class="category-badges">
+                            {postCategories.map((cat: string) => (
+                              <span class="category-badge" style={`background: ${categoryColors[cat]}`}>
+                                {cat}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                      <h3>
+                        <a href={`/blog/${post.slug}`} class="post-title-link">
+                          {title}
+                        </a>
+                      </h3>
+                      <p class="post-description">{description}</p>
+                      <a href={`/blog/${post.slug}`} class="read-more">
+                        Read more →
+                      </a>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+
+        <!-- Latest Posts Section -->
+        <div class="latest-section">
+          <h2 class="section-title">Latest Posts</h2>
+          <p class="section-description">Not sure where to start? Here are our most recent articles.</p>
+
+          <div class="posts-grid">
+            {latestPosts.map((post) => {
+              const { title, description, publishedDate, image, categories: postCategories } = post.data;
+              const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              });
+
+              return (
+                <article class="post-card">
+                  {image && (
+                    <a href={`/blog/${post.slug}`} class="post-image-link">
+                      <img src={image} alt={title} class="post-image" loading="lazy" />
+                    </a>
+                  )}
+                  <div class="post-content">
+                    <div class="post-meta">
+                      <time datetime={publishedDate.toISOString()} class="post-date">
+                        {formattedDate}
+                      </time>
+                      {postCategories && postCategories.length > 0 && (
+                        <div class="category-badges">
+                          {postCategories.map((cat: string) => (
+                            <span class="category-badge" style={`background: ${categoryColors[cat]}`}>
+                              {cat}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    <h3>
+                      <a href={`/blog/${post.slug}`} class="post-title-link">
+                        {title}
+                      </a>
+                    </h3>
+                    <p class="post-description">{description}</p>
+                    <a href={`/blog/${post.slug}`} class="read-more">
+                      Read more →
+                    </a>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </>
     )}
 
     <div class="newsletter-cta">
@@ -128,11 +265,78 @@ const posts = allPosts.sort((a, b) =>
     text-decoration: underline;
   }
 
+  /* Category Section */
+  .category-section {
+    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid #e5e7eb;
+  }
+
+  .category-section:last-of-type {
+    border-bottom: none;
+  }
+
+  .category-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .category-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+    background: white;
+    padding: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .category-info {
+    flex: 1;
+  }
+
+  .category-title {
+    font-size: 2rem;
+    color: #111827;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .category-description {
+    font-size: 1rem;
+    color: #4a5568;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Latest Section */
+  .latest-section {
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    color: #111827;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+  }
+
+  .section-description {
+    font-size: 1rem;
+    color: #4a5568;
+    text-align: center;
+    margin: 0 auto 2rem auto;
+    max-width: 600px;
+  }
+
+  /* Posts Grid */
   .posts-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   .post-card {
@@ -141,6 +345,8 @@ const posts = allPosts.sort((a, b) =>
     border-radius: 16px;
     overflow: hidden;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
   }
 
   .post-card:hover {
@@ -160,16 +366,42 @@ const posts = allPosts.sort((a, b) =>
 
   .post-content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .post-meta {
+    margin-bottom: 0.75rem;
   }
 
   .post-date {
-    display: block;
+    display: inline-block;
     font-size: 0.875rem;
     color: #667eea;
     font-weight: 600;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+  }
+
+  .category-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .category-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .post-title-link {
@@ -181,9 +413,9 @@ const posts = allPosts.sort((a, b) =>
     color: #667eea;
   }
 
-  .post-card h2 {
+  .post-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+    margin: 0 0 0.75rem 0;
     line-height: 1.3;
   }
 
@@ -191,6 +423,7 @@ const posts = allPosts.sort((a, b) =>
     color: #4a5568;
     line-height: 1.6;
     margin-bottom: 1rem;
+    flex: 1;
   }
 
   .read-more {
@@ -198,6 +431,7 @@ const posts = allPosts.sort((a, b) =>
     font-weight: 600;
     text-decoration: none;
     font-size: 1rem;
+    align-self: flex-start;
   }
 
   .read-more:hover {
@@ -250,9 +484,42 @@ const posts = allPosts.sort((a, b) =>
       font-size: 1rem;
     }
 
+    .category-header {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: center;
+    }
+
+    .category-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+    }
+
+    .category-title {
+      font-size: 1.75rem;
+    }
+
+    .category-description {
+      font-size: 0.9rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+    }
+
     .posts-grid {
       grid-template-columns: 1fr;
       gap: 1.5rem;
+    }
+
+    .category-badges {
+      gap: 0.375rem;
+    }
+
+    .category-badge {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
     }
 
     .newsletter-cta {

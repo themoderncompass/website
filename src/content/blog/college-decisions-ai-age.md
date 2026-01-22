@@ -6,6 +6,7 @@ author: "Josh Imholte"
 keywords: ["college decisions", "AI impact on careers", "college vs AI", "entry level jobs AI", "career planning AI age", "unique skills", "decision making framework"]
 image: "/blog-thumbnails/college-decisions-ai-age.svg"
 draft: false
+categories: ["Life Transition", "Career"]
 ---
 
 We've arrived at a point where AI has or is close to commoditizing knowledge. It's no longer viable to go to college to gain knowledge and hope for a career. The current state of this is college costs continue to rise, while the value of knowledge slowly erodes.

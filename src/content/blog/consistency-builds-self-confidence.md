@@ -6,6 +6,7 @@ author: "Josh Imholte"
 keywords: ["build self confidence", "consistency and confidence", "how to be more confident", "self confidence tips", "overcome self doubt"]
 image: "/blog-thumbnails/consistency-builds-self-confidence.svg"
 draft: false
+categories: ["Growth", "Productivity"]
 ---
 
 If you think self-confidence comes from positive affirmations and "not caring what others think," you're missing the real story.

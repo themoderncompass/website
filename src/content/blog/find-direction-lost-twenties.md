@@ -6,6 +6,7 @@ author: "Josh Imholte"
 keywords: ["feeling lost in twenties", "find life direction", "quarter life crisis", "personal growth 20s", "life clarity"]
 image: "/blog-thumbnails/find-direction-lost-twenties.svg"
 draft: false
+categories: ["Life Transition", "Growth"]
 ---
 
 If you're in your twenties and feeling lost, you're not alone. I spent years in my 20s and early 30s full of ambition but short on direction, making progress slowly and often in circles.

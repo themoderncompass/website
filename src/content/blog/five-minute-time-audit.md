@@ -6,6 +6,7 @@ author: "Josh Imholte"
 keywords: ["time audit", "time management", "productivity tips", "reclaim time", "where does time go"]
 image: "/blog-thumbnails/five-minute-time-audit.svg"
 draft: false
+categories: ["Productivity"]
 ---
 
 You know that feeling when it's Sunday night and you can't remember what you actually *did* all weekend?

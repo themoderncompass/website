@@ -6,6 +6,7 @@ author: "Josh Imholte"
 keywords: ["character development", "building character", "modern compass character", "personal growth character", "four layers of character"]
 image: "/blog-thumbnails/character-product-display.svg"
 draft: false
+categories: ["Frameworks", "Growth"]
 ---
 
 I'm writing this from a week before a Disney World trip, heavily focusing on what is **Character**, how I want to approach and define it within Modern Compass, and how to make it more approachable.

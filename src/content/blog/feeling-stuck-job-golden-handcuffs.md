@@ -6,6 +6,7 @@ author: "Josh Imholte"
 keywords: ["feeling stuck in job", "golden handcuffs", "career change decision", "should I quit my job", "unfulfilled at work", "job dissatisfaction"]
 image: "/blog-thumbnails/feeling-stuck-job-golden-handcuffs.svg"
 draft: false
+categories: ["Career", "Life Transition"]
 ---
 
 I spent about three years in a job that looked perfect on paper. Good salary, respected company, people who liked working with me. My manager even told me I was doing great work. But every Sunday evening, I'd get this pit in my stomach thinking about Monday morning. Not because anything was objectively wrong, but because something just felt off.
