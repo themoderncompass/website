@@ -94,9 +94,23 @@ const categoryColors: Record<string, string> = {
       </div>
     ) : (
       <>
+        <!-- Category Navigation Grid -->
+        <div class="category-nav-grid">
+          {categories.map((category) => (
+            <a href={`#${category.slug}`} class="nav-card">
+              <img src={category.icon} alt={category.name} class="nav-icon" loading="lazy" />
+              <span class="nav-label">{category.name}</span>
+            </a>
+          ))}
+          <a href="#latest" class="nav-card">
+            <img src="/categories/latest.svg" alt="Latest Posts" class="nav-icon" loading="lazy" />
+            <span class="nav-label">Latest Posts</span>
+          </a>
+        </div>
+
         <!-- Category Sections -->
         {postsByCategory.map((category) => (
-          <div class="category-section">
+          <div class="category-section" id={category.slug}>
             <div class="category-header">
               <img src={category.icon} alt={category.name} class="category-icon" loading="lazy" />
               <div class="category-info">
@@ -154,7 +168,7 @@ const categoryColors: Record<string, string> = {
         ))}
 
         <!-- Latest Posts Section -->
-        <div class="latest-section">
+        <div class="latest-section" id="latest">
           <h2 class="section-title">Latest Posts</h2>
           <p class="section-description">Not sure where to start? Here are our most recent articles.</p>
 
@@ -263,6 +277,62 @@ const categoryColors: Record<string, string> = {
 
   .cta-link:hover {
     text-decoration: underline;
+  }
+
+  /* Category Navigation Grid */
+  .category-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    gap: 1rem;
+  }
+
+  .nav-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+    transform: translateY(-4px);
+  }
+
+  .nav-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    padding: 0.5rem;
+    background: white;
+  }
+
+  .nav-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+    text-align: center;
+  }
+
+  .nav-card:hover .nav-label {
+    color: #667eea;
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
   }
 
   /* Category Section */
@@ -482,6 +552,25 @@ const categoryColors: Record<string, string> = {
 
     .intro {
       font-size: 1rem;
+    }
+
+    .category-nav-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .nav-card {
+      padding: 1.5rem 0.75rem;
+    }
+
+    .nav-icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    .nav-label {
+      font-size: 0.875rem;
     }
 
     .category-header {
