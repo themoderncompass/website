@@ -6,7 +6,7 @@ author: "Josh Imholte"
 keywords: ["year end reflection", "goal setting 2026", "modern compass framework", "personal growth planning", "directional thinking"]
 image: "/blog-thumbnails/looking-back-2026.svg"
 draft: false
-categories: ["Frameworks", "Productivity"]
+categories: ["Productivity"]
 ---
 
 Welcome to the final days of 2025. **You made it!**

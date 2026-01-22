@@ -6,7 +6,7 @@ author: "Josh Imholte"
 keywords: ["personal growth framework", "minimum requirements", "sustainable growth", "personal development blueprint", "getting unstuck", "intentional progress"]
 image: "/blog-thumbnails/minimum-requirements-personal-growth.svg"
 draft: false
-categories: ["Frameworks", "Growth"]
+categories: ["Book Frameworks", "Growth"]
 ---
 
 Personal growth isn't a destination. It's not something you master and check off a list.

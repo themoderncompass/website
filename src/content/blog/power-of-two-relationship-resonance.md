@@ -6,7 +6,7 @@ author: "Josh Imholte"
 keywords: ["relationship resonance", "why people click", "genuine connections", "meaningful relationships", "relationship compatibility"]
 image: "/blog-thumbnails/power-of-two-relationship-resonance.svg"
 draft: false
-categories: ["Relationships"]
+categories: ["Book Frameworks", "Relationships"]
 ---
 
 You meet someone and within 10 minutes, it feels like you've known them for years.
