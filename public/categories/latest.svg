@@ -1,0 +1,38 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Background -->
+  <rect width="400" height="400" fill="#FFFFFF"/>
+
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="grad-latest" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F97316"/>
+      <stop offset="33%" style="stop-color:#EC4899"/>
+      <stop offset="66%" style="stop-color:#A855F7"/>
+      <stop offset="100%" style="stop-color:#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Clock/Recent icon with sparkle -->
+  <g transform="translate(200, 200)">
+    <!-- Clock circle -->
+    <circle cx="0" cy="0" r="70" fill="none" stroke="url(#grad-latest)" stroke-width="7"/>
+
+    <!-- Clock hands -->
+    <line x1="0" y1="0" x2="0" y2="-40" stroke="url(#grad-latest)" stroke-width="6" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="30" y2="0" stroke="url(#grad-latest)" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="8" fill="url(#grad-latest)"/>
+
+    <!-- Hour markers (12, 3, 6, 9) -->
+    <circle cx="0" cy="-55" r="5" fill="url(#grad-latest)" opacity="0.6"/>
+    <circle cx="55" cy="0" r="5" fill="url(#grad-latest)" opacity="0.6"/>
+    <circle cx="0" cy="55" r="5" fill="url(#grad-latest)" opacity="0.6"/>
+    <circle cx="-55" cy="0" r="5" fill="url(#grad-latest)" opacity="0.6"/>
+
+    <!-- Sparkle/new indicator -->
+    <g transform="translate(50, -50) scale(0.7)">
+      <polygon points="0,-20 5,-5 20,0 5,5 0,20 -5,5 -20,0 -5,-5" fill="url(#grad-latest)" opacity="0.8"/>
+    </g>
+  </g>
+</svg>

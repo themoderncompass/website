@@ -1,0 +1,28 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Background -->
+  <rect width="400" height="400" fill="#FFFFFF"/>
+
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="grad-growth" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#F97316"/>
+      <stop offset="33%" style="stop-color:#EC4899"/>
+      <stop offset="66%" style="stop-color:#A855F7"/>
+      <stop offset="100%" style="stop-color:#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Growing plant/upward arrow -->
+  <g transform="translate(200, 200)">
+    <!-- Stem -->
+    <line x1="0" y1="80" x2="0" y2="-40" stroke="url(#grad-growth)" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Arrow head -->
+    <polyline points="-35,-5 0,-55 35,-5" fill="none" stroke="url(#grad-growth)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Growth rings/leaves -->
+    <circle cx="0" cy="30" r="25" fill="none" stroke="url(#grad-growth)" stroke-width="5" opacity="0.4"/>
+    <circle cx="0" cy="0" r="35" fill="none" stroke="url(#grad-growth)" stroke-width="5" opacity="0.6"/>
+    <circle cx="0" cy="-30" r="45" fill="none" stroke="url(#grad-growth)" stroke-width="5" opacity="0.3"/>
+  </g>
+</svg>

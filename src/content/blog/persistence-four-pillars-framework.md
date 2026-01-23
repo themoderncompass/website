@@ -6,6 +6,7 @@ author: "Josh Imholte"
 keywords: ["persistence framework", "grit vs stubbornness", "character development", "personal growth persistence", "how to stay persistent"]
 image: "/blog-thumbnails/persistence-four-pillars.svg"
 draft: false
+categories: ["Growth"]
 ---
 
 When you're persisting on something that matters, you're bound to hit lows.

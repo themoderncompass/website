@@ -1,0 +1,36 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Background -->
+  <rect width="400" height="400" fill="#FFFFFF"/>
+
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="grad-frameworks" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F97316"/>
+      <stop offset="33%" style="stop-color:#EC4899"/>
+      <stop offset="66%" style="stop-color:#A855F7"/>
+      <stop offset="100%" style="stop-color:#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Connected Framework Structure (overlapping nodes) -->
+  <g transform="translate(200, 200)">
+    <!-- Center node -->
+    <circle cx="0" cy="0" r="35" fill="none" stroke="url(#grad-frameworks)" stroke-width="6"/>
+
+    <!-- Top node -->
+    <circle cx="0" cy="-80" r="30" fill="none" stroke="url(#grad-frameworks)" stroke-width="6"/>
+    <line x1="0" y1="-25" x2="0" y2="-50" stroke="url(#grad-frameworks)" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Bottom node -->
+    <circle cx="0" cy="80" r="30" fill="none" stroke="url(#grad-frameworks)" stroke-width="6"/>
+    <line x1="0" y1="25" x2="0" y2="50" stroke="url(#grad-frameworks)" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Left node -->
+    <circle cx="-80" cy="0" r="30" fill="none" stroke="url(#grad-frameworks)" stroke-width="6"/>
+    <line x1="-25" y1="0" x2="-50" y2="0" stroke="url(#grad-frameworks)" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Right node -->
+    <circle cx="80" cy="0" r="30" fill="none" stroke="url(#grad-frameworks)" stroke-width="6"/>
+    <line x1="25" y1="0" x2="50" y2="0" stroke="url(#grad-frameworks)" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

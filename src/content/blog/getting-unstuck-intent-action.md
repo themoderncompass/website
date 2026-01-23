@@ -6,6 +6,7 @@ author: "Josh Imholte"
 keywords: ["getting unstuck", "feeling stuck in life", "how to get unstuck", "breaking the stagnation cycle", "intent and action", "personal growth stuck"]
 image: "/blog-thumbnails/getting-unstuck-intent-action.svg"
 draft: false
+categories: ["Productivity", "Growth"]
 ---
 
 You know the feeling. You've been thinking about making a change for weeks - maybe months. You've researched. You've planned. You've waited for the right moment.
