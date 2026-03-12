@@ -5,7 +5,7 @@ publishedDate: 2026-03-12
 author: "Josh Imholte"
 keywords: ["legacy", "modern compass framework", "relational legacy", "built legacy", "self reflection", "character", "trust", "relationships", "personal growth", "what to leave behind"]
 draft: false
-categories: ["Growth", "Relationships", "Book Frameworks"]
+categories: ["Growth", "Relationships"]
 ---
 
 Starting with this issue, I've decided to pivot the newsletter format a bit. Instead of leading with a general topic, I'll take a topic and offer insights through the four directions of Modern Compass: **Self, Trust, Relationships, and Character.** Some months will go deep, others may stay light depending on the topic, but every issue will show the framework in action.
