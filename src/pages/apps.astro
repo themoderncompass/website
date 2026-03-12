@@ -87,23 +87,44 @@ import SEO from '../components/SEO.astro'
           <p>If you've ever said "I want to be better about [thing]" but never had a way to measure it, this is your tool.</p>
         </div>
 
+        <div class="access-note">
+          <span class="access-icon">🎁</span>
+          <p><strong>Free for newsletter subscribers.</strong> Impulse Wallet is accessible at no cost when you subscribe to the Modern Compass newsletter. <a href="/newsletter/">Subscribe here →</a></p>
+        </div>
+
         <div class="cta-group">
           <a href="https://impulsewallet.themoderncompass.io/" class="button primary" target="_blank" rel="noopener">
             Try Impulse Wallet
           </a>
           <a href="/newsletter/" class="button ghost">
-            Get the Newsletter
+            Get Free Access
           </a>
         </div>
       </div>
     </div>
 
-    <!-- More coming soon -->
-    <div class="coming-soon">
-      <h2>More Apps Coming</h2>
-      <p>Impulse Wallet is the first in a growing ecosystem of tools built from the Modern Compass framework. Each app is designed to make one area of personal growth more tangible, measurable, and even enjoyable.</p>
-      <p>Subscribe to the newsletter to be the first to hear about new releases.</p>
-      <a href="/newsletter/" class="button ghost">Stay in the Loop</a>
+    <!-- Coming Soon Apps -->
+    <div class="coming-soon-section">
+      <h2>Coming Soon</h2>
+      <p class="coming-soon-intro">More tools are in the works — each one rooted in the Modern Compass framework and designed to make personal growth more tangible.</p>
+      <div class="coming-soon-grid">
+        <div class="coming-soon-card">
+          <div class="cs-badge">Coming Soon</div>
+          <div class="cs-icon">🧭</div>
+          <h3>Compass Check</h3>
+          <p>An interactive self-assessment that guides you through the four directions of the Modern Compass — Self, Trust, Relationships, and Character. Find out where you're strong, where you're avoiding, and what deserves your focus next.</p>
+        </div>
+        <div class="coming-soon-card">
+          <div class="cs-badge">Coming Soon</div>
+          <div class="cs-icon">📊</div>
+          <h3>Compass Tracker</h3>
+          <p>Track your growth across the four compass directions over time. See patterns in where you're investing energy, spot the areas you keep neglecting, and watch your direction evolve week by week.</p>
+        </div>
+      </div>
+      <div class="coming-soon-cta">
+        <p>Subscribe to the newsletter to be the first to know when these launch.</p>
+        <a href="/newsletter/" class="button ghost">Stay in the Loop</a>
+      </div>
     </div>
   </section>
 </Layout>
@@ -288,29 +309,112 @@ import SEO from '../components/SEO.astro'
     background: rgba(179, 36, 167, 0.06);
   }
 
-  /* Coming Soon */
-  .coming-soon {
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    border-radius: 16px;
-    padding: 2rem;
-    text-align: center;
+  /* Access note */
+  .access-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+  }
+
+  .access-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    line-height: 1.5;
+  }
+
+  .access-note p {
+    margin: 0;
+    font-size: 0.98rem;
+    color: #166534;
+    line-height: 1.55;
+  }
+
+  .access-note a {
+    color: #166534;
+    font-weight: 600;
+  }
+
+  /* Coming Soon Section */
+  .coming-soon-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .coming-soon-section h2 {
+    font-size: 1.75rem;
+    margin: 0;
+  }
+
+  .coming-soon-intro {
+    color: #4b5563;
+    font-size: 1rem;
+    margin: 0;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  .coming-soon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .coming-soon-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
     gap: 0.75rem;
   }
 
-  .coming-soon h2 {
-    font-size: 1.5rem;
-    margin: 0;
+  .cs-badge {
+    display: inline-block;
+    background: #f3f4f6;
+    color: #6b7280;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    width: fit-content;
   }
 
-  .coming-soon p {
-    max-width: 580px;
+  .cs-icon {
+    font-size: 2rem;
+  }
+
+  .coming-soon-card h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #111827;
+  }
+
+  .coming-soon-card p {
+    font-size: 0.95rem;
     color: #4b5563;
     margin: 0;
     line-height: 1.6;
+  }
+
+  .coming-soon-cta {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .coming-soon-cta p {
+    margin: 0;
+    color: #4b5563;
+    font-size: 0.98rem;
   }
 
   /* Responsive */
