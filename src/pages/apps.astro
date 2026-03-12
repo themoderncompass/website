@@ -1,0 +1,334 @@
+---
+import Layout from '../layouts/Layout.astro'
+import SEO from '../components/SEO.astro'
+---
+
+<Layout>
+  <SEO
+    slot="head"
+    title="Apps | Modern Compass"
+    description="Apps built by Modern Compass to help you build better habits, accountability, and self-control. Explore Impulse Wallet — a gamified accountability app for tracking your wins and losses."
+    canonical="https://themoderncompass.io/apps/"
+    keywords="impulse wallet, accountability app, habit tracking, self-control app, gamified personal growth, modern compass apps"
+  />
+
+  <section class="apps-page">
+    <div class="page-header">
+      <h1>Apps</h1>
+      <p class="intro">Tools built from the Modern Compass framework to help you take action, build accountability, and grow — one small choice at a time.</p>
+    </div>
+
+    <!-- Featured App: Impulse Wallet -->
+    <div class="featured-app">
+      <div class="featured-badge">Featured App</div>
+      <div class="featured-content">
+        <div class="app-info">
+          <div class="app-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="48" height="48" rx="12" fill="url(#walletGrad)"/>
+              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="26" font-family="system-ui, sans-serif">💰</text>
+              <defs>
+                <linearGradient id="walletGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#b324a7"/>
+                  <stop offset="1" stop-color="#0087c9"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="app-meta">
+            <h2>Impulse Wallet</h2>
+            <p class="app-tagline">Gamified accountability for self-control and habit tracking</p>
+          </div>
+        </div>
+
+        <p class="app-description">
+          Impulse Wallet turns self-control into a game. Every good choice earns you $1. Every slip costs you $1. It's a virtual wallet — no real money — but the stakes feel surprisingly real. That's the point.
+        </p>
+        <p class="app-description">
+          Built on the Modern Compass philosophy of <strong>progress over perfection</strong>, Impulse Wallet isn't about being flawless. It's about awareness. When you track choices — the good and the bad — patterns emerge. You start to see yourself more clearly. And clarity leads to change.
+        </p>
+
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">$</div>
+            <h3>$1 Up / $1 Down</h3>
+            <p>Simple virtual wallet system. Good choices earn a dollar. Bad ones cost one. No complexity — just honest scorekeeping.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🕐</div>
+            <h3>15-Minute Undo</h3>
+            <p>Made an entry in haste? You have a 15-minute grace period to undo it. No permanent punishment for accidental taps.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🔄</div>
+            <h3>Weekly Resets</h3>
+            <p>Every week is a fresh start. The slate clears so you can focus on this week's effort, not last week's failures.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">👤</div>
+            <h3>Anonymous Accounts</h3>
+            <p>No email required. Your data stays private. Accountability without the vulnerability of sharing personal information.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🤝</div>
+            <h3>Accountability Rooms</h3>
+            <p>Compare weekly scores with friends, family, or a partner. Social accountability without judgment — just friendly competition.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🎯</div>
+            <h3>Progress Over Perfection</h3>
+            <p>The goal isn't a perfect score. It's intentional effort. Impulse Wallet rewards showing up, not being flawless.</p>
+          </div>
+        </div>
+
+        <div class="who-its-for">
+          <h3>Who It's For</h3>
+          <p>Impulse Wallet is built for people who want a judgment-free way to work on self-control. Whether you're trying to eat better, spend less, exercise more, or simply become more aware of your daily choices — this app gives your intentions a scoreboard.</p>
+          <p>If you've ever said "I want to be better about [thing]" but never had a way to measure it, this is your tool.</p>
+        </div>
+
+        <div class="cta-group">
+          <a href="https://impulsewallet.themoderncompass.io/" class="button primary" target="_blank" rel="noopener">
+            Try Impulse Wallet
+          </a>
+          <a href="/newsletter/" class="button ghost">
+            Get the Newsletter
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- More coming soon -->
+    <div class="coming-soon">
+      <h2>More Apps Coming</h2>
+      <p>Impulse Wallet is the first in a growing ecosystem of tools built from the Modern Compass framework. Each app is designed to make one area of personal growth more tangible, measurable, and even enjoyable.</p>
+      <p>Subscribe to the newsletter to be the first to hear about new releases.</p>
+      <a href="/newsletter/" class="button ghost">Stay in the Loop</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .apps-page {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .page-header {
+    max-width: 680px;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    color: var(--text-muted, #4b5563);
+    line-height: 1.6;
+  }
+
+  /* Featured App Card */
+  .featured-app {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .featured-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #b324a7, #0087c9);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+  }
+
+  .featured-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .app-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .app-icon {
+    flex-shrink: 0;
+  }
+
+  .app-meta h2 {
+    font-size: 1.75rem;
+    margin: 0 0 0.25rem;
+    color: var(--primary-color, #1a1a1a);
+  }
+
+  .app-tagline {
+    color: var(--text-muted, #4b5563);
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .app-description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #374151;
+    margin: 0;
+  }
+
+  /* Features Grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .feature {
+    background: #f9fafb;
+    border: 1px solid #f3f4f6;
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+
+  .feature-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--color-purple, #b324a7);
+  }
+
+  .feature h3 {
+    font-size: 1rem;
+    margin: 0 0 0.4rem;
+    color: #111827;
+  }
+
+  .feature p {
+    font-size: 0.9rem;
+    color: var(--text-muted, #4b5563);
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* Who it's for */
+  .who-its-for {
+    background: linear-gradient(135deg, rgba(179, 36, 167, 0.06), rgba(0, 135, 201, 0.06));
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .who-its-for h3 {
+    font-size: 1.15rem;
+    margin: 0 0 0.75rem;
+    color: #111827;
+  }
+
+  .who-its-for p {
+    font-size: 0.98rem;
+    color: #374151;
+    margin: 0 0 0.75rem;
+    line-height: 1.65;
+  }
+
+  .who-its-for p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* CTA Buttons */
+  .cta-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.2s, box-shadow 0.2s;
+  }
+
+  .button.primary {
+    background: linear-gradient(135deg, #b324a7, #0087c9);
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(179, 36, 167, 0.3);
+  }
+
+  .button.primary:hover {
+    opacity: 0.92;
+    box-shadow: 0 4px 18px rgba(179, 36, 167, 0.4);
+  }
+
+  .button.ghost {
+    background: transparent;
+    color: #b324a7;
+    border: 1.5px solid #b324a7;
+  }
+
+  .button.ghost:hover {
+    background: rgba(179, 36, 167, 0.06);
+  }
+
+  /* Coming Soon */
+  .coming-soon {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .coming-soon h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .coming-soon p {
+    max-width: 580px;
+    color: #4b5563;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .featured-app {
+      padding: 1.5rem;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .cta-group {
+      flex-direction: column;
+    }
+
+    .button {
+      text-align: center;
+    }
+  }
+</style>
