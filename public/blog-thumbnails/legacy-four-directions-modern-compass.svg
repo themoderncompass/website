@@ -1,0 +1,57 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Background -->
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="grad-legacy" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981"/>
+      <stop offset="33%" style="stop-color:#3B82F6"/>
+      <stop offset="66%" style="stop-color:#A855F7"/>
+      <stop offset="100%" style="stop-color:#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Compass rose centered slightly above midpoint -->
+  <g transform="translate(600, 305)">
+
+    <!-- Outer faint rings -->
+    <circle cx="0" cy="0" r="210" fill="none" stroke="url(#grad-legacy)" stroke-width="2" opacity="0.15"/>
+    <circle cx="0" cy="0" r="170" fill="none" stroke="url(#grad-legacy)" stroke-width="1.5" opacity="0.2"/>
+
+    <!-- Cross guide lines (faint) -->
+    <line x1="-150" y1="0" x2="150" y2="0" stroke="url(#grad-legacy)" stroke-width="2" opacity="0.2" stroke-dasharray="6,5"/>
+    <line x1="0" y1="-150" x2="0" y2="150" stroke="url(#grad-legacy)" stroke-width="2" opacity="0.2" stroke-dasharray="6,5"/>
+
+    <!-- North arm (Self) -->
+    <line x1="0" y1="0" x2="0" y2="-135" stroke="url(#grad-legacy)" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+    <polygon points="0,-168 -17,-132 17,-132" fill="url(#grad-legacy)"/>
+    <text x="0" y="-185" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" letter-spacing="1">SELF</text>
+
+    <!-- East arm (Relationships) -->
+    <line x1="0" y1="0" x2="135" y2="0" stroke="url(#grad-legacy)" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+    <polygon points="168,0 132,-17 132,17" fill="url(#grad-legacy)"/>
+    <text x="184" y="8" text-anchor="start" font-size="24" font-weight="700" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" letter-spacing="1">RELATIONSHIPS</text>
+
+    <!-- South arm (Character) -->
+    <line x1="0" y1="0" x2="0" y2="135" stroke="url(#grad-legacy)" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+    <polygon points="0,168 -17,132 17,132" fill="url(#grad-legacy)"/>
+    <text x="0" y="200" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" letter-spacing="1">CHARACTER</text>
+
+    <!-- West arm (Trust) -->
+    <line x1="0" y1="0" x2="-135" y2="0" stroke="url(#grad-legacy)" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+    <polygon points="-168,0 -132,-17 -132,17" fill="url(#grad-legacy)"/>
+    <text x="-184" y="8" text-anchor="end" font-size="24" font-weight="700" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" letter-spacing="1">TRUST</text>
+
+    <!-- Diagonal accent lines (faint) -->
+    <line x1="-95" y1="-95" x2="-60" y2="-60" stroke="url(#grad-legacy)" stroke-width="3" opacity="0.25" stroke-linecap="round"/>
+    <line x1="95" y1="-95" x2="60" y2="-60" stroke="url(#grad-legacy)" stroke-width="3" opacity="0.25" stroke-linecap="round"/>
+    <line x1="-95" y1="95" x2="-60" y2="60" stroke="url(#grad-legacy)" stroke-width="3" opacity="0.25" stroke-linecap="round"/>
+    <line x1="95" y1="95" x2="60" y2="60" stroke="url(#grad-legacy)" stroke-width="3" opacity="0.25" stroke-linecap="round"/>
+
+    <!-- Center ring + dot -->
+    <circle cx="0" cy="0" r="28" fill="none" stroke="url(#grad-legacy)" stroke-width="4"/>
+    <circle cx="0" cy="0" r="12" fill="url(#grad-legacy)"/>
+    <circle cx="0" cy="0" r="5" fill="#FFFFFF"/>
+  </g>
+</svg>

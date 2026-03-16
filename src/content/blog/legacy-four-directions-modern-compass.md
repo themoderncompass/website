@@ -4,6 +4,7 @@ description: "Legacy isn't only for people with kids or big accomplishments. Exp
 publishedDate: 2026-03-12
 author: "Josh Imholte"
 keywords: ["legacy", "modern compass framework", "relational legacy", "built legacy", "self reflection", "character", "trust", "relationships", "personal growth", "what to leave behind"]
+image: /blog-thumbnails/legacy-four-directions-modern-compass.svg
 draft: false
 categories: ["Growth", "Relationships"]
 ---
