@@ -24,16 +24,7 @@ import SEO from '../components/SEO.astro'
       <div class="featured-content">
         <div class="app-info">
           <div class="app-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="48" height="48" rx="12" fill="url(#walletGrad)"/>
-              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="26" font-family="system-ui, sans-serif">💰</text>
-              <defs>
-                <linearGradient id="walletGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#b324a7"/>
-                  <stop offset="1" stop-color="#0087c9"/>
-                </linearGradient>
-              </defs>
-            </svg>
+            <img src="/impulsewallet.png" alt="Impulse Wallet logo" class="app-logo-icon" />
           </div>
           <div class="app-meta">
             <h2>Impulse Wallet</h2>
@@ -48,19 +39,18 @@ import SEO from '../components/SEO.astro'
           Built on the Modern Compass philosophy of <strong>progress over perfection</strong>, Impulse Wallet isn't about being flawless. It's about awareness. When you track choices, the good and the bad, patterns emerge. You start to see yourself more clearly. And clarity leads to change.
         </p>
 
-        <!-- App Screenshots Gallery -->
-        <div class="app-gallery">
-          <div class="gallery-track">
-            <figure class="gallery-slide">
-              <img src="/impulsewallet.png" alt="Impulse Wallet app overview" loading="lazy"/>
-            </figure>
-            <figure class="gallery-slide">
-              <img src="/main-wallet-interface.png" alt="Impulse Wallet main interface" loading="lazy"/>
-            </figure>
-            <figure class="gallery-slide">
-              <img src="/Impulse_wallet_ipad.png" alt="Impulse Wallet on iPad" loading="lazy"/>
-            </figure>
-          </div>
+        <!-- App Screenshot -->
+        <div class="app-screenshot-wrap">
+          <button class="screenshot-btn" id="screenshot-btn" aria-label="View full screenshot">
+            <img src="/main-wallet-interface.png" alt="Impulse Wallet main interface" loading="lazy" class="screenshot-thumb"/>
+            <span class="expand-hint">Tap to expand</span>
+          </button>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot fullscreen view" aria-hidden="true">
+          <button class="lightbox-close" id="lightbox-close" aria-label="Close fullscreen">✕</button>
+          <img src="/main-wallet-interface.png" alt="Impulse Wallet main interface" class="lightbox-img"/>
         </div>
 
         <div class="features-grid">
@@ -225,13 +215,49 @@ import SEO from '../components/SEO.astro'
       <div class="coming-soon-grid">
         <div class="coming-soon-card">
           <div class="cs-badge">Coming Soon</div>
-          <div class="cs-icon">🧭</div>
+          <div class="cs-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="cs1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/>
+                </linearGradient>
+              </defs>
+              <!-- Compass ring -->
+              <circle cx="24" cy="24" r="18" fill="none" stroke="url(#cs1)" stroke-width="2.5"/>
+              <!-- Cardinal tick marks -->
+              <line x1="24" y1="6" x2="24" y2="11" stroke="url(#cs1)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="24" y1="37" x2="24" y2="42" stroke="url(#cs1)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="6" y1="24" x2="11" y2="24" stroke="url(#cs1)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="37" y1="24" x2="42" y2="24" stroke="url(#cs1)" stroke-width="2" stroke-linecap="round"/>
+              <!-- North needle (gradient) -->
+              <polygon points="24,11 27,25 24,22 21,25" fill="url(#cs1)"/>
+              <!-- South needle (muted) -->
+              <polygon points="24,37 27,23 24,26 21,23" fill="#d1d5db"/>
+              <!-- Center dot -->
+              <circle cx="24" cy="24" r="2.5" fill="url(#cs1)"/>
+            </svg>
+          </div>
           <h3>Interactive Assessment</h3>
           <p>An interactive self-assessment that guides you through the four directions of the Modern Compass: Self, Trust, Relationships, and Character. Find out where you're strong, where you're avoiding, and what deserves your focus next.</p>
         </div>
         <div class="coming-soon-card">
           <div class="cs-badge">Coming Soon</div>
-          <div class="cs-icon">📊</div>
+          <div class="cs-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="cs2" x1="0" y1="0" x2="0" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/>
+                </linearGradient>
+              </defs>
+              <!-- Axis lines -->
+              <line x1="6" y1="42" x2="44" y2="42" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+              <line x1="6" y1="42" x2="6" y2="8" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+              <!-- Bars (growing left to right) -->
+              <rect x="10" y="32" width="8" height="10" rx="2" fill="url(#cs2)" opacity="0.45"/>
+              <rect x="22" y="23" width="8" height="19" rx="2" fill="url(#cs2)" opacity="0.72"/>
+              <rect x="34" y="13" width="8" height="29" rx="2" fill="url(#cs2)"/>
+            </svg>
+          </div>
           <h3>Compass Tracker</h3>
           <p>Track your growth across the four compass directions over time. See patterns in where you're investing energy, spot the areas you keep neglecting, and watch your direction evolve week by week.</p>
         </div>
@@ -305,6 +331,14 @@ import SEO from '../components/SEO.astro'
     flex-shrink: 0;
   }
 
+  .app-logo-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    object-fit: cover;
+    display: block;
+  }
+
   .app-meta h2 {
     font-size: 1.75rem;
     margin: 0 0 0.25rem;
@@ -324,49 +358,98 @@ import SEO from '../components/SEO.astro'
     margin: 0;
   }
 
-  /* App Gallery */
-  .app-gallery {
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  .gallery-track {
+  /* App Screenshot */
+  .app-screenshot-wrap {
     display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 0.75rem;
+    justify-content: center;
   }
 
-  .gallery-track::-webkit-scrollbar {
-    height: 5px;
+  .screenshot-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    border-radius: 16px;
+    overflow: visible;
   }
 
-  .gallery-track::-webkit-scrollbar-track {
-    background: #f3f4f6;
-    border-radius: 3px;
-  }
-
-  .gallery-track::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg, #b324a7, #0087c9);
-    border-radius: 3px;
-  }
-
-  .gallery-slide {
-    flex-shrink: 0;
-    width: 300px;
-    margin: 0;
-    scroll-snap-align: start;
-  }
-
-  .gallery-slide img {
-    width: 100%;
+  .screenshot-thumb {
+    width: 260px;
     height: auto;
-    border-radius: 10px;
-    display: block;
+    border-radius: 16px;
     border: 1px solid #e5e7eb;
-    object-fit: cover;
+    display: block;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .screenshot-btn:hover .screenshot-thumb {
+    transform: scale(1.02);
+    box-shadow: 0 8px 32px rgba(179, 36, 167, 0.18);
+  }
+
+  .expand-hint {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .lightbox.open {
+    display: flex;
+  }
+
+  .lightbox-img {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 16px;
+    box-shadow: 0 8px 48px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #fff;
+    font-size: 1.25rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  .lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.28);
   }
 
   /* Features Grid */
@@ -547,7 +630,8 @@ import SEO from '../components/SEO.astro'
   }
 
   .cs-icon {
-    font-size: 2rem;
+    display: block;
+    line-height: 0;
   }
 
   .coming-soon-card h3 {
@@ -594,8 +678,34 @@ import SEO from '../components/SEO.astro'
       text-align: center;
     }
 
-    .gallery-slide {
-      width: 240px;
+    .screenshot-thumb {
+      width: 180px;
     }
   }
 </style>
+
+<script>
+  const btn = document.getElementById('screenshot-btn');
+  const lightbox = document.getElementById('lightbox');
+  const closeBtn = document.getElementById('lightbox-close');
+
+  btn?.addEventListener('click', () => {
+    lightbox?.classList.add('open');
+    lightbox?.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  });
+
+  const closeLightbox = () => {
+    lightbox?.classList.remove('open');
+    lightbox?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  closeBtn?.addEventListener('click', closeLightbox);
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
