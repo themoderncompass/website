@@ -7,7 +7,7 @@ import SEO from '../components/SEO.astro'
   <SEO
     slot="head"
     title="Apps | Modern Compass"
-    description="Apps built by Modern Compass to help you build better habits, accountability, and self-control. Explore Impulse Wallet — a gamified accountability app for tracking your wins and losses."
+    description="Apps built by Modern Compass to help you build better habits, accountability, and self-control. Explore Impulse Wallet, a gamified accountability app for tracking your wins and losses."
     canonical="https://themoderncompass.io/apps/"
     keywords="impulse wallet, accountability app, habit tracking, self-control app, gamified personal growth, modern compass apps"
   />
@@ -15,7 +15,7 @@ import SEO from '../components/SEO.astro'
   <section class="apps-page">
     <div class="page-header">
       <h1>Apps</h1>
-      <p class="intro">Tools built from the Modern Compass framework to help you take action, build accountability, and grow — one small choice at a time.</p>
+      <p class="intro">Tools built from the Modern Compass framework to help you take action, build accountability, and grow. One small choice at a time.</p>
     </div>
 
     <!-- Featured App: Impulse Wallet -->
@@ -42,40 +42,158 @@ import SEO from '../components/SEO.astro'
         </div>
 
         <p class="app-description">
-          Impulse Wallet turns self-control into a game. Every good choice earns you $1. Every slip costs you $1. It's a virtual wallet — no real money — but the stakes feel surprisingly real. That's the point.
+          Impulse Wallet turns self-control into a game. Every good choice earns you $1. Every slip costs you $1. It's a virtual wallet, no real money, but the stakes feel surprisingly real. That's the point.
         </p>
         <p class="app-description">
-          Built on the Modern Compass philosophy of <strong>progress over perfection</strong>, Impulse Wallet isn't about being flawless. It's about awareness. When you track choices — the good and the bad — patterns emerge. You start to see yourself more clearly. And clarity leads to change.
+          Built on the Modern Compass philosophy of <strong>progress over perfection</strong>, Impulse Wallet isn't about being flawless. It's about awareness. When you track choices, the good and the bad, patterns emerge. You start to see yourself more clearly. And clarity leads to change.
         </p>
+
+        <!-- App Screenshots Gallery -->
+        <div class="app-gallery">
+          <div class="gallery-track">
+            <figure class="gallery-slide">
+              <img src="/impulsewallet.png" alt="Impulse Wallet app overview" loading="lazy"/>
+            </figure>
+            <figure class="gallery-slide">
+              <img src="/main-wallet-interface.png" alt="Impulse Wallet main interface" loading="lazy"/>
+            </figure>
+            <figure class="gallery-slide">
+              <img src="/Impulse_wallet_ipad.png" alt="Impulse Wallet on iPad" loading="lazy"/>
+            </figure>
+          </div>
+        </div>
 
         <div class="features-grid">
           <div class="feature">
-            <div class="feature-icon">$</div>
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="fi1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/>
+                  </linearGradient>
+                </defs>
+                <!-- Dollar sign -->
+                <text x="24" y="32" text-anchor="middle" font-size="26" font-weight="700" fill="url(#fi1)" font-family="Georgia, serif">$</text>
+                <!-- Up arrow (top-left) -->
+                <line x1="9" y1="20" x2="9" y2="8" stroke="url(#fi1)" stroke-width="2.5" stroke-linecap="round"/>
+                <polyline points="5,13 9,8 13,13" fill="none" stroke="url(#fi1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Down arrow (bottom-right) -->
+                <line x1="39" y1="28" x2="39" y2="40" stroke="url(#fi1)" stroke-width="2.5" stroke-linecap="round"/>
+                <polyline points="35,35 39,40 43,35" fill="none" stroke="url(#fi1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
             <h3>$1 Up / $1 Down</h3>
-            <p>Simple virtual wallet system. Good choices earn a dollar. Bad ones cost one. No complexity — just honest scorekeeping.</p>
+            <p>Simple virtual wallet system. Good choices earn a dollar. Bad ones cost one. No complexity, just honest scorekeeping.</p>
           </div>
           <div class="feature">
-            <div class="feature-icon">🕐</div>
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="fi2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/>
+                  </linearGradient>
+                </defs>
+                <!-- Clock face -->
+                <circle cx="24" cy="28" r="16" fill="none" stroke="url(#fi2)" stroke-width="2.5"/>
+                <!-- Hour hand (pointing up-left) -->
+                <line x1="24" y1="28" x2="18" y2="20" stroke="url(#fi2)" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Minute hand (pointing right) -->
+                <line x1="24" y1="28" x2="33" y2="28" stroke="url(#fi2)" stroke-width="2" stroke-linecap="round"/>
+                <!-- Undo arc at top -->
+                <path d="M16 11 Q24 4 32 11" fill="none" stroke="url(#fi2)" stroke-width="2.5" stroke-linecap="round"/>
+                <polyline points="13,14 16,11 20,14" fill="none" stroke="url(#fi2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
             <h3>15-Minute Undo</h3>
             <p>Made an entry in haste? You have a 15-minute grace period to undo it. No permanent punishment for accidental taps.</p>
           </div>
           <div class="feature">
-            <div class="feature-icon">🔄</div>
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="fi3" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/>
+                  </linearGradient>
+                </defs>
+                <!-- Calendar box -->
+                <rect x="6" y="13" width="28" height="26" rx="3" fill="none" stroke="url(#fi3)" stroke-width="2.5"/>
+                <!-- Header bar -->
+                <line x1="6" y1="21" x2="34" y2="21" stroke="url(#fi3)" stroke-width="2"/>
+                <!-- Binding pins -->
+                <line x1="14" y1="9" x2="14" y2="17" stroke="url(#fi3)" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="26" y1="9" x2="26" y2="17" stroke="url(#fi3)" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Refresh arc -->
+                <path d="M38 24 Q46 32 38 40" fill="none" stroke="url(#fi3)" stroke-width="2.5" stroke-linecap="round"/>
+                <polyline points="35,22 38,24 41,21" fill="none" stroke="url(#fi3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
             <h3>Weekly Resets</h3>
             <p>Every week is a fresh start. The slate clears so you can focus on this week's effort, not last week's failures.</p>
           </div>
           <div class="feature">
-            <div class="feature-icon">👤</div>
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="fi4" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/>
+                  </linearGradient>
+                </defs>
+                <!-- Person head -->
+                <circle cx="24" cy="14" r="8" fill="none" stroke="url(#fi4)" stroke-width="2.5"/>
+                <!-- Person shoulders/body -->
+                <path d="M8 44 Q8 30 24 30 Q40 30 40 44" fill="none" stroke="url(#fi4)" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Lock body -->
+                <rect x="18" y="27" width="12" height="9" rx="2" fill="url(#fi4)" opacity="0.85"/>
+                <!-- Lock shackle -->
+                <path d="M20 27 Q20 21 24 21 Q28 21 28 27" fill="none" stroke="url(#fi4)" stroke-width="2.5"/>
+              </svg>
+            </div>
             <h3>Anonymous Accounts</h3>
             <p>No email required. Your data stays private. Accountability without the vulnerability of sharing personal information.</p>
           </div>
           <div class="feature">
-            <div class="feature-icon">🤝</div>
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="fi5" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/>
+                  </linearGradient>
+                </defs>
+                <!-- Person 1 head -->
+                <circle cx="17" cy="13" r="7" fill="none" stroke="url(#fi5)" stroke-width="2.5"/>
+                <!-- Person 1 body -->
+                <path d="M4 44 Q4 31 17 31 Q26 31 28 37" fill="none" stroke="url(#fi5)" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Person 2 head (offset, behind) -->
+                <circle cx="31" cy="13" r="7" fill="none" stroke="url(#fi5)" stroke-width="2.5" opacity="0.6"/>
+                <!-- Person 2 body -->
+                <path d="M20 44 Q22 31 31 31 Q44 31 44 44" fill="none" stroke="url(#fi5)" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+              </svg>
+            </div>
             <h3>Accountability Rooms</h3>
-            <p>Compare weekly scores with friends, family, or a partner. Social accountability without judgment — just friendly competition.</p>
+            <p>Compare weekly scores with friends, family, or a partner. Social accountability without judgment, just friendly competition.</p>
           </div>
           <div class="feature">
-            <div class="feature-icon">🎯</div>
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="fi6" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/>
+                  </linearGradient>
+                </defs>
+                <!-- Axis lines -->
+                <line x1="7" y1="42" x2="7" y2="8" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+                <line x1="7" y1="42" x2="43" y2="42" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+                <!-- Trending up line (imperfect but heading up) -->
+                <polyline points="7,40 14,34 20,36 27,25 34,23 43,13" fill="none" stroke="url(#fi6)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Data points -->
+                <circle cx="14" cy="34" r="3" fill="url(#fi6)"/>
+                <circle cx="20" cy="36" r="3" fill="url(#fi6)"/>
+                <circle cx="27" cy="25" r="3" fill="url(#fi6)"/>
+                <circle cx="34" cy="23" r="3" fill="url(#fi6)"/>
+                <!-- Arrow tip -->
+                <polyline points="39,10 43,13 40,17" fill="none" stroke="url(#fi6)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
             <h3>Progress Over Perfection</h3>
             <p>The goal isn't a perfect score. It's intentional effort. Impulse Wallet rewards showing up, not being flawless.</p>
           </div>
@@ -83,7 +201,7 @@ import SEO from '../components/SEO.astro'
 
         <div class="who-its-for">
           <h3>Who It's For</h3>
-          <p>Impulse Wallet is built for people who want a judgment-free way to work on self-control. Whether you're trying to eat better, spend less, exercise more, or simply become more aware of your daily choices — this app gives your intentions a scoreboard.</p>
+          <p>Impulse Wallet is built for people who want a judgment-free way to work on self-control. Whether you're trying to eat better, spend less, exercise more, or simply become more aware of your daily choices, this app gives your intentions a scoreboard.</p>
           <p>If you've ever said "I want to be better about [thing]" but never had a way to measure it, this is your tool.</p>
         </div>
 
@@ -103,13 +221,13 @@ import SEO from '../components/SEO.astro'
     <!-- Coming Soon Apps -->
     <div class="coming-soon-section">
       <h2>Coming Soon</h2>
-      <p class="coming-soon-intro">More tools are in the works — each one rooted in the Modern Compass framework and designed to make personal growth more tangible.</p>
+      <p class="coming-soon-intro">More tools are in the works, each one rooted in the Modern Compass framework and designed to make personal growth more tangible.</p>
       <div class="coming-soon-grid">
         <div class="coming-soon-card">
           <div class="cs-badge">Coming Soon</div>
           <div class="cs-icon">🧭</div>
           <h3>Interactive Assessment</h3>
-          <p>An interactive self-assessment that guides you through the four directions of the Modern Compass — Self, Trust, Relationships, and Character. Find out where you're strong, where you're avoiding, and what deserves your focus next.</p>
+          <p>An interactive self-assessment that guides you through the four directions of the Modern Compass: Self, Trust, Relationships, and Character. Find out where you're strong, where you're avoiding, and what deserves your focus next.</p>
         </div>
         <div class="coming-soon-card">
           <div class="cs-badge">Coming Soon</div>
@@ -206,6 +324,51 @@ import SEO from '../components/SEO.astro'
     margin: 0;
   }
 
+  /* App Gallery */
+  .app-gallery {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .gallery-track {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.75rem;
+  }
+
+  .gallery-track::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .gallery-track::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 3px;
+  }
+
+  .gallery-track::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #b324a7, #0087c9);
+    border-radius: 3px;
+  }
+
+  .gallery-slide {
+    flex-shrink: 0;
+    width: 300px;
+    margin: 0;
+    scroll-snap-align: start;
+  }
+
+  .gallery-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    border: 1px solid #e5e7eb;
+    object-fit: cover;
+  }
+
   /* Features Grid */
   .features-grid {
     display: grid;
@@ -222,10 +385,9 @@ import SEO from '../components/SEO.astro'
   }
 
   .feature-icon {
-    font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    font-weight: 700;
-    color: var(--color-purple, #b324a7);
+    display: block;
+    line-height: 0;
   }
 
   .feature h3 {
@@ -430,6 +592,10 @@ import SEO from '../components/SEO.astro'
 
     .button {
       text-align: center;
+    }
+
+    .gallery-slide {
+      width: 240px;
     }
   }
 </style>
