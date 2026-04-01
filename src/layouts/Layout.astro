@@ -3,7 +3,7 @@
 // This component defines the common page structure, including the
 // header with navigation, a main slot for page content, and a footer.
 
-const year = 2025;
+const year = 2026;
 // Define the navigation links for the site.  The events link has been
 // intentionally removed per the latest design guidance to reduce
 // clutter and focus on core offerings.  You can reintroduce it by
@@ -63,6 +63,20 @@ const year = 2025;
           }
         }
       ]
+    }
+    </script>
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Modern Compass",
+      "url": "https://themoderncompass.io",
+      "author": {
+        "@type": "Person",
+        "name": "Josh Imholte"
+      }
     }
     </script>
 

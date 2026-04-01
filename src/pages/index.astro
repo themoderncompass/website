@@ -6,11 +6,24 @@ import SEO from '../components/SEO.astro';
 <Layout>
   <SEO
     slot="head"
-    title="Modern Compass - Find Direction in Life's Key Moments | Personal Growth Framework"
-    description="A framework for accelerating personal growth in Self, Trust, Character, and Relationships. Helping you navigate life with clarity, confidence, and intention. Free tools & monthly newsletter."
+    title="Modern Compass: Map who you are before deciding who you become | Josh Imholte"
+    description="Modern Compass is a self-assessment framework built around four directions: Self, Trust, Character, and Relationships. Map who you are before deciding who you become."
     canonical="https://themoderncompass.io"
     keywords="personal development, personal growth framework, life direction, self improvement, modern compass, character development, self awareness, trust building, relationship growth"
   />
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Modern Compass",
+    "author": {
+      "@type": "Person",
+      "name": "Josh Imholte"
+    },
+    "description": "Map who you are before deciding who you become.",
+    "url": "https://themoderncompass.io/book"
+  }
+  </script>
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">

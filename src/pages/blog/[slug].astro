@@ -31,9 +31,9 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
 <Layout>
   <SEO
     slot="head"
-    title={`${title} | Modern Compass Blog`}
+    title={`${title} | Modern Compass`}
     description={description}
-    canonical={`https://themoderncompass.io/blog/${post.slug}/`}
+    canonical={`https://themoderncompass.io/blog/${post.slug}`}
     type="article"
     author={author}
     publishedTime={publishedDate.toISOString()}
@@ -69,6 +69,8 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
         <p>Join 100+ subscribers getting monthly personal growth insights, tools, and frameworks delivered to their inbox.</p>
         <a href="/newsletter" class="cta-button">Subscribe to the newsletter</a>
       </div>
+
+      <p class="author-attribution">Josh Imholte is the author of <a href="https://themoderncompass.io">Modern Compass</a>: Map who you are before deciding who you become.</p>
 
       <div class="back-to-blog">
         <a href="/blog" class="back-link">← Back to all posts</a>
@@ -284,6 +286,23 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
   .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .author-attribution {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+  }
+
+  .author-attribution a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .author-attribution a:hover {
+    text-decoration: underline;
   }
 
   .back-to-blog {
