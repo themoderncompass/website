@@ -94,6 +94,10 @@ const categoryColors: Record<string, string> = {
       <p class="intro">Map who you are, before deciding who you become.</p>
     </div>
 
+    <div class="blog-intro">
+      <!-- Paste your intro paragraphs here as <p> tags -->
+    </div>
+
     {posts.length === 0 ? (
       <div class="no-posts">
         <p>No blog posts yet. Check back soon for insights on personal growth and finding direction.</p>
@@ -259,6 +263,22 @@ const categoryColors: Record<string, string> = {
     color: #4a5568;
     max-width: 700px;
     margin: 0 auto;
+  }
+
+  .blog-intro {
+    max-width: 760px;
+    margin: 0 auto 3rem auto;
+  }
+
+  .blog-intro p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+  }
+
+  .blog-intro p:last-child {
+    margin-bottom: 0;
   }
 
   .no-posts {
