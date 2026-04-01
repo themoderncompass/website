@@ -14,6 +14,19 @@ const newsletterUrl = 'https://newsletter.themoderncompass.io';
     canonical="https://themoderncompass.io/book"
     keywords="modern compass book, personal growth book, life direction framework, practical self improvement, character development, relationship building, Josh Imholte"
   />
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Modern Compass",
+    "author": {
+      "@type": "Person",
+      "name": "Josh Imholte"
+    },
+    "description": "Map who you are before deciding who you become.",
+    "url": "https://themoderncompass.io/book"
+  }
+  </script>
   <section class="book">
     <h1>{bookTitle}</h1>
     <p class="subtitle">Practical frameworks to help you navigate life with clarity and conviction.</p>

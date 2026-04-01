@@ -11,6 +11,19 @@ import SEO from '../components/SEO.astro';
     canonical="https://themoderncompass.io"
     keywords="personal development, personal growth framework, life direction, self improvement, modern compass, character development, self awareness, trust building, relationship growth"
   />
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Modern Compass",
+    "author": {
+      "@type": "Person",
+      "name": "Josh Imholte"
+    },
+    "description": "Map who you are before deciding who you become.",
+    "url": "https://themoderncompass.io/book"
+  }
+  </script>
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
