@@ -38,9 +38,13 @@ const {
 } = Astro.props;
 
 // Build full URLs for canonical and images
-const canonicalURL = canonical
+const rawCanonical = canonical
   ? new URL(canonical, Astro.site).href
   : new URL(Astro.url.pathname, Astro.site).href;
+// Strip trailing slash (except for the root URL)
+const canonicalURL = rawCanonical.endsWith('/') && rawCanonical !== Astro.site?.toString()
+  ? rawCanonical.slice(0, -1)
+  : rawCanonical;
 
 const socialImage = new URL(image, Astro.site).href;
 
