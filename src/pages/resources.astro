@@ -112,13 +112,14 @@ const bookshelf = [
   { title: 'Atomic Habits', author: 'James Clear', href: 'https://jamesclear.com/atomic-habits', note: '' },
   { title: '7 Habits of Highly Effective People', author: 'Stephen Covey', href: 'https://www.franklincovey.com/courses/the-7-habits/', note: '' },
   { title: 'The Defining Decade', author: 'Meg Jay', href: 'https://www.megjay.com/the-defining-decade', note: '' },
+  { title: 'Unhinged Habits', author: 'Jonathan Goodman', href: 'https://www.amazon.com/s?k=Unhinged+Habits+Jonathan+Goodman', note: '' },
 ]
 
 const apps = [
   {
-    name: 'ChatGPT Plus',
-    href: 'https://chat.openai.com/',
-    note: 'My everyday copilot for brainstorming, research, formatting, and scaffolding code.',
+    name: 'Claude Pro',
+    href: 'https://claude.ai/',
+    note: 'The best LLM available. Superior memory across conversations and built to challenge your thinking rather than just tell you what you want to hear.',
   },
   {
     name: 'Atoms by James Clear',
@@ -126,21 +127,17 @@ const apps = [
     note: 'A habit tracker that builds on the Atomic Habits framework to make small actions stick.',
   },
   {
-    name: 'Impulse Wallet (Coming)',
-    href: '/tools/impulse-wallet',
-    note: 'A Modern Compass web app to track your impulses and compare weekly scores with friends or family.',
+    name: 'Impulse Wallet',
+    href: '/apps',
+    note: 'A Modern Compass app to track your impulses and compare weekly scores with friends or family. Free for newsletter subscribers.',
   },
 ]
 
 const newsletters = [
   { name: 'James Clear 3-2-1', href: 'https://jamesclear.com/3-2-1', note: 'Short weekly prompts that pair well with micro actions.' },
   { name: 'Deep Culture', href: 'https://deepculture.substack.com', note: 'Interesting finds across the internet.' },
+  { name: 'The One Thing Better', href: 'https://www.jasonfeifer.com/newsletter/', note: 'Jason Feifer on making one thing better every week.' },
 ]
-
-const tiktok = {
-  href: 'https://www.tiktok.com/@themoderncompass',
-  blurb: 'Follow for videos on confidence, trust, practical relationship skills, and more that bring the book to life.',
-}
 
 const newsletterCTA = {
 heading: 'Clearer direction in your inbox',
@@ -238,14 +235,6 @@ body: 'One practical insight and hand-picked tools to help you take the next ste
           </li>
         ))}
       </ul>
-    </div>
-
-    <div class="promo">
-      <div class="promo-copy">
-        <h3>TikTok</h3>
-        <p>{tiktok.blurb}</p>
-      </div>
-      <a href={tiktok.href} class="button ghost" rel="nofollow noopener" target="_blank">Visit @themoderncompass</a>
     </div>
 
     <div class="cta">
