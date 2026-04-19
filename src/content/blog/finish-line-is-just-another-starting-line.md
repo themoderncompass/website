@@ -1,6 +1,6 @@
 ---
 title: "The Finish Line Is Just Another Starting Line"
-description: "Every finish line you cross reveals a new starting line. Here's why that's not exhausting—it's how momentum actually works, through all four compass directions."
+description: "Every finish line you cross reveals a new starting line. Here's why that's not exhausting. It's how momentum actually works, through all four compass directions."
 publishedDate: 2026-03-20
 author: "Josh Imholte"
 keywords: ["finish line", "starting line", "personal growth", "momentum", "Modern Compass", "character development", "persistence"]
@@ -11,13 +11,13 @@ categories: ["Growth"]
 
 It's funny how we can start something that feels herculean, and as we get closer to achieving it, we realize it wasn't as impossible as we thought. You just needed conviction and a willingness to put in the work.
 
-I'll be honest — up until the end of 2024, I wasn't ready for the task of writing Modern Compass. The story of what changed is embedded in one of my chapters. But this post isn't about that. It's about the realization that **the finish line is generally never a finish. It's almost always a starting line to something else.**
+I'll be honest: up until the end of 2024, I wasn't ready for the task of writing Modern Compass. The story of what changed is embedded in one of my chapters. But this post isn't about that. It's about the realization that **the finish line is generally never a finish. It's almost always a starting line to something else.**
 
-I think we know this going in. We just let ourselves believe in the finish so we can focus on the one hard thing in front of us — not the subsequent series of events that would only cause doubt or anxiety if we let ourselves see them too early.
+I think we know this going in. We just let ourselves believe in the finish so we can focus on the one hard thing in front of us, not the subsequent series of events that would only cause doubt or anxiety if we let ourselves see them too early.
 
 ## Finishing Doesn't Downplay the Accomplishment
 
-The fact that finishing something starts something else doesn't make the accomplishment smaller. If anything, **the more finish lines you cross that you didn't think were possible, the less effort those hard things seem to take over time** — and the more confidence you build to take on the next one.
+The fact that finishing something starts something else doesn't make the accomplishment smaller. If anything, **the more finish lines you cross that you didn't think were possible, the less effort those hard things seem to take over time**, and the more confidence you build to take on the next one.
 
 That's the compounding nature of momentum.
 
@@ -39,7 +39,7 @@ The moment you feel like you've earned someone's complete trust is usually the m
 
 ### Relationships
 
-No relationship reaches a point where the work is done. The couples, friendships, and partnerships that last aren't the ones that "made it" and coasted — they're the ones that kept showing up after every finish line.
+No relationship reaches a point where the work is done. The couples, friendships, and partnerships that last aren't the ones that "made it" and coasted. They're the ones that kept showing up after every finish line.
 
 ### Character
 
@@ -53,7 +53,7 @@ Maybe you got in shape for a vacation and then let it go. Maybe you repaired a f
 
 For each one, ask yourself: **was stopping the right call, or did you just lose momentum?**
 
-Some things deserve to end, and not every starting line needs to be crossed. The goal isn't to guilt yourself into perpetual motion — it's to get honest about which finish lines were intentional decisions to stop and which ones you just quietly drifted away from.
+Some things deserve to end, and not every starting line needs to be crossed. The goal isn't to guilt yourself into perpetual motion. It's to get honest about which finish lines were intentional decisions to stop and which ones you just quietly drifted away from.
 
 If one of them stings a little when you think about it, that's probably the one worth revisiting.
 
@@ -61,7 +61,7 @@ If one of them stings a little when you think about it, that's probably the one 
 
 The idea that every finish line is just another starting line can sound exhausting. It's not meant to.
 
-When the next starting line is something you care about — something that aligns with who you're becoming — starting again doesn't feel like a burden. It feels like momentum.
+When the next starting line is something you care about — something that aligns with who you're becoming. Starting again doesn't feel like a burden. It feels like momentum.
 
 **The finish lines that lead to dread, and the ones that lead to excitement, are both telling you something.**
 
