@@ -1,0 +1,54 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Background -->
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+
+  <defs>
+    <linearGradient id="grad-book" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#b324a7"/>
+      <stop offset="100%" style="stop-color:#0087c9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Open Book centered -->
+  <g transform="translate(600, 315)">
+    <!-- Left page -->
+    <path d="M-220,-160 Q-110,-170 0,-140 L0,160 Q-110,140 -220,150 Z"
+          fill="none" stroke="url(#grad-book)" stroke-width="5" stroke-linejoin="round"/>
+    <!-- Left page lines (text) -->
+    <line x1="-190" y1="-80" x2="-30" y2="-90" stroke="url(#grad-book)" stroke-width="2.5" opacity="0.35"/>
+    <line x1="-190" y1="-50" x2="-30" y2="-58" stroke="url(#grad-book)" stroke-width="2.5" opacity="0.35"/>
+    <line x1="-190" y1="-20" x2="-30" y2="-26" stroke="url(#grad-book)" stroke-width="2.5" opacity="0.35"/>
+    <line x1="-190" y1="10"  x2="-30" y2="6"   stroke="url(#grad-book)" stroke-width="2.5" opacity="0.35"/>
+    <line x1="-190" y1="40"  x2="-90" y2="38"  stroke="url(#grad-book)" stroke-width="2.5" opacity="0.35"/>
+
+    <!-- Right page -->
+    <path d="M220,-160 Q110,-170 0,-140 L0,160 Q110,140 220,150 Z"
+          fill="none" stroke="url(#grad-book)" stroke-width="5" stroke-linejoin="round"/>
+    <!-- Right page lines -->
+    <line x1="30" y1="-90" x2="190" y2="-80" stroke="url(#grad-book)" stroke-width="2.5" opacity="0.35"/>
+    <line x1="30" y1="-58" x2="190" y2="-50" stroke="url(#grad-book)" stroke-width="2.5" opacity="0.35"/>
+    <line x1="30" y1="-26" x2="190" y2="-20" stroke="url(#grad-book)" stroke-width="2.5" opacity="0.35"/>
+    <line x1="30" y1="6"   x2="190" y2="10"  stroke="url(#grad-book)" stroke-width="2.5" opacity="0.35"/>
+    <line x1="30" y1="38"  x2="130" y2="40"  stroke="url(#grad-book)" stroke-width="2.5" opacity="0.35"/>
+
+    <!-- Spine (center crease) -->
+    <line x1="0" y1="-145" x2="0" y2="162" stroke="url(#grad-book)" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Compass rose emerging from center-top of book -->
+    <!-- Compass ring -->
+    <circle cx="0" cy="-220" r="62" fill="none" stroke="url(#grad-book)" stroke-width="4"/>
+    <!-- N needle -->
+    <polygon points="0,-280 7,-238 0,-252 -7,-238" fill="url(#grad-book)"/>
+    <!-- S needle -->
+    <polygon points="0,-160 7,-202 0,-188 -7,-202" fill="#d1d5db"/>
+    <!-- E tick -->
+    <line x1="62" y1="-220" x2="50" y2="-220" stroke="url(#grad-book)" stroke-width="3" stroke-linecap="round"/>
+    <!-- W tick -->
+    <line x1="-62" y1="-220" x2="-50" y2="-220" stroke="url(#grad-book)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Center dot -->
+    <circle cx="0" cy="-220" r="5" fill="url(#grad-book)"/>
+
+    <!-- Connecting line from compass to book -->
+    <line x1="0" y1="-158" x2="0" y2="-145" stroke="url(#grad-book)" stroke-width="3" stroke-dasharray="6,4" opacity="0.6"/>
+  </g>
+</svg>
