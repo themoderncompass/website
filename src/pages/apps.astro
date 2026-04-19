@@ -18,6 +18,127 @@ import SEO from '../components/SEO.astro'
       <p class="intro">Tools built from the Modern Compass framework to help you take action, build accountability, and grow. One small choice at a time.</p>
     </div>
 
+    <!-- Map Where You Are Assessment -->
+    <div class="featured-app assessment-card">
+      <div class="featured-badge new-badge">New</div>
+      <div class="featured-content">
+        <div class="app-info">
+          <div class="app-icon assessment-icon">
+            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="ai-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/>
+                </linearGradient>
+              </defs>
+              <circle cx="32" cy="32" r="28" fill="none" stroke="url(#ai-grad)" stroke-width="3"/>
+              <line x1="32" y1="4" x2="32" y2="60" stroke="url(#ai-grad)" stroke-width="2" opacity="0.3"/>
+              <line x1="4" y1="32" x2="60" y2="32" stroke="url(#ai-grad)" stroke-width="2" opacity="0.3"/>
+              <polygon points="32,14 36,29 32,26 28,29" fill="url(#ai-grad)"/>
+              <polygon points="32,50 36,35 32,38 28,35" fill="#d1d5db"/>
+              <circle cx="32" cy="32" r="4" fill="url(#ai-grad)"/>
+            </svg>
+          </div>
+          <div class="app-meta">
+            <h2>Map Where You Are</h2>
+            <p class="app-tagline">A 10-minute digital self-assessment across the four Modern Compass directions</p>
+          </div>
+        </div>
+
+        <p class="app-description">
+          Before you can decide who you want to become, you need an honest read on where you actually are. <strong>Map Where You Are</strong> guides you through 27 questions across Self, Trust, Character, and Relationships — the four directions of the Modern Compass — and returns an AI-personalized report that reflects where you stand right now.
+        </p>
+        <p class="app-description">
+          The more honest you are answering the questions, the more valuable the report. Most people walk away with at least one insight they'd been feeling but hadn't connected the dots on yet.
+        </p>
+
+        <!-- Assessment Screenshot -->
+        <div class="app-screenshot-wrap">
+          <button class="screenshot-btn" id="assessment-screenshot-btn" aria-label="View assessment result example">
+            <img src="/assessment-result.png" alt="Map Where You Are assessment result showing radar chart across four compass directions" loading="lazy" class="screenshot-thumb assessment-thumb"/>
+            <span class="expand-hint">Tap to expand</span>
+          </button>
+        </div>
+
+        <!-- Assessment Lightbox -->
+        <div class="lightbox" id="assessment-lightbox" role="dialog" aria-modal="true" aria-label="Assessment result fullscreen view" aria-hidden="true">
+          <button class="lightbox-close" id="assessment-lightbox-close" aria-label="Close fullscreen">✕</button>
+          <img src="/assessment-result.png" alt="Map Where You Are assessment result" class="lightbox-img"/>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="af1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/></linearGradient></defs>
+                <circle cx="24" cy="24" r="18" fill="none" stroke="url(#af1)" stroke-width="2.5"/>
+                <line x1="24" y1="6" x2="24" y2="42" stroke="url(#af1)" stroke-width="1.5" opacity="0.3"/>
+                <line x1="6" y1="24" x2="42" y2="24" stroke="url(#af1)" stroke-width="1.5" opacity="0.3"/>
+                <polygon points="24,10 27,21 24,19 21,21" fill="url(#af1)"/>
+                <circle cx="24" cy="24" r="3" fill="url(#af1)"/>
+              </svg>
+            </div>
+            <h3>Four-Direction Mapping</h3>
+            <p>See exactly where you stand across Self, Trust, Character, and Relationships — visualized as a radar chart unique to your answers.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="af2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/></linearGradient></defs>
+                <rect x="8" y="10" width="32" height="28" rx="4" fill="none" stroke="url(#af2)" stroke-width="2.5"/>
+                <line x1="14" y1="19" x2="34" y2="19" stroke="url(#af2)" stroke-width="2" stroke-linecap="round"/>
+                <line x1="14" y1="25" x2="30" y2="25" stroke="url(#af2)" stroke-width="2" stroke-linecap="round"/>
+                <line x1="14" y1="31" x2="26" y2="31" stroke="url(#af2)" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="38" cy="12" r="7" fill="url(#af2)"/>
+                <text x="38" y="16" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">AI</text>
+              </svg>
+            </div>
+            <h3>AI-Personalized Report</h3>
+            <p>Your results generate a personalized written report — not a generic score. It reads your specific pattern and calls out what deserves your attention.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="af3" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/></linearGradient></defs>
+                <circle cx="24" cy="17" r="9" fill="none" stroke="url(#af3)" stroke-width="2.5"/>
+                <path d="M8 42 Q8 30 24 30 Q40 30 40 42" fill="none" stroke="url(#af3)" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="30" y1="13" x2="38" y2="8" stroke="url(#af3)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+                <circle cx="40" cy="7" r="4" fill="url(#af3)" opacity="0.4"/>
+              </svg>
+            </div>
+            <h3>Email Only, No Name</h3>
+            <p>Only your email is required. No name, no profile. Your data is secure and the answers stay private — honesty without exposure.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="af4" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/></linearGradient></defs>
+                <circle cx="24" cy="24" r="18" fill="none" stroke="url(#af4)" stroke-width="2.5"/>
+                <line x1="24" y1="24" x2="24" y2="11" stroke="url(#af4)" stroke-width="3" stroke-linecap="round"/>
+                <line x1="24" y1="24" x2="33" y2="29" stroke="url(#af4)" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="2.5" fill="url(#af4)"/>
+              </svg>
+            </div>
+            <h3>About 10 Minutes</h3>
+            <p>27 questions and a short open-text section. Long enough to get something real. Short enough to do it today.</p>
+          </div>
+        </div>
+
+        <div class="access-note assessment-access">
+          <span class="access-icon">⭐</span>
+          <p><strong>Newsletter subscribers get access to the premium AI-enabled version at a heavily discounted rate.</strong> <a href="/newsletter/">Subscribe here →</a></p>
+        </div>
+
+        <div class="cta-group">
+          <a href="https://map.themoderncompass.io" class="button primary" target="_blank" rel="noopener">
+            Take the Assessment →
+          </a>
+          <a href="/newsletter/" class="button ghost">
+            Subscribe for Discount
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- Featured App: Impulse Wallet -->
     <div class="featured-app">
       <div class="featured-badge">Featured App</div>
@@ -218,33 +339,6 @@ import SEO from '../components/SEO.astro'
           <div class="cs-icon">
             <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <defs>
-                <linearGradient id="cs1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/>
-                </linearGradient>
-              </defs>
-              <!-- Compass ring -->
-              <circle cx="24" cy="24" r="18" fill="none" stroke="url(#cs1)" stroke-width="2.5"/>
-              <!-- Cardinal tick marks -->
-              <line x1="24" y1="6" x2="24" y2="11" stroke="url(#cs1)" stroke-width="2" stroke-linecap="round"/>
-              <line x1="24" y1="37" x2="24" y2="42" stroke="url(#cs1)" stroke-width="2" stroke-linecap="round"/>
-              <line x1="6" y1="24" x2="11" y2="24" stroke="url(#cs1)" stroke-width="2" stroke-linecap="round"/>
-              <line x1="37" y1="24" x2="42" y2="24" stroke="url(#cs1)" stroke-width="2" stroke-linecap="round"/>
-              <!-- North needle (gradient) -->
-              <polygon points="24,11 27,25 24,22 21,25" fill="url(#cs1)"/>
-              <!-- South needle (muted) -->
-              <polygon points="24,37 27,23 24,26 21,23" fill="#d1d5db"/>
-              <!-- Center dot -->
-              <circle cx="24" cy="24" r="2.5" fill="url(#cs1)"/>
-            </svg>
-          </div>
-          <h3>Interactive Assessment</h3>
-          <p>An interactive self-assessment that guides you through the four directions of the Modern Compass: Self, Trust, Relationships, and Character. Find out where you're strong, where you're avoiding, and what deserves your focus next.</p>
-        </div>
-        <div class="coming-soon-card">
-          <div class="cs-badge">Coming Soon</div>
-          <div class="cs-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <defs>
                 <linearGradient id="cs2" x1="0" y1="0" x2="0" y2="48" gradientUnits="userSpaceOnUse">
                   <stop stop-color="#b324a7"/><stop offset="1" stop-color="#0087c9"/>
                 </linearGradient>
@@ -313,6 +407,33 @@ import SEO from '../components/SEO.astro'
     padding: 0.3rem 0.75rem;
     border-radius: 20px;
     margin-bottom: 1.5rem;
+  }
+
+  .new-badge {
+    background: linear-gradient(135deg, #0087c9, #b324a7);
+  }
+
+  .assessment-card {
+    border-color: rgba(179, 36, 167, 0.2);
+    background: linear-gradient(180deg, rgba(179, 36, 167, 0.02) 0%, #fff 60%);
+  }
+
+  .assessment-thumb {
+    width: 320px !important;
+    border-radius: 12px !important;
+  }
+
+  .assessment-access {
+    background: linear-gradient(135deg, rgba(179, 36, 167, 0.06), rgba(0, 135, 201, 0.06));
+    border-color: rgba(179, 36, 167, 0.2);
+  }
+
+  .assessment-access p {
+    color: #374151;
+  }
+
+  .assessment-access a {
+    color: #b324a7;
   }
 
   .featured-content {
@@ -685,6 +806,27 @@ import SEO from '../components/SEO.astro'
 </style>
 
 <script>
+  const assessmentBtn = document.getElementById('assessment-screenshot-btn');
+  const assessmentLightbox = document.getElementById('assessment-lightbox');
+  const assessmentClose = document.getElementById('assessment-lightbox-close');
+
+  assessmentBtn?.addEventListener('click', () => {
+    assessmentLightbox?.classList.add('open');
+    assessmentLightbox?.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  });
+
+  const closeAssessmentLightbox = () => {
+    assessmentLightbox?.classList.remove('open');
+    assessmentLightbox?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  assessmentClose?.addEventListener('click', closeAssessmentLightbox);
+  assessmentLightbox?.addEventListener('click', (e) => {
+    if (e.target === assessmentLightbox) closeAssessmentLightbox();
+  });
+
   const btn = document.getElementById('screenshot-btn');
   const lightbox = document.getElementById('lightbox');
   const closeBtn = document.getElementById('lightbox-close');
@@ -706,6 +848,9 @@ import SEO from '../components/SEO.astro'
     if (e.target === lightbox) closeLightbox();
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'Escape') {
+      closeLightbox();
+      closeAssessmentLightbox();
+    }
   });
 </script>
