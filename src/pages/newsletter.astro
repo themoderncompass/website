@@ -6,150 +6,207 @@ import SEO from '../components/SEO.astro';
 <Layout>
   <SEO
     slot="head"
-    title="Free Personal Development Newsletter - TimeOS System Included | Modern Compass"
-    description="Get monthly insights for personal growth, free TimeOS time management system, and access to Impulse Wallet accountability app. Join 100+ subscribers finding direction in life. No spam, unsubscribe anytime."
+    title="Modern Compass Newsletter — One Topic. Four Directions."
+    description="Every issue explores one idea across Self, Trust, Character, and Relationships. Once a month. Free access to the Map Where You Are assessment for subscribers."
     canonical="https://themoderncompass.io/newsletter"
-    keywords="personal development newsletter, monthly self improvement newsletter, free time management system, life direction coaching, accountability app, personal growth email"
+    keywords="personal development newsletter, modern compass newsletter, self improvement, character development, relationships growth, monthly newsletter"
   />
-  <!-- Hero Section with Purple Gradient Box -->
-  <section class="newsletter-hero-new">
-    <div class="hero-container-new">
-      <div class="hero-box">
-        <div class="brand-title">Modern Compass Newsletter</div>
 
-        <h1 class="main-headline">Map who you are, before deciding who you become.</h1>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="wrap narrow">
+      <h1 class="headline">One topic. Four directions.<br>A new way to see yourself.</h1>
+      <p class="subline">Every issue explores one idea across Self, Trust, Character, and Relationships.</p>
 
-        <p class="main-description">
-          You thought you'd be further along by now. Modern Compass reveals exactly where you stand across Self, Trust, Character, and Relationships so you can stop drifting and start building the life you want.
-        </p>
+      <div class="built-for">
+        <span class="built-for-label">Built for</span>
+        <span class="arrow">→</span>
+        <span class="cycling-text" id="cyclingText"></span><span class="cursor">|</span>
+      </div>
 
-        <div class="built-for">
-          <span class="built-for-label">Built for</span>
-          <span class="arrow">→</span>
-          <span class="cycling-text" id="cyclingText"></span>
-          <span class="cursor">|</span>
-        </div>
+      <!-- Subscribe Form -->
+      <div class="embed-wrap">
+        <iframe
+          id="beehiiv-subscribe-form"
+          src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
+          frameborder="0"
+          scrolling="yes"
+          style="width: 100%; max-width: 480px; height: 180px; border: none; border-radius: 8px; background-color: transparent; display: block; margin: 0 auto;"
+          title="Subscribe to Modern Compass on Beehiiv"
+        ></iframe>
+        <p class="frequency">Once a month.</p>
+      </div>
 
-        <div class="bonus-with-image">
-          <div class="bonus-image desktop-only">
-            <a href="#" class="preview-trigger" title="Click to view full Break the Loop PDF preview">
-              <img src="/break-the-loop.png" alt="Break the Loop PDF guide preview" />
-            </a>
-          </div>
-          <div class="bonus-content">
-            <div class="signup-bonuses">
-              <p><strong>Subscribe and get "Break the Loop"</strong></p>
-              <p class="bonus-description">A PDF to identify where you're stuck and take your first visible move in under 10 minutes.</p>
-              <a href="#" class="mobile-preview-link preview-trigger">Preview the guide →</a>
-            </div>
-
-            <!-- Subscribe Form -->
-            <div class="newsletter-embed-new" style="text-align: center;">
-              <iframe
-                id="beehiiv-subscribe-form"
-                src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
-                frameborder="0"
-                scrolling="yes"
-                style="width: 100%; max-width: 500px; height: 180px; border: none; border-radius: 8px; background-color: transparent; margin: 0 auto; display: inline-block;"
-                title="Subscribe to Modern Compass on Beehiiv"
-              ></iframe>
-            </div>
-          </div>
-        </div>
+      <!-- Sample Issue Preview -->
+      <div class="sample-issue">
+        <button class="sample-btn" id="sampleIssueBtn">See a recent issue →</button>
       </div>
     </div>
   </section>
 
-  <!-- Image Modal -->
-  <div id="imageModal" class="modal">
-    <span class="modal-close">&times;</span>
-    <img class="modal-content" src="/break-the-loop.png" alt="Break the Loop PDF guide full preview">
+  <!-- Sample Issue Modal -->
+  <div id="sampleModal" class="modal" role="dialog" aria-modal="true" aria-label="Recent issue preview">
+    <div class="modal-inner">
+      <button class="modal-close" id="modalClose" aria-label="Close preview">&times;</button>
+      <iframe
+        src="https://themoderncompass.io/blog/character-is-product-you-display"
+        title="Recent Modern Compass issue: Character Is the Product You Display"
+        class="modal-frame"
+        loading="lazy"
+      ></iframe>
+      <div class="modal-fallback">
+        <p>Can't load preview inline?</p>
+        <a href="https://themoderncompass.io/blog/character-is-product-you-display" target="_blank" rel="noopener">Open in new tab →</a>
+      </div>
+    </div>
   </div>
 
+  <!-- Benefit Blocks -->
+  <section class="benefits">
+    <div class="wrap">
+      <div class="benefits-grid">
 
-  <!-- FAQ Section for SEO and Conversion -->
-  <section class="newsletter-faq">
-    <h2>Frequently Asked Questions</h2>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="48" x2="48" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#F97316"/>
+                  <stop offset="50%" stop-color="#A855F7"/>
+                  <stop offset="100%" stop-color="#06B6D4"/>
+                </linearGradient>
+              </defs>
+              <!-- Compass rose: four arms -->
+              <line x1="24" y1="6" x2="24" y2="42" stroke="url(#g1)" stroke-width="3" stroke-linecap="round"/>
+              <line x1="6" y1="24" x2="42" y2="24" stroke="url(#g1)" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="5" fill="url(#g1)"/>
+              <polygon points="24,8 27,20 24,17 21,20" fill="url(#g1)"/>
+            </svg>
+          </div>
+          <h3>See your life from four angles at once.</h3>
+          <p>Every issue takes one topic and shows you how it plays out across Self, Trust, Character, and Relationships.</p>
+        </div>
 
-    <div class="faq-grid">
-      <div class="faq-item">
-        <h3>What is the Modern Compass newsletter?</h3>
-        <p>The Modern Compass newsletter is personal growth that simplifies the complex and moves you forward. Every 3rd Friday, you get one insight I'm working through, one tool that helps, and one action you can take in Self, Trust, Character, or Relationships. Each issue cuts through the noise to help you take meaningful steps forward.</p>
-      </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g2" x1="0" y1="48" x2="48" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#F97316"/>
+                  <stop offset="50%" stop-color="#EC4899"/>
+                  <stop offset="100%" stop-color="#A855F7"/>
+                </linearGradient>
+              </defs>
+              <!-- Hourglass / timer -->
+              <path d="M14 6h20M14 42h20M16 6l8 14 8-14M16 42l8-14 8 14" stroke="url(#g2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Short enough to read, specific enough to stick.</h3>
+          <p>One topic, four brief perspectives. No filler. Read it in 3 minutes and think about it the rest of the day.</p>
+        </div>
 
-      <div class="faq-item">
-        <h3>How often will I receive emails?</h3>
-        <p>Once a month, every 3rd Friday. No daily spam, no inbox overwhelm—just one purpose-filled email with depth and room to take action.</p>
-      </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g3" x1="0" y1="48" x2="48" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#10B981"/>
+                  <stop offset="100%" stop-color="#06B6D4"/>
+                </linearGradient>
+              </defs>
+              <!-- Map / assessment pin -->
+              <rect x="8" y="10" width="32" height="26" rx="3" stroke="url(#g3)" stroke-width="3"/>
+              <line x1="8" y1="18" x2="40" y2="18" stroke="url(#g3)" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="20" y1="10" x2="20" y2="36" stroke="url(#g3)" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="30" cy="28" r="4" fill="url(#g3)"/>
+            </svg>
+          </div>
+          <h3>Free access to the Map Where You Are assessment.</h3>
+          <p>Subscribers get access to the self-assessment tool that shows you which direction needs your attention first. Other Modern Compass tools will be at your disposal in the welcome email and as new apps or tools are released.</p>
+        </div>
 
-      <div class="faq-item">
-        <h3>What is "Break the Loop"?</h3>
-        <p>Break the Loop is a PDF guide you receive immediately after subscribing. It helps you identify where you're stuck, what's dragging you in, determine micro actions you can take, and make your first visible move public in under 10 minutes. It's designed to get you unstuck and moving forward quickly.</p>
-      </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g4" x1="0" y1="48" x2="48" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#8B5CF6"/>
+                  <stop offset="100%" stop-color="#3B82F6"/>
+                </linearGradient>
+              </defs>
+              <!-- Book with bookmark -->
+              <path d="M12 8h20a2 2 0 012 2v28a2 2 0 01-2 2H12a2 2 0 01-2-2V10a2 2 0 012-2z" stroke="url(#g4)" stroke-width="3"/>
+              <line x1="10" y1="16" x2="34" y2="16" stroke="url(#g4)" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="10" y1="23" x2="26" y2="23" stroke="url(#g4)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M30 8v14l-4-3-4 3V8" stroke="url(#g4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>First to know when the book launches.</h3>
+          <p>The Modern Compass book arrives in 2027. Subscribers get early access, pre-order details, and behind-the-scenes updates.</p>
+        </div>
 
-      <div class="faq-item">
-        <h3>What is the TimeOS digital asset?</h3>
-        <p>TimeOS is a 5-step time audit system that helps you identify where your hours are going and redirect them toward what matters most. It's a simple, actionable framework to reclaim wasted time. Available as a bonus Modern Tool for subscribers.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>What is Impulse Wallet?</h3>
-        <p>Impulse Wallet is a gamified accountability app that uses a simple "$1 up/down" virtual wallet system to track positive and negative choices. It features anonymous accounts, accountability rooms, weekly resets, and a 15-minute undo grace period. Subscribers get early access.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Is the newsletter really free?</h3>
-        <p>Yes, completely free. You'll get the newsletter, Break the Loop PDF, and access to Modern Tools like TimeOS and Impulse Wallet at no cost. Unsubscribe anytime with one click. No credit card required.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Who is Modern Compass for?</h3>
-        <p>Anyone feeling stuck, lost, or searching for direction in life. Whether you're navigating a life transition, a professional seeking clarity, or someone wanting intentional personal growth, Modern Compass provides the framework and tools to move forward.</p>
       </div>
     </div>
   </section>
 
-  <!-- Newsletter Subscription Schema -->
+  <!-- FAQ Section -->
+  <section class="faq">
+    <div class="wrap narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h3>What is Modern Compass?</h3>
+          <p>Modern Compass is a personal development framework built around four directions: Self, Trust, Character, and Relationships. Each direction has progressive layers that help you see where you actually stand, not where you think you stand. The framework also identifies Drag, which is what keeps you stuck at each layer, and gives you practical language and concepts to work through it. The book goes deep. The newsletter gives you a taste every month.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What is the Modern Compass newsletter?</h3>
+          <p>One email per month that takes a single topic and explores it across the four directions. Each issue includes a reflective prompt and behind-the-scenes updates on the book launching in 2027.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Who is Modern Compass for?</h3>
+          <p>People who can name what's wrong in their life but not why. You've tried the books, the podcasts, the advice. Modern Compass aims to give you the map to decide who you will become next.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Structured Data -->
   <script type="application/ld+json" is:inline>
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Modern Compass Newsletter Signup",
-    "description": "Personal growth newsletter that simplifies the complex and moves you forward - get Break the Loop PDF free",
+    "name": "Modern Compass Newsletter",
+    "description": "One topic. Four directions. A new way to see yourself. Monthly newsletter exploring Self, Trust, Character, and Relationships.",
     "url": "https://themoderncompass.io/newsletter",
     "mainEntity": {
       "@type": "ItemList",
       "itemListElement": [
         {
           "@type": "Question",
+          "name": "What is Modern Compass?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modern Compass is a personal development framework built around four directions: Self, Trust, Character, and Relationships. Each direction has progressive layers that help you see where you actually stand, not where you think you stand."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "What is the Modern Compass newsletter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Modern Compass newsletter is personal growth that simplifies the complex and moves you forward. Every 3rd Friday, you get one insight I'm working through, one tool that helps, and one action you can take in Self, Trust, Character, or Relationships. Each issue cuts through the noise to help you take meaningful steps forward."
+            "text": "One email per month that takes a single topic and explores it across the four directions. Each issue includes a reflective prompt and behind-the-scenes updates on the book launching in 2027."
           }
         },
         {
           "@type": "Question",
-          "name": "How often will I receive emails?",
+          "name": "Who is Modern Compass for?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Once a month, every 3rd Friday. No daily spam, no inbox overwhelm—just one purpose-filled email with depth and room to take action."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Break the Loop?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Break the Loop is a PDF guide you receive immediately after subscribing. It helps you identify where you're stuck, what's dragging you in, determine micro actions you can take, and make your first visible move public in under 10 minutes. It's designed to get you unstuck and moving forward quickly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is the newsletter really free?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, completely free. You'll get the newsletter, Break the Loop PDF, and access to Modern Tools like TimeOS and Impulse Wallet at no cost. Unsubscribe anytime with one click. No credit card required."
+            "text": "People who can name what's wrong in their life but not why. You've tried the books, the podcasts, the advice. Modern Compass aims to give you the map to decide who you will become next."
           }
         }
       ]
@@ -160,99 +217,62 @@ import SEO from '../components/SEO.astro';
 </Layout>
 
 <style>
-  /* New Hero Section Styles */
-  .newsletter-hero-new {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 3rem 1.5rem;
-    margin: -1rem -1rem 2rem -1rem;
-    border-radius: 20px;
+  /* ── Layout helpers ── */
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .wrap.narrow { max-width: 720px; }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 56px 0 40px;
+    text-align: center;
+    background: #ffffff;
   }
 
-  .hero-container-new {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .hero-box {
-    background: rgba(255, 255, 255, 0.98);
-    border-radius: 16px;
-    padding: 2.5rem 2rem;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  }
-
-  .brand-title {
-    font-size: 1.3rem;
+  .headline {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
     font-weight: 700;
-    color: #667eea;
-    margin-bottom: 1.5rem;
-    text-align: center;
+    line-height: 1.15;
+    color: #111;
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
   }
 
-  .main-headline {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    text-align: center;
+  .subline {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #444;
+    margin: 0 0 28px;
+    line-height: 1.5;
   }
 
-  .main-headline .highlight {
-    color: #667eea;
-  }
-
-  .main-description {
-    font-size: 1.2rem;
-    color: #4a5568;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-
-  .main-description strong {
-    color: #1a1a1a;
-    font-weight: 600;
-  }
-
+  /* Built-for typewriter */
   .built-for {
-    text-align: center;
-    margin: 2rem 0 1.5rem 0;
-    font-size: 1.5rem;
-    color: #1a1a1a;
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 28px;
     flex-wrap: nowrap;
   }
 
   .built-for-label {
-    font-weight: 600;
-    color: #667eea;
+    color: #8b5cf6;
     white-space: nowrap;
   }
 
-  .arrow {
-    color: #667eea;
-    font-weight: 600;
-    font-size: 1.3rem;
-  }
+  .arrow { color: #8b5cf6; }
 
   .cycling-text {
-    font-weight: 600;
-    color: #1a1a1a;
     display: inline-block;
-    min-width: 300px;
+    min-width: 260px;
     text-align: left;
     white-space: nowrap;
   }
 
   .cursor {
-    color: #667eea;
-    font-weight: 400;
+    color: #8b5cf6;
     animation: blink 1s step-end infinite;
-    margin-left: -0.1rem;
   }
 
   @keyframes blink {
@@ -260,351 +280,221 @@ import SEO from '../components/SEO.astro';
     51%, 100% { opacity: 0; }
   }
 
-  .value-statement {
-    background: #f7fafc;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+  /* Embed */
+  .embed-wrap {
+    margin: 0 auto 24px;
+    max-width: 500px;
   }
 
-  .value-statement p {
-    font-size: 1rem;
-    color: #2d3748;
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  .signup-bonuses {
-    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
-    border: 1px solid #b3e5fc;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .signup-bonuses p {
-    margin-bottom: 0.5rem;
-    color: #1e40af;
-    font-weight: 600;
-  }
-
-  .signup-bonuses .bonus-description {
-    font-size: 0.95rem;
-    color: #1e40af;
-    line-height: 1.5;
-    margin-bottom: 0;
-    font-weight: 500;
-  }
-
-  .social-proof-text {
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .social-proof-text p {
-    font-size: 1rem;
-    color: #4a5568;
-    margin: 0;
-  }
-
-  .highlight-purple {
-    color: #667eea;
-    font-weight: 700;
-  }
-
-  .newsletter-embed-new {
-    margin-bottom: 0.5rem;
-  }
-
-  .bonus-with-image {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    margin-top: 1.5rem;
-  }
-
-  .bonus-image {
-    flex-shrink: 0;
-  }
-
-  .bonus-image a {
-    display: block;
-    transition: transform 0.2s ease;
-  }
-
-  .bonus-image a:hover {
-    transform: scale(1.05);
-  }
-
-  .bonus-image img {
-    width: 200px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-  }
-
-  .bonus-content {
-    flex: 1;
-  }
-
-  .mobile-preview-link {
-    display: none;
-    color: #667eea;
-    font-weight: 600;
-    text-decoration: none;
+  .frequency {
     font-size: 0.9rem;
-    margin-top: 0.5rem;
+    color: #888;
+    margin: 8px 0 0;
+    text-align: center;
   }
 
-  .mobile-preview-link:hover {
-    text-decoration: underline;
+  /* Sample issue button */
+  .sample-issue { margin-bottom: 8px; }
+
+  .sample-btn {
+    background: none;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
   }
 
-  .desktop-only {
-    display: block;
+  .sample-btn:hover {
+    border-color: #8b5cf6;
+    color: #8b5cf6;
   }
 
-  /* Image Modal */
+  /* ── Sample issue modal ── */
   .modal {
     display: none;
     position: fixed;
+    inset: 0;
     z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
+    background: rgba(0,0,0,0.75);
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
   }
 
-  .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 90%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 8px;
+  .modal.open { display: flex; }
+
+  .modal-inner {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 860px;
+    max-height: 88vh;
+    display: flex;
+    flex-direction: column;
   }
 
   .modal-close {
     position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
+    top: 10px;
+    right: 14px;
+    background: rgba(0,0,0,0.55);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    color: #fff;
     cursor: pointer;
-    transition: 0.3s;
-    z-index: 10000;
+    line-height: 1;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .modal-close:hover,
-  .modal-close:focus {
-    color: #bbb;
+  .modal-frame {
+    width: 100%;
+    flex: 1;
+    min-height: 400px;
+    max-height: calc(88vh - 48px);
+    border: none;
   }
 
-  /* Mobile Responsive */
-  @media (max-width: 767px) {
-    .newsletter-hero-new {
-      padding: 1rem 0.75rem;
-      margin: -0.5rem -1rem 1rem -1rem;
-    }
-
-    .hero-box {
-      padding: 1rem 1rem;
-    }
-
-    .brand-title {
-      font-size: 1rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .main-headline {
-      font-size: 1.4rem;
-      margin-bottom: 0.75rem;
-      line-height: 1.1;
-    }
-
-    .main-description {
-      font-size: 0.9rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .built-for {
-      font-size: 1rem;
-      margin: 1.5rem 0 1rem 0;
-      flex-wrap: wrap;
-      gap: 0.25rem;
-    }
-
-    .arrow {
-      font-size: 1.1rem;
-    }
-
-    .cycling-text {
-      min-width: 200px;
-      text-align: left;
-    }
-
-    .value-statement {
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .value-statement p {
-      font-size: 0.85rem;
-    }
-
-    .signup-bonuses {
-      padding: 0.5rem 0.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .signup-bonuses p {
-      font-size: 0.85rem;
-      margin-bottom: 0.25rem;
-    }
-
-    .signup-bonuses .bonus-description {
-      font-size: 0.8rem;
-    }
-
-    .social-proof-text {
-      margin-bottom: 1rem;
-    }
-
-    .social-proof-text p {
-      font-size: 0.9rem;
-    }
-
-    .newsletter-embed-new {
-      margin-bottom: 0.25rem;
-    }
-
-    .bonus-with-image {
-      flex-direction: column;
-      gap: 1rem;
-      text-align: center;
-    }
-
-    .desktop-only {
-      display: none;
-    }
-
-    .mobile-preview-link {
-      display: inline-block;
-    }
-  }
-
-  /* FAQ Section Styles */
-  .newsletter-faq {
-    max-width: 900px;
-    margin: 3rem auto 2rem;
-    padding: 2rem 1.5rem;
-    background: #f9fafb;
-    border-radius: 16px;
-  }
-
-  .newsletter-faq h2 {
-    font-size: 2rem;
-    color: #111827;
-    margin-bottom: 2rem;
+  .modal-fallback {
+    padding: 8px 16px;
     text-align: center;
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.85rem;
+    color: #666;
+    flex-shrink: 0;
   }
 
-  .faq-grid {
+  .modal-fallback a { color: #8b5cf6; font-weight: 600; text-decoration: none; }
+  .modal-fallback a:hover { text-decoration: underline; }
+  .modal-fallback p { margin: 0 0 4px; }
+
+  /* ── Benefits ── */
+  .benefits {
+    padding: 56px 0;
+    background: #f8fafc;
+  }
+
+  .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
-  .faq-item {
-    background: white;
+  .benefit-card {
+    background: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 24px;
   }
 
-  .faq-item h3 {
-    font-size: 1.2rem;
-    color: #667eea;
-    margin-bottom: 0.75rem;
-    font-weight: 600;
+  .benefit-icon {
+    margin-bottom: 14px;
   }
 
-  .faq-item p {
-    font-size: 1rem;
-    color: #4a5568;
+  .benefit-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 8px;
+    line-height: 1.3;
+  }
+
+  .benefit-card p {
+    font-size: 0.95rem;
+    color: #444;
     line-height: 1.6;
     margin: 0;
   }
 
-  @media (max-width: 767px) {
-    .newsletter-faq {
-      padding: 1.5rem 1rem;
-      margin: 2rem auto 1rem;
-    }
+  /* ── FAQ ── */
+  .faq {
+    padding: 56px 0;
+    background: #ffffff;
+  }
 
-    .newsletter-faq h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
+  .faq h2 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: #111;
+    margin: 0 0 32px;
+    text-align: center;
+  }
 
-    .faq-grid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-    .faq-item {
-      padding: 1rem;
-    }
+  .faq-item {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px 24px;
+  }
 
-    .faq-item h3 {
-      font-size: 1.1rem;
-    }
+  .faq-item h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 8px;
+  }
 
-    .faq-item p {
+  .faq-item p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .hero { padding: 36px 0 28px; }
+
+    .built-for {
       font-size: 0.95rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
+
+    .cycling-text { min-width: 180px; }
+
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .faq { padding: 40px 0; }
+    .benefits { padding: 40px 0; }
   }
 </style>
 
 <script is:inline>
-  // Add class to body for custom styling
   document.body.classList.add('newsletter-page');
 
-  // Meta Pixel Conversion Tracking for Newsletter Signups
+  // Meta Pixel & GA conversion tracking
   window.addEventListener('message', function(event) {
-    // Listen for Beehiiv form submission success
     if (event.data && typeof event.data === 'string' && event.data.includes('beehiiv')) {
-      // Fire Meta Pixel Lead conversion
       if (typeof fbq !== 'undefined') {
-        fbq('track', 'Lead', {
-          content_name: 'Newsletter Signup',
-          content_category: 'Newsletter',
-          value: 5.00,
-          currency: 'USD'
-        });
-        console.log('Meta Pixel: Lead conversion tracked');
+        fbq('track', 'Lead', { content_name: 'Newsletter Signup', content_category: 'Newsletter', value: 5.00, currency: 'USD' });
       }
-
-      // Fire Google Analytics conversion
       if (typeof gtag !== 'undefined') {
-        gtag('event', 'generate_lead', {
-          event_category: 'Newsletter',
-          event_label: 'Newsletter Signup',
-          value: 5.00
-        });
-        console.log('GA4: Lead conversion tracked');
+        gtag('event', 'generate_lead', { event_category: 'Newsletter', event_label: 'Newsletter Signup', value: 5.00 });
       }
     }
   });
 
-  // Typewriter animation for "Built for:" section
+  // Typewriter animation
   document.addEventListener('DOMContentLoaded', function() {
     const personas = [
       'Lost twenty-somethings',
@@ -616,75 +506,36 @@ import SEO from '../components/SEO.astro';
       'Anti-quick-hack thinkers'
     ];
 
-    const cyclingTextElement = document.getElementById('cyclingText');
-    let currentIndex = 0;
-    let isDeleting = false;
-    let currentText = '';
-    let charIndex = 0;
+    const el = document.getElementById('cyclingText');
+    let idx = 0, charIdx = 0, deleting = false;
 
     function type() {
-      const fullText = personas[currentIndex];
+      const full = personas[idx];
+      charIdx = deleting ? charIdx - 1 : charIdx + 1;
+      el.textContent = full.substring(0, charIdx);
 
-      if (isDeleting) {
-        // Erase text
-        currentText = fullText.substring(0, charIndex - 1);
-        charIndex--;
-      } else {
-        // Type text
-        currentText = fullText.substring(0, charIndex + 1);
-        charIndex++;
-      }
+      let delay = deleting ? 30 : 60;
+      if (!deleting && charIdx === full.length) { delay = 2000; deleting = true; }
+      else if (deleting && charIdx === 0) { deleting = false; idx = (idx + 1) % personas.length; delay = 500; }
 
-      cyclingTextElement.textContent = currentText;
-
-      let typeSpeed = isDeleting ? 30 : 60; // Faster erasing, slower typing
-
-      if (!isDeleting && charIndex === fullText.length) {
-        // Finished typing, wait before erasing
-        typeSpeed = 2000;
-        isDeleting = true;
-      } else if (isDeleting && charIndex === 0) {
-        // Finished erasing, move to next word
-        isDeleting = false;
-        currentIndex = (currentIndex + 1) % personas.length;
-        typeSpeed = 500; // Brief pause before typing next word
-      }
-
-      setTimeout(type, typeSpeed);
+      setTimeout(type, delay);
     }
-
-    // Start the animation
     type();
   });
 
-  // Image Modal functionality
+  // Sample issue modal
   document.addEventListener('DOMContentLoaded', function() {
-    const modal = document.getElementById('imageModal');
-    const triggers = document.querySelectorAll('.preview-trigger');
-    const closeBtn = document.querySelector('.modal-close');
+    const modal = document.getElementById('sampleModal');
+    const openBtn = document.getElementById('sampleIssueBtn');
+    const closeBtn = document.getElementById('modalClose');
 
-    triggers.forEach(trigger => {
-      trigger.addEventListener('click', function(e) {
-        e.preventDefault();
-        modal.style.display = 'block';
-      });
+    openBtn.addEventListener('click', function() { modal.classList.add('open'); });
+    closeBtn.addEventListener('click', function() { modal.classList.remove('open'); });
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) modal.classList.remove('open');
     });
-
-    closeBtn.addEventListener('click', function() {
-      modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && modal.style.display === 'block') {
-        modal.style.display = 'none';
-      }
+      if (e.key === 'Escape') modal.classList.remove('open');
     });
   });
 </script>
-</Layout>
