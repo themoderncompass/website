@@ -34,7 +34,7 @@ Uncertainty has a way of exposing where you've been placing trust you shouldn't 
 
 ## Relationships
 
-Take stock of the depths of your various relationships, see this past issue for more. If uncertainty is running rampant and you haven't dedicated consistent time to relationships, whether that be personal or professional, start now. You are operating at a serious disadvantage if you don't. One of the biggest lessons I've learned the last few years on the career side of things, connecting is just as important as accomplishments. Accomplishments are a one time benefit, connections can offer a reoccurring benefit.
+Take stock of the depths of your various relationships, [see the Relationships posts on the blog](/blog#relationships) for more. If uncertainty is running rampant and you haven't dedicated consistent time to relationships, whether that be personal or professional, start now. You are operating at a serious disadvantage if you don't. One of the biggest lessons I've learned the last few years on the career side of things, connecting is just as important as accomplishments. Accomplishments are a one time benefit, connections can offer a reoccurring benefit.
 
 ## Character
 
