@@ -18,6 +18,8 @@ import SEO from '../components/SEO.astro';
       <h1 class="headline">One topic. Four directions.<br>A new way to see yourself.</h1>
       <p class="subline">Every issue explores one idea across Self, Trust, Character, and Relationships.</p>
 
+      <p class="assessment-frame">The <a href="https://map.themoderncompass.io" class="assessment-link">self-assessment</a> is where the framework starts—it maps where you stand across all four directions so you know which deserves your attention first. The newsletter is what deepens that work over time.</p>
+
       <div class="built-for">
         <span class="built-for-label">Built for</span>
         <span class="arrow">→</span>
@@ -35,6 +37,7 @@ import SEO from '../components/SEO.astro';
           title="Subscribe to Modern Compass on Beehiiv"
         ></iframe>
         <p class="frequency">Once a month.</p>
+        <p class="assessment-cta">Not sure where to start? <a href="https://map.themoderncompass.io" class="assessment-link">Take the self-assessment first →</a></p>
       </div>
 
       <!-- Sample Issue Preview -->
@@ -240,8 +243,31 @@ import SEO from '../components/SEO.astro';
   .subline {
     font-size: clamp(1rem, 2vw, 1.2rem);
     color: #444;
-    margin: 0 0 28px;
+    margin: 0 0 16px;
     line-height: 1.5;
+  }
+
+  .assessment-frame {
+    font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+    color: #444;
+    margin: 0 0 28px;
+    line-height: 1.6;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .assessment-link {
+    color: #8b5cf6;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .assessment-cta {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 10px 0 0;
+    text-align: center;
   }
 
   /* Built-for typewriter */

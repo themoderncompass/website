@@ -32,8 +32,11 @@ import SEO from '../components/SEO.astro';
         Map who you are, before deciding who you become.
       </p>
       <p class="sublead">
-        Modern Compass is a framework for accelerating growth in Self, Trust, Character, and Relationships.
+        A structured framework with four directions—Self, Trust, Character, and Relationships—that gives you the language and activities to see yourself honestly before you decide who to become next.
       </p>
+      <div class="hero-cta">
+        <a href="https://map.themoderncompass.io" class="btn-primary">Take the free assessment →</a>
+      </div>
     </div>
   </section>
 
@@ -115,13 +118,16 @@ import SEO from '../components/SEO.astro';
   <!-- PROOF AND MOMENTUM -->
   <section class="section">
     <div class="wrap narrow">
-      <h2 class="h">Join the growing community</h2>
+      <h2 class="h">Start by mapping where you are</h2>
       <p>
-        Over 100 subscribers receive monthly insights and get Break the Loop, a guided worksheet to help you get unstuck and build momentum.
-        Additional tools like TimeOS and the Impulse Wallet are unlocked as a subscriber if you need more support moving forward.
+        The self-assessment is where the framework begins. It maps where you stand across Self, Trust, Character, and Relationships and gives you a personalized read on which direction needs attention first.
       </p>
-      <p style="margin-top: 16px;">
-        <a href="/newsletter" style="color: #667eea; font-weight: 600; text-decoration: underline;">Join the newsletter</a> to get Break the Loop free.
+      <p style="margin-top: 12px;">
+        <a href="https://map.themoderncompass.io" style="color: #667eea; font-weight: 600; text-decoration: underline;">Take the assessment →</a>
+      </p>
+      <p style="margin-top: 12px;">
+        Over 100 subscribers also receive monthly insights and tools to deepen the work.
+        <a href="/newsletter" style="color: #667eea; font-weight: 600; text-decoration: underline;">Join the newsletter</a> to follow along.
       </p>
     </div>
   </section>
@@ -170,7 +176,20 @@ import SEO from '../components/SEO.astro';
     color: transparent;
   }
   .lead { font-size: 18px; margin: 0 0 6px 0; color: #222; }
-  .sublead { font-size: 16px; margin: 0 0 18px 0; color: #444; }
+  .sublead { font-size: 16px; margin: 0 0 20px 0; color: #444; }
+  .hero-cta { margin-top: 4px; }
+  .btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+    color: white;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+  }
+  .btn-primary:hover { opacity: 0.92; transform: translateY(-1px); }
   .sublead.centered { text-align: center; margin-bottom: 16px; }
 
   /* Content blocks */
