@@ -11,14 +11,13 @@ import SEO from '../components/SEO.astro';
     canonical="https://themoderncompass.io/newsletter"
     keywords="personal development newsletter, modern compass newsletter, self improvement, character development, relationships growth, monthly newsletter"
   />
+  <link slot="head" rel="preconnect" href="https://subscribe-forms.beehiiv.com" />
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="wrap narrow">
-      <h1 class="headline">One topic. Four directions.<br>A new way to see yourself.</h1>
-      <p class="subline">Every issue explores one idea across Self, Trust, Character, and Relationships.</p>
-
-      <p class="assessment-frame">The <a href="https://map.themoderncompass.io" class="assessment-link">self-assessment</a> is where the framework starts—it maps where you stand across all four directions so you know which deserves your attention first. The newsletter is what deepens that work over time.</p>
+      <h1 class="headline">Being stuck is a matter of perspective, so you've come to the right place.</h1>
+      <p class="subline">Most advice tells you what to do next. Modern Compass asks you to actually look, one topic a month, seen through Self, Trust, Character, and Relationships, so a clearer picture of who you are builds a little more each time.</p>
 
       <div class="built-for">
         <span class="built-for-label">Built for</span>
@@ -30,7 +29,6 @@ import SEO from '../components/SEO.astro';
       <div class="embed-wrap">
         <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="261a3276-40ab-431a-8523-c85bec095b96"></script>
         <p class="frequency">Once a month.</p>
-        <p class="assessment-cta">Not sure where to start? <a href="https://map.themoderncompass.io" class="assessment-link">Take the self-assessment first →</a></p>
       </div>
 
       <!-- Sample Issue Preview -->
@@ -110,15 +108,13 @@ import SEO from '../components/SEO.astro';
                   <stop offset="100%" stop-color="#06B6D4"/>
                 </linearGradient>
               </defs>
-              <!-- Map / assessment pin -->
-              <rect x="8" y="10" width="32" height="26" rx="3" stroke="url(#g3)" stroke-width="3"/>
-              <line x1="8" y1="18" x2="40" y2="18" stroke="url(#g3)" stroke-width="2.5" stroke-linecap="round"/>
-              <line x1="20" y1="10" x2="20" y2="36" stroke="url(#g3)" stroke-width="2.5" stroke-linecap="round"/>
-              <circle cx="30" cy="28" r="4" fill="url(#g3)"/>
+              <!-- Checkmark: actionable prompt -->
+              <circle cx="24" cy="24" r="18" fill="none" stroke="url(#g3)" stroke-width="3"/>
+              <path d="M15 24l6 6 12-12" stroke="url(#g3)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             </svg>
           </div>
-          <h3>Pairs with the free self-assessment.</h3>
-          <p>Take the Map Where You Are assessment anytime, it's free for everyone. The newsletter builds on what it shows you, one direction at a time.</p>
+          <h3>A prompt to actually act on.</h3>
+          <p>Every issue ends with a reflective question, not just something to think about, but something to do differently this month.</p>
         </div>
 
         <div class="benefit-card">
@@ -240,29 +236,6 @@ import SEO from '../components/SEO.astro';
     line-height: 1.5;
   }
 
-  .assessment-frame {
-    font-size: clamp(0.95rem, 1.8vw, 1.05rem);
-    color: #444;
-    margin: 0 0 28px;
-    line-height: 1.6;
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .assessment-link {
-    color: #8b5cf6;
-    font-weight: 600;
-    text-decoration: underline;
-  }
-
-  .assessment-cta {
-    font-size: 0.9rem;
-    color: #666;
-    margin: 10px 0 0;
-    text-align: center;
-  }
-
   /* Built-for typewriter */
   .built-for {
     display: inline-flex;
@@ -284,8 +257,6 @@ import SEO from '../components/SEO.astro';
 
   .cycling-text {
     display: inline-block;
-    min-width: 260px;
-    text-align: left;
     white-space: nowrap;
   }
 
@@ -303,7 +274,14 @@ import SEO from '../components/SEO.astro';
   .embed-wrap {
     margin: 0 auto 24px;
     max-width: 500px;
-    transform: translateX(16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .embed-wrap > :global(iframe),
+  .embed-wrap > :global(div) {
+    margin: 0 auto;
   }
 
   .frequency {
@@ -488,10 +466,6 @@ import SEO from '../components/SEO.astro';
       justify-content: center;
     }
 
-    .cycling-text { min-width: 180px; }
-
-    .embed-wrap { transform: none; }
-
     .benefits-grid {
       grid-template-columns: 1fr;
     }
@@ -527,9 +501,14 @@ import SEO from '../components/SEO.astro';
       'Wandering thirty-somethings',
       'Searching forty-somethings',
       'Framework seekers',
-      'Assessment believers',
       'Patient builders',
-      'Anti-quick-hack thinkers'
+      'Anti-quick-hack thinkers',
+      'Reflection avoiders',
+      'Serial self-help droppers',
+      'High performers, low clarity',
+      'Overthinkers who under-act',
+      'Comfortable but restless',
+      'Journal starters, journal quitters'
     ];
 
     const el = document.getElementById('cyclingText');
