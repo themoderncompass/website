@@ -28,14 +28,7 @@ import SEO from '../components/SEO.astro';
 
       <!-- Subscribe Form -->
       <div class="embed-wrap">
-        <iframe
-          id="beehiiv-subscribe-form"
-          src="https://subscribe-forms.beehiiv.com/261a3276-40ab-431a-8523-c85bec095b96"
-          frameborder="0"
-          scrolling="yes"
-          style="width: 100%; max-width: 480px; height: 180px; border: none; border-radius: 8px; background-color: transparent; display: block; margin: 0 auto;"
-          title="Subscribe to Modern Compass on Beehiiv"
-        ></iframe>
+        <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="261a3276-40ab-431a-8523-c85bec095b96"></script>
         <p class="frequency">Once a month.</p>
         <p class="assessment-cta">Not sure where to start? <a href="https://map.themoderncompass.io" class="assessment-link">Take the self-assessment first →</a></p>
       </div>
@@ -310,6 +303,7 @@ import SEO from '../components/SEO.astro';
   .embed-wrap {
     margin: 0 auto 24px;
     max-width: 500px;
+    transform: translateX(16px);
   }
 
   .frequency {
@@ -495,6 +489,8 @@ import SEO from '../components/SEO.astro';
     }
 
     .cycling-text { min-width: 180px; }
+
+    .embed-wrap { transform: none; }
 
     .benefits-grid {
       grid-template-columns: 1fr;
