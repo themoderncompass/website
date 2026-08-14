@@ -7,7 +7,7 @@ import SEO from '../components/SEO.astro';
   <SEO
     slot="head"
     title="Modern Compass Newsletter — One Topic. Four Directions."
-    description="Every issue explores one idea across Self, Trust, Character, and Relationships. Once a month. Free access to the Map Where You Are assessment for subscribers."
+    description="Every issue explores one idea across Self, Trust, Character, and Relationships. Once a month."
     canonical="https://themoderncompass.io/newsletter"
     keywords="personal development newsletter, modern compass newsletter, self improvement, character development, relationships growth, monthly newsletter"
   />
@@ -124,8 +124,8 @@ import SEO from '../components/SEO.astro';
               <circle cx="30" cy="28" r="4" fill="url(#g3)"/>
             </svg>
           </div>
-          <h3>Free access to the Map Where You Are assessment.</h3>
-          <p>Subscribers get access to the self-assessment tool that shows you which direction needs your attention first. Other Modern Compass tools will be at your disposal in the welcome email and as new apps or tools are released.</p>
+          <h3>Pairs with the free self-assessment.</h3>
+          <p>Take the Map Where You Are assessment anytime, it's free for everyone. The newsletter builds on what it shows you, one direction at a time.</p>
         </div>
 
         <div class="benefit-card">
@@ -508,7 +508,7 @@ import SEO from '../components/SEO.astro';
 <script is:inline>
   document.body.classList.add('newsletter-page');
 
-  // Meta Pixel & GA conversion tracking
+  // Meta Pixel & GA conversion tracking + redirect to thank-you page
   window.addEventListener('message', function(event) {
     if (event.data && typeof event.data === 'string' && event.data.includes('beehiiv')) {
       if (typeof fbq !== 'undefined') {
@@ -517,6 +517,10 @@ import SEO from '../components/SEO.astro';
       if (typeof gtag !== 'undefined') {
         gtag('event', 'generate_lead', { event_category: 'Newsletter', event_label: 'Newsletter Signup', value: 5.00 });
       }
+      // Give the pixel/gtag calls a moment to fire before navigating away.
+      setTimeout(function() {
+        window.location.href = '/thank-you';
+      }, 300);
     }
   });
 

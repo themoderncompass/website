@@ -1,0 +1,421 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
+---
+
+<Layout>
+  <SEO
+    slot="head"
+    title="You're In! - Modern Compass"
+    description="Thanks for subscribing to Modern Compass. Grab your free TimeOS audit and make sure your welcome email lands in your inbox."
+    canonical="https://themoderncompass.io/thank-you"
+    keywords="modern compass newsletter confirmation, timeos audit download"
+  />
+
+  <section class="hero">
+    <div class="wrap narrow">
+      <div class="check-badge" aria-hidden="true">✓</div>
+      <h1 class="headline">You're in.</h1>
+      <p class="subline">Your welcome email is already on its way. Check your inbox in the next few minutes.</p>
+      <p class="cadence-note">New issues ship the third Friday of every month, so you'll always know when to expect the next one.</p>
+    </div>
+  </section>
+
+  <!-- Lead Magnet -->
+  <section class="magnet">
+    <div class="wrap narrow">
+      <div class="magnet-card">
+        <div class="magnet-visual">
+          <img
+            src="/downloads/timeos-cover.png"
+            alt="Preview of the TimeOS Audit worksheet"
+            class="magnet-thumb"
+            width="900"
+            height="1266"
+            loading="lazy"
+          />
+        </div>
+        <div class="magnet-copy">
+          <span class="magnet-label">Free download</span>
+          <h2>The TimeOS Audit</h2>
+          <p>A 5-step system to see where your time and attention actually go, and reclaim it. Five pages you can fill out in one sitting.</p>
+          <a
+            id="downloadBtn"
+            class="download-btn"
+            href="/downloads/timeos-audit.pdf"
+            download="TimeOS-Audit-Modern-Compass.pdf"
+          >
+            Download the TimeOS Audit (PDF) ↓
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inbox Tips -->
+  <section class="inbox-tips">
+    <div class="wrap narrow">
+      <h2>Don't miss your welcome email</h2>
+      <p class="tips-intro">Welcome emails get filtered more than any other kind. If you don't see it within a few minutes, here's how to fix it in under 30 seconds:</p>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-number">1</div>
+          <h3>Check spam or promotions</h3>
+          <p>Search your inbox for "Modern Compass." If it's in Spam or the Promotions tab, that's normal for a first email from a new sender.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-number">2</div>
+          <h3>Move it to your inbox</h3>
+          <p>Drag the email into your Primary inbox, or mark it "Not spam." This is the single biggest signal you can give your email provider.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-number">3</div>
+          <h3>Reply with anything</h3>
+          <p>A one-word reply like "thanks" tells Gmail, Outlook, and Yahoo that you want mail from us. Future issues will land in your inbox from then on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Share -->
+  <section class="share">
+    <div class="wrap narrow">
+      <h2>Know someone who'd like this?</h2>
+      <p class="share-intro">Forward it along. Takes ten seconds.</p>
+      <div class="share-actions">
+        <button id="shareBtn" class="share-btn" type="button">Share Modern Compass</button>
+        <a
+          class="share-link"
+          href="mailto:?subject=Thought%20you%27d%20like%20this%20newsletter&body=I%20just%20subscribed%20to%20Modern%20Compass%2C%20a%20monthly%20newsletter%20on%20personal%20growth%20across%20Self%2C%20Trust%2C%20Character%2C%20and%20Relationships.%20Figured%20you%27d%20like%20it%20too%3A%20https%3A%2F%2Fthemoderncompass.io%2Fnewsletter"
+        >
+          Email a friend →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nav back -->
+  <section class="back-nav">
+    <div class="wrap narrow">
+      <a href="/" class="back-link">← Back to homepage</a>
+      <a href="/blog" class="back-link">Read the blog →</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .wrap.narrow { max-width: 640px; }
+
+  .hero {
+    padding: 56px 0 24px;
+    text-align: center;
+    background: #ffffff;
+  }
+
+  .check-badge {
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 auto 20px;
+  }
+
+  .headline {
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 14px;
+    letter-spacing: -0.02em;
+  }
+
+  .subline {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: #444;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .cadence-note {
+    font-size: 0.92rem;
+    color: #666;
+    max-width: 440px;
+    margin: 10px auto 0;
+    line-height: 1.6;
+  }
+
+  .magnet {
+    padding: 16px 0 40px;
+    background: #ffffff;
+  }
+
+  .magnet-card {
+    background: #faf5ff;
+    border: 1px solid #e9d5ff;
+    border-radius: 16px;
+    padding: 36px 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    text-align: left;
+  }
+
+  .magnet-visual {
+    flex-shrink: 0;
+    width: 150px;
+  }
+
+  .magnet-thumb {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 20px 36px rgba(107, 33, 168, 0.3), 0 4px 10px rgba(0, 0, 0, 0.08);
+    transform: rotate(-7deg);
+    transition: transform 0.25s ease;
+  }
+
+  .magnet-card:hover .magnet-thumb {
+    transform: rotate(-3deg) scale(1.03);
+  }
+
+  .magnet-copy {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .magnet-label {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #8b5cf6;
+    background: #f3e8ff;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+
+  .magnet-copy h2 {
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    color: #111;
+    margin: 0 0 10px;
+  }
+
+  .magnet-copy p {
+    color: #444;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin: 0 0 20px;
+    max-width: 440px;
+  }
+
+  .download-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
+  }
+
+  .download-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.45);
+  }
+
+  .inbox-tips {
+    padding: 40px 0 56px;
+    background: #f8fafc;
+  }
+
+  .inbox-tips h2 {
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    color: #111;
+    text-align: center;
+    margin: 0 0 10px;
+  }
+
+  .tips-intro {
+    text-align: center;
+    color: #555;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin: 0 0 28px;
+  }
+
+  .tips-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tip-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px 22px;
+    position: relative;
+    padding-left: 60px;
+  }
+
+  .tip-number {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    background: #f3e8ff;
+    color: #8b5cf6;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .tip-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 6px;
+  }
+
+  .tip-card p {
+    font-size: 0.92rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .share {
+    padding: 40px 0;
+    background: #ffffff;
+    text-align: center;
+  }
+
+  .share h2 {
+    font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+    color: #111;
+    margin: 0 0 8px;
+  }
+
+  .share-intro {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 0 0 20px;
+  }
+
+  .share-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .share-btn {
+    display: inline-block;
+    background: #fff;
+    color: #0087c9;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: 2px solid #0087c9;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .share-btn:hover {
+    background: #0087c9;
+    color: #fff;
+  }
+
+  .share-link {
+    color: #0087c9;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+
+  .share-link:hover { text-decoration: underline; }
+
+  .back-nav {
+    padding: 8px 0 56px;
+    background: #f8fafc;
+  }
+
+  .back-nav .wrap {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .back-link {
+    color: #8b5cf6;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+
+  .back-link:hover { text-decoration: underline; }
+
+  @media (max-width: 640px) {
+    .hero { padding: 40px 0 20px; }
+    .magnet-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 28px 24px;
+    }
+    .magnet-visual { width: 130px; }
+    .magnet-copy p { margin-left: auto; margin-right: auto; }
+    .back-nav .wrap { flex-direction: column; align-items: center; gap: 12px; }
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    const shareBtn = document.getElementById('shareBtn');
+    if (!shareBtn) return;
+
+    const shareUrl = 'https://themoderncompass.io/newsletter';
+    const shareText = "I just subscribed to Modern Compass, a monthly newsletter on personal growth across Self, Trust, Character, and Relationships. Thought you'd like it too.";
+    const originalLabel = shareBtn.textContent;
+
+    shareBtn.addEventListener('click', async function() {
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: 'Modern Compass Newsletter', text: shareText, url: shareUrl });
+        } catch (err) {
+          // User cancelled the share sheet, nothing to do.
+        }
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        shareBtn.textContent = 'Link copied!';
+      } catch (err) {
+        window.prompt('Copy this link:', shareUrl);
+      }
+
+      setTimeout(function() { shareBtn.textContent = originalLabel; }, 2000);
+    });
+  });
+</script>
