@@ -25,6 +25,16 @@ import SEO from '../components/SEO.astro';
   <section class="magnet">
     <div class="wrap narrow">
       <div class="magnet-card">
+        <div class="magnet-visual">
+          <img
+            src="/downloads/timeos-cover.png"
+            alt="Preview of the TimeOS Audit worksheet"
+            class="magnet-thumb"
+            width="900"
+            height="1266"
+            loading="lazy"
+          />
+        </div>
         <div class="magnet-copy">
           <span class="magnet-label">Free download</span>
           <h2>The TimeOS Audit</h2>
@@ -135,8 +145,36 @@ import SEO from '../components/SEO.astro';
     background: #faf5ff;
     border: 1px solid #e9d5ff;
     border-radius: 16px;
-    padding: 32px;
-    text-align: center;
+    padding: 36px 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    text-align: left;
+  }
+
+  .magnet-visual {
+    flex-shrink: 0;
+    width: 150px;
+  }
+
+  .magnet-thumb {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 20px 36px rgba(107, 33, 168, 0.3), 0 4px 10px rgba(0, 0, 0, 0.08);
+    transform: rotate(-7deg);
+    transition: transform 0.25s ease;
+  }
+
+  .magnet-card:hover .magnet-thumb {
+    transform: rotate(-3deg) scale(1.03);
+  }
+
+  .magnet-copy {
+    flex: 1;
+    min-width: 0;
   }
 
   .magnet-label {
@@ -164,8 +202,6 @@ import SEO from '../components/SEO.astro';
     line-height: 1.6;
     margin: 0 0 20px;
     max-width: 440px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .download-btn {
@@ -272,7 +308,13 @@ import SEO from '../components/SEO.astro';
 
   @media (max-width: 640px) {
     .hero { padding: 40px 0 20px; }
-    .magnet-card { padding: 24px; }
+    .magnet-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 28px 24px;
+    }
+    .magnet-visual { width: 130px; }
+    .magnet-copy p { margin-left: auto; margin-right: auto; }
     .back-nav .wrap { flex-direction: column; align-items: center; gap: 12px; }
   }
 </style>
