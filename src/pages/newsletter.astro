@@ -11,6 +11,7 @@ import SEO from '../components/SEO.astro';
     canonical="https://themoderncompass.io/newsletter"
     keywords="personal development newsletter, modern compass newsletter, self improvement, character development, relationships growth, monthly newsletter"
   />
+  <link slot="head" rel="preconnect" href="https://subscribe-forms.beehiiv.com" />
 
   <!-- Hero Section -->
   <section class="hero">
@@ -273,6 +274,14 @@ import SEO from '../components/SEO.astro';
   .embed-wrap {
     margin: 0 auto 24px;
     max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .embed-wrap > :global(iframe),
+  .embed-wrap > :global(div) {
+    margin: 0 auto;
   }
 
   .frequency {
