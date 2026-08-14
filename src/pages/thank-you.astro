@@ -1,0 +1,269 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
+---
+
+<Layout>
+  <SEO
+    slot="head"
+    title="You're In! — Modern Compass"
+    description="Thanks for subscribing to Modern Compass. Grab your free TimeOS audit and make sure your welcome email lands in your inbox."
+    canonical="https://themoderncompass.io/thank-you"
+    keywords="modern compass newsletter confirmation, timeos audit download"
+  />
+
+  <section class="hero">
+    <div class="wrap narrow">
+      <div class="check-badge" aria-hidden="true">✓</div>
+      <h1 class="headline">You're in.</h1>
+      <p class="subline">Your first issue of Modern Compass lands in your inbox once a month. In the meantime, two quick things below.</p>
+    </div>
+  </section>
+
+  <!-- Lead Magnet -->
+  <section class="magnet">
+    <div class="wrap narrow">
+      <div class="magnet-card">
+        <div class="magnet-copy">
+          <span class="magnet-label">Free download</span>
+          <h2>The TimeOS Audit</h2>
+          <p>A 5-step system to see where your time and attention actually go, and reclaim it. Five pages, no fluff.</p>
+          <a
+            id="downloadBtn"
+            class="download-btn"
+            href="/downloads/timeos-audit.pdf"
+            download="TimeOS-Audit-Modern-Compass.pdf"
+          >
+            Download the TimeOS Audit (PDF) ↓
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inbox Tips -->
+  <section class="inbox-tips">
+    <div class="wrap narrow">
+      <h2>Don't miss your welcome email</h2>
+      <p class="tips-intro">Welcome emails get filtered more than any other kind. If you don't see it within a few minutes, here's how to fix it in under 30 seconds:</p>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-number">1</div>
+          <h3>Check spam or promotions</h3>
+          <p>Search your inbox for "Modern Compass." If it's in Spam or the Promotions tab, that's normal for a first email from a new sender.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-number">2</div>
+          <h3>Move it to your inbox</h3>
+          <p>Drag the email into your Primary inbox, or mark it "Not spam." This is the single biggest signal you can give your email provider.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-number">3</div>
+          <h3>Reply with anything</h3>
+          <p>A one-word reply like "thanks" tells Gmail, Outlook, and Yahoo that you want mail from us — future issues will land in your inbox from then on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nav back -->
+  <section class="back-nav">
+    <div class="wrap narrow">
+      <a href="/" class="back-link">← Back to homepage</a>
+      <a href="/blog" class="back-link">Read the blog →</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .wrap.narrow { max-width: 640px; }
+
+  .hero {
+    padding: 56px 0 24px;
+    text-align: center;
+    background: #ffffff;
+  }
+
+  .check-badge {
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 auto 20px;
+  }
+
+  .headline {
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 14px;
+    letter-spacing: -0.02em;
+  }
+
+  .subline {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: #444;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .magnet {
+    padding: 16px 0 40px;
+    background: #ffffff;
+  }
+
+  .magnet-card {
+    background: #faf5ff;
+    border: 1px solid #e9d5ff;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+  }
+
+  .magnet-label {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #8b5cf6;
+    background: #f3e8ff;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+
+  .magnet-copy h2 {
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    color: #111;
+    margin: 0 0 10px;
+  }
+
+  .magnet-copy p {
+    color: #444;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin: 0 0 20px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .download-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
+  }
+
+  .download-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.45);
+  }
+
+  .inbox-tips {
+    padding: 40px 0 56px;
+    background: #f8fafc;
+  }
+
+  .inbox-tips h2 {
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    color: #111;
+    text-align: center;
+    margin: 0 0 10px;
+  }
+
+  .tips-intro {
+    text-align: center;
+    color: #555;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin: 0 0 28px;
+  }
+
+  .tips-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tip-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px 22px;
+    position: relative;
+    padding-left: 60px;
+  }
+
+  .tip-number {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    background: #f3e8ff;
+    color: #8b5cf6;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .tip-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 6px;
+  }
+
+  .tip-card p {
+    font-size: 0.92rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .back-nav {
+    padding: 8px 0 56px;
+    background: #f8fafc;
+  }
+
+  .back-nav .wrap {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .back-link {
+    color: #8b5cf6;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+
+  .back-link:hover { text-decoration: underline; }
+
+  @media (max-width: 640px) {
+    .hero { padding: 40px 0 20px; }
+    .magnet-card { padding: 24px; }
+    .back-nav .wrap { flex-direction: column; align-items: center; gap: 12px; }
+  }
+</style>

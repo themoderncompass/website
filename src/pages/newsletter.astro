@@ -508,7 +508,7 @@ import SEO from '../components/SEO.astro';
 <script is:inline>
   document.body.classList.add('newsletter-page');
 
-  // Meta Pixel & GA conversion tracking
+  // Meta Pixel & GA conversion tracking + redirect to thank-you page
   window.addEventListener('message', function(event) {
     if (event.data && typeof event.data === 'string' && event.data.includes('beehiiv')) {
       if (typeof fbq !== 'undefined') {
@@ -517,6 +517,10 @@ import SEO from '../components/SEO.astro';
       if (typeof gtag !== 'undefined') {
         gtag('event', 'generate_lead', { event_category: 'Newsletter', event_label: 'Newsletter Signup', value: 5.00 });
       }
+      // Give the pixel/gtag calls a moment to fire before navigating away.
+      setTimeout(function() {
+        window.location.href = '/thank-you';
+      }, 300);
     }
   });
 
