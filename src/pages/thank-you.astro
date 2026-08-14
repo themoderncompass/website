@@ -80,6 +80,23 @@ import SEO from '../components/SEO.astro';
     </div>
   </section>
 
+  <!-- Share -->
+  <section class="share">
+    <div class="wrap narrow">
+      <h2>Know someone who'd like this?</h2>
+      <p class="share-intro">Forward it along. Takes ten seconds.</p>
+      <div class="share-actions">
+        <button id="shareBtn" class="share-btn" type="button">Share Modern Compass</button>
+        <a
+          class="share-link"
+          href="mailto:?subject=Thought%20you%27d%20like%20this%20newsletter&body=I%20just%20subscribed%20to%20Modern%20Compass%2C%20a%20monthly%20newsletter%20on%20personal%20growth%20across%20Self%2C%20Trust%2C%20Character%2C%20and%20Relationships.%20Figured%20you%27d%20like%20it%20too%3A%20https%3A%2F%2Fthemoderncompass.io%2Fnewsletter"
+        >
+          Email a friend →
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Nav back -->
   <section class="back-nav">
     <div class="wrap narrow">
@@ -286,6 +303,59 @@ import SEO from '../components/SEO.astro';
     margin: 0;
   }
 
+  .share {
+    padding: 40px 0;
+    background: #ffffff;
+    text-align: center;
+  }
+
+  .share h2 {
+    font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+    color: #111;
+    margin: 0 0 8px;
+  }
+
+  .share-intro {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 0 0 20px;
+  }
+
+  .share-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .share-btn {
+    display: inline-block;
+    background: #fff;
+    color: #8b5cf6;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: 2px solid #8b5cf6;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .share-btn:hover {
+    background: #8b5cf6;
+    color: #fff;
+  }
+
+  .share-link {
+    color: #8b5cf6;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+
+  .share-link:hover { text-decoration: underline; }
+
   .back-nav {
     padding: 8px 0 56px;
     background: #f8fafc;
@@ -318,3 +388,34 @@ import SEO from '../components/SEO.astro';
     .back-nav .wrap { flex-direction: column; align-items: center; gap: 12px; }
   }
 </style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    const shareBtn = document.getElementById('shareBtn');
+    if (!shareBtn) return;
+
+    const shareUrl = 'https://themoderncompass.io/newsletter';
+    const shareText = "I just subscribed to Modern Compass, a monthly newsletter on personal growth across Self, Trust, Character, and Relationships. Thought you'd like it too.";
+    const originalLabel = shareBtn.textContent;
+
+    shareBtn.addEventListener('click', async function() {
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: 'Modern Compass Newsletter', text: shareText, url: shareUrl });
+        } catch (err) {
+          // User cancelled the share sheet, nothing to do.
+        }
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        shareBtn.textContent = 'Link copied!';
+      } catch (err) {
+        window.prompt('Copy this link:', shareUrl);
+      }
+
+      setTimeout(function() { shareBtn.textContent = originalLabel; }, 2000);
+    });
+  });
+</script>
