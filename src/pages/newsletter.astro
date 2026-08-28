@@ -16,8 +16,8 @@ import SEO from '../components/SEO.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="wrap narrow">
-      <h1 class="headline">Being stuck is a matter of perspective, so let's look one layer down.</h1>
-      <p class="subline">Most advice tells you what to do next. Modern Compass newsletter takes one topic a month and looks at it through Self, Trust, Character, and Relationships, so you find the layer underneath that changes your perspective.</p>
+      <h1 class="headline">Look one layer deeper</h1>
+      <p class="subline">Once a month, Modern Compass looks one layer beneath a familiar life challenge to help you see what you may be missing and what might actually deserve your attention.</p>
 
       <div class="built-for">
         <span class="built-for-label">Built for</span>
@@ -28,183 +28,9 @@ import SEO from '../components/SEO.astro';
       <!-- Subscribe Form -->
       <div class="embed-wrap">
         <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="261a3276-40ab-431a-8523-c85bec095b96"></script>
-        <p class="frequency">Once a month.</p>
-      </div>
-
-      <!-- Sample Issue Preview -->
-      <div class="sample-issue">
-        <button class="sample-btn" id="sampleIssueBtn">See a recent issue →</button>
       </div>
     </div>
   </section>
-
-  <!-- Sample Issue Modal -->
-  <div id="sampleModal" class="modal" role="dialog" aria-modal="true" aria-label="Recent issue preview">
-    <div class="modal-inner">
-      <button class="modal-close" id="modalClose" aria-label="Close preview">&times;</button>
-      <iframe
-        src="https://themoderncompass.io/blog/character-is-product-you-display"
-        title="Recent Modern Compass issue: Character Is the Product You Display"
-        class="modal-frame"
-        loading="lazy"
-      ></iframe>
-      <div class="modal-fallback">
-        <p>Can't load preview inline?</p>
-        <a href="https://themoderncompass.io/blog/character-is-product-you-display" target="_blank" rel="noopener">Open in new tab →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Benefit Blocks -->
-  <section class="benefits">
-    <div class="wrap">
-      <div class="benefits-grid">
-
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="g1" x1="0" y1="48" x2="48" y2="0" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#F97316"/>
-                  <stop offset="50%" stop-color="#A855F7"/>
-                  <stop offset="100%" stop-color="#06B6D4"/>
-                </linearGradient>
-              </defs>
-              <!-- Compass rose: four arms -->
-              <line x1="24" y1="6" x2="24" y2="42" stroke="url(#g1)" stroke-width="3" stroke-linecap="round"/>
-              <line x1="6" y1="24" x2="42" y2="24" stroke="url(#g1)" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="24" cy="24" r="5" fill="url(#g1)"/>
-              <polygon points="24,8 27,20 24,17 21,20" fill="url(#g1)"/>
-            </svg>
-          </div>
-          <h3>See your life from four angles at once.</h3>
-          <p>Every issue takes one topic and shows you how it plays out across Self, Trust, Character, and Relationships.</p>
-        </div>
-
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="g2" x1="0" y1="48" x2="48" y2="0" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#F97316"/>
-                  <stop offset="50%" stop-color="#EC4899"/>
-                  <stop offset="100%" stop-color="#A855F7"/>
-                </linearGradient>
-              </defs>
-              <!-- Hourglass / timer -->
-              <path d="M14 6h20M14 42h20M16 6l8 14 8-14M16 42l8-14 8 14" stroke="url(#g2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3>Short enough to read, specific enough to stick.</h3>
-          <p>One topic, four brief perspectives. No filler. Read it in 3 minutes and think about it the rest of the day.</p>
-        </div>
-
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="g3" x1="0" y1="48" x2="48" y2="0" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#10B981"/>
-                  <stop offset="100%" stop-color="#06B6D4"/>
-                </linearGradient>
-              </defs>
-              <!-- Checkmark: actionable prompt -->
-              <circle cx="24" cy="24" r="18" fill="none" stroke="url(#g3)" stroke-width="3"/>
-              <path d="M15 24l6 6 12-12" stroke="url(#g3)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            </svg>
-          </div>
-          <h3>A prompt to actually act on.</h3>
-          <p>Every issue ends with a reflective question, not just something to think about, but something to do differently this month.</p>
-        </div>
-
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="g4" x1="0" y1="48" x2="48" y2="0" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#8B5CF6"/>
-                  <stop offset="100%" stop-color="#3B82F6"/>
-                </linearGradient>
-              </defs>
-              <!-- Book with bookmark -->
-              <path d="M12 8h20a2 2 0 012 2v28a2 2 0 01-2 2H12a2 2 0 01-2-2V10a2 2 0 012-2z" stroke="url(#g4)" stroke-width="3"/>
-              <line x1="10" y1="16" x2="34" y2="16" stroke="url(#g4)" stroke-width="2.5" stroke-linecap="round"/>
-              <line x1="10" y1="23" x2="26" y2="23" stroke="url(#g4)" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M30 8v14l-4-3-4 3V8" stroke="url(#g4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3>First to know when the book launches.</h3>
-          <p>The Modern Compass book arrives in 2027. Subscribers get early access, pre-order details, and behind-the-scenes updates.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq">
-    <div class="wrap narrow">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-
-        <div class="faq-item">
-          <h3>What is Modern Compass?</h3>
-          <p>Modern Compass is a personal development framework built around four directions: Self, Trust, Character, and Relationships. Each direction has progressive layers that help you see where you actually stand, not where you think you stand. The framework also identifies Drag, which is what keeps you stuck at each layer, and gives you practical language and concepts to work through it. The book goes deep. The newsletter gives you a taste every month.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>What is the Modern Compass newsletter?</h3>
-          <p>One email per month that takes a single topic and explores it across the four directions. Each issue includes a reflective prompt and behind-the-scenes updates on the book launching in 2027.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Who is Modern Compass for?</h3>
-          <p>People who can name what's wrong in their life but not why. You've tried the books, the podcasts, the advice. Modern Compass aims to give you the map to decide who you will become next.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json" is:inline>
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Modern Compass Newsletter",
-    "description": "One topic. Four directions. A new way to see yourself. Monthly newsletter exploring Self, Trust, Character, and Relationships.",
-    "url": "https://themoderncompass.io/newsletter",
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "Question",
-          "name": "What is Modern Compass?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Modern Compass is a personal development framework built around four directions: Self, Trust, Character, and Relationships. Each direction has progressive layers that help you see where you actually stand, not where you think you stand."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Modern Compass newsletter?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "One email per month that takes a single topic and explores it across the four directions. Each issue includes a reflective prompt and behind-the-scenes updates on the book launching in 2027."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who is Modern Compass for?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "People who can name what's wrong in their life but not why. You've tried the books, the podcasts, the advice. Modern Compass aims to give you the map to decide who you will become next."
-          }
-        }
-      ]
-    }
-  }
-  </script>
 
 </Layout>
 
@@ -284,178 +110,6 @@ import SEO from '../components/SEO.astro';
     margin: 0 auto;
   }
 
-  .frequency {
-    font-size: 0.9rem;
-    color: #888;
-    margin: 8px 0 0;
-    text-align: center;
-  }
-
-  /* Sample issue button */
-  .sample-issue { margin-bottom: 8px; }
-
-  .sample-btn {
-    background: none;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #555;
-    cursor: pointer;
-    transition: border-color 0.2s, color 0.2s;
-  }
-
-  .sample-btn:hover {
-    border-color: #8b5cf6;
-    color: #8b5cf6;
-  }
-
-  /* ── Sample issue modal ── */
-  .modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    background: rgba(0,0,0,0.75);
-    padding: 16px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .modal.open { display: flex; }
-
-  .modal-inner {
-    position: relative;
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 860px;
-    max-height: 88vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .modal-close {
-    position: absolute;
-    top: 10px;
-    right: 14px;
-    background: rgba(0,0,0,0.55);
-    border: none;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    font-size: 18px;
-    color: #fff;
-    cursor: pointer;
-    line-height: 1;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .modal-frame {
-    width: 100%;
-    flex: 1;
-    min-height: 400px;
-    max-height: calc(88vh - 48px);
-    border: none;
-  }
-
-  .modal-fallback {
-    padding: 8px 16px;
-    text-align: center;
-    background: #f9fafb;
-    border-top: 1px solid #e5e7eb;
-    font-size: 0.85rem;
-    color: #666;
-    flex-shrink: 0;
-  }
-
-  .modal-fallback a { color: #8b5cf6; font-weight: 600; text-decoration: none; }
-  .modal-fallback a:hover { text-decoration: underline; }
-  .modal-fallback p { margin: 0 0 4px; }
-
-  /* ── Benefits ── */
-  .benefits {
-    padding: 56px 0;
-    background: #f8fafc;
-  }
-
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .benefit-card {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 24px;
-  }
-
-  .benefit-icon {
-    margin-bottom: 14px;
-  }
-
-  .benefit-card h3 {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #111;
-    margin: 0 0 8px;
-    line-height: 1.3;
-  }
-
-  .benefit-card p {
-    font-size: 0.95rem;
-    color: #444;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  /* ── FAQ ── */
-  .faq {
-    padding: 56px 0;
-    background: #ffffff;
-  }
-
-  .faq h2 {
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    color: #111;
-    margin: 0 0 32px;
-    text-align: center;
-  }
-
-  .faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .faq-item {
-    background: #f8fafc;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 20px 24px;
-  }
-
-  .faq-item h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #111;
-    margin: 0 0 8px;
-  }
-
-  .faq-item p {
-    font-size: 0.95rem;
-    color: #444;
-    line-height: 1.65;
-    margin: 0;
-  }
-
   /* ── Responsive ── */
   @media (max-width: 640px) {
     .hero { padding: 36px 0 28px; }
@@ -465,13 +119,6 @@ import SEO from '../components/SEO.astro';
       flex-wrap: wrap;
       justify-content: center;
     }
-
-    .benefits-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .faq { padding: 40px 0; }
-    .benefits { padding: 40px 0; }
   }
 </style>
 
@@ -500,15 +147,11 @@ import SEO from '../components/SEO.astro';
       'Lost twenty-somethings',
       'Wandering thirty-somethings',
       'Searching forty-somethings',
-      'Framework seekers',
-      'Patient builders',
-      'Anti-quick-hack thinkers',
-      'Reflection avoiders',
-      'Serial self-help droppers',
       'High performers, low clarity',
       'Overthinkers who under-act',
       'Comfortable but restless',
-      'Journal starters, journal quitters'
+      'Stuck on surface-level problems',
+      'Ready to look one layer deeper'
     ];
 
     const el = document.getElementById('cyclingText');
@@ -526,21 +169,5 @@ import SEO from '../components/SEO.astro';
       setTimeout(type, delay);
     }
     type();
-  });
-
-  // Sample issue modal
-  document.addEventListener('DOMContentLoaded', function() {
-    const modal = document.getElementById('sampleModal');
-    const openBtn = document.getElementById('sampleIssueBtn');
-    const closeBtn = document.getElementById('modalClose');
-
-    openBtn.addEventListener('click', function() { modal.classList.add('open'); });
-    closeBtn.addEventListener('click', function() { modal.classList.remove('open'); });
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) modal.classList.remove('open');
-    });
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') modal.classList.remove('open');
-    });
   });
 </script>
