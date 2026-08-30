@@ -16,8 +16,8 @@ import SEO from '../components/SEO.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="wrap narrow">
-      <h1 class="headline">Look one layer deeper</h1>
-      <p class="subline">Once a month, Modern Compass looks one layer beneath a familiar life challenge to help you see what you may be missing and what might actually deserve your attention.</p>
+      <h1 class="headline">We've all spent too long trying to fix a problem without realizing we were only working on the surface.</h1>
+      <p class="subline">Once a month, Modern Compass <span class="gradient-highlight">looks one layer beneath</span> a familiar life challenge to help you see what you may be missing and to make more confident life decisions.</p>
 
       <div class="built-for">
         <span class="built-for-label">Built for</span>
@@ -43,16 +43,19 @@ import SEO from '../components/SEO.astro';
   .hero {
     padding: 56px 0 40px;
     text-align: center;
-    background: #ffffff;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)), url('/Background.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .headline {
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-size: clamp(1.5rem, 3.2vw, 2.2rem);
     font-weight: 700;
-    line-height: 1.15;
+    line-height: 1.25;
     color: #111;
     margin: 0 0 16px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
   }
 
   .subline {
@@ -60,6 +63,17 @@ import SEO from '../components/SEO.astro';
     color: #444;
     margin: 0 0 16px;
     line-height: 1.5;
+  }
+
+  .gradient-highlight {
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--color-purple, #b324a7), var(--color-blue, #0087c9), var(--color-orange, #f76a3e));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
 
   /* Built-for typewriter */
@@ -99,15 +113,17 @@ import SEO from '../components/SEO.astro';
   /* Embed */
   .embed-wrap {
     margin: 0 auto 24px;
-    max-width: 500px;
+    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   .embed-wrap > :global(iframe),
   .embed-wrap > :global(div) {
     margin: 0 auto;
+    width: 100% !important;
   }
 
   /* ── Responsive ── */
