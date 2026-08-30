@@ -3,13 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import SEO from '../components/SEO.astro';
 ---
 
-<Layout>
+<Layout hideHeader={true}>
   <SEO
     slot="head"
     title="Modern Compass Newsletter — One Topic. Four Directions."
     description="Every issue explores one idea across Self, Trust, Character, and Relationships. Once a month."
-    canonical="https://themoderncompass.io/newsletter"
+    canonical="https://themoderncompass.io/newsletter-signup"
     keywords="personal development newsletter, modern compass newsletter, self improvement, character development, relationships growth, monthly newsletter"
+    noindex={true}
   />
   <link slot="head" rel="preconnect" href="https://subscribe-forms.beehiiv.com" />
 

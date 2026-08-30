@@ -9,5 +9,12 @@ export default defineConfig({
   build: {
     format: 'file',
   },
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // /newsletter-signup is a no-distractions ad-landing duplicate of
+      // /newsletter (no nav, nothing to do but subscribe or leave) — keep
+      // it out of the sitemap so it isn't offered as an organic result.
+      filter: (page) => !page.includes('/newsletter-signup'),
+    }),
+  ],
 });

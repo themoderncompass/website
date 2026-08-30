@@ -10,9 +10,12 @@ const year = 2026;
 // adding an object with an `href` and `label` as needed.
 
 // Pages that only want the home-linked logo (no nav links, no hamburger
-// menu) pass hideNav — used for ad-traffic landing pages like /newsletter
-// where every extra link is a way for a visitor to leave without signing up.
-const { hideNav = false } = Astro.props;
+// menu) pass hideNav — used for ad-traffic landing pages where every extra
+// link is a way for a visitor to leave without signing up.
+// Pages that want zero header at all (no logo, no links) pass hideHeader —
+// used for /newsletter-signup, where the only actions available are
+// subscribing or closing the tab.
+const { hideNav = false, hideHeader = false } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -116,6 +119,7 @@ src="https://www.facebook.com/tr?id=705209105898090&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
   </head>
   <body>
+    {!hideHeader && (
     <header>
  <nav>
   <a href="/" class="logo">
@@ -191,6 +195,7 @@ src="https://www.facebook.com/tr?id=705209105898090&ev=PageView&noscript=1"
 
 
     </header>
+    )}
     <main>
       <slot />
     </main>
