@@ -16,8 +16,8 @@ import SEO from '../components/SEO.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="wrap narrow">
-      <h1 class="headline">We've all spent too long trying to fix a problem without realizing we were only working on the surface.</h1>
-      <p class="subline">Once a month, Modern Compass <span class="gradient-highlight">looks one layer deeper</span> into a familiar life challenge to help you see what you may be missing and to make more confident life decisions.</p>
+      <h1 class="headline">We've all spent too long trying to fix a problem, without realizing we were only working on the surface.</h1>
+      <p class="subline"><span class="subline-text">Once a month, Modern Compass <span class="gradient-highlight">looks one layer deeper</span> into a familiar life challenge to help you see what you may be missing and to make more confident life decisions.</span></p>
 
       <div class="built-for">
         <span class="built-for-label">One layer deeper can look like:</span>
@@ -64,7 +64,7 @@ import SEO from '../components/SEO.astro';
     position: absolute;
     left: 50%;
     top: 50%;
-    width: min(700px, 78vw);
+    width: min(1053px, 117vw);
     aspect-ratio: 1283 / 1226;
     transform: translate(-50%, -50%);
     background-image: url('/Background.png');
@@ -91,10 +91,23 @@ import SEO from '../components/SEO.astro';
   }
 
   .subline {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    color: #444;
     margin: 0 0 16px;
-    line-height: 1.5;
+  }
+
+  /* A translucent, rounded backdrop hugging just the text (not a hard
+     white block spanning the hero) so the graphic still reads through
+     around it while the text itself gets enough contrast to read easily.
+     box-decoration-break keeps the rounded corners/padding correct on
+     each wrapped line instead of only the first/last. */
+  .subline-text {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #333;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.92);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0.2em 0.5em;
+    border-radius: 6px;
   }
 
   .gradient-highlight {
@@ -176,7 +189,7 @@ import SEO from '../components/SEO.astro';
     }
 
     .built-for::before {
-      width: min(560px, 96vw);
+      width: min(838px, 142vw);
     }
 
     .cycling-line { max-width: 100%; }
