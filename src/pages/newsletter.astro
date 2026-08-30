@@ -20,9 +20,8 @@ import SEO from '../components/SEO.astro';
       <p class="subline">Once a month, Modern Compass <span class="gradient-highlight">looks one layer beneath</span> a familiar life challenge to help you see what you may be missing and to make more confident life decisions.</p>
 
       <div class="built-for">
-        <span class="built-for-label">Built for</span>
-        <span class="arrow">→</span>
-        <span class="cycling-text" id="cyclingText"></span><span class="cursor">|</span>
+        <span class="built-for-label">One layer deeper can look like:</span>
+        <p class="cycling-line"><span class="cycling-text" id="cyclingText"></span><span class="cursor">|</span></p>
       </div>
 
       <!-- Subscribe Form -->
@@ -78,26 +77,31 @@ import SEO from '../components/SEO.astro';
 
   /* Built-for typewriter */
   .built-for {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.4rem;
-    font-size: clamp(1rem, 2vw, 1.3rem);
-    font-weight: 600;
-    color: #111;
-    margin: 0 0 28px;
-    flex-wrap: nowrap;
+    gap: 0.6rem;
+    margin: 0 auto 28px;
   }
 
   .built-for-label {
     color: #8b5cf6;
-    white-space: nowrap;
+    font-weight: 600;
+    font-size: clamp(0.95rem, 1.6vw, 1.1rem);
   }
 
-  .arrow { color: #8b5cf6; }
+  .cycling-line {
+    max-width: 540px;
+    min-height: 2.8em;
+    margin: 0 auto;
+    text-align: center;
+  }
 
   .cycling-text {
-    display: inline-block;
-    white-space: nowrap;
+    font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+    font-weight: 700;
+    color: #111;
+    line-height: 1.4;
   }
 
   .cursor {
@@ -115,6 +119,7 @@ import SEO from '../components/SEO.astro';
     margin: 0 auto 24px;
     width: 100%;
     max-width: 100%;
+    min-height: 56px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -122,19 +127,16 @@ import SEO from '../components/SEO.astro';
 
   .embed-wrap > :global(iframe),
   .embed-wrap > :global(div) {
-    margin: 0 auto;
     width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
   }
 
   /* ── Responsive ── */
   @media (max-width: 640px) {
     .hero { padding: 36px 0 28px; }
 
-    .built-for {
-      font-size: 0.95rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+    .cycling-line { max-width: 100%; }
   }
 </style>
 
@@ -160,14 +162,14 @@ import SEO from '../components/SEO.astro';
   // Typewriter animation
   document.addEventListener('DOMContentLoaded', function() {
     const personas = [
-      'Lost twenty-somethings',
-      'Wandering thirty-somethings',
-      'Searching forty-somethings',
-      'High performers, low clarity',
-      'Overthinkers who under-act',
-      'Comfortable but restless',
-      'Stuck on surface-level problems',
-      'Ready to look one layer deeper'
+      'Dating struggles rooted in worth and confidence',
+      'Career confusion that came down to trusting your own judgment',
+      'A project delayed for years waiting to feel ready',
+      'Relationship friction that began with the loss of common ground',
+      'Procrastination that was really anxiety in disguise',
+      'Weak boundaries caused by giving trust too freely',
+      'Feeling surrounded by people but still not truly known',
+      'Inherited expectations mistaken for who you really are'
     ];
 
     const el = document.getElementById('cyclingText');
@@ -178,8 +180,8 @@ import SEO from '../components/SEO.astro';
       charIdx = deleting ? charIdx - 1 : charIdx + 1;
       el.textContent = full.substring(0, charIdx);
 
-      let delay = deleting ? 30 : 60;
-      if (!deleting && charIdx === full.length) { delay = 2000; deleting = true; }
+      let delay = deleting ? 15 : 35;
+      if (!deleting && charIdx === full.length) { delay = 2800; deleting = true; }
       else if (deleting && charIdx === 0) { deleting = false; idx = (idx + 1) % personas.length; delay = 500; }
 
       setTimeout(type, delay);
