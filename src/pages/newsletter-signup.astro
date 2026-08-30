@@ -18,7 +18,7 @@ import SEO from '../components/SEO.astro';
   <section class="hero">
     <div class="wrap narrow">
       <h1 class="headline">We've all spent too long trying to fix a problem without realizing we were only working on the surface.</h1>
-      <p class="subline">Once a month, Modern Compass <span class="gradient-highlight">looks one layer beneath</span> a familiar life challenge to help you see what you may be missing and to make more confident life decisions.</p>
+      <p class="subline">Once a month, Modern Compass <span class="gradient-highlight">looks one layer deeper</span> into a familiar life challenge to help you see what you may be missing and to make more confident life decisions.</p>
 
       <div class="built-for">
         <span class="built-for-label">One layer deeper can look like:</span>
@@ -43,41 +43,37 @@ import SEO from '../components/SEO.astro';
   .hero {
     position: relative;
     /* Extra bottom padding gives the graphic's lower half somewhere to
-       live beneath the button without bleeding into the footer — see
+       live beneath the rotator without bleeding into the footer — see
        the ::before comment below for why it needs that room. */
-    padding: 56px 0 280px;
+    padding: 56px 0 320px;
     text-align: center;
     background-color: #fff;
     overflow: hidden;
   }
 
-  /* The graphic's eye sits behind the subscribe button — its bottom half
-     mirrors its top half around the button, so the whole composition
-     radiates outward from the CTA. It's anchored from the hero's BOTTOM
-     edge (where the button always is) rather than centered top-to-bottom,
-     because the button's distance from the bottom stays put while its
-     distance from the top swings with however many lines the headline/
-     rotator wrap to. Width is capped in vw so it can never cause
-     horizontal scroll, and height simply follows the image's own aspect
-     ratio — nothing here reacts to the hero's content-driven height, so
-     resizing the window can't make it "zoom." background-size: contain
-     keeps the whole graphic visible instead of cropping it into a square;
-     the hero's bottom padding above is sized so the full circle fits
-     without overflow:hidden ever actually having to cut into it. */
-  .hero::before {
+  /* The graphic's eye sits behind the rotator (the "One layer deeper can
+     look like:" line), so the whole composition radiates outward from
+     that hook line instead of the button below it. It's a pseudo-element
+     of .built-for itself (not .hero) so top/left: 50% + translate(-50%,-50%)
+     center it on the rotator regardless of how many lines the headline/
+     subline above it wrap to. Sized as large as the layout allows —
+     hero's overflow:hidden clips anything that reaches past the top of
+     the hero section, which is exactly where the header/nav sits, so the
+     graphic grows until the nav cuts it off rather than stopping short. */
+  .built-for::before {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: 296px;
-    width: min(620px, 82vw);
+    top: 50%;
+    width: min(700px, 78vw);
     aspect-ratio: 1283 / 1226;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
     background-image: url('/Background.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.4;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
   }
 
@@ -115,6 +111,7 @@ import SEO from '../components/SEO.astro';
 
   /* Built-for typewriter */
   .built-for {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,11 +173,11 @@ import SEO from '../components/SEO.astro';
   /* ── Responsive ── */
   @media (max-width: 640px) {
     .hero {
-      padding: 36px 0 200px;
+      padding: 36px 0 220px;
     }
 
-    .hero::before {
-      bottom: 216px;
+    .built-for::before {
+      width: min(560px, 96vw);
     }
 
     .cycling-line { max-width: 100%; }
