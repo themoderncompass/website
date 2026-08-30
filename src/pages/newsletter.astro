@@ -41,31 +41,43 @@ import SEO from '../components/SEO.astro';
   /* ── Hero ── */
   .hero {
     position: relative;
-    padding: 56px 0 40px;
+    /* Extra bottom padding gives the graphic's lower half somewhere to
+       live beneath the button without bleeding into the footer — see
+       the ::before comment below for why it needs that room. */
+    padding: 56px 0 280px;
     text-align: center;
     background-color: #fff;
     overflow: hidden;
   }
 
-  /* The graphic is sized off the viewport width alone (never the section's
-     own height), so text reflowing to another line — which changes the
-     hero's height, not its width — can't make it rescale. background-size:
-     contain (not cover) also guarantees the whole graphic stays visible
-     instead of being cropped into a "squared wallpaper" look. */
+  /* The graphic's eye sits behind the subscribe button — its bottom half
+     mirrors its top half around the button, so the whole composition
+     radiates outward from the CTA. It's anchored from the hero's BOTTOM
+     edge (where the button always is) rather than centered top-to-bottom,
+     because the button's distance from the bottom stays put while its
+     distance from the top swings with however many lines the headline/
+     rotator wrap to. Width is capped in vw so it can never cause
+     horizontal scroll, and height simply follows the image's own aspect
+     ratio — nothing here reacts to the hero's content-driven height, so
+     resizing the window can't make it "zoom." background-size: contain
+     keeps the whole graphic visible instead of cropping it into a square;
+     the hero's bottom padding above is sized so the full circle fits
+     without overflow:hidden ever actually having to cut into it. */
   .hero::before {
     content: '';
     position: absolute;
-    top: 50%;
     left: 50%;
-    width: min(560px, 65vw);
+    bottom: 296px;
+    width: min(620px, 82vw);
     aspect-ratio: 1283 / 1226;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
     background-image: url('/Background.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    opacity: 0.16;
+    opacity: 0.4;
     z-index: 0;
+    pointer-events: none;
   }
 
   .hero > .wrap {
@@ -162,7 +174,13 @@ import SEO from '../components/SEO.astro';
 
   /* ── Responsive ── */
   @media (max-width: 640px) {
-    .hero { padding: 36px 0 28px; }
+    .hero {
+      padding: 36px 0 200px;
+    }
+
+    .hero::before {
+      bottom: 216px;
+    }
 
     .cycling-line { max-width: 100%; }
   }
