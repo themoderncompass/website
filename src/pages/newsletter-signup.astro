@@ -17,7 +17,7 @@ import SEO from '../components/SEO.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="wrap narrow">
-      <h1 class="headline">We've all spent too long trying to fix a problem, without realizing we were only working on the surface.</h1>
+      <h1 class="headline">We've all spent too long trying to fix the wrong problem.</h1>
       <p class="subline"><span class="subline-text">Once a month, Modern Compass <span class="gradient-highlight">looks one layer deeper</span> into a familiar life challenge to help you see what you may be missing and to make more confident life decisions.</span></p>
 
       <div class="built-for">
@@ -193,7 +193,14 @@ import SEO from '../components/SEO.astro';
       width: min(838px, 142vw);
     }
 
-    .cycling-line { max-width: 100%; }
+    .cycling-line {
+      max-width: 100%;
+      /* Mobile wraps more of these entries onto a 3rd line, so reserve
+         3 lines here instead of desktop's 2 — otherwise a long entry
+         still pushes the subscribe button down when it wraps further
+         than the 2-line allowance. */
+      min-height: calc(3 * 1.4 * clamp(1.05rem, 2.2vw, 1.3rem));
+    }
   }
 </style>
 
