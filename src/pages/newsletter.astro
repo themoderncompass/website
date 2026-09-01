@@ -12,11 +12,5 @@ import NewsletterHero from '../components/NewsletterHero.astro';
     canonical="https://themoderncompass.io/newsletter"
     keywords="personal development newsletter, modern compass newsletter, self improvement, decision making, character development, relationships growth, monthly newsletter"
   />
-  <link slot="head" rel="preconnect" href="https://subscribe-forms.beehiiv.com" />
-  <!-- The signup form is the whole point of this page — prioritize
-       fetching its script so it's ready as early as possible, without
-       touching the DOM/CSS at all. -->
-  <link slot="head" rel="preload" as="script" fetchpriority="high" href="https://subscribe-forms.beehiiv.com/v3/loader.js" />
-
   <NewsletterHero />
 </Layout>
