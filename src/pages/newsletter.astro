@@ -17,14 +17,6 @@ import SEO from '../components/SEO.astro';
        touching the DOM/CSS at all. -->
   <link slot="head" rel="preload" as="script" fetchpriority="high" href="https://subscribe-forms.beehiiv.com/v3/loader.js" />
 
-  <!-- Hero background is the LCP element on this page — preload it with
-       fetchpriority high so the browser fetches it from the HTML scan
-       instead of discovering it only after CSS is parsed. Never lazy-load
-       this. `media` picks the one matching variant per viewport so only
-       one file downloads. -->
-  <link slot="head" rel="preload" as="image" type="image/webp" fetchpriority="high" media="(max-width: 640px)" href="/background-mobile.webp" />
-  <link slot="head" rel="preload" as="image" type="image/webp" fetchpriority="high" media="(min-width: 641px)" href="/background-desktop.webp" />
-
   <!-- Hero Section -->
   <section class="hero">
     <div class="wrap narrow">
@@ -56,39 +48,9 @@ import SEO from '../components/SEO.astro';
   /* ── Hero ── */
   .hero {
     position: relative;
-    /* Extra bottom padding gives the graphic's lower half somewhere to
-       live beneath the rotator without bleeding into the footer — see
-       the ::before comment below for why it needs that room. */
     padding: 56px 0 64px;
     text-align: center;
     background-color: #fff;
-    overflow: hidden;
-  }
-
-  /* The graphic's eye sits behind the rotator (the "One layer deeper can
-     look like:" line), so the whole composition radiates outward from
-     that hook line instead of the button below it. It's a pseudo-element
-     of .built-for itself (not .hero) so top/left: 50% + translate(-50%,-50%)
-     center it on the rotator regardless of how many lines the headline/
-     subline above it wrap to. Sized as large as the layout allows —
-     hero's overflow:hidden clips anything that reaches past the top of
-     the hero section, which is exactly where the header/nav sits, so the
-     graphic grows until the nav cuts it off rather than stopping short. */
-  .built-for::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: min(560px, 117vw);
-    aspect-ratio: 1283 / 1226;
-    transform: translate(-50%, -50%);
-    background-image: url('/background-desktop.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.4;
-    z-index: -1;
-    pointer-events: none;
   }
 
   .hero > .wrap {
@@ -197,17 +159,14 @@ import SEO from '../components/SEO.astro';
     margin: 0 auto !important;
   }
 
-  /* Founder credibility line. Pushed well clear of the background graphic's
-     lower edge (the graphic is centered on .built-for and extends roughly
-     half its own height below it) so the card sits on clean white instead
-     of overlapping the art. Styled as a distinct pull-quote card — a
+  /* Founder credibility line, styled as a distinct pull-quote card — a
      brand-gradient accent bar (via ::before, so its corners can stay
      independent of the card's own radius) + blur + a tinted shadow — so it
      reads as a polished personal aside, not more hero copy. */
   .credibility {
     position: relative;
     max-width: 560px;
-    margin: 64px auto 0;
+    margin: 32px auto 0;
     text-align: left;
     font-size: clamp(0.88rem, 1.6vw, 0.98rem);
     line-height: 1.6;
@@ -244,11 +203,6 @@ import SEO from '../components/SEO.astro';
   @media (max-width: 640px) {
     .hero {
       padding: 36px 0 48px;
-    }
-
-    .built-for::before {
-      width: min(480px, 122vw);
-      background-image: url('/background-mobile.webp');
     }
 
     .cycling-line {
