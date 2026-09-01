@@ -33,43 +33,10 @@ import SEO from '../components/SEO.astro';
         <p class="cycling-line"><span class="cycling-text" id="cyclingText"></span><span class="cursor">|</span></p>
       </div>
 
-      <!-- Subscribe Form
-           The skeleton below is static HTML/CSS, painted immediately with
-           the rest of the page — no JS needed to see it. beehiiv's loader.js
-           mounts its real widget as a direct child of .embed-wrap (an
-           <iframe> or <div>, per the CSS rule below); the inline script
-           right after this div watches for that child to appear and swaps
-           the skeleton out. Runs immediately (not on DOMContentLoaded)
-           since .embed-wrap already exists in the DOM by the time the
-           parser reaches this script tag. -->
+      <!-- Subscribe Form -->
       <div class="embed-wrap">
-        <div class="embed-skeleton" aria-hidden="true">
-          <span class="embed-skeleton-input"></span>
-          <span class="embed-skeleton-button">Subscribe</span>
-        </div>
         <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="261a3276-40ab-431a-8523-c85bec095b96"></script>
       </div>
-      <script is:inline>
-        (function () {
-          var wrap = document.querySelector('.embed-wrap');
-          var skeleton = wrap && wrap.querySelector('.embed-skeleton');
-          if (!wrap || !skeleton) return;
-          var observer = new MutationObserver(function (mutations) {
-            for (var i = 0; i < mutations.length; i++) {
-              var added = mutations[i].addedNodes;
-              for (var j = 0; j < added.length; j++) {
-                var node = added[j];
-                if (node.nodeType === 1 && node !== skeleton) {
-                  skeleton.style.display = 'none';
-                  observer.disconnect();
-                  return;
-                }
-              }
-            }
-          });
-          observer.observe(wrap, { childList: true });
-        })();
-      </script>
     </div>
   </section>
 
@@ -222,45 +189,6 @@ import SEO from '../components/SEO.astro';
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto !important;
-  }
-
-  /* Static fallback shell — visible instantly, no JS required. Swapped
-     out by the inline script above once beehiiv's real widget mounts. */
-  .embed-skeleton {
-    display: flex;
-    gap: 10px;
-  }
-
-  .embed-skeleton-input {
-    flex: 1;
-    height: 48px;
-    border-radius: 8px;
-    background: #f2f2f2;
-    border: 1px solid #e2e2e2;
-  }
-
-  .embed-skeleton-button {
-    flex-shrink: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    padding: 0 22px;
-    border-radius: 8px;
-    background: #8b5cf6;
-    color: #fff;
-    font-weight: 600;
-    font-size: 0.95rem;
-    white-space: nowrap;
-  }
-
-  @media (max-width: 480px) {
-    .embed-skeleton {
-      flex-direction: column;
-    }
-    .embed-skeleton-button {
-      width: 100%;
-    }
   }
 
   /* ── Responsive ── */
