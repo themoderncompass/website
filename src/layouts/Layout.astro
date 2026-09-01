@@ -23,8 +23,8 @@ const { hideNav = false, hideHeader = false } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#8b5cf6" />
     <title>The Modern Compass</title>
 
@@ -88,35 +88,62 @@ const { hideNav = false, hideHeader = false } = Astro.props;
     }
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KH6C2VFPZC"></script>
-    <script>
+    <!-- Google tag (gtag.js) + Meta Pixel
+         Stubs/queues are set up synchronously (cheap — just array pushes),
+         but the actual third-party script downloads/executions are deferred
+         until the browser is idle or the visitor first interacts, so they
+         don't compete with the initial paint and the signup form's INP. -->
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-KH6C2VFPZC');
+
+      !function(f,b,e,v,n)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[]}(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '705209105898090');
+      fbq('track', 'PageView');
+
+      function loadDeferredTags() {
+        var ga = document.createElement('script');
+        ga.async = true;
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-KH6C2VFPZC';
+        document.head.appendChild(ga);
+
+        var fb = document.createElement('script');
+        fb.async = true;
+        fb.src = 'https://connect.facebook.net/en_US/fbevents.js';
+        document.head.appendChild(fb);
+      }
+
+      var deferredTagsLoaded = false;
+      function triggerDeferredTags() {
+        if (deferredTagsLoaded) return;
+        deferredTagsLoaded = true;
+        loadDeferredTags();
+      }
+
+      window.addEventListener('load', function() {
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(triggerDeferredTags, { timeout: 4000 });
+        } else {
+          setTimeout(triggerDeferredTags, 2000);
+        }
+      });
+      ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function(evt) {
+        window.addEventListener(evt, triggerDeferredTags, { once: true, passive: true });
+      });
     </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=705209105898090&ev=PageView&noscript=1"
+    /></noscript>
 
     <!-- Allow pages to inject additional head content -->
     <slot name="head" />
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '705209105898090');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=705209105898090&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
   </head>
   <body>
     {!hideHeader && (
