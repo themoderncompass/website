@@ -13,9 +13,28 @@
     </div>
 
     <!-- Subscribe Form -->
-    <div class="embed-wrap">
-      <script async fetchpriority="high" src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="261a3276-40ab-431a-8523-c85bec095b96"></script>
-    </div>
+    <form id="subscribeForm" class="subscribe-form" novalidate>
+      <div class="honeypot">
+        <label for="website">Leave this field blank</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+      </div>
+      <div class="form-row">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="email-input"
+          placeholder="Enter your email"
+          required
+          autocomplete="email"
+          aria-label="Email address"
+        />
+        <button type="submit" id="submitBtn" class="submit-btn">
+          <span class="btn-label">Onward</span>
+        </button>
+      </div>
+      <p id="formError" class="form-error" role="alert" hidden></p>
+    </form>
 
     <!-- Credibility -->
     <p class="credibility">I've spent more than a decade working through ambiguous problems where the obvious answer is rarely the whole answer. Modern Compass grew from realizing I'd spent years doing the same thing in my own life: trying to fix what I could see instead of looking at what was underneath it.<span class="credibility-attribution">— Josh Imholte, Founder</span></p>
@@ -123,22 +142,91 @@
     51%, 100% { opacity: 0; }
   }
 
-  /* Embed */
-  .embed-wrap {
+  /* Subscribe form */
+  .subscribe-form {
     margin: 0 auto 24px;
     width: 100%;
-    max-width: 100%;
-    min-height: 56px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    max-width: 480px;
   }
 
-  .embed-wrap > :global(iframe),
-  .embed-wrap > :global(div) {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
+  /* Honeypot — hidden from real visitors, still reachable by bots that
+     fill in every field blindly. Off-screen rather than display:none so
+     it isn't skipped by autofill/bot heuristics that check visibility. */
+  .honeypot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 10px;
+  }
+
+  .email-input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #111;
+    background: #fff;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.15s ease;
+  }
+
+  .email-input:focus {
+    border-color: #8b5cf6;
+  }
+
+  .submit-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
+  }
+
+  .submit-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.45);
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .form-error {
+    margin: 10px 0 0;
+    color: #dc2626;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  @media (max-width: 480px) {
+    .form-row {
+      flex-direction: column;
+    }
+
+    .submit-btn {
+      width: 100%;
+    }
   }
 
   /* Founder credibility line, styled as a distinct pull-quote card — a
@@ -201,20 +289,67 @@
 <script is:inline>
   document.body.classList.add('newsletter-page');
 
-  // Meta Pixel & GA conversion tracking + redirect to thank-you page
-  window.addEventListener('message', function(event) {
-    if (event.data && typeof event.data === 'string' && event.data.includes('beehiiv')) {
-      if (typeof fbq !== 'undefined') {
-        fbq('track', 'Lead', { content_name: 'Newsletter Signup', content_category: 'Newsletter', value: 5.00, currency: 'USD' });
+  // Newsletter subscribe form: posts to our own /api/subscribe function
+  // (which talks to beehiiv server-side), fires conversion tracking, then
+  // redirects to the thank-you page.
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('subscribeForm');
+    if (!form) return;
+
+    const emailInput = document.getElementById('email');
+    const honeypot = document.getElementById('website');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnLabel = submitBtn.querySelector('.btn-label');
+    const errorEl = document.getElementById('formError');
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+      errorEl.hidden = true;
+
+      // Bots that fill in every field land here; drop them silently.
+      if (honeypot.value) return;
+
+      const email = emailInput.value.trim();
+      if (!EMAIL_RE.test(email)) {
+        errorEl.textContent = 'Please enter a valid email address.';
+        errorEl.hidden = false;
+        return;
       }
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'generate_lead', { event_category: 'Newsletter', event_label: 'Newsletter Signup', value: 5.00 });
+
+      submitBtn.disabled = true;
+      btnLabel.textContent = 'Subscribing…';
+
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email }),
+        });
+
+        const data = await res.json().catch(function() { return {}; });
+        if (!res.ok) {
+          throw new Error(data.error || 'Something went wrong. Please try again.');
+        }
+
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Lead', { content_name: 'Newsletter Signup', content_category: 'Newsletter', value: 5.00, currency: 'USD' });
+        }
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'generate_lead', { event_category: 'Newsletter', event_label: 'Newsletter Signup', value: 5.00 });
+        }
+
+        // Give the pixel/gtag calls a moment to fire before navigating away.
+        setTimeout(function() {
+          window.location.href = '/thank-you';
+        }, 300);
+      } catch (err) {
+        errorEl.textContent = err.message || 'Something went wrong. Please try again.';
+        errorEl.hidden = false;
+        submitBtn.disabled = false;
+        btnLabel.textContent = 'Onward';
       }
-      // Give the pixel/gtag calls a moment to fire before navigating away.
-      setTimeout(function() {
-        window.location.href = '/thank-you';
-      }, 300);
-    }
+    });
   });
 
   // Typewriter animation
