@@ -6,10 +6,10 @@ import SEO from '../components/SEO.astro';
 <Layout hideHeader={true}>
   <SEO
     slot="head"
-    title="Modern Compass Newsletter — One Topic. Four Directions."
-    description="Every issue explores one idea across Self, Trust, Character, and Relationships. Once a month."
+    title="Modern Compass Newsletter — One Layer Beneath the Obvious"
+    description="The Modern Compass newsletter looks one layer beneath a familiar life challenge to show a new perspective and improve confidence in decision making."
     canonical="https://themoderncompass.io/newsletter-signup"
-    keywords="personal development newsletter, modern compass newsletter, self improvement, character development, relationships growth, monthly newsletter"
+    keywords="personal development newsletter, modern compass newsletter, self improvement, decision making, character development, relationships growth, monthly newsletter"
     noindex={true}
   />
   <link slot="head" rel="preconnect" href="https://subscribe-forms.beehiiv.com" />
@@ -30,10 +30,10 @@ import SEO from '../components/SEO.astro';
   <section class="hero">
     <div class="wrap narrow">
       <h1 class="headline">We've all spent too long trying to fix the wrong problem.</h1>
-      <p class="subline"><span class="subline-text">The Modern Compass newsletter <span class="gradient-highlight">looks one layer beneath</span> a familiar life challenge to help you see what you may be missing and make more confident decisions about what comes next.</span></p>
+      <p class="subline"><span class="subline-text">The Modern Compass newsletter <span class="gradient-highlight">looks one layer beneath</span> a familiar life challenge to show a new perspective and improve confidence in decision making.</span></p>
 
       <div class="built-for">
-        <span class="built-for-label">One layer deeper can look like:</span>
+        <span class="built-for-label">One layer deeper, IRL:</span>
         <p class="cycling-line"><span class="cycling-text" id="cyclingText"></span><span class="cursor">|</span></p>
       </div>
 
@@ -198,25 +198,38 @@ import SEO from '../components/SEO.astro';
     margin: 0 auto !important;
   }
 
-  /* Founder credibility line. The graphic still shows through this far
-     down the hero, so it gets the same "readable card over art" treatment
-     as .subline-text, but styled as a distinct pull-quote (left accent
-     bar + blur + shadow) rather than a plain highlight so it reads as a
-     personal aside, not more hero copy. */
+  /* Founder credibility line. Pushed well clear of the background graphic's
+     lower edge (the graphic is centered on .built-for and extends roughly
+     half its own height below it) so the card sits on clean white instead
+     of overlapping the art. Styled as a distinct pull-quote card — a
+     brand-gradient accent bar (via ::before, so its corners can stay
+     independent of the card's own radius) + blur + a tinted shadow — so it
+     reads as a polished personal aside, not more hero copy. */
   .credibility {
+    position: relative;
     max-width: 560px;
-    margin: 8px auto 0;
+    margin: 64px auto 0;
     text-align: left;
     font-size: clamp(0.88rem, 1.6vw, 0.98rem);
     line-height: 1.6;
     color: #333;
-    background: rgba(255, 255, 255, 0.88);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-    border-left: 3px solid #8b5cf6;
-    border-radius: 4px 10px 10px 4px;
-    padding: 14px 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(248, 244, 255, 0.94));
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 18px 24px 18px 28px;
+    box-shadow: 0 16px 36px rgba(139, 92, 246, 0.16), 0 2px 10px rgba(0, 0, 0, 0.06);
+  }
+
+  .credibility::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    border-radius: 12px 0 0 12px;
+    background: linear-gradient(180deg, var(--color-purple, #b324a7), var(--color-blue, #0087c9), var(--color-orange, #f76a3e));
   }
 
   .credibility-attribution {
@@ -272,14 +285,10 @@ import SEO from '../components/SEO.astro';
   // Typewriter animation
   document.addEventListener('DOMContentLoaded', function() {
     const personas = [
-      'Dating struggles rooted in worth and confidence',
-      'Career confusion that came down to trusting your own judgment',
-      'A project delayed for years waiting to feel ready',
-      'Relationship friction that began with the loss of common ground',
-      'Procrastination that was really anxiety in disguise',
-      'Weak boundaries caused by giving trust too freely',
-      'Feeling surrounded by people but still not truly known',
-      'Inherited expectations mistaken for who you really are'
+      'Dating life improved once you realized the importance of self-worth and acknowledged your anxiety',
+      'A career pivot when you recognized how far character could take you',
+      'The book got written once you trusted you had something to say',
+      'That project finally started when you realized self-control was all you ever needed'
     ];
 
     const el = document.getElementById('cyclingText');
