@@ -13,6 +13,14 @@ import SEO from '../components/SEO.astro';
   />
   <link slot="head" rel="preconnect" href="https://subscribe-forms.beehiiv.com" />
 
+  <!-- Hero background is the LCP element on this page — preload it with
+       fetchpriority high so the browser fetches it from the HTML scan
+       instead of discovering it only after CSS is parsed. Never lazy-load
+       this. `media` picks the one matching variant per viewport so only
+       one file downloads. -->
+  <link slot="head" rel="preload" as="image" type="image/webp" fetchpriority="high" media="(max-width: 640px)" href="/background-mobile.webp" />
+  <link slot="head" rel="preload" as="image" type="image/webp" fetchpriority="high" media="(min-width: 641px)" href="/background-desktop.webp" />
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="wrap narrow">
@@ -67,7 +75,7 @@ import SEO from '../components/SEO.astro';
     width: min(1053px, 117vw);
     aspect-ratio: 1283 / 1226;
     transform: translate(-50%, -50%);
-    background-image: url('/Background.png');
+    background-image: url('/background-desktop.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -190,6 +198,7 @@ import SEO from '../components/SEO.astro';
 
     .built-for::before {
       width: min(838px, 142vw);
+      background-image: url('/background-mobile.webp');
     }
 
     .cycling-line {
