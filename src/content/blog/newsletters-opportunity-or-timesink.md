@@ -48,7 +48,7 @@ One thing AI does do well is build and educate. It built this very website, and 
 
 2. **I learned not to waste money chasing vanity metrics.** Beehiiv Boosts, Meta ads, SparkLoop, LinkedIn ads. I tinkered with all of them at low stakes, and they rarely produced engaged readers when my existing readers weren't already engaged. Focus on the people who are already paying attention, and on the small things that resonate on social.
 
-3. **So how do you actually get readers, eyeballs, and subscribers?** Sorry to disappoint, I don't have the full answer yet. What I can tell you works, even if it's not an overnight success, is posting on social media. For a lot of people, LinkedIn will be the place. For others, a different platform will fit better. It's free, low risk, and yes, you'll suck at it at first, same as I did and still do. But through it, you find your voice.
+3. **So how do you actually get readers, eyeballs, and subscribers?** Sorry to disappoint, I don't have the full answer yet. What I can tell you works, even if it's not an overnight success, is posting on social media. For a lot of people, LinkedIn will be the place. For others, a different platform will fit better. It's free, low risk, and yes, you'll suck at it at first, same as I did and still do. But through it, you find your voice, and just as valuable, you learn which platform doesn't convert for you. For me that was TikTok, even at 1,000 followers. For you it might be the opposite.
 
    <img src="/blog-graphics/suck-to-get-good.jpg" alt="Alex Hormozi quote: If you aren't willing to suck, you're never going to get good." style="width:100%;height:auto;" />
 
