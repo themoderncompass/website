@@ -35,6 +35,8 @@ Here's a few reasons why I think progress was slow.
 
 **I'd have ignored AI on strategy from the start.** Had I known how much AI would send me into analysis paralysis, on everything from positioning to editing, I would have told my slightly younger, better-looking self to just make what your 30-year-old self would want to read, and start there. Don't put stock in what AI says you should do. It's a shit show, and one model will contradict the next. Ask what real people say, or where they're conspicuously silent, instead.
 
+One thing AI does do well is build and educate. It built this very website, and tools like Claude Cowork and MCP servers have lowered the bar enough to take a lot of the building effort off your plate.
+
 **I'd have avoided TikTok.** I posted on TikTok a couple times a week for a year, trying to funnel those followers to the newsletter, and it never converted, despite reaching 1,000 followers. I'm not saying it won't work for you, or that I won't ever go back, but for me it was a waste of time. And yes, those cringeworthy videos are still up if you look up @themoderncompass.
 
 **I'd have started posting on LinkedIn sooner.** I've gotten more follower and newsletter growth from LinkedIn alone than from every other platform or Meta ad campaign combined, and I ran ads here and there too.
