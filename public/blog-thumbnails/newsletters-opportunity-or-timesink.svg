@@ -1,0 +1,31 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Background -->
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="gradNewsletterThumb" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F97316"/>
+      <stop offset="33%" style="stop-color:#FBBF24"/>
+      <stop offset="66%" style="stop-color:#10B981"/>
+      <stop offset="100%" style="stop-color:#3B82F6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Simple Envelope with Growth Line Drawing -->
+  <g transform="translate(600, 330)">
+    <!-- Envelope body -->
+    <rect x="-230" y="-80" width="290" height="190" rx="10" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7"/>
+
+    <!-- Envelope flap -->
+    <polyline points="-230,-80 -85,50 60,-80" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- Growth line rising out of the envelope -->
+    <polyline points="60,40 135,5 180,-45 235,-110" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Growth markers -->
+    <circle cx="135" cy="5" r="9" fill="url(#gradNewsletterThumb)"/>
+    <circle cx="180" cy="-45" r="9" fill="url(#gradNewsletterThumb)"/>
+    <circle cx="235" cy="-110" r="14" fill="url(#gradNewsletterThumb)"/>
+  </g>
+</svg>

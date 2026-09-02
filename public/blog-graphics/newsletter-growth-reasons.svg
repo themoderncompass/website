@@ -1,0 +1,55 @@
+<svg width="1300" height="360" viewBox="0 0 1300 360" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Background -->
+  <rect width="1300" height="360" fill="#FFFFFF"/>
+
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="gradReasons" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F97316"/>
+      <stop offset="33%" style="stop-color:#FBBF24"/>
+      <stop offset="66%" style="stop-color:#10B981"/>
+      <stop offset="100%" style="stop-color:#3B82F6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Connecting line -->
+  <line x1="130" y1="150" x2="1170" y2="150" stroke="url(#gradReasons)" stroke-width="4" stroke-dasharray="2,14" stroke-linecap="round"/>
+
+  <!-- Node 1 -->
+  <g transform="translate(130,150)">
+    <circle r="52" fill="none" stroke="url(#gradReasons)" stroke-width="6"/>
+    <text text-anchor="middle" dy="16" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#111827">1</text>
+    <text text-anchor="middle" y="98" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#374151">Focus</text>
+  </g>
+
+  <!-- Node 2 -->
+  <g transform="translate(390,150)">
+    <circle r="52" fill="none" stroke="url(#gradReasons)" stroke-width="6"/>
+    <text text-anchor="middle" dy="16" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#111827">2</text>
+    <text text-anchor="middle" y="98" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#374151">Positioning</text>
+  </g>
+
+  <!-- Node 3 -->
+  <g transform="translate(650,150)">
+    <circle r="52" fill="none" stroke="url(#gradReasons)" stroke-width="6"/>
+    <text text-anchor="middle" dy="16" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#111827">3</text>
+    <text text-anchor="middle" y="98" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#374151">Identity</text>
+  </g>
+
+  <!-- Node 4 -->
+  <g transform="translate(910,150)">
+    <circle r="52" fill="none" stroke="url(#gradReasons)" stroke-width="6"/>
+    <text text-anchor="middle" dy="16" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#111827">4</text>
+    <text text-anchor="middle" y="98" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#374151">Funnel</text>
+  </g>
+
+  <!-- Node 5 -->
+  <g transform="translate(1170,150)">
+    <circle r="52" fill="none" stroke="url(#gradReasons)" stroke-width="6"/>
+    <text text-anchor="middle" dy="16" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#111827">5</text>
+    <text text-anchor="middle" y="98" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#374151">Content</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="650" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="600" fill="#6B7280">5 things that slowed my growth over 19 issues</text>
+</svg>
