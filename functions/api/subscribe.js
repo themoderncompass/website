@@ -33,7 +33,7 @@ export async function onRequestPost(context) {
   const apiKey = env.BEEHIIV_API_KEY;
 
   if (!publicationId || !apiKey) {
-    return jsonResponse({ error: 'Newsletter signup is temporarily unavailable.' }, 500);
+        return jsonResponse({ error: 'Newsletter signup is temporarily unavailable.', hasPublicationId: Boolean(publicationId), hasApiKey: Boolean(apiKey) }, 500);
   }
 
   let beehiivRes;
