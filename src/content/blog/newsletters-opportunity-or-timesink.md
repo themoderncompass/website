@@ -7,6 +7,7 @@ keywords: ["newsletter growth", "email newsletter lessons", "beehiiv boosts", "b
 image: "/blog-thumbnails/newsletters-opportunity-or-timesink.svg"
 draft: false
 categories: ["Building", "Growth"]
+hideFooterCta: true
 ---
 
 I'm approaching two years of operating a monthly newsletter, with 19 issues out to date, and I wanted to share some lessons learned, some things I would have changed, and why I still got tremendous benefit even though the subscriber count doesn't reflect it.
@@ -49,17 +50,19 @@ One thing AI does do well is build and educate. It built this very website, and 
 
 3. **So how do you actually get readers, eyeballs, and subscribers?** Sorry to disappoint, I don't have the full answer yet. What I can tell you works, even if it's not an overnight success, is posting on social media. For a lot of people, LinkedIn will be the place. For others, a different platform will fit better. It's free, low risk, and yes, you'll suck at it at first, same as I did and still do. But through it, you find your voice.
 
+   <img src="/blog-graphics/suck-to-get-good.jpg" alt="Alex Hormozi quote: If you aren't willing to suck, you're never going to get good." style="width:100%;height:auto;" />
+
 4. **Building authority outside your career or industry is genuinely difficult**, though not insurmountable. It takes a long time, hopefully less for you than it has for me, but I've found vulnerability and trust are the two things that actually move the needle.
 
 5. **The one thing I feel I did right was building a list I actually own the emails for**, through Beehiiv, Kit, or similar, instead of a LinkedIn-native newsletter. You can grow faster with the latter, but you don't own the emails, so you can't own the experience. And like most LinkedIn-native newsletters, I subscribe and then never see the issue again unless I happen to catch the creator's post. Skip that method. Build an email list you own.
 
 ## My Verdict
 
-Newsletters are a huge opportunity. Look at everything I learned, almost entirely free, through trial and error. They do require time, which is why landing on the right cadence is crucial, based on how much focus you're actually willing to give it. Treat every issue as a chance to tell your best story yet, and you can't go far wrong.
+Newsletters are a huge opportunity. Look at everything I learned, almost entirely free, through trial and error. They do require time, which is why landing on the right cadence is crucial, based on how much focus you're actually willing to give it. Treat every issue as a chance to tell your best story yet, and you can't go wrong.
 
 If you're eager to start your own, hit me up on LinkedIn. I can point you to a few pros running ongoing programs. In the meantime, why not subscribe to the Modern Compass newsletter? The next issue might be the one that shows you a new angle to finally go all in.
 
-**[Subscribe to the Modern Compass newsletter →](/newsletter)**
+<a href="/newsletter" class="inline-subscribe-button">Subscribe to the Modern Compass newsletter →</a>
 
 **Always... follow your compass.**
 
@@ -71,11 +74,3 @@ If you're eager to start your own, hit me up on LinkedIn. I can point you to a f
 
 - [1] Psychology Today. (2025). *Why You Forget So Much of What You Just Learned.* Psychology Today Blog. psychologytoday.com
 - [2] Udemy Business. (2024). *Overcoming the Forgetting Curve in Learning.* Udemy Blog. udemy.com
-
----
-
-## More Resources
-
-- **Curious how the assessment side of the business is growing?** → Read [Early Signals From the Assessment](/blog/early-signals-from-the-assessment)
-- **Want the case for building things that are yours, even if they never pay off?** → Read [Creative Equity: Why Creating for Yourself Compounds](/blog/creative-equity-compounds)
-- **Ready to see what the newsletter is actually about?** → Explore [the Modern Compass book](/book)
