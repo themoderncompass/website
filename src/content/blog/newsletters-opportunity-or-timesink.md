@@ -56,15 +56,15 @@ One thing AI does do well is build and educate. It built this very website, and 
 
 5. **The one thing I feel I did right was building a list I actually own the emails for**, through Beehiiv, Kit, or similar, instead of a LinkedIn-native newsletter. You can grow faster with the latter, but you don't own the emails, so you can't own the experience. And like most LinkedIn-native newsletters, I subscribe and then never see the issue again unless I happen to catch the creator's post. Skip that method. Build an email list you own.
 
-## Closing the Loop on the Subscriber Drop
+## Why Fifty Real Readers Beat a Hundred Ghosts
 
-I mentioned going from over 100 subscribers down to about 50, so let me actually close that loop instead of leaving it hanging.
+A shrinking subscriber count looks like failure. It isn't always, and mine wasn't.
 
-My unsubscribe rate has stayed very low this entire time, and I think going monthly instead of weekly or biweekly is a big part of why. Nobody feels bombarded, so almost nobody feels the need to leave.
+I built the list past 100 mostly through Beehiiv Boosts and Meta ads, and both brought in the wrong people, not people who disliked the newsletter enough to unsubscribe, but people who never engaged with it at all. When I pulled the actual open data, a large chunk of that list had never opened a single issue, or had opened one or two years ago and disappeared. That's not an audience. That's noise sitting on top of your real numbers, and it will lie to you about how your content is actually performing.
 
-The real cause of the drop was pruning, not people opting out. Most of the growth that got me past 100 in the first place came from Beehiiv Boosts and Meta ads that never connected me with the right audience. When I finally sat down and looked at the actual numbers, a good chunk of that list had never opened a single email, or had opened one or two a long time ago and gone quiet since. Those subscribers weren't unengaged readers. They were never readers, and they were quietly wrecking my open rate.
+My unsubscribe rate has stayed low the entire time I've run this, largely because I only publish monthly. Nobody feels bombarded enough to leave. So the drop to 50 wasn't churn. It was me cutting dead weight I never should have paid to acquire in the first place.
 
-So I cut them. Fifty people who actually open the newsletter tell me more about whether this is working than a hundred names sitting dead in a list. If your subscriber count ever drops and you assume the worst, check whether it's real unsubscribes or just an honest cleanup first. Mine was the latter, and I'd do it again.
+Here's the lesson: a subscriber who never opens an email isn't a subscriber, they're a rounding error with your name on it. Vanity growth from Boosts, paid ads, or any tactic that doesn't target real intent will always cost you more in signal than it gives you in headcount. Fifty engaged readers tell you the truth about what's working. A hundred ghosts tell you nothing, and they'll cost you money to keep chasing.
 
 ## My Verdict
 
