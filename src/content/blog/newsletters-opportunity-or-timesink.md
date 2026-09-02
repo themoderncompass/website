@@ -56,6 +56,16 @@ One thing AI does do well is build and educate. It built this very website, and 
 
 5. **The one thing I feel I did right was building a list I actually own the emails for**, through Beehiiv, Kit, or similar, instead of a LinkedIn-native newsletter. You can grow faster with the latter, but you don't own the emails, so you can't own the experience. And like most LinkedIn-native newsletters, I subscribe and then never see the issue again unless I happen to catch the creator's post. Skip that method. Build an email list you own.
 
+## Closing the Loop on the Subscriber Drop
+
+I mentioned going from over 100 subscribers down to about 50, so let me actually close that loop instead of leaving it hanging.
+
+My unsubscribe rate has stayed very low this entire time, and I think going monthly instead of weekly or biweekly is a big part of why. Nobody feels bombarded, so almost nobody feels the need to leave.
+
+The real cause of the drop was pruning, not people opting out. Most of the growth that got me past 100 in the first place came from Beehiiv Boosts and Meta ads that never connected me with the right audience. When I finally sat down and looked at the actual numbers, a good chunk of that list had never opened a single email, or had opened one or two a long time ago and gone quiet since. Those subscribers weren't unengaged readers. They were never readers, and they were quietly wrecking my open rate.
+
+So I cut them. Fifty people who actually open the newsletter tell me more about whether this is working than a hundred names sitting dead in a list. If your subscriber count ever drops and you assume the worst, check whether it's real unsubscribes or just an honest cleanup first. Mine was the latter, and I'd do it again.
+
 ## My Verdict
 
 Newsletters are a huge opportunity. Look at everything I learned, almost entirely free, through trial and error. They do require time, which is why landing on the right cadence is crucial, based on how much focus you're actually willing to give it. Treat every issue as a chance to tell your best story yet, and you can't go wrong.
