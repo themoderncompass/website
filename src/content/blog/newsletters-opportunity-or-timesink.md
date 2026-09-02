@@ -56,15 +56,15 @@ One thing AI does do well is build and educate. It built this very website, and 
 
 5. **The one thing I feel I did right was building a list I actually own the emails for**, through Beehiiv, Kit, or similar, instead of a LinkedIn-native newsletter. You can grow faster with the latter, but you don't own the emails, so you can't own the experience. And like most LinkedIn-native newsletters, I subscribe and then never see the issue again unless I happen to catch the creator's post. Skip that method. Build an email list you own.
 
-## Why Fifty Real Readers Beat a Hundred Ghosts
+## Why Fifty Real Readers Beat a Padded Hundred-Plus List
 
 A shrinking subscriber count looks like failure. It isn't always, and mine wasn't.
 
-I built the list past 100 mostly through Beehiiv Boosts and Meta ads, and both brought in the wrong people, not people who disliked the newsletter enough to unsubscribe, but people who never engaged with it at all. When I pulled the actual open data, a large chunk of that list had never opened a single issue, or had opened one or two years ago and disappeared. That's not an audience. That's noise sitting on top of your real numbers, and it will lie to you about how your content is actually performing.
+I built the list past 100 mostly through Beehiiv Boosts and Meta ads, and both brought in the wrong people, not people who disliked the newsletter enough to unsubscribe, but people who never engaged with it at all. When I pulled the actual open data, roughly half that list had never opened a single issue, or had opened one or two years ago and disappeared. That's not an audience. That's noise sitting on top of your real numbers, and it will lie to you about how your content is actually performing.
 
-My unsubscribe rate has stayed low the entire time I've run this, largely because I only publish monthly. Nobody feels bombarded enough to leave. So the drop to 50 wasn't churn. It was me cutting dead weight I never should have paid to acquire in the first place.
+My unsubscribe rate has stayed low the entire time I've run this, largely because I only publish monthly. Nobody feels bombarded enough to leave. So the drop to 50 wasn't churn. It was me cutting the dead weight I never should have paid to acquire in the first place.
 
-Here's the lesson: a subscriber who never opens an email isn't a subscriber, they're a rounding error with your name on it. Vanity growth from Boosts, paid ads, or any tactic that doesn't target real intent will always cost you more in signal than it gives you in headcount. Fifty engaged readers tell you the truth about what's working. A hundred ghosts tell you nothing, and they'll cost you money to keep chasing.
+Here's the lesson: a subscriber who never opens an email isn't a subscriber, they're a rounding error with your name on it. Vanity growth from Boosts, paid ads, or any tactic that doesn't target real intent will always cost you more in signal than it gives you in headcount. Fifty engaged readers tell you the truth about what's working. A padded list just tells you how much money you wasted acquiring names that were never going to read anything.
 
 ## My Verdict
 
