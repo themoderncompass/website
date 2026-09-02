@@ -10,11 +10,8 @@
     </linearGradient>
   </defs>
 
-  <!-- A letter weighing down one side of a scale, resting against the counter it sits on -->
+  <!-- A letter weighing down one side of a scale -->
   <g>
-    <!-- Counter the scale sits on -->
-    <line x1="280" y1="431" x2="780" y2="431" stroke="url(#gradNewsletterThumb)" stroke-width="8" stroke-linecap="round"/>
-
     <!-- Tall fulcrum stand -->
     <polygon points="600,281 555,431 645,431" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7" stroke-linejoin="round"/>
 
