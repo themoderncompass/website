@@ -66,7 +66,7 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
     <footer class="post-footer">
       <div class="newsletter-cta-inline">
         <h3>Want more insights like this?</h3>
-        <p>Join 100+ subscribers getting monthly personal growth insights, tools, and frameworks delivered to their inbox.</p>
+        <p>Join a growing list of engaged readers getting monthly personal growth insights, tools, and frameworks delivered to their inbox.</p>
         <a href="/newsletter" class="cta-button">Subscribe to the newsletter</a>
       </div>
 
@@ -186,6 +186,14 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
 
   .post-content :global(p) {
     margin-bottom: 1.5rem;
+  }
+
+  .post-content :global(img) {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    border-radius: 16px;
   }
 
   .post-content :global(ul),

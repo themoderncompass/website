@@ -96,7 +96,7 @@ It doesn't have to be perfect. It just has to be movement.
 
 ---
 
-**Ready to track your progress and build momentum?** Join 100+ subscribers getting monthly personal growth insights, frameworks, and tools - including access to [Impulse Wallet](https://impulsewallet.themoderncompass.io/), my social accountability app designed to help you follow through on what matters.
+**Ready to track your progress and build momentum?** Join a growing list of engaged readers getting monthly personal growth insights, frameworks, and tools - including access to [Impulse Wallet](https://impulsewallet.themoderncompass.io/), my social accountability app designed to help you follow through on what matters.
 
 Plus, get the **TimeOS framework** - a simple 5-step system for understanding where your time actually goes and redirecting it toward what moves you forward.
 

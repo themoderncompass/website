@@ -117,7 +117,7 @@ Now take one small action to build it.
 
 ---
 
-**Want a complete framework for identifying where your time and energy actually go?** Join 100+ subscribers getting monthly personal growth insights and tools - including the **TimeOS framework** for understanding your minimum requirements across time, focus, and action.
+**Want a complete framework for identifying where your time and energy actually go?** Join a growing list of engaged readers getting monthly personal growth insights and tools - including the **TimeOS framework** for understanding your minimum requirements across time, focus, and action.
 
 Plus get access to [Impulse Wallet](https://impulsewallet.themoderncompass.io/), my social accountability app designed to help you follow through on what matters most.
 
