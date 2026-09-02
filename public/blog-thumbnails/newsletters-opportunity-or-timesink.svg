@@ -4,34 +4,34 @@
 
   <!-- Gradient Definitions -->
   <defs>
-    <linearGradient id="gradNewsletterThumb" gradientUnits="userSpaceOnUse" x1="280" y1="170" x2="910" y2="460">
+    <linearGradient id="gradNewsletterThumb" gradientUnits="userSpaceOnUse" x1="290" y1="190" x2="900" y2="440">
       <stop offset="0%" style="stop-color:#b324a7"/>
       <stop offset="100%" style="stop-color:#0087c9"/>
     </linearGradient>
   </defs>
 
-  <!-- A letter weighing down one side of a scale -->
+  <!-- A letter weighing down one side of a scale, resting against the counter it sits on -->
   <g>
-    <!-- Ground line -->
-    <line x1="515" y1="325" x2="715" y2="325" stroke="url(#gradNewsletterThumb)" stroke-width="8" stroke-linecap="round"/>
+    <!-- Counter the scale sits on -->
+    <line x1="280" y1="431" x2="780" y2="431" stroke="url(#gradNewsletterThumb)" stroke-width="8" stroke-linecap="round"/>
 
-    <!-- Fulcrum -->
-    <polygon points="615,245 570,325 660,325" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7" stroke-linejoin="round"/>
+    <!-- Tall fulcrum stand -->
+    <polygon points="600,281 555,431 645,431" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7" stroke-linejoin="round"/>
 
     <!-- Beam, tipped so the letter's side dips down -->
-    <line x1="375" y1="314" x2="855" y2="176" stroke="url(#gradNewsletterThumb)" stroke-width="8" stroke-linecap="round"/>
-    <circle cx="615" cy="245" r="9" fill="url(#gradNewsletterThumb)"/>
+    <line x1="374.5" y1="363.1" x2="825.5" y2="198.9" stroke="url(#gradNewsletterThumb)" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="600" cy="281" r="9" fill="url(#gradNewsletterThumb)"/>
 
-    <!-- Left hanger and pan (heavier side, hangs lower) -->
-    <line x1="375" y1="314" x2="375" y2="354" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
-    <path d="M310,419 Q375,455 440,419" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
+    <!-- Left hanger and pan (heavier side, hangs down until it meets the counter) -->
+    <line x1="374.5" y1="363.1" x2="374.5" y2="413.1" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M309.5,413.1 Q374.5,449.1 439.5,413.1" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
 
     <!-- Right hanger and pan (empty side, rides higher) -->
-    <line x1="855" y1="176" x2="855" y2="231" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
-    <path d="M790,231 Q855,267 920,231" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="825.5" y1="198.9" x2="825.5" y2="248.9" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M760.5,248.9 Q825.5,284.9 890.5,248.9" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
 
     <!-- Envelope, resting in the lower pan, narrower than the pan itself -->
-    <rect x="330" y="354" width="90" height="65" rx="7" fill="#FFFFFF" stroke="url(#gradNewsletterThumb)" stroke-width="7"/>
-    <polyline points="330,354 375,386 420,354" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+    <rect x="329.5" y="343.1" width="90" height="70" rx="7" fill="#FFFFFF" stroke="url(#gradNewsletterThumb)" stroke-width="7"/>
+    <polyline points="329.5,343.1 374.5,378.1 419.5,343.1" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
   </g>
 </svg>
