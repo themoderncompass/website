@@ -4,28 +4,34 @@
 
   <!-- Gradient Definitions -->
   <defs>
-    <linearGradient id="gradNewsletterThumb" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#F97316"/>
-      <stop offset="33%" style="stop-color:#FBBF24"/>
-      <stop offset="66%" style="stop-color:#10B981"/>
-      <stop offset="100%" style="stop-color:#3B82F6"/>
+    <linearGradient id="gradNewsletterThumb" gradientUnits="userSpaceOnUse" x1="330" y1="160" x2="870" y2="440">
+      <stop offset="0%" style="stop-color:#b324a7"/>
+      <stop offset="100%" style="stop-color:#0087c9"/>
     </linearGradient>
   </defs>
 
-  <!-- Simple Envelope with Growth Line Drawing -->
-  <g transform="translate(600, 330)">
-    <!-- Envelope body -->
-    <rect x="-230" y="-80" width="290" height="190" rx="10" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7"/>
+  <!-- A letter balanced on a scale -->
+  <g>
+    <!-- Ground line -->
+    <line x1="500" y1="430" x2="700" y2="430" stroke="url(#gradNewsletterThumb)" stroke-width="8" stroke-linecap="round"/>
 
-    <!-- Envelope flap -->
-    <polyline points="-230,-80 -85,50 60,-80" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- Fulcrum -->
+    <polygon points="600,340 555,430 645,430" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7" stroke-linejoin="round"/>
 
-    <!-- Growth line rising inside the envelope -->
-    <polyline points="-190,95 -110,75 -30,50 50,15" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Beam -->
+    <line x1="380" y1="340" x2="820" y2="340" stroke="url(#gradNewsletterThumb)" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="600" cy="340" r="9" fill="url(#gradNewsletterThumb)"/>
 
-    <!-- Growth markers -->
-    <circle cx="-110" cy="75" r="9" fill="url(#gradNewsletterThumb)"/>
-    <circle cx="-30" cy="50" r="9" fill="url(#gradNewsletterThumb)"/>
-    <circle cx="50" cy="15" r="14" fill="url(#gradNewsletterThumb)"/>
+    <!-- Left hanger and pan -->
+    <line x1="380" y1="340" x2="380" y2="392" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M335,392 Q380,428 425,392" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Right hanger and pan -->
+    <line x1="820" y1="340" x2="820" y2="392" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M775,392 Q820,428 865,392" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Envelope, resting balanced at the center of the beam -->
+    <rect x="470" y="166" width="260" height="170" rx="10" fill="#FFFFFF" stroke="url(#gradNewsletterThumb)" stroke-width="7"/>
+    <polyline points="470,166 600,251 730,166" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
   </g>
 </svg>
