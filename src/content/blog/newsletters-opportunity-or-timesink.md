@@ -58,13 +58,7 @@ One thing AI does do well is build and educate. It built this very website, and 
 
 ## Why Fifty Real Readers Beat a Padded Hundred-Plus List
 
-A shrinking subscriber count looks like failure. It isn't always, and mine wasn't.
-
-I built the list past 100 mostly through Beehiiv Boosts and Meta ads, and both brought in the wrong people, not people who disliked the newsletter enough to unsubscribe, but people who never engaged with it at all. When I pulled the actual open data, roughly half that list had never opened a single issue, or had opened one or two years ago and disappeared. That's not an audience. That's noise sitting on top of your real numbers, and it will lie to you about how your content is actually performing.
-
-My unsubscribe rate has stayed low the entire time I've run this, largely because I only publish monthly. Nobody feels bombarded enough to leave. So the drop to 50 wasn't churn. It was me cutting the dead weight I never should have paid to acquire in the first place.
-
-Here's the lesson: a subscriber who never opens an email isn't a subscriber, they're a rounding error with your name on it. Vanity growth from Boosts, paid ads, or any tactic that doesn't target real intent will always cost you more in signal than it gives you in headcount. Fifty engaged readers tell you the truth about what's working. A padded list just tells you how much money you wasted acquiring names that were never going to read anything.
+Half my newsletter list, built up through Beehiiv Boosts and Meta ads, had never opened a single issue, just dead weight sitting on top of my real numbers. My unsubscribe rate has stayed low the whole time because I only publish monthly, so the drop from 100-plus to 50 wasn't churn, it was me finally cutting names I never should have paid to acquire. A subscriber who never opens an email is a rounding error with your name on it, and fifty engaged readers will tell you more truth about your work than a padded list ever will.
 
 ## My Verdict
 
