@@ -161,7 +161,7 @@ I redirected 5 hours/week to writing. That's it.
 **What compounded:**
 - Built Modern Compass from idea to framework
 - Wrote a book I'd been "planning" for years
-- Started a newsletter that now reaches 100+ people
+- Started a newsletter that now reaches a growing list of engaged readers
 - Created tools (TimeOS, Impulse Wallet) that help others
 
 None of that would exist if I kept consuming instead of creating.

@@ -118,7 +118,7 @@ One fork in the road at a time.
 
 ---
 
-**Want a complete system for tracking your daily choices and building real momentum?** Join 100+ subscribers getting monthly personal growth insights - including access to [Impulse Wallet](https://impulsewallet.themoderncompass.io/), my social accountability app designed to help you follow through on what matters.
+**Want a complete system for tracking your daily choices and building real momentum?** Join a growing list of engaged readers getting monthly personal growth insights - including access to [Impulse Wallet](https://impulsewallet.themoderncompass.io/), my social accountability app designed to help you follow through on what matters.
 
 Plus get the **TimeOS framework** - a simple 5-step system for identifying where your time goes and making intentional swaps.
 

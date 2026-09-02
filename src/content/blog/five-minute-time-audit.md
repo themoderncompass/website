@@ -96,7 +96,7 @@ When I first tracked my own time, I discovered I was spending 5+ hours/week cons
 I swapped just 5 hours/week from consuming to writing. That shift changed everything:
 - Built Modern Compass from an idea to a framework
 - Wrote the book I'd been "planning" for years
-- Started the newsletter that now reaches 100+ people
+- Started the newsletter that now reaches a growing list of engaged readers
 
 **I didn't get more time. I just stopped wasting it.**
 
