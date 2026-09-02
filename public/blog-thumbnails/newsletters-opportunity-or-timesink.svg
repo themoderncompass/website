@@ -4,28 +4,31 @@
 
   <!-- Gradient Definitions -->
   <defs>
-    <linearGradient id="gradNewsletterThumb" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#F97316"/>
-      <stop offset="33%" style="stop-color:#FBBF24"/>
-      <stop offset="66%" style="stop-color:#10B981"/>
-      <stop offset="100%" style="stop-color:#3B82F6"/>
+    <linearGradient id="gradNewsletterThumb" gradientUnits="userSpaceOnUse" x1="290" y1="190" x2="900" y2="440">
+      <stop offset="0%" style="stop-color:#b324a7"/>
+      <stop offset="100%" style="stop-color:#0087c9"/>
     </linearGradient>
   </defs>
 
-  <!-- Simple Envelope with Growth Line Drawing -->
-  <g transform="translate(600, 330)">
-    <!-- Envelope body -->
-    <rect x="-230" y="-80" width="290" height="190" rx="10" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7"/>
+  <!-- A letter weighing down one side of a scale -->
+  <g>
+    <!-- Tall fulcrum stand -->
+    <polygon points="600,281 555,431 645,431" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7" stroke-linejoin="round"/>
 
-    <!-- Envelope flap -->
-    <polyline points="-230,-80 -85,50 60,-80" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- Beam, tipped so the letter's side dips down -->
+    <line x1="374.5" y1="363.1" x2="825.5" y2="198.9" stroke="url(#gradNewsletterThumb)" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="600" cy="281" r="9" fill="url(#gradNewsletterThumb)"/>
 
-    <!-- Growth line rising inside the envelope -->
-    <polyline points="-190,95 -110,75 -30,50 50,15" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Left hanger and pan (heavier side, hangs down until it meets the counter) -->
+    <line x1="374.5" y1="363.1" x2="374.5" y2="413.1" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M309.5,413.1 Q374.5,449.1 439.5,413.1" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
 
-    <!-- Growth markers -->
-    <circle cx="-110" cy="75" r="9" fill="url(#gradNewsletterThumb)"/>
-    <circle cx="-30" cy="50" r="9" fill="url(#gradNewsletterThumb)"/>
-    <circle cx="50" cy="15" r="14" fill="url(#gradNewsletterThumb)"/>
+    <!-- Right hanger and pan (empty side, rides higher) -->
+    <line x1="825.5" y1="198.9" x2="825.5" y2="248.9" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M760.5,248.9 Q825.5,284.9 890.5,248.9" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Envelope, resting in the lower pan, narrower than the pan itself -->
+    <rect x="329.5" y="343.1" width="90" height="70" rx="7" fill="#FFFFFF" stroke="url(#gradNewsletterThumb)" stroke-width="7"/>
+    <polyline points="329.5,343.1 374.5,378.1 419.5,343.1" fill="none" stroke="url(#gradNewsletterThumb)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
   </g>
 </svg>
