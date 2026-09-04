@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await post.render();
 
-const { title, description, publishedDate, author, keywords, image, hideFooterCta } = post.data;
+const { title, description, publishedDate, author, keywords, image, hideFooterCta, hideDescription } = post.data;
 
 const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
   year: 'numeric',
@@ -50,7 +50,7 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
         <span class="post-author">by {author}</span>
       </div>
       <h1 class="post-title">{title}</h1>
-      <p class="post-description">{description}</p>
+      {!hideDescription && <p class="post-description">{description}</p>}
     </header>
 
     {image && (
@@ -68,7 +68,7 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
         <div class="newsletter-cta-inline">
           <h3>Want more insights like this?</h3>
           <p>Join a growing list of engaged readers getting monthly personal growth insights, tools, and frameworks delivered to their inbox.</p>
-          <a href="/newsletter" class="cta-button">Subscribe to the newsletter</a>
+          <a href="/newsletter" class="mc-button-inverse">Subscribe to the newsletter</a>
         </div>
       )}
 
@@ -257,14 +257,15 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
     display: block;
     width: fit-content;
     margin: 2rem auto;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
     color: white;
     padding: 0.875rem 2rem;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1rem;
     text-align: center;
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
@@ -280,7 +281,7 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
   }
 
   .newsletter-cta-inline {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
     color: white;
     padding: 2.5rem 2rem;
     border-radius: 16px;
@@ -299,23 +300,6 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
     margin-bottom: 1.5rem;
     color: white;
     opacity: 1;
-  }
-
-  .cta-button {
-    display: inline-block;
-    background: white;
-    color: #667eea;
-    padding: 0.875rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 
   .author-attribution {

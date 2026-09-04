@@ -8,6 +8,7 @@ image: "/blog-thumbnails/newsletters-opportunity-or-timesink.svg"
 draft: false
 categories: ["Building", "Growth"]
 hideFooterCta: true
+hideDescription: true
 ---
 
 I'm approaching two years of operating a monthly newsletter, with 19 issues out to date, and I wanted to share some lessons learned, some things I would have changed, and why I still got tremendous benefit even though the subscriber count doesn't reflect it.
@@ -26,7 +27,7 @@ Here's a few reasons why I think progress was slow.
 
 **Identity crisis.** For the better part of a year, I couldn't decide if the newsletter should be called Modern Compass, the book's title, or something else, and I still question it carrying the same name. I've since noticed Ryan Holiday's Daily Stoic book and Daily Stoic newsletter carry an identical naming convention, so I've decided to stick with it. If Ryan can do it, I can do it.
 
-**Marketing funnel.** I operated the whole time under the assumption that the newsletter was for people who already wanted book concepts. I positioned it too far down the funnel, practically after the book, which is backwards. The newsletter should help convert cold traffic into eventual book buyers. I'm only realizing this after joining a newsletter cohort with Chennel and Dylan two weeks ago.
+**Marketing funnel.** I operated the whole time under the assumption that the newsletter was for people who already wanted book concepts. I positioned it too far down the funnel, practically after the book, which is backwards. The newsletter should help convert cold traffic into eventual book buyers. I'm only realizing this after joining a newsletter cohort with Chenille Basilio and Dylan Redekop two weeks ago.
 
 **The wrong stuff.** I focused too much on frameworks and concepts and not enough on the pain of a given problem, storytelling, or how looking a layer deeper might reveal a path forward for someone else.
 
