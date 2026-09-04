@@ -44,7 +44,7 @@ import SEO from '../components/SEO.astro';
           <div class="tip-card">
             <div class="tip-number">3</div>
             <h3><span class="marker">Reply</span> with anything</h3>
-            <p>A one-word reply like "thanks" tells Gmail, Outlook, and Yahoo that you want mail from us. It's what actually ensures future issues land in your inbox instead of getting filtered out.</p>
+            <p>A one-word reply like "Hey" tells Gmail, Outlook, and Yahoo that you want mail from us. It's what actually ensures future issues land in your inbox instead of getting filtered out.</p>
           </div>
         </div>
       </div>
@@ -288,9 +288,9 @@ import SEO from '../components/SEO.astro';
   }
 
   /* Hand-drawn marker underline to call out the single most important
-     action in the tips list: replying to the email. A slightly wavy,
-     imperfect stroke rather than a straight rule, so it reads as a
-     deliberate highlight rather than default underline styling. */
+     action in the tips list: replying to the email. A thick, textured,
+     tapered stroke (feTurbulence-roughened edges) rather than a clean
+     vector line, so it reads like an actual highlighter mark. */
   .marker {
     position: relative;
     display: inline-block;
@@ -299,11 +299,11 @@ import SEO from '../components/SEO.astro';
   .marker::after {
     content: '';
     position: absolute;
-    left: -4%;
-    right: -4%;
-    bottom: -0.28em;
-    height: 0.32em;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 12' preserveAspectRatio='none'%3E%3Cpath d='M2,7.5 C15,2 25,10.5 40,5 C55,0.5 65,10.5 80,4.5 C88,1.5 94,7 98,5.5' stroke='%238b5cf6' stroke-width='3.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    left: -6%;
+    right: -8%;
+    bottom: -0.3em;
+    height: 0.45em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 30' preserveAspectRatio='none'%3E%3Cfilter id='r'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.03 0.4' numOctaves='2' seed='2' result='n'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='n' scale='3.5'/%3E%3C/filter%3E%3Cpath filter='url(%23r)' d='M4,19 C45,6 100,1 150,3 C178,5 196,8 206,9 C212,10 216,14 218,19' stroke='%237c3aed' stroke-width='11' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     pointer-events: none;
