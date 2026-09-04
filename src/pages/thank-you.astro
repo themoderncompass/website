@@ -25,7 +25,6 @@ import SEO from '../components/SEO.astro';
   <section class="inbox-tips">
     <div class="wrap narrow">
       <div class="tips-card">
-        <span class="tips-label">Do this now, it takes 30 seconds</span>
         <h2>Don't miss your welcome email</h2>
         <p class="tips-intro">Welcome emails get filtered more than any other kind. If you don't see it within a few minutes, here's how to fix it before it gets buried:</p>
 
@@ -42,10 +41,10 @@ import SEO from '../components/SEO.astro';
             <p>Drag the email into your Primary inbox, or mark it "Not spam." This is the single biggest signal you can give your email provider.</p>
           </div>
 
-          <div class="tip-card tip-card-emphasis">
+          <div class="tip-card">
             <div class="tip-number">3</div>
             <h3><span class="marker">Reply</span> with anything</h3>
-            <p>A one-word reply like "thanks" tells Gmail, Outlook, and Yahoo that you want mail from us. Future issues will land in your inbox from then on.</p>
+            <p>A one-word reply like "thanks" tells Gmail, Outlook, and Yahoo that you want mail from us. It's what actually ensures future issues land in your inbox instead of getting filtered out.</p>
           </div>
         </div>
       </div>
@@ -229,17 +228,6 @@ import SEO from '../components/SEO.astro';
     box-shadow: 0 16px 36px rgba(139, 92, 246, 0.14), 0 2px 10px rgba(0, 0, 0, 0.04);
   }
 
-  .tips-label {
-    display: block;
-    text-align: center;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #8b5cf6;
-    margin: 0 0 10px;
-  }
-
   .inbox-tips h2 {
     font-size: clamp(1.3rem, 3vw, 1.6rem);
     color: #111;
@@ -270,11 +258,6 @@ import SEO from '../components/SEO.astro';
     padding-left: 60px;
   }
 
-  .tip-card-emphasis {
-    border-color: #c4b5fd;
-    box-shadow: 0 4px 16px rgba(139, 92, 246, 0.18);
-  }
-
   .tip-number {
     position: absolute;
     left: 20px;
@@ -288,11 +271,6 @@ import SEO from '../components/SEO.astro';
     color: #8b5cf6;
     font-weight: 700;
     font-size: 0.9rem;
-  }
-
-  .tip-card-emphasis .tip-number {
-    background: #8b5cf6;
-    color: #fff;
   }
 
   .tip-card h3 {
@@ -309,14 +287,26 @@ import SEO from '../components/SEO.astro';
     margin: 0;
   }
 
-  /* Highlighter-style marker underline to call out the single most
-     important action in the tips list: replying to the email. */
+  /* Hand-drawn marker underline to call out the single most important
+     action in the tips list: replying to the email. A slightly wavy,
+     imperfect stroke rather than a straight rule, so it reads as a
+     deliberate highlight rather than default underline styling. */
   .marker {
-    background-image: linear-gradient(120deg, rgba(139, 92, 246, 0.4) 0%, rgba(139, 92, 246, 0.4) 100%);
+    position: relative;
+    display: inline-block;
+  }
+
+  .marker::after {
+    content: '';
+    position: absolute;
+    left: -4%;
+    right: -4%;
+    bottom: -0.28em;
+    height: 0.32em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 12' preserveAspectRatio='none'%3E%3Cpath d='M2,7.5 C15,2 25,10.5 40,5 C55,0.5 65,10.5 80,4.5 C88,1.5 94,7 98,5.5' stroke='%238b5cf6' stroke-width='3.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-size: 100% 0.4em;
-    background-position: 0 88%;
-    padding: 0 0.05em;
+    background-size: 100% 100%;
+    pointer-events: none;
   }
 
   .share {
