@@ -115,7 +115,8 @@ const categoryColors: Record<string, string> = {
           </a>
         </div>
 
-        <div class="blog-intro">
+        <details class="blog-intro">
+          <summary>How the Modern Compass framework works</summary>
           <p>Most personal development starts with the wrong question. Books, courses, and coaches jump straight to who you should become, what habits to build, what goals to chase. Nobody stops to ask where you actually are right now.</p>
           <p>That's the gap Modern Compass was built to fill.</p>
           <p>Modern Compass is a self-assessment framework built around four directions: Self, Trust, Character, and Relationships. Each direction has four progressive layers that build on each other, giving you a honest picture of where you are across the full spectrum of who you are, not just one slice of it. The subtitle says it plainly: map who you are before deciding who you become.</p>
@@ -125,7 +126,7 @@ const categoryColors: Record<string, string> = {
           <p>Character is the direction most personal development gets wrong. It's not a fixed trait you either have or don't. Character is the product you display to the world through your actions, effort, and integrity. It progresses from patterns shaped by your environment, through deliberate development, to authentic expression, and finally toward something driven by service outside of yourself.</p>
           <p>Relationships covers how you actually connect with people, starting with empathy and building through resonance, affinity, and genuine loyalty. Understanding where you are in this direction explains a lot about why some relationships feel effortless and others keep hitting the same wall.</p>
           <p>The articles below explore these directions and layers through real situations, honest examples, and practical frameworks. Whether you're feeling stuck, navigating a transition, or just trying to understand yourself better, start wherever feels most relevant.</p>
-        </div>
+        </details>
 
         <!-- Category Sections -->
         {postsByCategory.map((category) => (
@@ -243,7 +244,7 @@ const categoryColors: Record<string, string> = {
     <div class="newsletter-cta">
       <h2>Get insights delivered monthly</h2>
       <p>Join a growing list of engaged readers receiving practical tools and frameworks for personal growth.</p>
-      <a href="/newsletter" class="button">Subscribe to the newsletter</a>
+      <a href="/newsletter" class="mc-button-inverse">Subscribe to the newsletter</a>
     </div>
   </section>
 </Layout>
@@ -276,10 +277,39 @@ const categoryColors: Record<string, string> = {
   .blog-intro {
     max-width: 760px;
     margin: 0 auto 3rem auto;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .blog-intro summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #667eea;
+    font-size: 1.05rem;
+    list-style: none;
+  }
+
+  .blog-intro summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .blog-intro summary::before {
+    content: '+ ';
+    font-weight: 700;
+  }
+
+  .blog-intro[open] summary::before {
+    content: '\2212 ';
+  }
+
+  .blog-intro[open] summary {
+    margin-bottom: 1rem;
   }
 
   .blog-intro p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #4a5568;
     line-height: 1.8;
     margin-bottom: 1.25rem;
@@ -546,7 +576,7 @@ const categoryColors: Record<string, string> = {
 
   .newsletter-cta {
     text-align: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
     color: white;
     padding: 3rem 2rem;
     border-radius: 16px;
@@ -562,23 +592,6 @@ const categoryColors: Record<string, string> = {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     opacity: 0.95;
-  }
-
-  .button {
-    display: inline-block;
-    background: white;
-    color: #667eea;
-    padding: 0.875rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 
   @media (max-width: 767px) {

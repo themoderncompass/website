@@ -124,7 +124,7 @@ import SEO from '../components/SEO.astro'
         </div>
 
         <div class="cta-group">
-          <a href="https://map.themoderncompass.io" class="button primary" target="_blank" rel="noopener">
+          <a href="https://map.themoderncompass.io" class="mc-button" target="_blank" rel="noopener">
             Take the Assessment →
           </a>
         </div>
@@ -309,7 +309,7 @@ import SEO from '../components/SEO.astro'
         </div>
 
         <div class="cta-group">
-          <a href="/newsletter/" class="button primary">
+          <a href="/newsletter/" class="mc-button">
             Subscribe to Get Access
           </a>
         </div>
@@ -345,7 +345,7 @@ import SEO from '../components/SEO.astro'
       </div>
       <div class="coming-soon-cta">
         <p>Subscribe to the newsletter to be the first to know when these launch.</p>
-        <a href="/newsletter/" class="button ghost">Stay in the Loop</a>
+        <a href="/newsletter/" class="mc-button-ghost">Stay in the Loop</a>
       </div>
     </div>
   </section>
@@ -626,39 +626,6 @@ import SEO from '../components/SEO.astro'
     margin-top: 0.5rem;
   }
 
-  .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8rem 1.5rem;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: opacity 0.2s, box-shadow 0.2s;
-  }
-
-  .button.primary {
-    background: linear-gradient(135deg, #b324a7, #0087c9);
-    color: #fff;
-    box-shadow: 0 2px 12px rgba(179, 36, 167, 0.3);
-  }
-
-  .button.primary:hover {
-    opacity: 0.92;
-    box-shadow: 0 4px 18px rgba(179, 36, 167, 0.4);
-  }
-
-  .button.ghost {
-    background: transparent;
-    color: #b324a7;
-    border: 1.5px solid #b324a7;
-  }
-
-  .button.ghost:hover {
-    background: rgba(179, 36, 167, 0.06);
-  }
-
   /* Access note */
   .access-note {
     display: flex;
@@ -782,7 +749,8 @@ import SEO from '../components/SEO.astro'
       flex-direction: column;
     }
 
-    .button {
+    .mc-button,
+    .mc-button-ghost {
       text-align: center;
     }
 

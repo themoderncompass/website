@@ -348,6 +348,14 @@ const { hideNav = false, hideHeader = false } = Astro.props;
       --color-orange: #f76a3e;  /* vibrant orange */
       --text-color: #333333;
       --background-color: #ffffff;
+
+      /* Global button colour — the purple used on the newsletter page's
+         "Onward" button. Every button on the site should draw from these
+         so button styling stays consistent site-wide. */
+      --btn-purple-1: #8b5cf6;
+      --btn-purple-2: #6d28d9;
+      --btn-shadow: rgba(139, 92, 246, 0.35);
+      --btn-shadow-hover: rgba(139, 92, 246, 0.45);
       /*
        * Construct a four‑stop gradient that flows diagonally through
        * the purple, blue, yellow and orange hues.  Adjust the stop
@@ -460,6 +468,85 @@ nav {
     footer p {
       color: #666;
       font-size: 0.875rem;
+    }
+
+    /* ── Global button styles ──
+       One consistent button look for the whole site, built from the purple
+       used on the newsletter page's subscribe button. Use .mc-button for
+       any solid/filled CTA, .mc-button-ghost for an outline/secondary CTA,
+       and .mc-button-inverse for a button that sits on a colored/gradient
+       background (where a solid purple fill would blend in). */
+    .mc-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4em;
+      background: linear-gradient(135deg, var(--btn-purple-1), var(--btn-purple-2));
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+      box-shadow: 0 4px 14px var(--btn-shadow);
+    }
+
+    .mc-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px var(--btn-shadow-hover);
+    }
+
+    .mc-button:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .mc-button-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4em;
+      background: transparent;
+      color: var(--btn-purple-1);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 12px 26px;
+      border: 2px solid var(--btn-purple-1);
+      border-radius: 10px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .mc-button-ghost:hover {
+      background: var(--btn-purple-1);
+      color: #fff;
+    }
+
+    .mc-button-inverse {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4em;
+      background: #fff;
+      color: var(--btn-purple-2);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .mc-button-inverse:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
   </style>
 </html>
