@@ -2,6 +2,8 @@
 
 This is an Astro-based website project for Modern Compass.
 
+Read and follow [AGENTS.md](./AGENTS.md) for newsletter imports, shared visual styles, validation, and pull-request delivery. Newsletter ports must preserve the source word for word; the original-writing guidance in `.claude/agents/blog-writer.md` does not authorize rewriting imported content.
+
 ## Development
 
 **Start development server:**

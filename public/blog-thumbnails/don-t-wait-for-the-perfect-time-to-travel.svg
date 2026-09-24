@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Make room for the journey</title>
+  <desc id="desc">A winding path through mountains toward a sunrise, beside a packed suitcase.</desc>
+  <defs>
+    <linearGradient id="travel" gradientUnits="userSpaceOnUse" x1="310" y1="460" x2="890" y2="160">
+      <stop stop-color="#F97316"/><stop offset=".33" stop-color="#EC4899"/><stop offset=".66" stop-color="#A855F7"/><stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <path fill="#fff" d="M0 0h1200v630H0z"/>
+  <circle cx="720" cy="210" r="72" fill="#fff7ed" stroke="url(#travel)" stroke-width="5"/>
+  <g fill="none" stroke="url(#travel)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m285 350 145-175 150 175M510 350l110-125 120 125M675 350l110-105 130 105" opacity=".55"/>
+    <path d="m390 225 40-50 45 53-30-8-17 20-18-22z" stroke-width="3" opacity=".55"/>
+    <path d="M600 500c190-60 195-110 60-120s-165-45-65-73"/>
+    <path d="m580 303 20 1-6 20"/>
+    <rect x="320" y="356" width="145" height="122" rx="18" fill="#fff"/>
+    <path d="M365 355v-24h55v24M348 358v118M437 358v118" stroke-width="5"/>
+    <path d="M720 107v-17M815 154l15-10M625 150l-14-12" opacity=".6"/>
+  </g>
+  <circle cx="600" cy="500" r="9" fill="#F97316"/>
+  <path d="M290 500h210M760 500h145" stroke="#e5e7eb" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -9,6 +9,8 @@ const blog = defineCollection({
     author: z.string().default('Josh Imholte'),
     keywords: z.array(z.string()).optional(),
     image: z.string().optional(),
+    socialImage: z.string().optional(),
+    sourceUrl: z.string().url().optional(),
     draft: z.boolean().default(false),
     hideFooterCta: z.boolean().default(false),
     hideDescription: z.boolean().default(false),

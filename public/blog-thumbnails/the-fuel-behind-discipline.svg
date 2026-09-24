@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Three sources, one discipline</title>
+  <desc id="desc">Three fuel sources flow into one gauge, representing fear, willpower, and mental bandwidth powering discipline.</desc>
+  <defs>
+    <linearGradient id="fuel" gradientUnits="userSpaceOnUse" x1="320" y1="450" x2="880" y2="170">
+      <stop stop-color="#F97316"/><stop offset=".33" stop-color="#EC4899"/><stop offset=".66" stop-color="#A855F7"/><stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <path fill="#fff" d="M0 0h1200v630H0z"/>
+  <g fill="none" stroke="url(#fuel)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="370" cy="210" r="63"/>
+    <circle cx="600" cy="210" r="63"/>
+    <circle cx="830" cy="210" r="63"/>
+    <path d="M370 273v35q0 24 24 24h145M600 273v42M830 273v35q0 24-24 24H661" opacity=".5"/>
+    <path d="M370 170c-6 22-27 30-27 51a27 27 0 0 0 54 0c0-14-11-26-15-31-1 13-8 18-12 20 4-17 3-28 0-40z" fill="#fff7ed"/>
+    <path d="m606 168-30 48h22l-5 38 32-50h-22z" fill="#faf5ff"/>
+    <rect x="800" y="190" width="60" height="40" rx="7"/>
+    <path d="M860 202h8v16h-8M811 200v20M825 200v20M839 200v20" stroke-width="4"/>
+    <path d="M470 450a130 130 0 0 1 260 0" stroke-width="9"/>
+    <path d="m600 450 75-81" stroke-width="7"/>
+    <path d="M491 450h15M505 385l13 7M545 341l8 14M600 322v15M655 341l-8 14M695 385l-13 7M709 450h-15" stroke-width="4"/>
+  </g>
+  <circle cx="600" cy="450" r="12" fill="#A855F7"/>
+  <path d="M465 487h270" stroke="#e5e7eb" stroke-width="3" stroke-linecap="round"/>
+</svg>
