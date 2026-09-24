@@ -1,10 +1,10 @@
-<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<svg width="400" height="400" viewBox="105 105 190 190" xmlns="http://www.w3.org/2000/svg">
   <!-- White Background -->
   <rect width="400" height="400" fill="#FFFFFF"/>
 
   <!-- Gradient Definition -->
   <defs>
-    <linearGradient id="grad-growth" x1="0%" y1="100%" x2="0%" y2="0%">
+    <linearGradient id="grad-growth" gradientUnits="userSpaceOnUse" x1="-110" y1="110" x2="110" y2="-110">
       <stop offset="0%" style="stop-color:#F97316"/>
       <stop offset="33%" style="stop-color:#EC4899"/>
       <stop offset="66%" style="stop-color:#A855F7"/>

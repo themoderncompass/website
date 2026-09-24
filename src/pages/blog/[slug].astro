@@ -17,12 +17,13 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await post.render();
 
-const { title, description, publishedDate, author, keywords, image, hideFooterCta, hideDescription } = post.data;
+const { title, description, publishedDate, author, keywords, image, socialImage, hideFooterCta, hideDescription, sourceUrl } = post.data;
 
 const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'long',
-  day: 'numeric'
+  day: 'numeric',
+  timeZone: 'UTC'
 });
 
 const keywordString = keywords ? keywords.join(', ') : 'personal development, life direction, self improvement';
@@ -38,7 +39,7 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
     author={author}
     publishedTime={publishedDate.toISOString()}
     keywords={keywordString}
-    image={image || '/logo.png'}
+    image={socialImage || image || '/logo.png'}
   />
 
   <article class="blog-post">
@@ -86,8 +87,9 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
     "@type": "BlogPosting",
     "headline": title,
     "description": description,
-    "image": image ? `https://themoderncompass.io${image}` : "https://themoderncompass.io/logo.png",
+    "image": `https://themoderncompass.io${socialImage || image || '/logo.png'}`,
     "datePublished": publishedDate.toISOString(),
+    ...(sourceUrl && { "isBasedOn": sourceUrl, "inLanguage": "en-US", "keywords": keywordString }),
     "author": {
       "@type": "Person",
       "name": author,
@@ -198,6 +200,10 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
     border-radius: 16px;
   }
 
+  .post-content :global(.newsletter-logo) {
+    width: 120px;
+  }
+
   .post-content :global(ul),
   .post-content :global(ol) {
     margin-bottom: 1.5rem;
@@ -216,12 +222,12 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
     color: #4a5568;
   }
 
-  .post-content :global(a) {
+  .post-content :global(a:not(.mc-button):not(.mc-button-ghost):not(.mc-button-inverse)) {
     color: #667eea;
     text-decoration: underline;
   }
 
-  .post-content :global(a:hover) {
+  .post-content :global(a:not(.mc-button):not(.mc-button-ghost):not(.mc-button-inverse):hover) {
     color: #764ba2;
   }
 

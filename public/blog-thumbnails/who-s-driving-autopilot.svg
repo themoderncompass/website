@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Take the wheel of connection</title>
+  <desc id="desc">A steering wheel with two connected people at its center, surrounded by four compass points.</desc>
+  <defs>
+    <linearGradient id="connection" gradientUnits="userSpaceOnUse" x1="385" y1="480" x2="800" y2="145">
+      <stop stop-color="#F97316"/><stop offset=".33" stop-color="#EC4899"/><stop offset=".66" stop-color="#A855F7"/><stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <path fill="#fff" d="M0 0h1200v630H0z"/>
+  <g fill="none" stroke="url(#connection)" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="600" cy="315" r="210" stroke-width="3" stroke-dasharray="7 13" opacity=".25"/>
+    <circle cx="600" cy="315" r="168" stroke-width="10"/>
+    <path d="M437 277h78M685 277h78M568 379l-27 95M632 379l27 95" stroke-width="9"/>
+    <rect x="510" y="248" width="180" height="134" rx="40" fill="#fff" stroke-width="6"/>
+    <circle cx="560" cy="288" r="18" stroke-width="5"/>
+    <circle cx="640" cy="288" r="18" stroke-width="5"/>
+    <path d="M540 345v-10a20 20 0 0 1 40 0l20 12 20-12a20 20 0 0 1 40 0v10" stroke-width="5"/>
+    <path d="M600 89v26M600 515v26M374 315h26M800 315h26" stroke-width="5"/>
+  </g>
+  <circle cx="600" cy="105" r="8" fill="#A855F7"/>
+  <circle cx="810" cy="315" r="8" fill="#06B6D4"/>
+  <circle cx="600" cy="525" r="8" fill="#EC4899"/>
+  <circle cx="390" cy="315" r="8" fill="#F97316"/>
+</svg>

@@ -145,7 +145,8 @@ const categoryColors: Record<string, string> = {
                 const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: 'long',
-                  day: 'numeric'
+                  day: 'numeric',
+                  timeZone: 'UTC'
                 });
 
                 return (
@@ -198,7 +199,8 @@ const categoryColors: Record<string, string> = {
               const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
-                day: 'numeric'
+                day: 'numeric',
+                timeZone: 'UTC'
               });
 
               return (
@@ -380,7 +382,8 @@ const categoryColors: Record<string, string> = {
     width: 50px;
     height: 50px;
     border-radius: 8px;
-    padding: 0.25rem;
+    /* Artwork fills its existing 50px (45px mobile) slot without resizing cards. */
+    padding: 0;
     background: white;
   }
 
