@@ -51,7 +51,7 @@ I'll never know if the outcome would have been the same without those realizatio
 
 That's why I built the Modern Compass and wrote this book, so that others, and even I myself, might use it to find clarity faster than stumbling through it did for me.
 
-It's also where the subtitle was born: **Map who you are, before deciding who you will become.**
+It's also where the subtitle was born: **Direction before decision.**
 
 This doesn't happen just once. I've taken that step back at several key moments in the last ten years. The story above is just one of three examples. Each time, the clarity came from the same place: pausing, getting honest, and mapping where I actually was before charging forward.
 

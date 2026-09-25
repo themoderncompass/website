@@ -27,13 +27,11 @@ const shares = [
   'Build relationships',
 ];
 
-const authorName = author.name;
-
 const credentials = [
   "I've spent over a decade leading complex projects in tech and the last 5 years launching global products, turning messy topics into clear strategies and value",
   "My writing and tools are built from lived experience, tested in the realities of work, family, and growth",
   "I don't preach quick fixes. I focus on frameworks that are easy to understand",
-  "Modern Compass is designed to be actionable and approachable with activities, tools, and a growing community to help",
+  "I build activities and tools to help you put the framework into practice.",
   "I believe clarity beats complexity. If it doesn't simplify your life or nudge you to move forward, it doesn't belong"
 ];
 ---
@@ -48,7 +46,6 @@ const credentials = [
   <section class="about">
     <div class="photo-container">
       <img src="/1645116024072.jpeg" alt="Josh Imholte, author and creator of Modern Compass" class="headshot" />
-      <p class="photo-name">{authorName}</p>
     </div>
 
     <div class="about-text">
@@ -148,11 +145,6 @@ const credentials = [
     object-fit: cover;
   }
 
-  .photo-name {
-    margin-top: 0.5rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-  }
 
   @media (min-width: 768px) {
     .photo-container {

@@ -28,7 +28,7 @@ You pick what sounds good rather than what actually needs attention, or what oth
 
 ## There's a Better Way
 
-**Map who you are, before deciding who you become.**
+**Direction before decision.**
 
 Use four key directions to see where you've been investing your energy and where you've been avoiding it.
 
