@@ -2,7 +2,7 @@
 title: "The Fuel Behind Discipline"
 description: "Explore how fear, willpower, and mental bandwidth fuel discipline, and how closed decisions help you keep the promises that matter most."
 publishedDate: 2026-07-31T11:00:00.000Z
-author: "Joshua Imholte"
+author: "Josh Imholte"
 sourceUrl: "https://newsletter.themoderncompass.io/p/the-fuel-behind-discipline"
 keywords: ["discipline", "self control", "willpower", "mental bandwidth", "closed decisions"]
 image: "/blog-thumbnails/the-fuel-behind-discipline.svg"

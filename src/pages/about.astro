@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SEO from '../components/SEO.astro';
+import { author, authorSchema } from '../data/author';
 
 const bio = `
   For years in my 20's and 30's I tried to navigate life without a clear guide, full of ambition but
@@ -26,7 +27,7 @@ const shares = [
   'Build relationships',
 ];
 
-const authorName = 'Josh Imholte';
+const authorName = author.name;
 
 const credentials = [
   "I've spent over a decade leading complex projects in tech and the last 5 years launching global products, turning messy topics into clear strategies and value",
@@ -40,18 +41,19 @@ const credentials = [
   <SEO
     slot="head"
     title="About Josh Imholte - Modern Compass Author & Founder"
-    description="Meet Josh Imholte, product leader turned personal development coach. Learn how Modern Compass was created to help people feeling lost find direction and build intentional lives."
+    description="Meet Josh Imholte, author and creator of Modern Compass and a product leader in tech. Explore the story behind his framework for finding direction in life."
     canonical="https://themoderncompass.io/about"
-    keywords="Josh Imholte, Modern Compass founder, personal development coach, life direction mentor, product leader"
+    keywords="Josh Imholte, Modern Compass author, Modern Compass creator, product leader"
   />
   <section class="about">
     <div class="photo-container">
-      <img src="/1645116024072.jpeg" alt="Josh Imholte - Founder of Modern Compass, personal development coach and product leader" class="headshot" />
+      <img src="/1645116024072.jpeg" alt="Josh Imholte, author and creator of Modern Compass" class="headshot" />
       <p class="photo-name">{authorName}</p>
     </div>
 
     <div class="about-text">
-      <h1>About</h1>
+      <h1>About {author.name}</h1>
+      <p>{author.description} <a href={author.sameAs[0]}>Find Josh on LinkedIn</a>.</p>
       <p class="bio">{bio}</p>
 
       <p class="intro-share">Through my book, newsletter, LinkedIn, Threads, and tools, I share practical ways to:</p>
@@ -72,6 +74,14 @@ const credentials = [
     <!-- Gradient motto at the bottom -->
     <h2 class="motto">Always…follow your compass.</h2>
   </section>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    '@id': `${author.url}#profile`,
+    url: author.url,
+    name: `About ${author.name}`,
+    mainEntity: authorSchema,
+  })} />
 </Layout>
 
 <style>

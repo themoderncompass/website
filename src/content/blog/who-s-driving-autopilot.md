@@ -2,7 +2,7 @@
 title: "Who's driving...autopilot?"
 description: "Four ways to reconnect in a relationship on autopilot, through awareness, calibrated trust, shared interests, and character."
 publishedDate: 2026-08-21T11:00:00.000Z
-author: "Joshua Imholte"
+author: "Josh Imholte"
 sourceUrl: "https://newsletter.themoderncompass.io/p/who-s-driving-autopilot"
 keywords: ["relationship on autopilot", "calibrated trust", "relationship connection", "Modern Compass"]
 image: "/blog-thumbnails/who-s-driving-autopilot.svg"
