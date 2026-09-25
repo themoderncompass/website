@@ -28,3 +28,8 @@
 - Josh is an author, the creator of Modern Compass, and a product leader in tech. Do not invent credentials or describe him as a personal development coach or life direction mentor.
 - Keep personal profile links on the Person identity, not the Organization identity. Only describe real website features in structured data.
 - The existing collapsed framework reference lives at `/blog#modern-compass-framework`. Preserve the four directions, their exact progressive layer names, and integrity as the thread across them. Keep it available in generated HTML and collapsed by default.
+
+## Brand promise and subtitle
+
+- The current book subtitle and brand promise is “Direction before decision”. Do not reintroduce the retired “Map who you are before deciding who you become” subtitle or its variants in website copy or metadata.
+- Josh explicitly authorized replacing that retired phrase in existing blog bodies as part of this subtitle update. This is a narrow exception to the word-for-word import rule; preserve all other original article text.
