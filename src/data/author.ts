@@ -5,7 +5,7 @@ export const author = {
   url: 'https://themoderncompass.io/about',
   image: 'https://themoderncompass.io/1645116024072.jpeg',
   description: 'Author and creator of Modern Compass, and a product leader in tech.',
-  sameAs: ['https://www.linkedin.com/in/joshimholte'],
+  sameAs: ['https://www.linkedin.com/in/josh-imholte/'],
 };
 
 export const authorSchema = {
