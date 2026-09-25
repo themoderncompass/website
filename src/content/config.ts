@@ -1,4 +1,5 @@
 import { defineCollection, z } from 'astro:content';
+import { author } from '../data/author';
 
 const blog = defineCollection({
   type: 'content',
@@ -6,7 +7,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     publishedDate: z.date(),
-    author: z.string().default('Josh Imholte'),
+    author: z.string().default(author.name),
     keywords: z.array(z.string()).optional(),
     image: z.string().optional(),
     socialImage: z.string().optional(),

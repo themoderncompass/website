@@ -20,3 +20,11 @@
 - Run `npm ci` and `npm run build`, verify new routes, metadata, dates, images, links, and category/latest-post placement, and visually check desktop and mobile pages.
 - Deliver changes through a pull request unless Josh explicitly requests merging or publishing. Do not merge or enable automatic merging as part of preparing a PR.
 - These import rules override generic original-blog-writing guidance in `.claude/agents/blog-writer.md` for newsletter ports. They apply to Codex and Claude Code alike.
+
+## Author identity and framework attribution
+
+- Use Josh Imholte for website bylines and author metadata. Keep Joshua Imholte as an alternate name in structured data only; preserve original names and sign-offs inside imported newsletter bodies.
+- Shared author identity lives in `src/data/author.ts`. Link article authors and the organization's founder to its stable Person identifier; use `/about` as the author profile.
+- Josh is an author, the creator of Modern Compass, and a product leader in tech. Do not invent credentials or describe him as a personal development coach or life direction mentor.
+- Keep personal profile links on the Person identity, not the Organization identity. Only describe real website features in structured data.
+- The existing collapsed framework reference lives at `/blog#modern-compass-framework`. Preserve the four directions, their exact progressive layer names, and integrity as the thread across them. Keep it available in generated HTML and collapsed by default.

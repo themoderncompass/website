@@ -2,7 +2,7 @@
 title: "Don't Wait for the Perfect Time to Travel"
 description: "Making time for travel starts with intention. Explore planning, family connections, and travel through Self, Trust, Relationships, and Character."
 publishedDate: 2026-09-18T11:00:00.000Z
-author: "Joshua Imholte"
+author: "Josh Imholte"
 sourceUrl: "https://newsletter.themoderncompass.io/p/don-t-wait-for-the-perfect-time-to-travel"
 keywords: ["making time for travel", "intentional travel", "family travel", "Modern Compass"]
 image: "/blog-thumbnails/don-t-wait-for-the-perfect-time-to-travel.svg"
