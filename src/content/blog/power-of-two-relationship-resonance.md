@@ -1,230 +1,166 @@
 ---
-title: "The Power of Two: Why Some Relationships Just Click (And Others Don't)"
-description: "Ever wonder why you instantly connect with some people but not others? It's not chemistry or luck. It's resonance - and it comes down to two simple elements."
-publishedDate: 2025-02-19
+title: "The Power of Two: The Simple Way to Think about Why We Click"
+description: "The original Modern Compass newsletter issue introducing relationship resonance and the Power of Two."
+publishedDate: 2025-07-18
 author: "Josh Imholte"
+sourceUrl: "https://newsletter.themoderncompass.io/p/the-power-of-two-the-simple-way-to-think-about-why-we-click"
 keywords: ["relationship resonance", "why people click", "genuine connections", "meaningful relationships", "relationship compatibility"]
 image: "/blog-thumbnails/power-of-two-relationship-resonance.svg"
 draft: false
 categories: ["Book Frameworks", "Relationships"]
+hideDescription: true
+hideFooterCta: true
 ---
 
-You meet someone and within 10 minutes, it feels like you've known them for years.
+Hello {{ name | there }},
 
-Conversation flows. Silence isn't awkward. You just... **click**.
+Ever wonder why some relationships just click—leaving you feeling energized, seen, and understood while others feel like friction?
 
-Then you meet someone else - equally accomplished, equally friendly - and it's just... flat. No spark. No flow. Forced.
+In this issue, I’m introducing the Power of Two, a core relationship concept from my book Modern Compass. It’s a simple lens for understanding how resonance forms in our relationships.
 
-**What's the difference?**
+You’ll see why this matters across all kinds of relationships, plus get a couple of quick activities to help you spot what creates resonance for you.
 
-It's not chemistry. It's not luck. It's **resonance**.
+Want to listen to an overview of this issue on the go? Check out this TikTok video: [@themoderncompass](https://www.tiktok.com/@themoderncompass) #moderncompass #newsletter #relationships
 
-And it comes down to two simple elements.
+### Featured Insight: Relationship Resonance and the Power of Two
 
-## What Is Resonance?
+Let’s start with how I define resonance in relationships:
 
-Resonance is when empathy is reciprocated, presence is mutual, and energy flows without friction.
+> Resonance emerges when empathy is reciprocated, presence is mutual, and energy flows without friction.
+> It’s not loud or urgent. It’s a quiet harmony—something you feel when connection finds a natural rhythm.
 
-It's a quiet, natural connection. You're not performing. You're not managing the interaction. **You're just... there. Together.**
+Resonance isn’t just for romantic relationships as I alluded to, it shows up everywhere and in all relationships, family, friends, and colleagues too.
 
-**Resonance isn't:**
-- Chemistry (that's attraction, not connection)
-- Similarity (you can be different and still resonate)
-- Compatibility (you can be compatible and feel nothing)
+Before we move on, it’s helpful to think about two levels of resonance:
 
-**Resonance is:** The feeling that someone *gets* you - and you get them - without trying.
+- Personal resonance: When you feel connected to someone, even if it’s not fully returned.
+- Shared resonance: When both people feel it—mutual empathy, aligned energy, and effortless presence.
 
-## The Two Elements of Resonance
+Key distinction: It’s common to feel personal resonance with public figures, authors, content creators, etc when their message or actions align with you. That type of resonance is always one sided unless you know the individual. What we will focus on going forward is shared resonance, that can only form through mutual presence and real interaction.
 
-After years of building relationships (and watching others build theirs), I've noticed a pattern.
+The Power of Two is really a simplified way to understand what builds resonance in relationships. It’s made up at a minimum of these 2 things:
 
-**Genuine connection always has two elements:**
+1. Common Ground — shared interests, context, or experiences
+2. Discovered Character Alignment — a revealed sense of shared values, consistent behaviors, or a similar way of showing up
 
-### 1. Common Ground
+Common Ground shows who they are. Discovered Character Alignment reveals how they act. Together, they help you decide not just who you enjoy—but who you can rely on. In the past many folks say it’s common ground and shared values, but we can say we value something, and act differently. That’s how discovered character alignment through time together is more revealing than shared values. Most of us also have a hard time assessing someone’s values, but they can observe behavioral congruence.
 
-This is the surface layer. The entry point.
+Power of Two isn’t saying only two matter—it’s asking whether you can name those two.
 
-**Common ground includes:**
-- Shared interests (you both love hiking, design, philosophy)
-- Similar context (same industry, same life stage, same city)
-- Comparable experiences (you've both been through startups, parenthood, loss)
+Common Ground examples:
 
-Common ground creates the **opportunity** for connection. It's the doorway.
+- Grew up in the same region or cultural background
+- Shared interest in a specific hobby or topic (e.g. cycling, philosophy, personal growth)
+- Similar life stage (e.g. both new parents, both navigating a career pivot)
 
-But it's not enough.
+Discovered Character Alignment examples:
 
-You can share 100 interests with someone and still feel no resonance. Because resonance requires depth.
+- Both have pride in their work or craft
+- Both value deep conversation over surface-level talk
+- Both show generosity without expecting recognition or return
 
-### 2. Discovered Character Alignment
+These are the 2 key elements that make up resonance in a relationship. Now you might be thinking within one of your relationships, well there are 5 things we have common ground on and 3 ways we have character alignment. To that, I’d say there’s really no issue with that, but it might be worthwhile to consider, what would they be if you had to pick 2. More on that type of activity later down in the modern tools section.
 
-This is the deeper layer. The anchor.
+Important to note, the mere fact of noticing those 2 things doesn’t guarantee mutual resonance, but it tells you a connection may be worth paying attention to. From there, you can look for signs that resonance is shared—not just something you're experiencing on your own.
 
-**Character alignment means:**
-- You show up the same way in relationships
-- Your values are compatible (not identical, but aligned)
-- You approach challenges, vulnerability, and growth similarly
+Shared resonance often reveals itself gradually—through mutual curiosity, presence, and reciprocal effort. While we never know exactly what someone else is feeling, you can observe patterns or ask subtle questions that surface alignment, especially around character.
 
-**It's discovered, not declared.** You don't know someone's character from a LinkedIn bio. You see it through:
-- How they handle conflict
-- How they treat people who can't help them
-- How they respond to your vulnerability
-- How consistent they are over time
+Here are two prompts per relationship type that can help you surface shared resonance:
 
-When character aligns, **resonance deepens.**
+#### Family
+- “When do you feel most at ease around people in our family?”
+- “Who in the family really gets how you operate—and why do you think that is?”
 
-## Why Some People Click (And Others Don't)
+#### Professional
+- “What kind of working relationships or team mates bring out your best?”
+- “When collaboration feels easy, what do you think makes that possible?”
 
-**Scenario 1: Common Ground, No Character Alignment**
+#### Friend
+- “What do you value most in your close friendships?”
+- “What makes you feel like someone’s your kind of people?”
 
-You meet someone at a conference. Same industry, same challenges, lots to talk about.
+#### Intimate
+- “What are your two strongest signs that a connection is resonating for you?”
+- “When you feel deeply connected to someone, what’s usually happening between you?”
 
-But they're all hustle, no depth. They talk *at* you, not *with* you. Conversations feel transactional.
+Quick side note for married couples: Even if you’re married and have been for some time, this was a fun conversation when I mentioned to my wife what I thought those 2 things were for me when we started dating and hearing what 2 things were for her.
 
-**Result:** Surface-level connection. Might be useful professionally, but not resonant.
+These prompts aren’t about testing anyone, they’re about understanding how the other person experiences your connection.
 
-**Scenario 2: Character Alignment, No Common Ground**
+If their answers reflect the same common ground or character alignment you’re sensing, there’s a strong chance the resonance is mutual and worth further investing in.
 
-You meet someone with totally different interests, different industry, different life stage.
+## Why Understanding Resonance is Beneficial
 
-But they listen like you matter. They're curious without agenda. They show up with integrity.
+Whether you’re exploring new romantic connections, strengthening professional relationships, or wondering if it’s time to let a few go, Resonance and the Power of Two gives you a practical lens. Like the old saying goes, knowing is half the battle, in this case knowing is understanding how to spot developing resonance. The other half here is choosing with intention, investing in the relationships that align, letting go of the ones that don’t, and having language to explain why.
 
-**Result:** Deeper connection than expected. You build new common ground *because* character aligns.
+### Personal Anecdote
 
-**Scenario 3: Both Common Ground + Character Alignment**
+When I prompted this activity with my wife recently, discussing what my 2 were during our dating days, I came up with the following:
 
-You meet someone with shared interests *and* aligned values.
+Common ground - shared interest in nerdy topics. Harry Potter, Disney (totally not nerdy by the way), Legos, etc
 
-Conversation flows. You can be vulnerable. You challenge each other. You grow together.
+Discovered Character Alignment - Both of us not only had deep family roots in Texas, we also discovered neither of us would ever move away from family. Going back to this isn’t just a shared values thing, I saw her view and love for family in every interaction over the first several weeks/months that aligned with how I view family. We’ve been building on that foundation and others ever since.
 
-**Result:** Resonance. The kind of relationship that lasts decades.
+### Activity: Scroll & Spot What Resonates
 
-## The Two Levels of Resonance
+You’re already scrolling—why not turn it into insight? This quick activity uses your favorite social feed to help you practice noticing resonance in real time. It’s a low-stakes way to sharpen your awareness of what draws you in… and why.
 
-### Personal Resonance (One-Sided)
+1. Open Your Favorite Social Media App: TikTok, Instagram/Facebook Reels, YouTube Shorts, or any platform you like with short form videos from people you don’t know.
+2. Swipe Until Something Resonates: Scroll through the content and pay attention to when you feel the urge to stop and watch.
+3. Reflect on the Why: Ask yourself what made you pause. Was it the topic, the style, the person, or something else?
+4. Identify the Resonance: Take a moment to note what specifically resonated with you and why it stood out.
+5. Apply the Insight: Think about how recognizing what resonates in small moments can help you understand what truly matters to you in bigger decisions and relationships.
 
-You feel a connection, but it's not mutual.
+### Activity: The Power Pair Reflection
 
-Maybe you admire someone's work. Maybe you feel understood by their writing. Maybe you vibe with their energy.
+On your next walk, commute, or break, try this quick mental exercise to help you recognize what creates resonance for you in relationships.
 
-**This matters.** Personal resonance guides who you follow, what you consume, what inspires you.
+1. Pick a relationship. Choose one that’s been on your mind—friend, colleague, or partner. (Skip parent/child for this one.)
+2. Name the connection. Identify one clear point of common ground (what you share) and one discovered character alignment (how they show up in a way that resonates with you).
+3. Notice what clicks. Pause and reflect: What do these two things tell you about what makes a relationship feel real, energizing, or easy for you?
+4. Bonus step: use one of those prompts above and bring one of them up in any 1 of your relationships. You just might learning something new
 
-But it's not a relationship. It's a connection you feel *about* someone, not *with* them.
+## I’d Love Your Thoughts
 
-### Mutual Resonance (Shared)
+I’d love to hear what resonated (see resonance shows up a lot, and you might be sick of that word by now) or where you’re still unsure. Whether this is your first issue or you’ve been here since the beginning, your feedback helps more than you may know.
 
-You both feel it. The connection is reciprocal.
+Further more, if there is a sticky spot within this concept, something that felt hard to grasp or apply—hit reply and let me know. I have plenty more written on this topic within the book and currently working to finish the 1st pass of it, maybe I can give you a bit more than what’s here, or shed more light on a new perspective I hadn’t seen or considered.
 
-Empathy flows both ways. Presence is mutual. Energy builds instead of drains.
+## 🥳 Modern Compass Digital Asset Store Launch 🥳
 
-**This is rare.** And worth protecting.
+I have launched a Modern Compass digital asset store on Etsy this past week and just being a Newsletter subscriber, grants you 30% off code that lasts until end of July.
 
-## How to Spot Genuine Resonance
+[Modern Compass Etsy store](https://moderncompass.etsy.com/?coupon=LAUNCH30)
 
-**Ask yourself:**
-- Do I feel energized or drained after spending time with them?
-- Can I be honest without fear of judgment?
-- Do they respond to my vulnerability with curiosity, not solutions?
-- Am I performing, or am I just... being?
+These are the 2 digital assets I currently have on Etsy. Feel free to take a look and reply with any feedback of the listing and/or digital asset. Your feedback is always a gift!
 
-**Green flags:**
-- They remember what matters to you
-- They're consistent across contexts (same in public and private)
-- They challenge you without diminishing you
-- Silence feels comfortable, not awkward
+- Break the Loop - Get Unstuck in Under 10 Minutes
+- Overwhelm Reset - Braindump Worksheet with a twist to enable more deep thought
 
-**Red flags:**
-- Every conversation feels like a performance
-- You edit yourself constantly
-- They're unreliable or inconsistent
-- You feel "off" after interactions but can't explain why
+A minor detour on why I went down this path. A) Several of these newsletters have been digital asset adjacent (needing a little more something structured activity or desired outcome), and B) operating scrappy startup style (common phrase used in Tech companies) digital asset income is a means to put more into ads and boosting growth. This activity forced me to update my logo from a generic compass for more polish, so it was a win just for that!
 
-## How Resonance Develops (And How It Doesn't)
+## Interesting Finds
 
-**Resonance doesn't develop through:**
-- Forcing connection
-- Oversharing too soon
-- Trying to be interesting
-- Manufacturing common ground
+Credit to Google Gemini on these
 
-**Resonance develops through:**
-- Curiosity (asking questions that matter)
-- Consistency (showing up over time)
-- Reciprocity (matching effort and vulnerability)
-- Patience (letting it unfold naturally)
+### 1. AI-Designed Cancer Drugs Nearing Human Trials
 
-**The timeline:** Common ground can be established in minutes. Character alignment takes months. Mutual resonance? Years.
+The Find: Isomorphic Labs, Google DeepMind's AI drug discovery firm, is preparing to launch human trials for its AI-designed cancer drugs. This is a groundbreaking moment, as these drugs were conceived and optimized by artificial intelligence, potentially transforming the speed and precision of future medical breakthroughs.
 
-Don't rush it.
+Why it's cool: This isn't just about faster drug development; it's a validation of AI's ability to innovate in complex fields like medicine, potentially leading to more effective and targeted treatments for various diseases.
 
-## When to Invest, When to Walk Away
+[Read more](https://hyper.ai/en/headlines/1263ad6213f1b18a6d9171912f2c748a)
 
-**Invest in relationships with:**
-- Common ground *and* emerging character alignment
-- Reciprocal effort and curiosity
-- Consistency over time
-- Mutual resonance
+### 2. The Month of July's Roman Makeover
 
-**Walk away from relationships with:**
-- Common ground but misaligned values
-- One-sided effort
-- Inconsistency or unreliability
-- Persistent "off" feeling you can't shake
+The Find: The month of July was originally called "Quintilis," meaning "fifth month," in the ancient Roman calendar. In 44 BC, it was renamed "July" in honor of Julius Caesar, who was born in that month.
 
-**Your energy is finite.** Spend it on relationships that resonate, not ones that drain.
+Why it's cool: It's a fascinating historical tidbit that highlights how the legacy of powerful figures continues to shape even the most mundane aspects of our modern lives, like the names on our calendars.
 
-## The Modern Compass Framework for Relationships
+[Read more](https://en.wikipedia.org/wiki/July)
 
-Resonance is part of the **Relationships direction** in Modern Compass:
+## Stay Connected and Always…Follow Your Compass
 
-1. **Empathy** - Understand others' perspectives without losing yourself
-2. **Resonance** - Find people who share your values (you are here)
-3. **Affinity** - Build genuine connection through shared experience
-4. **Loyalty** - Show up consistently, even when it's hard
+Like this issue? Share it with a friend who’d enjoy it!
 
-**Resonance is the bridge.** It's where empathy meets depth, and where affinity begins to form.
-
-## Your Next Step
-
-Look at your current relationships.
-
-**Ask:**
-- Which ones have both common ground *and* character alignment?
-- Which ones feel one-sided or draining?
-- Where are you forcing connection instead of finding it?
-
-**Then:**
-- Double down on resonant relationships
-- Set boundaries on draining ones
-- Stay open to new connections, but don't force them
-
-**The Power of Two isn't a checklist.** It's a lens. Use it to see your relationships more clearly.
-
-**[Want monthly insights on building genuine relationships? →](/newsletter)**
-
----
-
-## The Bottom Line
-
-You don't click with everyone. And that's fine.
-
-Resonance requires:
-1. Common ground (the entry point)
-2. Character alignment (the anchor)
-
-When both are present, **connection feels effortless.**
-
-When one is missing, **it feels like work.**
-
-Stop forcing relationships that don't resonate. Start investing in the ones that do.
-
-**Always... follow your compass.**
-
-*- Josh*
-
----
-
-## More Resources
-
-- **Want to build self-confidence?** → Read [How Consistency Builds Self-Confidence](/blog/consistency-builds-self-confidence)
-- **Feeling lost in relationships?** → Read [How to Find Direction When You Feel Lost in Your 20s](/blog/find-direction-lost-twenties)
-- **Ready for the full framework?** → Explore [the Modern Compass book](/book)
+Subscribe here: [Newsletter Signup Link](https://moderncompass.beehiiv.com/subscribe)

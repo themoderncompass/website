@@ -7,6 +7,9 @@ keywords: ["Modern Compass assessment", "self-assessment feedback", "self-trust"
 image: "/blog-thumbnails/early-signals-assessment.svg"
 draft: false
 categories: ["Building"]
+sourceUrl: "https://newsletter.themoderncompass.io/p/early-signals-from-the-assessment"
+hideDescription: true
+hideFooterCta: true
 ---
 
 A few weeks ago I quietly opened up [Map Where You Are](https://map.themoderncompass.io), a free self-assessment I built as part of the Modern Compass framework that provides an AI-powered report. Ten people have taken it so far, (11 if you count me) and several offered feedback.

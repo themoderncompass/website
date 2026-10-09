@@ -1,136 +1,87 @@
 ---
-title: "Goals and Why the Little Things Matter More Than You Think"
-description: "Forget dramatic transformations. Learn why 15-minute daily choices create more lasting change than any grand resolution ever will."
-publishedDate: 2025-10-04
+title: "Goals and Why the Little Things Matter!"
+description: "The original Modern Compass newsletter issue about goals, small choices, structure, and the daily actions that create momentum."
+publishedDate: 2025-03-21
 author: "Josh Imholte"
+sourceUrl: "https://newsletter.themoderncompass.io/p/goals-and-why-the-little-things-matter"
 keywords: ["goal setting", "small daily habits", "consistency over motivation", "why goals fail", "building momentum", "sustainable change"]
 image: "/blog-thumbnails/why-little-things-matter-goals.svg"
 draft: false
 categories: ["Productivity", "Growth"]
+hideDescription: true
+hideFooterCta: true
 ---
 
-Most goals fail.
+Hello {{ name | "there" }},
 
-Not because the goal was wrong. Not because you lacked willpower.
+Welcome to the first edition of the Modern Compass Newsletter! For this edition, what better topic to discuss than goals? Goals are hard to start and even harder to maintain. How do we know when a goal is worth pursuing or just weighing us down? We’ll touch on that and more below. I’m glad you’re here…let’s go!
 
-They fail because we focus on the destination and ignore the daily choices that actually get us there.
+## Featured Topic: Goals
 
-Here's what I've learned: **success isn't built in grand moments. It's built in small, consistent choices that either move you forward or keep you stuck.**
+This year, more than ever, I’ve realized that small choices truly do add up. I had heard this before, but it never fully resonated—until now.
 
-Every decision is a fork in the road. One path builds momentum. The other maintains the status quo.
+You might be wondering: Why now? What changed?
 
-## Why Your Goals Keep Failing
+- I finally connected with the passion this project gave me. In the past, I wasn’t energized by this goal—I found it draining, much like writing in general. But once I built a writing habit, things shifted. My vision became clearer over time, and my confidence grew as I aligned my efforts with a direction that felt meaningful.
+- I found tools that helped me structure my thoughts better than ever. Writing tools like SudoWrite helped me refine my chapters, organize my ideas, and make my process more efficient. Generative AI helped fill technical writing gaps, accelerate research, and serve as an assistant I could bounce ideas off of.
 
-You've been there. January 1st, a fresh notebook, big ambitions. By February, the notebook's forgotten and the goal feels impossible.
+But this newsletter isn’t just about me—it’s about us and developing our own Modern Compass. Let’s explore how to make your goals easier to start, easier to maintain, and genuinely exciting to pursue.
 
-Here's why most goals don't stick:
+## The Problem – Why Most Goals Fail
 
-**You don't see immediate progress.** You expect visible results fast, and when they don't show up in days or weeks, you assume it's not working.
+Many people, myself included, set ambitious goals but struggle to follow through. Why? Because we don’t see immediate progress, and we aren’t energized by the process. Without passion or a clear structure, goals can feel draining rather than fulfilling.
 
-**You're waiting for passion to arrive.** You think you need to feel inspired before you can take action. But that's backwards.
+This often leads to procrastination, frustration, and eventually abandoning the goal altogether.
 
-**The process feels draining.** Without structure or support, every step feels like pulling yourself uphill.
+## The Insight – Small Steps and Structure Create Momentum
 
-The problem isn't your goals. It's the belief that big goals require big effort all at once.
+The key to real progress isn’t making huge leaps—it’s taking small, consistent steps backed by the right habits, tools, or systems. Passion is rarely found—it’s developed through effort.
 
-They don't.
+For me, things started clicking when I:
 
-## The Power of 15-Minute Choices
+- Built a writing habit, which created momentum and motivation
+- Used generative AI to accelerate research and formatting
+- Found structure with tools like SudoWrite to organize my thoughts
 
-Real change doesn't come from overhauling your entire life. It comes from replacing 15 minutes of one thing with 15 minutes of something else.
+Whatever your goal is, the same principles apply. Small steps and structure create momentum. Identify your key requirements early to ensure consistency and clarity along the way.
 
-Not hours. Not dramatic transformations. Just small swaps, repeated.
+## The Action Step – Start with One Small Daily Effort
 
-When I started tracking where my time actually went, I found hours each week disappearing into consuming - scrolling, researching, planning. Not bad activities, but not moving me forward either.
+1. Pick a small, repeatable action—something so easy, it’s hard to fail. A good benchmark is a minimum 15 minutes of focused effort each day. Earn a daily or weekly reward when you put in your 15 minutes.
+2. Find a tool or system to support it, whether it’s a to-do list, a habit tracker, or even AI to help organize your thoughts.
 
-I didn't need to eliminate those completely. I just needed to swap 15 minutes here and there:
-- 15 minutes of scrolling → 15 minutes writing
-- 15 minutes of planning → 15 minutes doing
-- 15 minutes of researching → 15 minutes experimenting
+Many people believe success is about big moments, but in reality, it’s built from small, daily choices. Every decision is a fork in the road—one path moves you forward, the other keeps you stuck.
 
-Those 15-minute swaps compounded. Within weeks, I had progress. Within months, I had results.
+## Interactive Activity
 
-**Start small. Build from there.**
+### Generative AI Prompt to See How Small Efforts Payoff in Your Goals
 
-## How to Make the Little Things Work
+You may not know it yet, but whatever it is you are striving towards, you can do it!
 
-Here's the framework that actually works:
+Copy and paste this into ChatGPT:
 
-### 1. Start with Minimal, Repeatable Actions
+> I have a goal, and I want you to narrate me through a 10-stage journey of pursuing it one question at a time. Start by asking me what my goal is. Then, at each stage, describe a fork in the road—with 4 choices. Don't show this in the choices but each choice has an associated XP (experience points) and at the end, you can see how much XP you racked up for fun. Add a narrative on how those small choices compound over time. Keep it realistic but inspiring. You can throw in one random setback and one random breakthrough type stage. End with a reflection on what I’ve learned from this exercise.
 
-Don't set "write a book" as your daily goal. Set "write for 15 minutes."
+Disclaimer: There are no right or wrong answers despite the scoring. Don't be discouraged if you get lower scores on your responses, but worth considering if that changes how you would approach your things in reality.
 
-Don't aim for "get in shape." Aim for "move for 15 minutes."
+## Your Compass in Action
 
-The goal is to build momentum, not exhaust yourself.
+- How did this activity resonate with you? Any key takeaway or ah-hah moments?
+- What’s one small action you can take this week to move forward on something important? Did it align to the GenAI activity or no? Hit reply and let me know!
 
-### 2. Use Structure and Tools
+## Modern Compass Book Progress
 
-You don't need to rely on willpower alone. Use tools that support consistency:
-- Habit trackers to visualize streaks
-- Accountability systems to stay on track
-- Simple frameworks to organize your approach
+- Started: ~5,000 words (Jan 1, 2025); Currently: 34,000 words (40% done).
+- All chapters outlined; clear vision for the end.
+- Prioritizing completion, not perfection (I’ll refine it later).
+- Quick detour to launch this newsletter—research highlighted the importance of building a community of interested readers early.
 
-(This is exactly why I built [Impulse Wallet](https://impulsewallet.themoderncompass.io/) - to track small choices and build momentum through accountability.)
+I will only share updates on the book when meaningful, otherwise I will leave this section out. Thank you for being an early supporter—I’m glad you’re here!
 
-### 3. Develop Passion Through Effort
+## Stay Connected and Keep Exploring
 
-Here's the truth no one tells you: **passion is rarely found. It's developed through consistent effort.**
+Like this issue? Share it with a friend who’d enjoy it!
 
-You don't wait for inspiration to show up. You show up, and inspiration follows.
+Follow along: [X](https://twitter.com/ModernCompassHQ) | [Facebook](https://facebook.com/profile.php?id=61573796291614)
 
-Every 15-minute choice builds familiarity. Familiarity builds competence. Competence builds passion.
-
-### 4. Celebrate the Small Wins
-
-When you hit 3 days of consistency, that's a win. When you choose 15 minutes of progress over 15 minutes of distraction, that's a win.
-
-Create a reward system for showing up, not just for finishing.
-
-The little things compound when you recognize them.
-
-## What Changed for Me
-
-I used to think goals required massive effort and perfect conditions.
-
-Now I know they require small, repeated choices and simple systems to support them.
-
-When I swapped:
-- Consuming for creating (15 minutes at a time)
-- Planning for doing (15 minutes at a time)
-- Waiting for moving (15 minutes at a time)
-
-Everything shifted. Not overnight. Not dramatically. But consistently.
-
-Those small swaps built Modern Compass. They built the newsletter. They built the tools I now share.
-
-**The little things didn't just matter. They were everything.**
-
-## Your Turn: Pick One 15-Minute Swap
-
-What's one small daily choice that's keeping you stuck?
-
-What's one 15-minute swap you could make instead?
-
-Start there. Not tomorrow. Today.
-
-One fork in the road at a time.
-
----
-
-**Want a complete system for tracking your daily choices and building real momentum?** Join a growing list of engaged readers getting monthly personal growth insights - including access to [Impulse Wallet](https://impulsewallet.themoderncompass.io/), my social accountability app designed to help you follow through on what matters.
-
-Plus get the **TimeOS framework** - a simple 5-step system for identifying where your time goes and making intentional swaps.
-
-[Subscribe to the newsletter](https://themoderncompass.io/newsletter) and get both tools for free.
-
-**Related reading:**
-- [The 5-Minute Time Audit That Reveals Where Your Life Is Going](/blog/five-minute-time-audit)
-- [Getting Unstuck: Why Intent Without Action Keeps You Trapped](/blog/getting-unstuck-intent-action)
-- [Consistency is Fuel for Self-Confidence](/blog/consistency-builds-self-confidence)
-
----
-
-*Always... follow your compass.*
-
-*- Josh*
+Psst... I slipped in clues about next edition’s featured topic—did you spot it in the Featured Topic section? If so, I'd love to hear your thoughts on how it might relate to personal growth.

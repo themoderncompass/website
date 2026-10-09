@@ -1,205 +1,90 @@
 ---
-title: "Why Accountability Comes Before Habits (And Why Your Habits Keep Failing)"
-description: "Habits fail without accountability. Learn why the accountability-first approach works better than willpower, and how to build sustainable change that actually sticks."
-publishedDate: 2025-02-05
+title: "Accountability Before Habits"
+description: "The original newsletter issue on why accountability and alignment create the conditions for habits to last."
+publishedDate: 2025-09-19
 author: "Josh Imholte"
-keywords: ["accountability for habits", "why habits fail", "accountability partner", "build better habits", "habit accountability system"]
+sourceUrl: "https://newsletter.themoderncompass.io/p/accountability-before-habits"
+keywords: ["accountability", "habits", "personal growth", "Impulse Wallet"]
 image: "/blog-thumbnails/accountability-before-habits.svg"
 draft: false
+hideDescription: true
+hideFooterCta: true
 categories: ["Productivity", "Growth"]
 ---
 
-You've tried building habits before.
+Hello there,
 
-Morning routine. Gym 3x/week. Journaling. Meditation. Reading before bed.
+Habits. The conventional wisdom says to stack them, track them, and repeat them. Yet most of us have journals with only a few entries or gym memberships that eventually go unused. This week I want to share why accountability matters more than habits and how it can change the outcomes we care about most.
 
-**And they all fell apart.**
+Want to listen to an overview of this issue on the go? Check out this TikTok video: [@themoderncompass](https://www.tiktok.com/@themoderncompass)
 
-Not because you're lazy. Not because you lack discipline. But because you were missing the foundation.
+### Featured Insight
 
-**Accountability comes before habits.** And most people get this backwards.
+The Problem – We are told to focus on building habits, but habits often fall apart after a few weeks without proper accountability. Without support, it is easy to skip a day, then another, and soon the habit disappears.
 
-## Why Your Habits Keep Failing
+The Insight – Accountability is the foundation that habits depend on. A partner, a system, or even a personal checkpoint creates the structure that keeps us consistent. The deeper truth is that we rarely care about the habit itself. What we care about is the outcome: stop smoking, lose weight, save money, start something new. The habit is only a vehicle. Accountability is what keeps us moving toward the destination.
 
-Here's the typical cycle:
+Those destinations can feel far off and impossible, which is why many give up. Social media makes it look like people achieve goals perfectly, but that is an illusion. In reality there are detours and setbacks. Accountability is what gets you back on the road. As Willie Jolley said, “a setback is just a setup for a comeback.”
 
-1. Get motivated (New Year, Monday, "fresh start")
-2. Set a habit (exercise daily, wake up at 5am, write 1,000 words)
-3. Do it for 3-7 days (feels great!)
-4. Miss one day (it's fine, I'll restart tomorrow)
-5. Miss another day (okay this is harder than I thought)
-6. Give up entirely (I'll try again next month)
+There is also a hidden requirement that often goes unspoken: alignment with yourself. If you don’t truly care about the outcome, no amount of outside pressure will keep you going. Friends and loved ones can and will try to push you, especially on health issues like smoking or weight, but if you are not invested, it will not last.
 
-Sound familiar?
+So how do you build that alignment if it doesn’t come naturally? Start by asking yourself why this outcome matters to you personally. Go up to three levels deep. For example, “I want to quit smoking” becomes “I want more energy” becomes “I want to play with my kids without getting winded.” That 2nd or 3rd layer deep is where alignment and clarity to the outcome might be hiding.
 
-**The problem isn't the habit. It's the structure around it.**
+My history of the broad “lose weight” focus area had many failures over my 40 years, it was that 2nd to 3rd layer that eventually took hold, and it was “I’ve seen what diabetes does to a person (first hand to my dad), I dont want that for myself”. That created very powerful alignment to the outcome and I dropped 50lb years ago and have still kept most of it off.
 
-Habits fail because there's nothing holding you accountable when motivation disappears. And motivation *always* disappears.
+You end up realizing the focus areas that you want to stick around like weight management and so, don’t really have an end or destination, they become your lifestyle which still may or may not require accountability.
 
-## The Truth About Habits
+Types of accountability:
 
-Here's what no one tells you:
+- Public accountability: sharing your progress with others
+- Reciprocal accountability: having someone check in on you, while you do the same for them
+- Internal accountability: tracking your own progress and reviewing it regularly
 
-**You don't actually care about habits. You care about outcomes.**
+Over time, it is not the habit that sticks. It is the alignment to the outcome, supported by accountability, that makes change possible.
 
-You don't want to "go to the gym." You want to feel strong, look good, have energy.
+### Interactive Activity
 
-You don't want to "journal every day." You want clarity, self-awareness, emotional regulation.
+This week try a simple mapping exercise. It will help you see where accountability is missing and how to add it back in.
 
-**Habits are just vehicles.** And vehicles break down without maintenance.
+1. Pick one focus area & outcome you have been struggling to reach.
+2. List the habits you have tried to get there.
+3. Mark which ones fell apart.
+4. Ask yourself: what accountability or alignment was missing each time?
+5. Create one accountability upgrade. Tell a friend, set a check-in, or use a system that records your actions (you’re in luck….see below).
 
-That maintenance? Accountability.
+The goal is not to chase the habit. The goal is to build accountability and alignment strong enough that the outcome you want starts to become real, even if its little gains over time.
 
-## Accountability Is the Foundation
+### One Way to Put Into Practice: Impulse Wallet Exclusive Beta Launch
 
-Think of it this way:
+I built Impulse Wallet as a simple way to make accountability real. It’s a social accountability app where you track progress with a +$1/–$1 system, either solo or in private rooms with friends, family, or colleagues. Every small decision adds up, and the goal is to reach $20 each week. The wallet resets every Monday, giving you a fresh start.
 
-- **Habits** = The structure you build
-- **Accountability** = The foundation that holds it up
+Why try it? Accountability works—research shows goals are 65% more likely to stick with a partner. Impulse Wallet makes that simple without the noise of social media or the shame of endless streaks.
 
-Without foundation, even the best structure collapses.
+The beta is live now, no download or signup required. Give it a try, invite friends and family to join you, and reply with any feedback or suggestions.
 
-**Accountability means:**
-- Someone (or something) checks if you did the thing
-- There's a record of your progress (or lack of it)
-- There's mild consequence or social pressure
-- You can't lie to yourself about "trying"
+[Impulse Wallet](https://impulsewallet.themoderncompass.io)
 
-It's not about punishment. It's about **visibility**.
+#### Impulse Wallet Guide
 
-When your actions are visible - to others or even to yourself - you can't hide. And that changes everything.
+### Milestone Unlocks (Kickstarter Style)
 
-## Three Types of Accountability
+The following are things I’ll start investing time into if I hit these active user milestones:
 
-### 1. Public Accountability
-You tell others what you're doing. Friends, social media, a group.
+- 50 active users: Dark mode capability
+- 100 active users: Basic trophy room system for players (can be seen by other players in their active room) and persists with you if you move to different rooms
+- 200 active users: Public focus centric rooms with potential Discord integration (Fitness Focus, Productivity Partners, Wellness Warriors, etc.) - find accountability partners beyond your personal network
+- 500 active users: Mobile Apps on iPhone & Android
 
-**Pros:** High social pressure, feels real
-**Cons:** Can feel performative, external validation trap
+## Modern Compass Book Updates
 
-**Example:** Posting your progress on social media, joining a fitness challenge
+Too be frank and in the spirit of accountability, I have slacked on writing this month. I did some, but not as much as I would have liked. Last 2 weeks I’ve obsessed over this app to get it launched and once the function was there, get it looking better for this months newsletter issue.
 
-### 2. Reciprocal Accountability
-You check in with a partner. They track theirs, you track yours. Mutual support.
+Now that I’m getting it out, from here I pivot back writing and troubleshooting any issues anyone spots in the app, unless of course we hit those milestones much quicker than I expect! From launch, to good enough, to beta in roughly 2 weeks, meant not as much time writing, but writing continues to be a focus area for me that I track in the app. When I don’t get at least 15 minutes of writing daily, I hit withdrawal and see my Impulse Wallet dwindle, so I don’t like to see that.
 
-**Pros:** Balanced, supportive, sustainable
-**Cons:** Both people need to stay committed
+Thats just a glimpse of how I use my app and hold myself more accountable.
 
-**Example:** Daily check-in texts with a friend, accountability buddy calls
+## Stay Connected and always…follow your compass.
 
-### 3. Internal Accountability
-You track your own progress with a system. No external pressure, just data.
+Did this topic or activity spark any insights for you? I’d love to hear it! [Survey Link](https://moderncompass.beehiiv.com/forms/a1a4c712-b340-45a6-99a0-5bd4bf2f4b60)
 
-**Pros:** Private, flexible, honest
-**Cons:** Easier to ignore, requires self-discipline
-
-**Example:** Habit tracker app, journal, simple checklist
-
-**The best approach?** Combine all three. But start with one that feels doable.
-
-## Why Alignment Matters More Than Habits
-
-You can have all the accountability in the world, but if you're tracking the wrong thing, it won't stick.
-
-**Ask yourself:**
-- Why do I actually want this?
-- What outcome am I really after?
-- Is this my goal or someone else's expectation?
-
-**Go 2-3 levels deep:**
-
-- Surface: "I want to work out"
-- Level 1: "Why?" → "To be healthier"
-- Level 2: "Why do you want to be healthier?" → "So I have energy for my kids"
-- **Level 3:** "Why does that matter?" → "Because I don't want to be the tired parent who can't play with them"
-
-**That's your real motivation.** And when you know it, accountability becomes easier because the outcome actually matters to you.
-
-## The Accountability-First System
-
-Instead of:
-1. Pick a habit
-2. Try really hard
-3. Hope it sticks
-
-Do this:
-1. **Identify the outcome you want** (clarity, energy, confidence)
-2. **Choose the smallest action that moves you toward it** (15 minutes, not 2 hours)
-3. **Set up accountability first** (partner, tracker, public commitment)
-4. **Track visibility, not perfection** (did you do it? yes/no)
-5. **Adjust based on data** (what's working? what's not?)
-
-The habit becomes secondary. The outcome + accountability is what drives it.
-
-## How Impulse Wallet Makes Accountability Simple
-
-Here's the problem with most accountability systems: they're too complex or too vague.
-
-**Impulse Wallet fixes this.**
-
-It's a simple "$1 up/down" system:
-- Make a choice aligned with your focus area? +$1
-- Make a choice that works against it? -$1
-
-**Why it works:**
-- **Visibility:** You see your choices in real-time
-- **Accountability rooms:** Join with friends or family for social support
-- **Weekly resets:** You're never too far behind
-- **15-minute undo:** Grace period for being human
-- **Gamified:** Feels like progress, not punishment
-
-It's not about being perfect. It's about being aware.
-
-**[Try Impulse Wallet - build accountability that actually works →](/newsletter)**
-
-## When Habits Actually Stick
-
-Habits stick when:
-1. You're clear on the **outcome** (not just the action)
-2. You have **accountability** (someone or something tracks it)
-3. You're **aligned** with why it matters (your reason, not society's)
-4. You **restart** without shame (missed days don't mean failure)
-
-**The formula:**
-- Outcome clarity + Accountability structure = Sustainable change
-
-Notice habits aren't even in that formula. They're the byproduct.
-
-## Your Next Step
-
-Stop trying to build habits through willpower.
-
-**Start with accountability:**
-
-1. Pick ONE focus area (not five)
-2. Set up ONE accountability system (partner, tracker, app)
-3. Track visibility for 7 days (just yes/no, no judgment)
-4. Adjust based on what you learn
-
-**Then - and only then - the habit has a chance.**
-
-**[Get early access to Impulse Wallet + monthly accountability insights →](/newsletter)**
-
----
-
-## The Bottom Line
-
-Habits are tools. Accountability is the foundation.
-
-You've been trying to build on sand. No wonder things keep collapsing.
-
-**Build the foundation first. Then the habits will hold.**
-
-It's not sexy. It's not a hack. But it's what actually works.
-
-**Always... follow your compass.**
-
-*- Josh*
-
----
-
-## More Resources
-
-- **Want to build consistency?** → Read [How Consistency Builds Self-Confidence](/blog/consistency-builds-self-confidence)
-- **Feeling lost?** → Read [How to Find Direction When You Feel Lost in Your 20s](/blog/find-direction-lost-twenties)
-- **Need the full framework?** → Explore [the Modern Compass book](/book)
+Like this issue? Share it with a friend who’d enjoy it! [Newsletter Signup Link](https://themoderncompass.io/newsletter)

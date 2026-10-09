@@ -1,231 +1,143 @@
 ---
-title: "Creative Equity: Why Creating for Yourself Compounds (Even If It Never Pays)"
-description: "Job performance resets every quarter. Creative equity compounds forever. Learn why building something for yourself matters more than climbing the corporate ladder."
-publishedDate: 2025-02-12
+title: "Creative Equity and the Compounding Effect of Creating"
+description: "The original Modern Compass newsletter issue on creative equity and why creating for yourself compounds over time."
+publishedDate: 2025-06-20
 author: "Josh Imholte"
-keywords: ["creative equity", "side project benefits", "personal growth investment", "create for yourself", "compounding creativity"]
+sourceUrl: "https://newsletter.themoderncompass.io/p/creative-equity-and-the-compounding-effect-of-creating"
+keywords: ["creative equity", "creative growth", "personal projects", "Modern Compass"]
 image: "/blog-thumbnails/creative-equity-compounds.svg"
 draft: false
+hideDescription: true
+hideFooterCta: true
 categories: ["Building", "Growth"]
 ---
 
-You spend 40-60 hours/week creating value for someone else.
+Hello there,
 
-Your best ideas? Owned by your employer.
-Your best effort? Measured by quarterly performance reviews.
-Your creative energy? Drained by 5pm.
+Most of us don’t realize how much creativity we’re spending at work until we realize we have nothing left for ourselves.
 
-**And then you wonder why you feel stuck.**
+Our jobs take the best hours of our day, the sharpest parts of our thinking—and often leave little energy to build something of our own. A job pays the bills, does provide the grounds for skill growth, and ideally supports a good life, yes—but that’s not the whole story.
 
-Here's what no one tells you: **Job performance resets. Creative equity compounds.**
+Here’s the shift: when you create for yourself, even in small ways, that effort compounds—through both success and failure.
 
-## What Is Creative Equity?
+Your skillsets can grow through your career, and those do become part of your creative equity (more on that later), but the job itself often resets. Last quarter might’ve been great, but now it’s “What have you done for me lately” or now it’s time to start working on the next project with little breathing room in between.
 
-Creative equity is the ongoing accumulation of value from your creative efforts and personal growth.
+That’s not bad intent—it’s business. Companies have to turn a profit. If they don’t, it’s nothing to no one. However, realizing that what you create for yourself never resets is a powerful shift. One that can fuel you to do more—with more clarity and purpose. We’ll dig into this and more on this newsletter on creative equity.
 
-It's:
-- The blog you write at night
-- The skill you're building on weekends
-- The side project that might go nowhere
-- The framework you're developing for yourself
+Want to listen to an audio version of this Newsletter? Check out Spotify.
 
-**It's anything you create that belongs to you.**
+[Spotify](https://open.spotify.com/show/0i44krxuT92Mvb0gTHjBtm)
 
-Not your employer. Not your clients. **You.**
+### Featured Insight: Creative Equity
 
-## Why Job Performance Doesn't Build Equity
+Creative equity is all about the ongoing accumulation of value from your creative efforts and personal growth. It’s not so much about selling yourself as it is about recognizing and nurturing the value that you create over time. It’s a way to measure and appreciate how your creative endeavors continuously add to your personal, professional, and/or entrepreneurial life. When I talk about creative equity, I don’t mean equity in the diversity or representation sense.
 
-You crush it at work. Promotion. Raise. Recognition.
+I mean the equity you build by consistently creating—your growing body of work, and every time you create, you make a deposit into your creative equity. Don’t think of this equity as something thats just written, painted, or sung, this can be far more than that. Creative equity can be skillsets, content creation in various forms, owning a business; to something as simple as being an athlete and beyond.
 
-Then what?
+An athlete is actually a great example of demonstrating creative equity for 2 reasons:
 
-**The scoreboard resets.**
+1. To be a star athlete you need to dedicate time to creating endurance, mindset, strategy, and a body that creates the ability to win. You have to create constantly, in and out of the game to be a star athlete.
+2. Creative equity in a physical form can be simply thought of as a trophy room or awards hanging somewhere for all to see. That is a display of creative equity (minus the participation awards).
 
-New quarter, new goals, new expectations. Last quarter's wins? Irrelevant. You're only as good as this quarter's numbers.
+### The Problem
 
-**That's not equity. That's a treadmill.**
+We’re more overworked than ever—spending our best energy inside jobs that reset every month or every quarter. When we’re finally off the clock, we’re often not building—we’re consuming.
 
-And the worst part? If you leave or get laid off, all that "value" you created stays with the company. You walk away with... a resume bullet point.
+I know because I did it too before I got married. I’d work all day, then scroll, watch, or game till I went to sleep because that felt like all that was left of me to do. That was the cycle.
 
-## Creative Equity Compounds Forever
+To make things even tricker, AI is accelerating everything. While this has limited impact to the athlete example, AI is already replacing tasks and reshaping some industries—and it’s just getting started. Over the next 5 to 15 years, many knowledge worker jobs (mine included) will shift dramatically, potentially vanish entirely.
 
-When you create for yourself, it stacks.
+We’re pouring our energy into roles that not only reset, but may not even exist in the future. So the question becomes: why haven’t we started to create for ourselves yet?
 
-**Every hour you invest:**
-- Builds on previous hours
-- Adds to your skill set
-- Creates something that can't be taken away
-- Compounds regardless of external circumstances
+### The Insight
 
-**Examples:**
-- Write 100 blog posts → you have 100 assets working for you
-- Learn a new skill → it's yours forever, across every job
-- Build a framework → it guides you for decades
-- Create content → it reaches people while you sleep
+The simplest answer is this: we need to start creating—intentionally for ourselves, and one way to do that is through habit or tracking that growth.
 
-**The difference:**
-- **Job value:** Linear, resets, owned by others
-- **Creative equity:** Compounds, persists, owned by you
+Not because it’s trendy, not because it guarantees income, but because the act of creating is one of the few things that compounds over time, regardless of where the society or your job goes next.
 
-## The AI Disruption Argument (But Not the One You Think)
+This doesn’t mean quitting your job or launching a brand tomorrow. It means giving some of your energy—not all of it, just some—back to yourself. Into a project, a skill, a habit, a story, into something you can look at months or years from now and say, that’s mine, I made that happen.
 
-Everyone's freaking out about AI taking jobs.
+In fact, many self-starters at work—those who volunteer for the hard stuff, lead projects, build internal docs, or step up to own a topic—are creators in disguise. They may not call it that, but they’re chasing the same thing: growth, ownership, reputation. At the heart of it, they’re building creative equity. The question is whether they’re only building it inside the company—or also finding ways to apply it beyond.
 
-"Learn to code!" → AI writes code.
-"Focus on creativity!" → AI generates art.
-"Build relationships!" → AI personalizes at scale.
+Key takeaway: Jobs pay for output and that resets. Creativity builds equity, and that grows. Creative equity may not pay the bills yet—but it might one day.
 
-**Here's the real risk:** Spending all your creative energy building someone else's creative equity while AI eats your job from underneath.
+### Personal Anecdote
 
-**The solution isn't to compete with AI.** It's to create something AI can't replace: **your unique perspective, expressed consistently, in your own voice.**
+To that last point—about being a self-starter—I’ve realized that every product launch, every presentation, every well-run meeting (or rough one), every marketing plan, and every piece of feedback has given me something I can use for myself.
 
-That's not a job. That's creative equity.
+I want to be the best in my career so I can be the best outside of it. Not just for performance at work, but to bring that same focus and effort into the things I’m building—like Modern Compass.
 
-## Where People Get It Wrong
+The truth is, I didn’t fully make these connections until this year. Now that I do, I can’t unsee it, and I hope you can’t unsee it either.
 
-**Mistake #1: "I need to monetize it immediately"**
+Every skill I sharpen, every piece of clarity I gain—it’s not just for my job. It’s part of something I’m building that belongs to me.
 
-No, you don't.
+### Interactive Activity
 
-Creative equity is valuable *even if it never makes a dollar*. The skills you build, the clarity you gain, the confidence you develop - those compound regardless of revenue.
+#### Creative Equity Review
 
-Revenue is a bonus, not the point.
+Instructions:
 
-**Mistake #2: "I don't have time"**
+You should not be able to edit the shared version I linked, but if you can, do not edit the shared version.
 
-You have 5-10 hours/week going to consumption (social media, Netflix, podcasts).
+- Download the file (using link below)
+- Delete my examples
+- Start typing in your entries (always start with oldest first)
 
-Redirect 2 hours. That's it.
+Helpful Tip: This file is best used in Excel or Google sheets, I’ve noticed issues with the chart when using Numbers on Mac so avoid using in Numbers.
 
-2 hours/week × 52 weeks = 104 hours/year on something that's *yours*.
+Start by looking back over the past week and logging what you’ve created—big or small. That’s your creative equity in action.
 
-**Mistake #3: "What if it goes nowhere?"**
+If you find the activity valuable (or even fun), feel free to go further back in time. Just be sure to enter the oldest entries first, so the cumulative chart tracks correctly.
 
-It already went somewhere. **You built it.**
+⚠️ Sorting by date after entering data can break the cumulative equity formula, so it's best to keep the sheet in chronological order.
 
-The process of creating builds:
-- Discipline (you showed up)
-- Skill (you got better)
-- Perspective (you clarified your thinking)
-- Proof (you're capable of building)
+Want to keep going?
 
-That's not "nowhere." That's equity.
+Try doing a quick Creative Equity Review every week to track your growth over time. That’s how I intend to use it myself.
 
-## The Athlete Mindset
+Amplified by AI:
 
-Athletes understand creative equity instinctively.
+You’ll also notice a tab labeled GenAI Prompts. This is optional, but if you're curious, you can drop the file into any generative AI tool and ask it to summarize trends, patterns, or wins based on your data.
 
-They train daily, building:
-- Endurance (compounds over years)
-- Technique (refines with repetition)
-- Mental toughness (strengthens through adversity)
-- Strategy (evolves with experience)
+[Creative Equity Review v1](https://docs.google.com/spreadsheets/d/1LuK1d23QKce81DIINnonFlnb_OJ_LqjjGVVrGWHK5Qo/edit?usp=sharing)
 
-**Their "trophy room" isn't just medals.** It's the accumulated proof of what they can do. And that compounds even after retirement.
+Lets see that creative equity grow!!!
 
-You can do the same. But instead of a trophy room, you have:
-- A portfolio
-- A body of work
-- A skill set
-- A reputation
+## Your Compass in Action
 
-**All built on your terms.**
+What’s one thing you’ve created in the past month that still feels meaningful to you?
 
-## How to Start Building Creative Equity
+It doesn’t have to be polished, public, or perfect. Just something that mattered to you.
 
-**Step 1: Redirect 2 hours/week from consuming to creating**
+Hit reply and let me know—I read every response, and your answer might inspire someone else to keep creating too.
 
-Stop scrolling. Start writing, coding, building, designing - whatever lights you up.
+## Modern Compass Book Updates
 
-**Step 2: Create in public (even if no one's watching)**
+- Completed one more chapter so with reducing the newsletter to once a month I seem to be clocking in a chapter a month. I’d prefer to be doing more but I’m splitting time with TikTok growth so that I have community or platform building of folks interested before book is published.
+- TikTok quest continues. Currently at 430 followers and still doing weekly ad boosts there for consistent growth. I think in my last issue I mentioned I was targeting growing beyond my existing network but my ultimate goal now is just hit 1000 followers which unlocks ability for me to add my newsletter subscribe URL as a clickable link.
 
-Publish it. Share it. Make it visible. Not for validation - for accountability.
+Sounds silly, but that clickable link is a pretty big deal for getting more newsletter growth through TikTok and/or directing folks to a website which I have but not built yet until I’m done 1st pass of book, gotten some beta reader feedback, and going through round of professional editing.
 
-**Step 3: Track your growth, not your outcomes**
+- Needless to say, clear next steps ahead and for the most part I only have 8 chapters left to do, although some of these will be the most complicated to write. …..onward!
 
-Don't measure success by followers or revenue. Measure by:
-- How many times you showed up
-- How much better you got
-- What you learned along the way
+## Referral Program
 
-**Step 4: Let it compound**
+### The First Referral Challenge Is On!
 
-Keep going. Weeks become months. Months become years. Years become a body of work that's undeniably yours.
+Be the first subscriber to refer someone to Modern Compass—and unlock a one-time reward just for leading the way.
 
-## Creative Equity in Action (My Story)
+What do you get? A custom-built generative AI prompt, tailored to your life, your growth goals, your use case, or your biggest challenge. Yours alone.
 
-I spent 5+ hours/week consuming content - podcasts, articles, videos - but zero hours creating.
+Here’s how to claim it:
 
-I redirected 5 hours/week to writing. That's it.
+If someone subscribes because of you, just send me a quick email by replying to one of my newsletters with their name (or email). I’ll confirm it and send your reward directly. No tiers. No waiting. Just be first.
 
-**What compounded:**
-- Built Modern Compass from idea to framework
-- Wrote a book I'd been "planning" for years
-- Started a newsletter that now reaches a growing list of engaged readers
-- Created tools (TimeOS, Impulse Wallet) that help others
+Referral link to share: [Subscribe](https://moderncompass.beehiiv.com/subscribe)
 
-None of that would exist if I kept consuming instead of creating.
+## Stay Connected and Keep Exploring
 
-**And here's the key:** Even if the newsletter had 0 subscribers, I'd still have:
-- Clarity on my framework
-- A skill I can use forever (writing)
-- Proof that I can build something from nothing
+Like this issue? Share it with a friend who’d enjoy it!
 
-That's creative equity. And it's worth more than any quarterly bonus.
+Subscribe here: [Newsletter Signup Link](https://moderncompass.beehiiv.com/subscribe)
 
-## The Long Game
-
-Creative equity is a 5, 10, 20-year investment.
-
-You won't see results in 3 months. But in 3 years? Undeniable.
-
-**The question isn't:** "Will this work?"
-
-**The question is:** "Do I want to build something that's mine, or keep building someone else's dream?"
-
-## Start This Week
-
-Pick ONE thing to create this week. Just one.
-
-- Write 500 words
-- Build a simple tool
-- Record your thinking on a topic
-- Design something that matters to you
-
-**It doesn't have to be good. It just has to be yours.**
-
-**[Want tools to track your creative progress? Try Impulse Wallet →](/newsletter)**
-
-**[Get monthly insights on building what's yours →](/newsletter)**
-
----
-
-## The Bottom Line
-
-You're going to spend creative energy either way.
-
-You can spend it on:
-- Quarterly goals that reset
-- Performance reviews that fade
-- Value that belongs to someone else
-
-**Or you can spend it on:**
-- Projects that compound
-- Skills that persist
-- Value that's yours forever
-
-**Creative equity doesn't guarantee success. But it guarantees ownership.**
-
-And in a world where jobs are fragile and AI is accelerating, **ownership is everything.**
-
-**Always... follow your compass.**
-
-*- Josh*
-
----
-
-## More Resources
-
-- **Want to reclaim time for creation?** → Read [The 5-Minute Time Audit That Reveals Where Your Life Is Going](/blog/five-minute-time-audit)
-- **Need accountability to stay consistent?** → Read [Why Accountability Comes Before Habits](/blog/accountability-before-habits)
-- **Ready to build your compass?** → Explore [the Modern Compass book](/book)
+#### And always….follow your compass
