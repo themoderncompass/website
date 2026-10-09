@@ -1,84 +1,47 @@
 ---
-title: "Why I Wrote Modern Compass"
-description: "The personal story behind the Modern Compass framework. How stepping back to map where I was changed everything, and why I built a system so others don't have to stumble through it."
+title: "Why I Wrote Modern Compass (Book)"
+description: "The original newsletter issue about the personal experience that led Josh to create Modern Compass."
 publishedDate: 2026-04-17
 author: "Josh Imholte"
-keywords: ["Modern Compass book", "why I wrote this book", "personal growth framework", "self-awareness", "clarity", "anxiety and growth", "self-improvement"]
+sourceUrl: "https://newsletter.themoderncompass.io/p/why-i-wrote-modern-compass-book"
+keywords: ["Modern Compass", "book", "personal growth", "self-awareness"]
 image: "/blog-thumbnails/why-i-wrote-modern-compass.svg"
 draft: false
+hideDescription: true
+hideFooterCta: true
 categories: ["Book Frameworks", "Building"]
 ---
 
-It feels important to share a little more about why I started writing this book.
+Hello there,
 
-I was 30, with very little dating experience, wondering why I didn't have the family I'd always pictured. I was happy, with good friendships, family connections, and travel, but still felt empty sitting there weekend after weekend. I had years of hit-or-miss advice behind me. YouTube videos on success. Self-help books. And yet I was stuck and going nowhere fast.
+It feels important to me based on recent events that I share a little more about why I started writing this book. I was 30, very little dating experience and wondered why I didn’t have the family I always thought about having. Sitting there weekend after weekend, while happy with the family connections, travel and friendships I had made, still felt empty. I recall years of hit or miss advice, pressure, YouTube videos of how to be successful, but I was stuck and going nowhere fast.
 
-Now, I've been a personal growth reader for a long time. But nothing quite spoke to what I was actually dealing with.
+Now I’ve long been a self-improvement/personal growth book reader, but nothing quite spoke to me to help me with this. I somehow finally stumbled into the realization that, there may be more of an issue than just the clearest symptom I was trying to solve “dating”. The issue wasn’t really dating at all, it was a combination of reenvisioning how I see self worth, self confidence, my outlook on relationships (stop the blame game), and more importantly, awareness of my drag. Drag is a concept I touch on in many chapters from the book of identifying drag that keeps you stuck at different layers. For me, this was anxiety here. I had accumulated mental scars of failures here that added up over the years and the negative self talk was so loud, I couldn’t pep talk myself out of it. I had tried things on Amazon for anxiety, but they never worked and I wanted to keep it legal. In this moment of clarity, I turned to a GP, explained my issue, and she readily gave me low dose anxiety medication.
 
-## The Wrong Problem
+What felt like over night, the noise about what I told myself stopped. I was still me, but I took risks and chances, that I would have otherwise been stuck in analysis paralysis. I never needed higher medication and I stopped after 6 months since I was dating and didn’t feel the need for them. To be clear, I’m not advocating you or anyone needs anxiety medication. What I am advocating for and the purpose of writing this book is, I wish some structured way of thinking about this existed that could have helped me sooner and hopefully many others. Having said that, I am also very aware of this almost cosmic coincidence, that a girl just so happen to become single, and a friend just so happen to think of me, and set us up on a blind date very shortly after I started medication. We're now married with 2 kids, but prior to me making some of these realizations, I don’t think the outcome would have been the same, or at least different, but we will never know. 2 things I cannot overstate, stepping back to get clarity about yourself and being intentional.
 
-I finally stumbled into a realization: there may be more going on than just the clearest symptom I was trying to solve: "dating."
+So that’s why I built this framework and wrote this book so that others, even myself might try this to see if it brings clarity quicker than stumbling through did for me. This is where the subtitle was also born: Direction before decision. I think this actually happens at several points of our lives, the above was just one of 3 examples in the last 10 years I took that step back for the bigger picture.
 
-**The issue wasn't dating at all.**
+My question to you is what needs a pause, a step back, and look at the bigger picture of you, and for you?
 
-It was a combination of things:
-- How I saw my own self-worth
-- My confidence (or lack of it)
-- My outlook on relationships (I needed to stop the blame game)
-- And most importantly, my awareness of what I call **drag**
+## Workshop News
 
-Drag is a concept I touch on throughout the book. It's about identifying what's keeping you stuck at different layers. For me, the drag was anxiety. I had accumulated mental scars from years of perceived failures, and the negative self-talk had gotten so loud I couldn't pep-talk myself out of it.
+The in-person workshop I mentioned last issue I was building during this 2 week writing break I had didn't get traction despite some marketing dollars behind it, so I pulled the plug and pivoted. Instead, I spent that time building the digital assessment I envisioned to be used in the workshop, and I’m excited to share that with you now!
 
-## The Turning Point
+## Activity - Digital Self Assessment
 
-I'd tried things. Nothing worked. In a moment of clarity, I went to my GP, explained what was going on, and she readily prescribed a low-dose anxiety medication.
+When I took my own assessment, the report named something I'd been feeling for a while but hadn't connected the dots on myself. I hope it finds something valuable for you.
 
-What felt like overnight, **the noise stopped.**
+"Map Where You Are" is a short digital self-assessment that maps where you stand across the four Modern Compass directions: Self, Trust, Character, and Relationships. Takes about ten minutes, only email is required, no name. You'll walk away with an AI-personalized report that reflects a read on where you are right now. The more honest you are answering the questions and in the open text, the more valuable the report will be to you. You may have noticed I used “map where you are” here not who you are. The reason for that is, in a 10 min assessment or even a 2 hour workshop, it’d be hard for me to claim you can map who you are. Thats a much longer game, but a general sense of where aligned to this framework, that should be possible.
 
-I was still me. But I started taking risks and chances that I previously couldn't access. I'd been frozen in analysis paralysis. I never needed a higher dose, and I stopped after six months because I no longer felt I needed it.
+[Take the assessment and Map where you are](https://map.themoderncompass.io/)
 
-To be clear: I'm not advocating that you or anyone needs anxiety medication. What I am advocating for, and what drove me to write this book, is that **I wish some structured way of thinking about all of this had existed earlier.** Something that could have helped me get clarity sooner, and might help others do the same.
+## Modern Compass Updates
 
-## The Coincidence You Can't Plan For
+Hot off the press for this issue, the editor I hired for the manuscript assessment provided their report back, lot of work to do, but very encouraging!
 
-Shortly after I started medication, a girl just happened to become single. A friend just happened to think of me. A blind date was set up.
+## Always…Follow Your Compass!
 
-We're now married with two kids.
+📩 Like this issue? Share it with a friend who’d enjoy it!
 
-I'll never know if the outcome would have been the same without those realizations I'd made. But I do know this: **two things I cannot overstate are stepping back to get clarity about yourself, and being intentional.** Before I made those realizations, I don't think I would have shown up the same way, even if the circumstances had been identical.
-
-## Why the Framework Exists
-
-That's why I built the Modern Compass and wrote this book, so that others, and even I myself, might use it to find clarity faster than stumbling through it did for me.
-
-It's also where the subtitle was born: **Direction before decision.**
-
-This doesn't happen just once. I've taken that step back at several key moments in the last ten years. The story above is just one of three examples. Each time, the clarity came from the same place: pausing, getting honest, and mapping where I actually was before charging forward.
-
-## The Question Worth Asking
-
-What in your life right now needs a pause? A step back? A look at the bigger picture?
-
-What deserves clarity before you keep pushing forward?
-
-## Activity: Map Where You Are
-
-The "Map Where You Are" digital self-assessment is a short self-assessment that maps where you stand across the four Modern Compass directions: **Self, Trust, Character, and Relationships.**
-
-It takes about ten minutes. Only your email is required. No name. You'll walk away with an AI-personalized report that reflects a genuine read on where you are right now. The more honest you are with your answers, the more valuable the report will be.
-
-When I took my own assessment, it named something I'd been feeling for a while but hadn't connected the dots on myself.
-
-**[Take the assessment and Map Where You Are →](https://map.themoderncompass.io)**
-
-**Always... follow your compass.**
-
-*— Josh*
-
----
-
-## More Resources
-
-- **Want to understand the four compass directions?** → Read [Character Is the Product You Display to the World](/blog/character-is-product-you-display)
-- **Working through a life transition?** → Read [How to Find Direction When You Feel Lost in Your Twenties](/blog/find-direction-lost-twenties)
-- **Ready to go deeper?** → Explore [the Modern Compass book](/book/)
+📌 Subscribe here: [Newsletter Signup Link](https://themoderncompass.io/newsletter)
