@@ -1,16 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SEO from '../components/SEO.astro';
-import NewsletterHero from '../components/NewsletterHero.astro';
+import NewsletterLanding from '../components/NewsletterLanding.astro';
 ---
 
-<Layout>
+<Layout hideHeader={true} fullWidth={true}>
   <SEO
     slot="head"
     title="Modern Compass Newsletter — One Layer Beneath the Obvious"
-    description="The Modern Compass newsletter looks one layer beneath a familiar life challenge to show a new perspective to better inform what you do next."
+    description="Practical perspectives to help you see what’s beneath the surface before deciding what comes next. Every third Friday, free in your inbox."
     canonical="https://themoderncompass.io/newsletter"
     keywords="personal development newsletter, modern compass newsletter, self improvement, decision making, character development, relationships growth, monthly newsletter"
   />
-  <NewsletterHero />
+  <NewsletterLanding />
 </Layout>
