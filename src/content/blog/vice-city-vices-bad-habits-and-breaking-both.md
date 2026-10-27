@@ -5,8 +5,8 @@ publishedDate: 2026-10-16
 author: "Josh Imholte"
 sourceUrl: "https://newsletter.themoderncompass.io/p/vice-city-vices-bad-habits-and-breaking-both"
 keywords: ["bad habits", "vices", "focus", "self control", "stress relief"]
-image: "/blog-thumbnails/vice-city-vices-bad-habits-and-breaking-both.svg"
-socialImage: "/blog-thumbnails/vice-city-vices-bad-habits-and-breaking-both.png"
+image: "/newsletter/vice-city-thumbnail.avif"
+socialImage: "/blog-thumbnails/vice-city-original.png"
 draft: false
 hideDescription: true
 hideFooterCta: true
