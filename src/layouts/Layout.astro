@@ -16,7 +16,7 @@ const year = 2026;
 // Pages that want zero header at all (no logo, no links) pass hideHeader —
 // used for /newsletter-signup, where the only actions available are
 // subscribing or closing the tab.
-const { hideNav = false, hideHeader = false } = Astro.props;
+const { hideNav = false, hideHeader = false, fullWidth = false } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -191,7 +191,7 @@ const { hideNav = false, hideHeader = false } = Astro.props;
 
     </header>
     )}
-    <main>
+    <main class:list={{ 'full-width': fullWidth }}>
       <slot />
     </main>
     <footer>
@@ -424,6 +424,12 @@ nav {
       main {
         padding: 2rem 1.5rem;
       }
+    }
+
+    main.full-width {
+      max-width: none;
+      padding: 0;
+      min-height: calc(100vh - 55px);
     }
 
     footer {

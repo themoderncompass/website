@@ -225,6 +225,23 @@ const keywordString = keywords ? keywords.join(', ') : 'personal development, li
     color: #4a5568;
   }
 
+  /* Imported newsletter excerpts are grouped for readability, but they are
+     not pull quotes. Keep the author's full paragraphs in normal article flow
+     while giving the excerpt a quiet visual boundary. */
+  .post-content :global(.newsletter-excerpt) {
+    margin: 2.5rem 0;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-left: 4px solid #667eea;
+    border-radius: 12px;
+    background: #fafaff;
+    color: #1f2937;
+  }
+
+  .post-content :global(.newsletter-excerpt p:last-child) {
+    margin-bottom: 0;
+  }
+
   .post-content :global(a:not(.mc-button):not(.mc-button-ghost):not(.mc-button-inverse)) {
     color: #667eea;
     text-decoration: underline;
