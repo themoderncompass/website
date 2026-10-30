@@ -9,7 +9,8 @@ const { Content: AutopilotContent } = await autopilot.render();
 <div class="newsletter-landing">
 <header class="hero" id="subscribe"><div class="wrap">
   <div class="hero-grid"><div><p class="eyebrow">The Modern Compass Newsletter</p><h1>Look one<br><span>layer deeper.</span></h1><p class="hero-prose">Practical perspectives to help you see what’s beneath the surface before deciding what comes next.</p>
-    <form class="signup-card" id="subscribeForm" action="/api/subscribe" method="post"><div class="honeypot"><label for="website">Leave this field blank</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div><label for="newsletter-email">Your email address</label><div class="signup-row"><input id="newsletter-email" name="email" type="email" placeholder="you@example.com" required autocomplete="email"><button type="submit">Subscribe free</button></div><p class="signup-detail">Every third Friday. Free to read. Unsubscribe anytime.</p><div class="reader-proof"><p>Join 150+ readers across email and LinkedIn—founders, leaders, professionals, parents, and more.</p><p>Including readers at Google Cloud, Confluent, and SailPoint.</p></div><p class="preview-status" hidden role="alert"></p></form>
+    <form class="signup-card" id="subscribeForm" action="/api/subscribe" method="post"><div class="honeypot"><label for="website">Leave this field blank</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div><label for="newsletter-email">Your email address</label><div class="signup-row"><input id="newsletter-email" name="email" type="email" placeholder="you@example.com" required autocomplete="email"><button type="submit">Subscribe free</button></div><p class="signup-detail">Every third Friday. Free to read. Unsubscribe anytime.</p><p class="preview-status" hidden role="alert"></p></form>
+    <div class="reader-proof"><p>Join 150+ readers across email and LinkedIn—founders, leaders, professionals, parents, and more.</p><p>Including readers at Google Cloud, Confluent, and SailPoint.</p></div>
   </div><div class="phone-stage"><div class="iphone" aria-label="iPhone preview of the actual Vice City newsletter"><div class="screen"><div class="status"><span>9:41</span><span class="island"></span><span class="status-icons">▴▴ ▰</span></div><div class="screen-scroll"><img class="newsletter-capture" src="/newsletter/vice-city-newsletter-capture.jpg" alt="Screenshot of Vice City: Vices, Bad Habits, and Breaking Both from the Modern Compass newsletter"></div><div class="home"></div></div></div><button class="phone-control" type="button" aria-pressed="false">Pause newsletter preview Ⅱ</button></div></div>
 </div></header>
 
@@ -75,7 +76,7 @@ const { Content: AutopilotContent } = await autopilot.render();
   @media(min-width:541px) and (max-height:500px){.hero-grid{grid-template-columns:minmax(0,1fr) 170px;gap:35px;padding:24px 0 30px}.hero h1{font-size:42px;margin-bottom:12px}.hero-prose{font-size:14px;line-height:1.5;margin-bottom:16px}.eyebrow{margin-bottom:10px}.signup-card{padding:12px}.signup-detail{margin-top:8px}.iphone{width:150px;height:310px;border-radius:26px}.screen{border-radius:19px}.phone-stage{gap:12px}.phone-control{font-size:9px}}
   @media(min-width:541px) and (max-height:500px){.hero-grid{padding-top:12px}}
 
-.reader-proof{margin-top:14px;color:#72697c;text-align:center;font-size:11px;line-height:1.65}.reader-proof p{margin:0}.reader-proof p+p{margin-top:5px}
+.reader-proof{max-width:450px;padding:0 10px;margin-top:14px;color:#72697c;text-align:center;font-size:11px;line-height:1.65}.reader-proof p{margin:0}.reader-proof p+p{margin-top:5px}
 .hero{box-shadow:none}
 .reader{margin:auto}
 .reader-content .newsletter-logo{width:120px}
