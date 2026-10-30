@@ -43,8 +43,12 @@ import SEO from '../components/SEO.astro';
 
           <div class="tip-card">
             <div class="tip-number">3</div>
-            <h3><span class="marker">Reply</span> with anything</h3>
-            <p>A one-word reply like "Hey" tells Gmail, Outlook, and Yahoo that you want mail from us. It's what actually ensures future issues land in your inbox instead of getting filtered out.</p>
+            <h3><span class="marker">Reply</span> with two things</h3>
+            <ol class="reply-prompts">
+              <li>What’s a decision in your life you’ve been looking for a little more direction on?</li>
+              <li>Imagine it’s 12 months from now and you’re celebrating an outcome of that decision. What would that look like to you?</li>
+            </ol>
+            <p>Your reply helps me know what readers are looking for and helps your email provider recognize me as a trusted sender, giving future issues a better chance of landing in your inbox.</p>
           </div>
         </div>
       </div>
@@ -286,6 +290,16 @@ import SEO from '../components/SEO.astro';
     line-height: 1.6;
     margin: 0;
   }
+
+  .reply-prompts {
+    font-size: 0.92rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 12px 0;
+    padding-left: 1.4em;
+  }
+
+  .reply-prompts li + li { margin-top: 8px; }
 
   /* Hand-drawn marker underline to call out the single most important
      action in the tips list: replying to the email. A thick, textured,
