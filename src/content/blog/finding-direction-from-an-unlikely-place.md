@@ -9,7 +9,7 @@ socialImage: "/blog-thumbnails/finding-direction-from-an-unlikely-place.png"
 draft: false
 hideDescription: true
 hideFooterCta: true
-categories: ["Life Transition", "Growth"]
+categories: ["Growth"]
 ---
 
 <div>

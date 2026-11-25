@@ -1,17 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-<title id="title">Finding Direction From an Unlikely Place</title><desc id="desc">A route splitting into three paths</desc>
-<defs><linearGradient id="accent" x1="0%" y1="100%" x2="100%" y2="0%">
-<stop stop-color="#a23ce0"/><stop offset=".50" stop-color="#1685db"/><stop offset="1" stop-color="#fa724a"/></linearGradient></defs>
+<title id="title">Finding Direction From an Unlikely Place</title>
+<desc id="desc">A route splitting into three paths</desc>
+<defs>
+  <linearGradient id="accent" x1="0%" y1="100%" x2="100%" y2="0%">
+    <stop stop-color="#a855f7"/><stop offset=".23" stop-color="#ec4899"/>
+    <stop offset=".54" stop-color="#3b82f6"/><stop offset=".78" stop-color="#06b6d4"/>
+    <stop offset="1" stop-color="#fbbf24"/>
+  </linearGradient>
+</defs>
 <rect width="1200" height="630" fill="#ffffff"/>
-<rect x="20" y="20" width="1160" height="590" rx="22" fill="none" stroke="#e7ddd8" stroke-width="2"/>
-<g transform="translate(897 316)">
-<circle r="192" fill="url(#accent)" opacity=".08"/>
-<circle r="160" fill="none" stroke="#272432" stroke-opacity=".14" stroke-width="2" stroke-dasharray="3 9"/>
-<g fill="none" stroke="url(#accent)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M-160 132 Q-98 42 0 34 Q105 20 151 -104 M0 34 Q60 -2 87 -134 M0 34 Q-4 -34 -65 -97"/><circle cx="-160" cy="132" r="9"/><circle cx="151" cy="-104" r="10"/><circle cx="87" cy="-134" r="10"/><circle cx="-65" cy="-97" r="10"/></g>
+<g transform="translate(600 315) scale(1.35)" fill="none" stroke="url(#accent)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M-160 132 Q-98 42 0 34 Q105 20 151 -104 M0 34 Q60 -2 87 -134 M0 34 Q-4 -34 -65 -97"/><circle cx="-160" cy="132" r="9"/><circle cx="151" cy="-104" r="10"/><circle cx="87" cy="-134" r="10"/><circle cx="-65" cy="-97" r="10"/>
 </g>
-<path d="M76 136H146" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
-<g font-family="DejaVu Sans,sans-serif" fill="#201b2c">
-<text x="76" y="113" font-size="23" font-weight="700" letter-spacing="4">MODERN COMPASS</text>
-<g font-weight="700" letter-spacing="-1.5"><text x="76" y="238" font-size="69">Finding Direction</text><text x="76" y="315" font-size="69">From an Unlikely</text><text x="76" y="392" font-size="69">Place</text></g>
-<text x="76" y="535" font-size="20" letter-spacing="3">LIFE TRANSITION / GROWTH</text>
-</g></svg>
+</svg>

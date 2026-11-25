@@ -48,13 +48,16 @@ class NewsletterTest(unittest.TestCase):
     def test_thumbnail_and_existing_categories(self):
         title = "Finding Direction From an Unlikely Place"
         tags = tags_for(title, "direction learn grow strengths")
-        self.assertIn("Life Transition", tags)
+        self.assertEqual(tags, ["Growth"])
+        self.assertEqual(tags_for("Navigating a Career Transition", "career transition"), ["Life Transition", "Career"])
         self.assertLessEqual(len(tags), 2)
         self.assertTrue(set(tags) <= TAXONOMY.keys())
-        art = ET.fromstring(make_svg(title, tags, "finding-direction"))
+        art = ET.fromstring(make_svg(title, tags))
         self.assertEqual((art.get("width"), art.get("height")), ("1200", "630"))
-        self.assertNotEqual(make_svg(title, tags, "finding-direction"),
-                            make_svg("Breaking a Bad Habit", ["Productivity"], "break-a-habit"))
+        self.assertFalse(art.findall(".//{http://www.w3.org/2000/svg}text"))
+        self.assertEqual(art.find("{http://www.w3.org/2000/svg}rect").get("fill"), "#ffffff")
+        self.assertNotEqual(make_svg(title, tags),
+                            make_svg("Breaking a Bad Habit", ["Productivity"]))
 
 
 if __name__ == "__main__":

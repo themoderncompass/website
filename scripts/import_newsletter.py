@@ -2,7 +2,6 @@
 import argparse
 from datetime import datetime, time, timedelta
 from email.utils import parsedate_to_datetime
-from hashlib import sha256
 from html import escape
 from html.parser import HTMLParser
 from pathlib import Path
@@ -10,7 +9,6 @@ import json
 import re
 import subprocess
 import tempfile
-import textwrap
 from urllib.parse import parse_qsl, urljoin, urlsplit
 from urllib.request import HTTPRedirectHandler, build_opener
 from xml.etree import ElementTree as ET
@@ -39,7 +37,7 @@ ATTR = {
 }
 TAXONOMY = {
     "Growth": r"\b(grow\w*|learn\w*|confidence|strengths|personal development|self[- ]\w+|health)\b",
-    "Life Transition": r"\b(direction|transition|change careers|life change|starting over|turning point|uncertainty|next chapter)\b",
+    "Life Transition": r"\b(transition\w*|change careers|career change|new career|life changes?|starting over|turning point|uncertainty|next chapter|lost in your (?:20s|twenties)|relocat\w*|retir\w*|graduat\w*|layoff\w*)\b",
     "Relationships": r"\b(relationship\w*|marriage|parent\w*|daughters|son|family|friend\w*|spouse|connection\w*)\b",
     "Productivity": r"\b(productivit\w*|time management|habit\w*|discipline|focus|routine\w*|schedule\w*)\b",
     "Career": r"\b(career\w*|job\w*|workplace|profession\w*|manager\w*|employ\w*)\b",
@@ -199,10 +197,22 @@ def third_saturday(today):
 
 
 def tags_for(title, text):
-    scores = [(4 * len(re.findall(p, title, re.I)) + min(5, len(re.findall(p, text, re.I))), k)
-              for k, p in TAXONOMY.items()]
-    scores.sort(key=lambda pair: -pair[0])
-    return [k for n, k in scores[:2] if n >= max(2, scores[0][0] * 0.45)] or ["Growth"]
+    # Prefer a single shelf. A second tag needs a distinct headline signal,
+    # not just a topic mentioned in passing somewhere in the issue.
+    scores = []
+    for category, pattern in TAXONOMY.items():
+        headline = len(re.findall(pattern, title, re.I))
+        body_terms = {match.group().casefold() for match in re.finditer(pattern, text, re.I)}
+        scores.append((4 * headline + min(5, len(body_terms)), headline, category))
+    scores.sort(key=lambda row: (-row[0], -row[1]))
+    primary, headline, category = scores[0]
+    secondary, secondary_headline, second_category = scores[1]
+    if not headline and primary - secondary < 2:
+        return ["Growth"]
+    categories = [category] if primary >= 2 else ["Growth"]
+    if secondary_headline and secondary >= max(4, primary * 0.55):
+        categories.append(second_category)
+    return categories
 
 
 def normalized(value):
@@ -225,36 +235,27 @@ def already_imported(slug, url, title):
     return False
 
 
-def make_svg(title, categories, slug):
+def make_svg(title, categories):
     motif = "direction" if re.search(r"\b(direction|compass|path|crossroads)\b", title, re.I) else categories[0]
     label, art = MOTIFS[motif]
-    colors = [("#a23ce0", "#1685db", "#fa724a"), ("#b92890", "#7755dc", "#ef9b3b"),
-              ("#7c4be5", "#226ace", "#f57953"), ("#982ea8", "#4381d9", "#f5b444")]
-    a, b, c = colors[int(sha256(slug.encode()).hexdigest(), 16) % len(colors)]
-    lines = textwrap.wrap(title, width=20, max_lines=4, placeholder="…")
-    longest = max(map(len, lines))
-    size = min(76, 1180 // max(1, longest))
-    y0 = 315 - (len(lines) - 1) * (size + 8) // 2
-    text = "".join(f'<text x="76" y="{y0+i*(size+8)}" font-size="{size}">{escape(line)}</text>'
-                   for i, line in enumerate(lines))
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-<title id="title">{escape(title)}</title><desc id="desc">{escape(label)}</desc>
-<defs><linearGradient id="accent" x1="0%" y1="100%" x2="100%" y2="0%">
-<stop stop-color="{a}"/><stop offset=".50" stop-color="{b}"/><stop offset="1" stop-color="{c}"/></linearGradient></defs>
+    # Like the existing blog illustrations: a white field and one central
+    # gradient line drawing. The card already renders the headline and tags.
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">{escape(title)}</title>
+<desc id="desc">{escape(label)}</desc>
+<defs>
+  <linearGradient id="accent" x1="0%" y1="100%" x2="100%" y2="0%">
+    <stop stop-color="#a855f7"/><stop offset=".23" stop-color="#ec4899"/>
+    <stop offset=".54" stop-color="#3b82f6"/><stop offset=".78" stop-color="#06b6d4"/>
+    <stop offset="1" stop-color="#fbbf24"/>
+  </linearGradient>
+</defs>
 <rect width="1200" height="630" fill="#ffffff"/>
-<rect x="20" y="20" width="1160" height="590" rx="22" fill="none" stroke="#e7ddd8" stroke-width="2"/>
-<g transform="translate(897 316)">
-<circle r="192" fill="url(#accent)" opacity=".08"/>
-<circle r="160" fill="none" stroke="#272432" stroke-opacity=".14" stroke-width="2" stroke-dasharray="3 9"/>
-<g fill="none" stroke="url(#accent)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">{art}</g>
+<g transform="translate(600 315) scale(1.35)" fill="none" stroke="url(#accent)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+  {art}
 </g>
-<path d="M76 136H146" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
-<g font-family="DejaVu Sans,sans-serif" fill="#201b2c">
-<text x="76" y="113" font-size="23" font-weight="700" letter-spacing="4">MODERN COMPASS</text>
-<g font-weight="700" letter-spacing="-1.5">{text}</g>
-<text x="76" y="535" font-size="20" letter-spacing="3">{escape(" / ".join(categories).upper())}</text>
-</g></svg>
-'''
+</svg>
+"""
 
 
 def main():
@@ -311,7 +312,7 @@ def main():
     with tempfile.TemporaryDirectory() as tmp:
         svg = Path(tmp) / "thumb.svg"
         png = Path(tmp) / "thumb.png"
-        svg.write_text(make_svg(title, categories, slug))
+        svg.write_text(make_svg(title, categories))
         subprocess.run(["inkscape", str(svg), f"--export-filename={png}"], check=True, capture_output=True)
         for src, suffix in [(svg, "svg"), (png, "png")]:
             destination = ROOT / ART / f"{slug}.{suffix}"
