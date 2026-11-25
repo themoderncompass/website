@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Finding Direction From an Unlikely Place</title>
+<desc id="desc">A route splitting into three paths</desc>
+<defs>
+  <linearGradient id="accent" x1="0%" y1="100%" x2="100%" y2="0%">
+    <stop stop-color="#a855f7"/><stop offset=".23" stop-color="#ec4899"/>
+    <stop offset=".54" stop-color="#3b82f6"/><stop offset=".78" stop-color="#06b6d4"/>
+    <stop offset="1" stop-color="#fbbf24"/>
+  </linearGradient>
+</defs>
+<rect width="1200" height="630" fill="#ffffff"/>
+<g transform="translate(600 315) scale(1.35)" fill="none" stroke="url(#accent)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M-160 132 Q-98 42 0 34 Q105 20 151 -104 M0 34 Q60 -2 87 -134 M0 34 Q-4 -34 -65 -97"/><circle cx="-160" cy="132" r="9"/><circle cx="151" cy="-104" r="10"/><circle cx="87" cy="-134" r="10"/><circle cx="-65" cy="-97" r="10"/>
+</g>
+</svg>

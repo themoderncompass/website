@@ -1,0 +1,120 @@
+name: Prepare monthly newsletter PR
+
+on:
+  schedule:
+    # GitHub's POSIX cron cannot express the nth weekday. Start on Saturdays;
+    # the calendar gate exits before checkout or RSS access on all but the third.
+    - cron: '23 9 * * 6'
+      timezone: America/Chicago
+  workflow_dispatch:
+    inputs:
+      issue_slug:
+        description: 'Published Beehiiv issue slug (the part after /p/)'
+        required: true
+        type: string
+      dry_run:
+        description: 'Build and validate without pushing or opening a PR'
+        default: true
+        type: boolean
+
+concurrency:
+  group: modern-compass-newsletter-import
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  calendar:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      proceed: ${{ steps.calendar.outputs.proceed }}
+    steps:
+      - name: Check the calendar
+        id: calendar
+        run: |
+          day=$(TZ=America/Chicago date +%-d)
+          weekday=$(TZ=America/Chicago date +%u)
+          if [[ "$GITHUB_EVENT_NAME" == workflow_dispatch ]] || \
+            [[ "$weekday" == 6 && "$day" -ge 15 && "$day" -le 21 ]]; then
+            echo 'proceed=true' >> "$GITHUB_OUTPUT"
+          fi
+
+  prepare:
+    needs: calendar
+    if: needs.calendar.outputs.proceed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Install thumbnail renderer
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends inkscape fonts-dejavu-core
+      - name: Import one issue
+        id: import
+        env:
+          ISSUE: ${{ inputs.issue_slug }}
+        run: |
+          python -m unittest discover -s scripts -p 'test_*.py'
+          output="$RUNNER_TEMP/newsletter-slug"
+          if [[ "$GITHUB_EVENT_NAME" == workflow_dispatch ]]; then
+            python scripts/import_newsletter.py --slug="$ISSUE" --output-file "$output"
+          else
+            python scripts/import_newsletter.py --scheduled --output-file "$output"
+          fi
+          if [[ -s "$output" ]]; then
+            slug=$(cat "$output")
+            [[ "$slug" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]]
+            echo "slug=$slug" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Build and verify the post
+        if: steps.import.outputs.slug != ''
+        env:
+          ASTRO_TELEMETRY_DISABLED: '1'
+          SLUG: ${{ steps.import.outputs.slug }}
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          python scripts/verify_newsletter.py "$SLUG"
+      - name: Open a review PR
+        if: steps.import.outputs.slug != '' && (github.event_name == 'schedule' || !inputs.dry_run)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SLUG: ${{ steps.import.outputs.slug }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          branch="newsletter-import/$SLUG"
+          existing=$(gh pr list --state all --head "$branch" --json number --jq 'length')
+          if [[ "$existing" != 0 ]]; then
+            echo 'A review PR already exists for this issue.'
+            exit 0
+          fi
+          gh auth setup-git
+          # Push only a new issue branch, never the default branch.
+          # Avoid force-pushing over reviewer edits on a previous attempt.
+          if git ls-remote --exit-code origin "refs/heads/$branch" >/dev/null; then
+            echo 'An import branch already exists. Reuse it or remove it after inspection.'
+            exit 1
+          else
+            [[ $? == 2 ]]
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -c "$branch"
+          git add -- "src/content/blog/$SLUG.md" "public/blog-thumbnails/$SLUG.svg" "public/blog-thumbnails/$SLUG.png"
+          git commit -m "Add newsletter issue: $SLUG"
+          git push origin "HEAD:refs/heads/$branch"
+          gh pr create --base "$DEFAULT_BRANCH" --head "$branch" \
+            --title "Add newsletter issue: $SLUG" \
+            --body 'Imported from the public Beehiiv feed and verified by the Astro build. Please review the article against Beehiiv, the suggested categories and description, and both thumbnail formats. Merge manually to publish.'
