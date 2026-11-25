@@ -241,7 +241,7 @@ def make_svg(title, categories, slug):
 <title id="title">{escape(title)}</title><desc id="desc">{escape(label)}</desc>
 <defs><linearGradient id="accent" x1="0%" y1="100%" x2="100%" y2="0%">
 <stop stop-color="{a}"/><stop offset=".50" stop-color="{b}"/><stop offset="1" stop-color="{c}"/></linearGradient></defs>
-<rect width="1200" height="630" fill="#fbf8f4"/>
+<rect width="1200" height="630" fill="#ffffff"/>
 <rect x="20" y="20" width="1160" height="590" rx="22" fill="none" stroke="#e7ddd8" stroke-width="2"/>
 <g transform="translate(897 316)">
 <circle r="192" fill="url(#accent)" opacity=".08"/>
