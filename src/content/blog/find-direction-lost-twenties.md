@@ -49,7 +49,7 @@ After years of circling the same patterns, I created Modern Compass - a simple f
 - **Environmental** - Recognize how your upbringing shaped you
 - **Developed** - Actively build the traits you want to embody
 - **Authentic** - Align your actions with your values
-- **Transcending** - Move beyond self-interest to serve something larger
+- **Driven** - Move beyond self-interest to serve something larger
 
 **Start here:** Name one value you want to be known for. What's one small action you can take this week that demonstrates it?
 
@@ -60,6 +60,14 @@ After years of circling the same patterns, I created Modern Compass - a simple f
 - **Loyalty** - Show up consistently, even when it's hard
 
 **Start here:** Reach out to one person you've been meaning to connect with. No agenda, just genuine check-in.
+
+### What if the problem isn't what you think it is?
+
+Say you're two years into your first full-time job and think, "I need a different career." Maybe you do. But look at all four directions and their layers before you make that call. Under **Self**, you might notice you like the work but lack the confidence to ask for more responsibility. Under **Trust**, you might realize you don't know whom you can ask for honest feedback. **Character** can help you name what you want to stand for at work, and **Relationships** can show you whether you have people you can talk to about it.
+
+Put those pieces together and the next step might not be quitting. It might be asking someone you trust to help you find one project you can own. That's a way to test whether you need a new career or more room to grow in this one.
+
+If you're not sure what to look at first, [take the 10-minute Map Where You Are assessment](https://map.themoderncompass.io/) to see all four directions side by side.
 
 ## How to Actually Move Forward (Not Just Think About It)
 
